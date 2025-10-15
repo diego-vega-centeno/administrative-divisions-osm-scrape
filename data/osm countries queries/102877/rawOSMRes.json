@@ -1,0 +1,29 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-03T17:40:00Z",
+    "timestamp_areas_base": "2025-10-03T13:36:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 102877,
+      "tags": {
+        "admin_level": "2",
+        "boundary": "administrative",
+        "name": "\u00d6sterreich \u2014 Liechtenstein",
+        "name:ca": "\u00c0ustria - Liechtenstein",
+        "name:de": "\u00d6sterreich \u2014 Liechtenstein",
+        "name:en": "Austria \u2014 Liechtenstein",
+        "name:fi": "It\u00e4valta \u2014 Liechenstein",
+        "name:fr": "Autriche \u2014 Liechtenstein",
+        "name:lt": "Austrija \u2014 Lichten\u0161teinas",
+        "name:ru": "\u0410\u0432\u0441\u0442\u0440\u0438\u044f \u2014 \u041b\u0438\u0445\u0442\u0435\u043d\u0448\u0442\u0435\u0439\u043d",
+        "type": "multilinestring",
+        "wikidata": "Q1991324"
+      }
+    }
+  ]
+}

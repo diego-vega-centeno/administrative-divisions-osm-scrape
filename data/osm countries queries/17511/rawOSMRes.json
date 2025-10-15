@@ -1,0 +1,29 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-03T02:17:50Z",
+    "timestamp_areas_base": "2025-10-02T22:16:13Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 17511,
+      "tags": {
+        "admin_level": "2",
+        "boundary": "administrative",
+        "name": "Deutschland - \u00d6sterreich",
+        "name:ca": "Alemanya - \u00c0ustria",
+        "name:de": "Deutschland - \u00d6sterreich",
+        "name:en": "Germany - Austria",
+        "name:fr": "Allemagne - Autriche",
+        "name:lt": "Vokietija \u2014 Austrija",
+        "name:ru": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f - \u0410\u0432\u0441\u0442\u0440\u0438\u044f",
+        "type": "multilinestring",
+        "wikidata": "Q1991986",
+        "wikipedia": "de:Grenze zwischen Deutschland und \u00d6sterreich"
+      }
+    }
+  ]
+}

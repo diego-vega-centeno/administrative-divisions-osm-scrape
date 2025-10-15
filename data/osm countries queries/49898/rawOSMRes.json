@@ -1,0 +1,4917 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-03T02:21:53Z",
+    "timestamp_areas_base": "2025-10-02T22:16:13Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 49898,
+      "tags": {
+        "ISO3166-1": "KH",
+        "ISO3166-1:alpha2": "KH",
+        "ISO3166-1:alpha3": "KHM",
+        "ISO3166-1:numeric": "116",
+        "admin_level": "2",
+        "alt_name:en": "Camboja",
+        "alt_name:ig": "Cambodia",
+        "alt_name:quz": "Kampuya",
+        "alt_name:vi": "Campuchia",
+        "boundary": "administrative",
+        "default_language": "km",
+        "driving_side": "right",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg",
+        "int_name": "Cambodia",
+        "name": "\u1796\u17d2\u179a\u17c7\u179a\u17b6\u1787\u17b6\u178e\u17b6\u1785\u1780\u17d2\u179a\u200b\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6",
+        "name:ace": "Kamboja",
+        "name:af": "Kambodja",
+        "name:als": "Kambodscha",
+        "name:am": "\u12ab\u121d\u1266\u12f2\u12eb",
+        "name:an": "Cambocha",
+        "name:ang": "Cambodia",
+        "name:ar": "\u0643\u0645\u0628\u0648\u062f\u064a\u0627",
+        "name:arz": "\u0643\u0627\u0645\u0628\u0648\u062f\u064a\u0627",
+        "name:as": "\u0995\u09ae\u09cd\u09ac\u09cb\u09a1\u09bf\u09af\u09bc\u09be",
+        "name:ast": "Camboya",
+        "name:az": "Kamboca",
+        "name:ba": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:bar": "Kambodscha",
+        "name:bat-smg": "Kambuod\u017ea",
+        "name:bcl": "Kambodya",
+        "name:be": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:be-tarask": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:bg": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:bn": "\u0995\u09ae\u09cd\u09ac\u09cb\u09a1\u09bf\u09af\u09bc\u09be",
+        "name:bo": "\u0f41\u0f58\u0f0b\u0f54\u0f7c\u0f0b\u0f5b\u0f0d",
+        "name:bpy": "\u0995\u09ae\u09cd\u09ac\u09cb\u09a1\u09bf\u09af\u09bc\u09be",
+        "name:br": "Kambodja",
+        "name:bs": "Kambod\u017ea",
+        "name:bug": "Kamboja",
+        "name:bxr": "\u041a\u0430\u043c\u0431\u043e\u0436",
+        "name:ca": "Cambodja",
+        "name:ce": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:ceb": "Kamboya",
+        "name:ckb": "\u06a9\u06d5\u0645\u0628\u06c6\u062f\u06cc\u0627",
+        "name:crh": "Kambo\u00e7iya",
+        "name:cs": "Kambod\u017ea",
+        "name:csb": "Kamb\u00f2d\u017c\u00f4",
+        "name:cv": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:cy": "Cambodia",
+        "name:da": "Cambodja",
+        "name:de": "Kambodscha",
+        "name:diq": "Kambo\u00e7ya",
+        "name:dsb": "Kambod\u017ea",
+        "name:dv": "\u0786\u07ac\u0782\u07b0\u0784\u07af\u0791\u07a8\u0787\u07a7",
+        "name:dz": "\u0f40\u0f58\u0f0b\u0f56\u0f7c\u0f0b\u0f4c\u0f72\u0f0b\u0f61\u0f0b",
+        "name:el": "\u039a\u03b1\u03bc\u03c0\u03cc\u03c4\u03b6\u03b7",
+        "name:en": "Cambodia",
+        "name:eo": "Kambo\u011do",
+        "name:es": "Camboya",
+        "name:et": "Kambod\u017ea",
+        "name:eu": "Kanbodia",
+        "name:ext": "Camboya",
+        "name:fa": "\u06a9\u0627\u0645\u0628\u0648\u062c",
+        "name:fi": "Kambod\u017ea",
+        "name:fil": "Cambodia",
+        "name:fo": "Kambodja",
+        "name:fr": "Cambodge",
+        "name:frp": "Cambodg\u00b7e",
+        "name:fy": "Kambodja",
+        "name:ga": "An Chamb\u00f3id",
+        "name:gag": "Kamboca",
+        "name:gan": "\u67ec\u57d4\u5be8",
+        "name:gd": "Cambuidea",
+        "name:gl": "Camboxa",
+        "name:gn": "Kamboja",
+        "name:gu": "\u0a95\u0aae\u0acd\u0aac\u0acb\u0aa1\u0ac0\u0aaf\u0abe",
+        "name:gv": "Yn Chamboyd",
+        "name:ha": "Kambodiya",
+        "name:hak": "K\u00e1n-pu-chh\u00e0i",
+        "name:haw": "Kamabodia",
+        "name:he": "\u05e7\u05de\u05d1\u05d5\u05d3\u05d9\u05d4",
+        "name:hi": "\u0915\u092e\u094d\u092c\u094b\u0921\u093f\u092f\u093e",
+        "name:hif": "Cambodia",
+        "name:hr": "Kambod\u017ea",
+        "name:hsb": "Kambod\u017aa",
+        "name:ht": "Kanb\u00f2dj",
+        "name:hu": "Kambodzsa",
+        "name:hy": "\u053f\u0561\u0574\u0562\u0578\u057b\u0561",
+        "name:ia": "Cambodgia",
+        "name:id": "Kamboja",
+        "name:ie": "Cambodja",
+        "name:ig": "Kambodia",
+        "name:ilo": "Cambodia",
+        "name:io": "Kambodja",
+        "name:is": "Kamb\u00f3d\u00eda",
+        "name:it": "Cambogia",
+        "name:iu": "Kampuujia",
+        "name:ja": "\u30ab\u30f3\u30dc\u30b8\u30a2",
+        "name:jbo": "kamputceas",
+        "name:jv": "Kamboja",
+        "name:ka": "\u10d9\u10d0\u10db\u10d1\u10dd\u10ef\u10d0",
+        "name:kab": "Cambudya",
+        "name:kbd": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u044d",
+        "name:kk": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:km": "\u1796\u17d2\u179a\u17c7\u179a\u17b6\u1787\u17b6\u178e\u17b6\u1785\u1780\u17d2\u179a\u1780\u1798\u17d2\u1796\u17bb\u1787\u17b6",
+        "name:km:IPA": "pr\u0115\u0259h ri\u0259.ci\u0259.na\u02d0.ca\u0294 kam.pu.ci\u0259",
+        "name:kn": "\u0c95\u0cbe\u0c82\u0cac\u0ccb\u0ca1\u0cbf\u0caf",
+        "name:ko": "\uce84\ubcf4\ub514\uc544",
+        "name:kok": "\u0915\u0902\u092c\u094b\u0921\u093f\u092f\u093e",
+        "name:ku": "Kamboca",
+        "name:kv": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:kw": "Kamboji",
+        "name:ky": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:la": "Cambosia",
+        "name:lb": "Kambodscha",
+        "name:li": "Cambodja",
+        "name:lij": "Camboggia",
+        "name:lmo": "Cambogia",
+        "name:ln": "Kamboji",
+        "name:lo": "\u0e9b\u0eb0\u0ec0\u0e97\u0e94\u0e81\u0eb3\u0e9b\u0eb9\u0ec0\u0e88\u0e8d",
+        "name:lt": "Kambod\u017ea",
+        "name:lv": "Kambod\u017ea",
+        "name:lzh": "\u67ec\u57d4\u5be8",
+        "name:map-bms": "Kamboja",
+        "name:mdf": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:mg": "Kambodia",
+        "name:mi": "Kamap\u014dtia",
+        "name:mk": "\u041a\u0430\u043c\u0431\u043e\u045f\u0430",
+        "name:ml": "\u0d15\u0d02\u0d2c\u0d4b\u0d21\u0d3f\u0d2f",
+        "name:mn": "\u041a\u0430\u043c\u0431\u043e\u0436",
+        "name:mr": "\u0915\u0902\u092c\u094b\u0921\u093f\u092f\u093e",
+        "name:ms": "Kemboja",
+        "name:mt": "Kambodja",
+        "name:my": "\u1000\u1019\u1039\u1018\u1031\u102c\u1012\u102e\u1038\u101a\u102c\u1038\u1014\u102d\u102f\u1004\u103a\u1004\u1036",
+        "name:na": "Kambodja",
+        "name:nah": "Camboya",
+        "name:nan": "Kampuchea",
+        "name:nap": "Cambogia",
+        "name:nds": "Kambodscha",
+        "name:nl": "Cambodja",
+        "name:nn": "Kambodsja",
+        "name:no": "Kambodsja",
+        "name:nov": "Kambodia",
+        "name:oc": "Camb\u00f2tja",
+        "name:or": "\u0b15\u0b2e\u0b4d\u0b2c\u0b4b\u0b21\u0b3c\u0b3f\u0b06",
+        "name:os": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u00e6",
+        "name:pa": "\u0a15\u0a70\u0a2c\u0a4b\u0a21\u0a40\u0a06",
+        "name:pam": "Kambodya",
+        "name:pih": "Kamboedya",
+        "name:pl": "Kambod\u017ca",
+        "name:pms": "Camb\u00f2gia",
+        "name:pnb": "\u06a9\u0645\u067e\u0648\u0686\u06cc\u0627",
+        "name:ps": "\u06a9\u0645\u0628\u0648\u062f\u06cc\u0627",
+        "name:pt": "Camboja",
+        "name:qu": "Kambuya",
+        "name:quz": "Kambuya",
+        "name:rm": "Cambodscha",
+        "name:ro": "Cambodgia",
+        "name:roa-rup": "Cambogia",
+        "name:ru": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:rw": "Kambodiya",
+        "name:sah": "\u041a\u0430\u043c\u0431\u043e\u0434\u044c\u0430",
+        "name:scn": "Camboggia",
+        "name:sco": "Cambodie",
+        "name:sd": "\u06aa\u0645\u067e\u0648\u068a\u064a\u0627",
+        "name:se": "Kambodja",
+        "name:sh": "Kambod\u017ea",
+        "name:si": "\u0d9a\u0dcf\u0db8\u0dca\u0db6\u0ddd\u0da2\u0dba",
+        "name:sk": "Kambod\u017ea",
+        "name:sl": "Kambod\u017ea",
+        "name:smn": "Kambod\u017ea",
+        "name:sms": "Kambod\u017ea",
+        "name:so": "Kambodiya",
+        "name:sq": "Kamboxhia",
+        "name:sr": "\u041a\u0430\u043c\u0431\u043e\u045f\u0430",
+        "name:ss": "IKhambodiya",
+        "name:su": "Kamboja",
+        "name:sv": "Kambodja",
+        "name:sw": "Kamboja",
+        "name:szl": "Kambod\u017ca",
+        "name:ta": "\u0b95\u0bae\u0bcd\u0baa\u0bcb\u0b9f\u0bbf\u0baf\u0bbe",
+        "name:te": "\u0c15\u0c02\u0c2c\u0c4b\u0c21\u0c3f\u0c2f\u0c3e",
+        "name:tg": "\u041a\u0430\u043c\u0431\u043e\u04b7\u0430",
+        "name:th": "\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e01\u0e31\u0e21\u0e1e\u0e39\u0e0a\u0e32",
+        "name:tk": "Kambo\u00e7i\u00fda",
+        "name:tl": "Kamboya",
+        "name:tn": "Khambodia",
+        "name:tr": "Kambo\u00e7ya",
+        "name:tt": "\u041a\u0430\u043c\u0431\u043e\u0497\u0430",
+        "name:tzl": "Camputsch",
+        "name:udm": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:ug": "\u0643\u0627\u0645\u0628\u0648\u062c\u0627",
+        "name:uk": "\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "name:ur": "\u06a9\u0645\u0628\u0648\u0688\u06cc\u0627",
+        "name:uz": "Kambodja",
+        "name:vi": "Cao Mi\u00ean",
+        "name:vlca": "Cambodja",
+        "name:vo": "Kamboc\u00e4n",
+        "name:vro": "Kambod\u017ea",
+        "name:war": "Camboya",
+        "name:wo": "Kamboodi",
+        "name:wuu": "\u67ec\u57d4\u5be8",
+        "name:xal": "\u041a\u0430\u043c\u0431\u0443\u0434\u0438\u043d \u041d\u0443\u0442\u0433",
+        "name:yi": "\u05e7\u05d0\u05de\u05d1\u05d0\u05d3\u05d9\u05e2",
+        "name:yo": "K\u00e0mb\u00f3d\u00ed\u00e0",
+        "name:yue": "\u67ec\u57d4\u5be8",
+        "name:zea": "Cambodja",
+        "name:zh": "\u67ec\u57d4\u5be8",
+        "name:zh-Hans": "\u67ec\u57d4\u5be8",
+        "name:zh-Hant": "\u67ec\u57d4\u5be8",
+        "official_name:ckb": "\u0634\u0627\u0646\u0634\u06cc\u0646\u06cc \u06a9\u06d5\u0645\u0628\u06c6\u062f\u06cc\u0627",
+        "official_name:cs": "Kambod\u017esk\u00e9 kr\u00e1lovstv\u00ed",
+        "official_name:de": "K\u00f6nigreich Kambodscha",
+        "official_name:en": "Kingdom of Cambodia",
+        "official_name:es": "Reino de Camboya",
+        "official_name:fi": "Kambod\u017ean kuningaskunta",
+        "official_name:fr": "Royaume du Cambodge",
+        "official_name:it": "Regno di Cambogia",
+        "official_name:ja": "\u30ab\u30f3\u30dc\u30b8\u30a2\u738b\u56fd",
+        "official_name:ko": "\uce84\ubcf4\ub514\uc544 \uc655\uad6d",
+        "official_name:nl": "Koninkrijk Cambodja",
+        "official_name:no": "Kongeriket Kambodsja",
+        "official_name:pt": "Reino do Camboja",
+        "official_name:ru": "\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u0442\u0432\u043e \u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430",
+        "official_name:sv": "Kungariket Kambodja",
+        "official_name:zh-Hant": "\u67ec\u57d4\u5be8\u738b\u570b",
+        "timezone": "Asia/Phnom_Penh",
+        "type": "boundary",
+        "wikidata": "Q424",
+        "wikipedia": "en:Cambodia"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2198916,
+      "tags": {
+        "ISO3166-2": "KH-19",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u179f\u17d2\u1791\u17b9\u1784\u178f\u17d2\u179a\u17c2\u1784",
+        "name:bg": "\u0421\u0442\u0443\u043d\u0433 \u0422\u0440\u0435\u043d\u0433",
+        "name:en": "Stung Treng",
+        "name:fr": "Stoeng Treng",
+        "name:ja": "\u30b9\u30c8\u30a5\u30f3\u30c8\u30ec\u30f3",
+        "name:km-Latn": "Kh\u00eat St\u0153\u0306ng Tr\u00eang",
+        "name:ru": "\u0421\u0442\u044b\u043d\u0433\u0442\u0440\u0430\u0435\u043d\u0433",
+        "name:zh": "\u4e0a\u4e01\u7701",
+        "population": "111734",
+        "type": "boundary",
+        "wikidata": "Q837889",
+        "wikipedia": "de:Stung Treng (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2198922,
+      "tags": {
+        "ISO3166-2": "KH-13",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1796\u17d2\u179a\u17c7\u179c\u17b7\u17a0\u17b6\u179a",
+        "name:en": "Preah Vihear",
+        "name:fr": "Preah Vihear",
+        "name:ja": "\u30d7\u30ec\u30a2\u30f4\u30a3\u30d2\u30a2",
+        "name:km-Latn": "Kh\u00eat Pre\u0103h Vih\u00e9ar",
+        "name:lt": "Preavih\u0117jos provincija",
+        "name:ru": "\u041f\u0440\u044d\u0430\u0445\u0432\u0438\u0445\u0435\u0430",
+        "name:zh": "\u67cf\u5a01\u590f\u7701",
+        "population": "170852",
+        "type": "boundary",
+        "wikidata": "Q502151",
+        "wikipedia": "de:Preah Vihear (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2198944,
+      "tags": {
+        "ISO3166-2": "KH-6",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u1784\u17cb\u1792\u17c6",
+        "name:en": "Kampong Thom",
+        "name:fr": "Kompong Thom",
+        "name:ja": "\u30b3\u30f3\u30dd\u30f3\u30c8\u30e0",
+        "name:km-Latn": "Kh\u00eat K\u00e2mp\u00f3ng Thum",
+        "name:ko": "\uce84\ud401\ud1b0",
+        "name:lt": "Kampongtomo provincija",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u043d\u0433\u0442\u0445\u043e\u043c",
+        "name:zh": "\u78c5\u540c\u7701",
+        "population": "708398",
+        "type": "boundary",
+        "wikidata": "Q502148",
+        "wikipedia": "de:Kampong Thom (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2199033,
+      "tags": {
+        "ISO3166-2": "KH-12",
+        "admin_level": "4",
+        "alt_name:vi": "Nam Vang",
+        "boundary": "administrative",
+        "name": "\u179a\u17b6\u1787\u1792\u17b6\u1793\u17b8\u1797\u17d2\u1793\u17c6\u1796\u17c1\u1789",
+        "name:en": "Phnom Penh",
+        "name:fr": "Phnom Penh",
+        "name:ja": "\u30d7\u30ce\u30f3\u30da\u30f3",
+        "name:ko": "\ud504\ub188\ud39c",
+        "name:lzh": "\u91d1\u908a",
+        "name:ru": "\u041f\u043d\u043e\u043c\u043f\u0435\u043d\u044c",
+        "name:vi": "Phn\u00f4m P\u00eanh",
+        "name:wuu": "\u91d1\u8fb9",
+        "name:zh": "\u91d1\u8fb9",
+        "name:zh-Hans": "\u91d1\u8fb9",
+        "name:zh-Hant": "\u91d1\u908a",
+        "type": "boundary",
+        "wikidata": "Q1850",
+        "wikipedia": "en:Phnom Penh"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2199066,
+      "tags": {
+        "ISO3166-2": "KH-9",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c4\u17c7\u1780\u17bb\u1784",
+        "name:en": "Koh Kong",
+        "name:fr": "Kaoh Kong",
+        "name:ja": "\u30b3\u30b3\u30f3",
+        "name:km-Latn": "Kh\u00eat Ka\u00f4h K\u014fng",
+        "name:ru": "\u041a\u043e\u0445\u043a\u043e\u043d\u0433",
+        "name:th": "\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e40\u0e01\u0e32\u0e30\u0e01\u0e07",
+        "name:uk": "\u041a\u0430\u0445\u043a\u043e\u043d\u0433",
+        "name:zh": "\u6208\u516c\u7701",
+        "population": "139722",
+        "type": "boundary",
+        "wikidata": "Q466000",
+        "wikipedia": "de:Koh Kong (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200024,
+      "tags": {
+        "ISO3166-2": "KH-23",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c2\u1794",
+        "name:en": "Kep",
+        "name:fr": "Kep",
+        "name:ja": "\u30b1\u30c3\u30d7",
+        "name:ko": "\ucf00\ud504\uc8fc",
+        "name:ru": "\u041a\u0430\u0435\u043f",
+        "population": "40280",
+        "type": "boundary",
+        "wikidata": "Q852089",
+        "wikipedia": "en:Kep Province"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200183,
+      "tags": {
+        "ISO3166-2": "KH-7",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u178f",
+        "name:en": "Kampot",
+        "name:fr": "Kampot",
+        "name:ja": "\u30ab\u30f3\u30dd\u30c3\u30c8",
+        "name:km-Latn": "Kh\u00eat K\u00e2mp\u00f4t",
+        "name:ko": "\uce84\ud3ec\ud2b8",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u0442",
+        "name:zh": "\u8d21\u5e03\u7701",
+        "population": "585110",
+        "type": "boundary",
+        "wikidata": "Q748470",
+        "wikipedia": "de:Kampot (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200220,
+      "tags": {
+        "ISO3166-2": "KH-21",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u178f\u17b6\u1780\u17c2\u179c",
+        "name:en": "Takeo",
+        "name:fr": "Tak\u00e9o",
+        "name:ja": "\u30bf\u30b1\u30aa",
+        "name:km": "\u1781\u17c1\u178f\u17d2\u178f\u178f\u17b6\u1780\u17c2\u179c",
+        "name:km-Latn": "Kh\u00eat Tak\u00eav",
+        "name:ko": "\ud0c0\ucf00\uc624\uc8fc",
+        "name:ru": "\u0422\u0430\u043a\u0435\u043e",
+        "name:th": "\u0e15\u0e32\u0e41\u0e01\u0e49\u0e27",
+        "name:zh": "\u8336\u80f6\u7701",
+        "population": "893582",
+        "population:date": "2019",
+        "source:population": "NIS 2019",
+        "type": "boundary",
+        "wikidata": "Q613345",
+        "wikipedia": "de:Takeo (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200251,
+      "tags": {
+        "ISO3166-2": "KH-8",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u178e\u17d2\u178a\u17b6\u179b",
+        "name:en": "Kandal",
+        "name:fr": "Kandal",
+        "name:ja": "\u30ab\u30f3\u30c0\u30eb",
+        "name:km-Latn": "Kh\u00eat K\u00e2ndal",
+        "name:ru": "\u041a\u0430\u043d\u0434\u0430\u043b\u044c",
+        "name:zh": "\u5e72\u4e39\u7701",
+        "population": "1265085",
+        "type": "boundary",
+        "wikidata": "Q466031",
+        "wikipedia": "de:Kandal"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200278,
+      "tags": {
+        "ISO3166-2": "KH-15",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1796\u17c4\u1792\u17b7\u17cd\u179f\u17b6\u178f\u17cb",
+        "name:en": "Pursat",
+        "name:fr": "Pursat",
+        "name:ja": "\u30dd\u30fc\u30b5\u30c3\u30c8",
+        "name:km-Latn": "Kh\u00eat Po\u016dth\u012ds\u0103t",
+        "name:lt": "Pousato provincija",
+        "name:ru": "\u041f\u043e\u0443\u0441\u0430\u0442",
+        "name:zh": "\u83e9\u8428\u7701",
+        "population": "397107",
+        "source:population": "http://www.stat.go.jp/english/info/meetings/cambodia/pdf/pre_rep1.pdf",
+        "type": "boundary",
+        "wikidata": "Q834464",
+        "wikipedia": "de:Pursat (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200301,
+      "tags": {
+        "ISO3166-2": "KH-16",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u179a\u178f\u1793\u1782\u17b7\u179a\u17b8",
+        "name:de": "Ratanakiri",
+        "name:en": "Ratanakiri",
+        "name:fr": "Rotanah Kiri",
+        "name:ja": "\u30e9\u30bf\u30ca\u30ad\u30ea",
+        "name:km-Latn": "Kh\u00eat R\u00f4t\u00e2n\u00f4kiri",
+        "name:ru": "\u0420\u0430\u0442\u0430\u043d\u0430\u043a\u0438\u0440\u0438",
+        "name:zh": "\u814a\u5854\u7eb3\u57fa\u91cc\u7701",
+        "population": "149997",
+        "type": "boundary",
+        "wikidata": "Q747846",
+        "wikipedia": "de:Ratanakiri"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200303,
+      "tags": {
+        "ISO3166-2": "KH-4",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u1784\u17cb\u1786\u17d2\u1793\u17b6\u17c6\u1784",
+        "name:en": "Kampong Chhnang",
+        "name:fr": "Kompong Chhnang",
+        "name:ja": "\u30b3\u30f3\u30dd\u30f3\u30c1\u30e5\u30ca\u30f3",
+        "name:km-Latn": "Kh\u00eat K\u00e2mp\u00f3ng Chhn\u0103ng",
+        "name:ko": "\uce84\ud401\uce58\ub0ad",
+        "name:lt": "Kampong\u010dnango provincija",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u043d\u0433\u0447\u043d\u0430\u043d\u0433",
+        "name:zh": "\u78c5\u6e05\u626c\u7701",
+        "population": "472616",
+        "type": "boundary",
+        "wikidata": "Q877468",
+        "wikipedia": "de:Kampong Chhnang (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200322,
+      "tags": {
+        "ISO3166-2": "KH-24",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1794\u17c9\u17c3\u179b\u17b7\u1793",
+        "name:en": "Pailin",
+        "name:fr": "Pa\u00eflin",
+        "name:ja": "\u30d1\u30a4\u30ea\u30f3",
+        "name:ru": "\u041f\u0430\u0439\u043b\u0438\u043d",
+        "name:th": "\u0e44\u0e1e\u0e25\u0e34\u0e19",
+        "name:zh": "\u62dc\u6797\u7701",
+        "ref": "24",
+        "type": "boundary",
+        "wikidata": "Q506646",
+        "wikipedia": "de:Pailin (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200390,
+      "tags": {
+        "ISO3166-2": "KH-1",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1794\u1793\u17d2\u1791\u17b6\u1799\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Bantey Meanchey",
+        "name:fr": "Banteay Meanchey",
+        "name:ja": "\u30d0\u30f3\u30c6\u30a4\u30e1\u30f3\u30c1\u30a7\u30a4",
+        "name:km-Latn": "Kh\u00eat B\u00e2nt\u00e9ay M\u00e9anchey",
+        "name:ru": "\u0411\u0430\u043d\u0442\u0435\u0430\u0439\u043c\u0435\u0430\u043d\u0442\u044c\u0435\u0439",
+        "name:zh": "\u73ed\u8fed\u68c9\u5409\u7701",
+        "population": "678033",
+        "type": "boundary",
+        "wikidata": "Q3817",
+        "wikipedia": "de:Banteay Meanchey"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200393,
+      "tags": {
+        "ISO3166-2": "KH-17",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u179f\u17c0\u1798\u179a\u17b6\u1794",
+        "name:en": "Siem Reap",
+        "name:fr": "Siem Reap",
+        "name:ja": "\u30b7\u30a7\u30e0\u30ea\u30a2\u30c3\u30d7",
+        "name:km-Latn": "Kh\u00eat Si\u0115mr\u00e9ab",
+        "name:ko": "\uc2dc\uc5e0\ub9ac",
+        "name:lt": "Siemreapo provincija",
+        "name:ru": "\u0421\u0438\u0435\u043c\u0440\u0435\u0430\u043f",
+        "name:uk": "\u0421\u0456\u0454\u043c\u0440\u0435\u0430\u043f",
+        "name:zh": "\u66b9\u7c92\u7701",
+        "population": "896309",
+        "type": "boundary",
+        "wikidata": "Q652818",
+        "wikipedia": "de:Siem Reap (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200402,
+      "tags": {
+        "ISO3166-2": "KH-22",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u17a7\u178f\u17d2\u178a\u179a\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Oddar Meanchey",
+        "name:fr": "Otdar Meanchey",
+        "name:ja": "\u30a6\u30c9\u30f3\u30e1\u30f3\u30c1\u30a7\u30a4",
+        "name:km-Latn": "Kh\u00eat \u014etd\u00e2r M\u00e9anchey",
+        "name:ru": "\u041e\u0434\u0434\u0430\u0440\u043c\u0435\u0430\u043d\u0442\u044c\u0435\u0439",
+        "name:th": "\u0e2d\u0e38\u0e14\u0e23\u0e21\u0e35\u0e0a\u0e31\u0e22",
+        "name:zh": "\u5965\u591a\u68c9\u5409\u7701",
+        "population": "185443",
+        "type": "boundary",
+        "wikidata": "Q629538",
+        "wikipedia": "de:Oddar Meanchey"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200442,
+      "tags": {
+        "ISO3166-2": "KH-3",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u1784\u17cb\u1785\u17b6\u1798 \uaa06\uaa4c\uaa1a\uaa2e\uaa46\uaa41 \uaa0c\uaa4c",
+        "name:en": "Kampong Cham",
+        "name:fr": "Kompong Cham",
+        "name:ja": "\u30b3\u30f3\u30dd\u30f3\u30c1\u30e3\u30e0",
+        "name:km-Latn": "Kh\u00eat K\u00e2mp\u00f3ng Cham",
+        "name:ko": "\uce84\ud401\ucc38",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u043d\u0433\u0442\u044f\u043c",
+        "name:zh": "\u78c5\u6e5b\u7701",
+        "population": "1680694",
+        "type": "boundary",
+        "wikidata": "Q142258",
+        "wikipedia": "de:Kampong Cham (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200450,
+      "tags": {
+        "ISO3166-2": "KH-11",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1798\u178e\u17d2\u178c\u179b\u1782\u17b7\u179a\u17b8",
+        "name:en": "Mondulkiri",
+        "name:fr": "Mondol Kiri",
+        "name:ja": "\u30e2\u30f3\u30c9\u30eb\u30ad\u30ea",
+        "name:km-Latn": "Kh\u00eat M\u00f4nd\u00f3l Kiri",
+        "name:ru": "\u041c\u043e\u043d\u0434\u043e\u043b\u044c\u043a\u0438\u0440\u0438",
+        "name:zh": "\u8499\u591a\u57fa\u91cc\u7701",
+        "official_name": "Mondul Kiri",
+        "population": "60811",
+        "type": "boundary",
+        "wikidata": "Q652830",
+        "wikipedia": "de:Mondulkiri"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200456,
+      "tags": {
+        "ISO3166-2": "KH-10",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17d2\u179a\u1785\u17c1\u17c7",
+        "name:en": "Kratie",
+        "name:fr": "Krati\u00e9",
+        "name:ja": "\u30af\u30e9\u30c1\u30a8",
+        "name:km-Latn": "Kh\u00eat Kr\u00e2ch\u00e9h",
+        "name:ru": "\u041a\u0440\u0430\u0442\u044c\u044d\u0445",
+        "name:zh": "\u6854\u4e95\u7701",
+        "type": "boundary",
+        "wikidata": "Q785896",
+        "wikipedia": "de:Kratie (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2200477,
+      "tags": {
+        "ISO3166-2": "KH-14",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1796\u17d2\u179a\u17c3\u179c\u17c2\u1784",
+        "name:en": "Prey Veng",
+        "name:fr": "Prey Veng",
+        "name:ja": "\u30d7\u30ec\u30a4\u30d9\u30f3",
+        "name:km-Latn": "Kh\u00eat Prey V\u00eang",
+        "name:ru": "\u041f\u0440\u0435\u0439\u0432\u044d\u043d\u0433",
+        "name:zh": "\u6ce2\u841d\u52c9\u7701",
+        "type": "boundary",
+        "wikidata": "Q856788",
+        "wikipedia": "de:Prey Veng (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2215016,
+      "tags": {
+        "ISO3166-2": "KH-5",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u1784\u17cb\u179f\u17d2\u1796\u17ba",
+        "name:en": "Kampong Speu",
+        "name:fr": "Kompong Speu",
+        "name:ja": "\u30b3\u30f3\u30dd\u30f3\u30b9\u30d7\u30fc",
+        "name:km": "\u1781\u17c1\u178f\u17d2\u178f\u1780\u17c6\u1796\u17bb\u1784\u179f\u17d2\u1796\u17ba",
+        "name:km-Latn": "Kh\u00eat K\u00e2mp\u00f3ng Sp\u0153",
+        "name:ko": "\uce84\ud401\uc2a4\ud398\uc6b0",
+        "name:lt": "Kampongspi provincija",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u043d\u0433\u0441\u043f\u044b",
+        "name:zh": "\u78c5\u58eb\u5351\u7701",
+        "population": "716517",
+        "type": "boundary",
+        "wikidata": "Q652867",
+        "wikipedia": "de:Kampong Speu (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2301441,
+      "tags": {
+        "ISO3166-2": "KH-20",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784",
+        "name:en": "Svay Rieng",
+        "name:fr": "Svay Rieng",
+        "name:ja": "\u30b9\u30f4\u30a1\u30a4\u30ea\u30a8\u30f3",
+        "name:km-Latn": "Kh\u00eat Svay Ri\u0115ng",
+        "name:ru": "\u0421\u0432\u0430\u0439\u0440\u0438\u0435\u043d\u0433",
+        "name:uk": "\u0421\u0432\u0430\u0439\u0440\u0456\u0435\u043d\u0491",
+        "type": "boundary",
+        "wikidata": "Q751864",
+        "wikipedia": "de:Svay Rieng (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 3279394,
+      "tags": {
+        "ISO3166-2": "KH-18",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1796\u17d2\u179a\u17c7\u179f\u17b8\u17a0\u1793\u17bb",
+        "name:en": "Khaet Preah Sihanouk",
+        "name:fr": "Sihanoukville",
+        "name:ja": "\u30b7\u30a2\u30cc\u30fc\u30af\u30d3\u30eb",
+        "name:km": "\u1781\u17c1\u178f\u17d2\u178f\u1796\u17d2\u179a\u17c7\u179f\u17b8\u17a0\u1793\u17bb",
+        "name:ko": "\uc2dc\ud558\ub204\ud06c\ube4c",
+        "name:ru": "\u041f\u0440\u044d\u0430\u0445\u0441\u044d\u0439\u0445\u0430\u043d\u0443\u043a",
+        "name:zh": "\u897f\u54c8\u52aa\u514b\u7701",
+        "type": "boundary",
+        "wikidata": "Q220966",
+        "wikipedia": "km:\u1781\u17c1\u178f\u17d2\u178f\u1796\u17d2\u179a\u17c7\u179f\u17b8\u17a0\u1793\u17bb"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 3714841,
+      "tags": {
+        "ISO3166-2": "KH-25",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u178f\u17d2\u1794\u17bc\u1784\u1783\u17d2\u1798\u17bb\u17c6",
+        "name:en": "Tbong Khmum",
+        "name:fr": "Tbong Khmum",
+        "name:ru": "\u0422\u0431\u043e\u0443\u043d\u0433\u043a\u0445\u043c\u0443\u043c",
+        "name:zh": "\u7279\u672c\u514b\u8499\u7701",
+        "population": "754000",
+        "type": "boundary",
+        "wikidata": "Q15623578",
+        "wikipedia": "de:Tbong Khmum (Provinz)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 6608542,
+      "tags": {
+        "ISO3166-2": "KH-2",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u178f\u17d2\u178f\u1794\u17b6\u178f\u17cb\u178a\u17c6\u1794\u1784",
+        "name:en": "Battambang",
+        "name:fr": "Battambang",
+        "name:ja": "\u30d0\u30bf\u30f3\u30d0\u30f3",
+        "name:km-Latn": "Kh\u00eat B\u0103td\u00e2mb\u00e2ng",
+        "name:ru": "\u0411\u0430\u0442\u0442\u0430\u043c\u0431\u0430\u043d\u0433",
+        "name:th": "\u0e1e\u0e23\u0e30\u0e15\u0e30\u0e1a\u0e2d\u0e07",
+        "name:uk": "\u0411\u0430\u0442\u0442\u0430\u043c\u0431\u0430\u043d\u0433",
+        "name:zh": "\u9a6c\u5fb7\u671b\u7701",
+        "population": "1036523",
+        "type": "boundary",
+        "wikidata": "Q810923",
+        "wikipedia": "km:\u1781\u17c1\u178f\u17d2\u178f\u1794\u17b6\u178f\u17cb\u178a\u17c6\u1794\u1784"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 5846608,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c6\u1796\u1784\u17cb\u179f\u17b8\u179b\u17b6",
+        "name:en": "Kampong Seila",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c6\u1796\u1784\u17cb\u179f\u17b8\u179b\u17b6",
+        "name:ru": "\u041a\u0430\u043c\u043f\u043e\u043d\u0433\u0441\u044d\u0439\u043b\u0435\u0430",
+        "name:zh": "\u585e\u62c9\u533a\u57df",
+        "type": "boundary",
+        "wikidata": "Q4929618",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 5846609,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1796\u17d2\u179a\u17c7\u179f\u17b8\u17a0\u1793\u17bb",
+        "name:en": "Preah Sihanouk Municipality",
+        "name:km": "\u1780\u17d2\u179a\u17bb\u1784\u1796\u17d2\u179a\u17c7\u179f\u17b8\u17a0\u1793\u17bb",
+        "name:ru": "\u041f\u0440\u044d\u0430\u0445\u0441\u044d\u0439\u0445\u0430\u043d\u0443\u043a",
+        "name:zh": "\u897f\u54c8\u52aa\u514b\u5e02",
+        "type": "boundary",
+        "wikidata": "Q6883472",
+        "wikipedia": "km:\u179f\u17d2\u179a\u17bb\u1780\u1798\u17b7\u178f\u17d2\u178f\u1797\u17b6\u1796",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 5846610,
+      "tags": {
+        "admin_level": "6",
+        "alt_name:zh": "\u6ce2\u793c\u52aa\u53bf;\u6cc9\u4ed4\u6e2f",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1793\u1794\u17cb",
+        "name:en": "Prey Nob District",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1793\u1794\u17cb",
+        "name:ru": "\u041f\u0440\u0435\u0439\u043d\u043e\u043f",
+        "name:zh": "\u6ce2\u96f7\u8bfa\u53bf",
+        "type": "boundary",
+        "wikidata": "Q4930264",
+        "wikipedia": "km:\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1793\u1794\u17cb",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 5846611,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u1791\u17b9\u1784\u17a0\u17b6\u179c",
+        "name:en": "Stueng Hav",
+        "name:km": "\u179f\u17d2\u1791\u17b9\u1784\u17a0\u17b6\u179c",
+        "name:ru": "\u0421\u0442\u044b\u043d\u0433\u0445\u0430\u0443",
+        "type": "boundary",
+        "wikidata": "Q4929384",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17022994,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1780\u17c4\u17c7\u179a\u17c9\u17bb\u1784",
+        "name:en": "Koh Rong Municipality",
+        "name:km": "\u1780\u17d2\u179a\u17bb\u1784\u1780\u17c4\u17c7\u179a\u17c9\u17bb\u1784",
+        "name:ru": "\u041a\u0430\u043e\u0445\u0440\u043e\u043d\u0433",
+        "name:zh": "\u9ad8\u9f99\u5e02",
+        "type": "boundary",
+        "wikidata": "Q65426809",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020858,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1780\u17c6\u1796\u1784\u17cb\u179f\u17c4\u1798",
+        "name:en": "Kampong Saom Municipality",
+        "name:km": "\u1780\u17d2\u179a\u17bb\u1784\u1780\u17c6\u1796\u1784\u17cb\u179f\u17c4\u1798",
+        "name:zh": "\u78c5\u900a\u6e2f\u5e02",
+        "type": "boundary",
+        "parent_id": "3279394"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18393163,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1781\u17c1\u1798\u179a\u1797\u17bc\u1798\u17b7\u1793\u17d2\u1791",
+        "name:en": "Khemara Phoumin",
+        "name:uk": "\u041a\u0430\u0445\u043a\u043e\u043d\u0433",
+        "ref": "0904",
+        "type": "boundary",
+        "wikidata": "Q4929536",
+        "parent_id": "2199066"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19357717,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1790\u17d2\u1798\u1794\u17b6\u17c6\u1784",
+        "name:en": "Thma Bang",
+        "ref": "0907",
+        "type": "boundary",
+        "wikidata": "Q4930009",
+        "parent_id": "2199066"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361983,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1794\u1793\u17d2\u1791\u17b6\u1799\u1798\u17b6\u179f",
+        "name:en": "Banteay Meas",
+        "ref": "0702",
+        "type": "boundary",
+        "wikidata": "Q4857204",
+        "parent_id": "2200183"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361984,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1788\u17bc\u1780",
+        "name:en": "Chhuk",
+        "ref": "0703",
+        "type": "boundary",
+        "wikidata": "Q4929144",
+        "parent_id": "2200183"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361985,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u17a2\u1784\u17d2\u1782\u179a\u1787\u17d0\u1799",
+        "name:en": "Angkor Chey",
+        "ref": "0701",
+        "type": "boundary",
+        "wikidata": "Q4763325",
+        "parent_id": "2200183"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361986,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1787\u17bb\u17c6\u1782\u17b7\u179a\u17b8",
+        "name:en": "Chum Kiri",
+        "ref": "0704",
+        "type": "boundary",
+        "wikidata": "Q4929362",
+        "parent_id": "2200183"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379820,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17b6\u179b\u17c4\u179f\u17c2\u1793\u1787\u17d0\u1799",
+        "name:en": "Ta Lou Senchey",
+        "ref": "1507",
+        "start_date": "2019-01-08",
+        "type": "boundary",
+        "wikidata": "Q65427309",
+        "parent_id": "2200278"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379847,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1796\u17c4\u1792\u17b7\u17cd\u179f\u17b6\u178f\u17cb",
+        "name:en": "Pursat",
+        "name:th": "\u0e42\u0e1e\u0e18\u0e34\u0e2a\u0e31\u0e15\u0e27\u0e4c",
+        "ref": "1505",
+        "type": "boundary",
+        "wikidata": "Q4929515",
+        "parent_id": "2200278"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18393121,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179c\u17b6\u179b\u179c\u17c2\u1784",
+        "name:en": "Veal Veaeng",
+        "ref": "1506",
+        "type": "boundary",
+        "wikidata": "Q4929351",
+        "parent_id": "2200278"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19357617,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1797\u17d2\u1793\u17c6\u1780\u17d2\u179a\u179c\u17c9\u17b6\u1789",
+        "name:en": "Phnum Kravanh",
+        "ref": "1504",
+        "type": "boundary",
+        "wikidata": "Q4929393",
+        "parent_id": "2200278"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233280,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17d2\u179a\u17b8\u179f\u17d2\u1793\u17c6",
+        "name:en": "Srei Snam District",
+        "ref": "1712",
+        "type": "boundary",
+        "wikidata": "Q4929593",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233281,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17d2\u179a\u17a1\u17b6\u1789\u17cb",
+        "name:en": "Kralanh District",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17d2\u179a\u17a1\u17b6\u1789\u17cb",
+        "name:ru": "\u041a\u0440\u0430\u043b\u0430\u043d\u044c",
+        "ref": "1706",
+        "type": "boundary",
+        "wikidata": "Q1883697",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233282,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17bd\u1780",
+        "name:en": "Puok District",
+        "ref": "1707",
+        "type": "boundary",
+        "wikidata": "Q1883685",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233283,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u179f\u17c0\u1798\u179a\u17b6\u1794",
+        "name:en": "Siem Reap Municipality",
+        "name:km": "\u1780\u17d2\u179a\u17bb\u1784\u179f\u17c0\u1798\u179a\u17b6\u1794",
+        "name:ru": "\u0421\u0438\u0435\u043c\u0440\u0435\u0430\u043f",
+        "ref": "1710",
+        "type": "boundary",
+        "wikidata": "Q4929292",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233337,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17bc\u1791\u17d2\u179a\u1793\u17b7\u1782\u1798",
+        "name:en": "Soutr Nikom District",
+        "name:zh": "\u7d22\u5c3c\u8d21\u53bf",
+        "ref": "1711",
+        "type": "boundary",
+        "wikidata": "Q4929573",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233338,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17d2\u179a\u17b6\u179f\u17b6\u1791\u1794\u17b6\u1782\u1784",
+        "name:en": "Prasat Bakong District",
+        "ref": "1709",
+        "type": "boundary",
+        "wikidata": "Q4929377",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233339,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u1793\u17d2\u1791\u17b6\u1799\u179f\u17d2\u179a\u17b8",
+        "name:en": "Banteay Srei District",
+        "name:ru": "\u0411\u0430\u043d\u0442\u0435\u0430\u0439\u0441\u0440\u044d\u0439",
+        "ref": "1703",
+        "type": "boundary",
+        "wikidata": "Q4857206",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233340,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179c\u17c9\u17b6\u179a\u17b7\u1793",
+        "name:en": "Varin District",
+        "ref": "1714",
+        "type": "boundary",
+        "wikidata": "Q4930239",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233341,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u17a2\u1784\u17d2\u1782\u179a\u1787\u17bb\u17c6",
+        "name:en": "Angkor Chum District",
+        "ref": "1701",
+        "type": "boundary",
+        "wikidata": "Q1883711",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233348,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17d2\u179c\u17b6\u1799\u179b\u17be",
+        "name:en": "Svay Leu District",
+        "ref": "1713",
+        "type": "boundary",
+        "wikidata": "Q4930061",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233349,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1787\u17b8\u1780\u17d2\u179a\u17c2\u1784",
+        "name:en": "Chi Kraeng District",
+        "name:zh": "\u829d\u683c\u695e\u53bf",
+        "ref": "1704",
+        "type": "boundary",
+        "wikidata": "Q1883705",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13233358,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u17a2\u1784\u17d2\u1782\u179a\u1792\u17c6",
+        "name:en": "Angkor Thum District",
+        "name:ru": "\u0410\u043d\u0433\u043a\u043e\u0442\u0445\u043e\u043c",
+        "ref": "1702",
+        "type": "boundary",
+        "wikidata": "Q4763330",
+        "parent_id": "2200393"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587063,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u179a\u179f\u17c1\u178a\u17d2\u178b",
+        "name:en": "Borsedth",
+        "type": "boundary",
+        "wikidata": "Q4866644",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587083,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u17a7\u178a\u17bb\u1784\u17d2\u1782\u1798\u17c9\u17c2\u1787\u17d0\u1799",
+        "name:en": "Odongk Maechay Municipality",
+        "ref": "0509",
+        "start_date": "2022-12-23",
+        "type": "boundary",
+        "wikidata": "Q4929250",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587298,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1782\u1784\u1796\u17b7\u179f\u17b8",
+        "name:en": "Kong Pisei",
+        "type": "boundary",
+        "wikidata": "Q4929012",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587333,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17c6\u179a\u17c4\u1784\u1791\u1784",
+        "name:en": "Samraong Tong",
+        "type": "boundary",
+        "wikidata": "Q4929551",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587380,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u17b1\u179a\u17c9\u17b6\u179b\u17cb",
+        "name:en": "Aoral",
+        "type": "boundary",
+        "wikidata": "Q4778738",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587381,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1797\u17d2\u1793\u17c6\u179f\u17d2\u179a\u17bd\u1785",
+        "name:en": "Phnum Sruoch",
+        "name:zh": "\u666e\u519c\u65af\u7f57\u53bf",
+        "type": "boundary",
+        "wikidata": "Q4929201",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9587408,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1790\u17d2\u1796\u1784",
+        "name:en": "Thpong",
+        "type": "boundary",
+        "wikidata": "Q4929091",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9600344,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1785\u17d2\u1794\u17b6\u179a\u1798\u1793",
+        "name:en": "Chbar Mon City",
+        "type": "boundary",
+        "wikidata": "Q5088735",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18380030,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17b6\u1798\u1782\u17d2\u1782\u17b8\u1798\u17bb\u1793\u17b8\u1787\u17d0\u1799",
+        "name:en": "Samkkei Munichay District",
+        "ref": "0510",
+        "start_date": "2022-12-23",
+        "type": "boundary",
+        "parent_id": "2215016"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738764,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u179c\u17c1\u179b",
+        "name:en": "Bavel",
+        "ref": "0204",
+        "type": "boundary",
+        "wikidata": "Q4873692",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738765,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u179a\u17c0\u1784",
+        "name:en": "Kamrieng",
+        "ref": "0212",
+        "type": "boundary",
+        "wikidata": "Q10776159",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738766,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1797\u17d2\u1793\u17c6\u1796\u17d2\u179a\u17b9\u1780",
+        "name:en": "Phnum Proek",
+        "ref": "0211",
+        "type": "boundary",
+        "wikidata": "Q7186590",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738767,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c6\u1796\u17c5\u179b\u17bc\u1793",
+        "name:en": "Sampov Lun",
+        "ref": "0210",
+        "type": "boundary",
+        "wikidata": "Q10812380",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738941,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u178f\u1793\u1798\u178e\u17d2\u178c\u179b",
+        "name:en": "Rotonak Mondol",
+        "name:zh": "\u62c9\u8fbe\u7eb3\u8499\u591a\u53bf",
+        "ref": "0207",
+        "type": "boundary",
+        "wikidata": "Q4929543",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738942,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u17b6\u178e\u1793\u17cb",
+        "name:en": "Banan",
+        "ref": "0201",
+        "type": "boundary",
+        "wikidata": "Q4853813",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14738943,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1794\u17b6\u178f\u17cb\u178a\u17c6\u1794\u1784",
+        "name:en": "Battambang",
+        "ref": "0203",
+        "type": "boundary",
+        "wikidata": "Q4869685",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14741066,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1790\u17d2\u1798\u1782\u17c4\u179b",
+        "name:en": "Thma Koul",
+        "ref": "0202",
+        "type": "boundary",
+        "wikidata": "Q4930610",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14748409,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u17bb\u1780\u17d2\u1781\u1782\u17b7\u179a\u17b8",
+        "name:en": "Rukh Kiri",
+        "type": "boundary",
+        "wikidata": "Q25054603",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17613568,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1782\u17b6\u179f\u17cb\u1780\u17d2\u179a\u17a1",
+        "name:en": "Koas Krala",
+        "ref": "0213",
+        "type": "boundary",
+        "wikidata": "Q6424230",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17613569,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c6\u17a1\u17bc\u178f",
+        "name:en": "Samlout",
+        "ref": "0209",
+        "type": "boundary",
+        "wikidata": "Q1385818",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19355104,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1798\u17c4\u1784\u17ab\u179f\u17d2\u179f\u17b8",
+        "name:en": "Moung Ruessei",
+        "ref": "0206",
+        "type": "boundary",
+        "wikidata": "Q4928976",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19355105,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17c2",
+        "name:en": "Sangkae",
+        "ref": "0208",
+        "type": "boundary",
+        "wikidata": "Q4929439",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19355106,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17af\u1780\u1797\u17d2\u1793\u17c6",
+        "name:en": "Aek Phnum",
+        "ref": "0205",
+        "type": "boundary",
+        "wikidata": "Q4930600",
+        "parent_id": "6608542"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14741082,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1794\u17c9\u17c3\u179b\u17b7\u1793",
+        "name:en": "Pailin",
+        "ref": "2401",
+        "type": "boundary",
+        "wikidata": "Q7124773",
+        "parent_id": "2200322"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 14741083,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17b6\u179b\u17b6\u1780\u17d2\u179a\u17c5",
+        "name:en": "Sala Krau",
+        "ref": "2402",
+        "type": "boundary",
+        "wikidata": "Q7403327",
+        "parent_id": "2200322"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404655,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1780\u17c2\u1794",
+        "name:en": "Kep Municipality",
+        "ref": "1403",
+        "type": "boundary",
+        "wikidata": "Q4929343",
+        "parent_id": "2200024"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404656,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u178a\u17c6\u178e\u17b6\u1780\u17cb\u1785\u1784\u17d2\u17a2\u17be\u179a",
+        "name:en": "Damnak Chang'aeur District",
+        "ref": "1403",
+        "type": "boundary",
+        "wikidata": "Q4929343",
+        "parent_id": "2200024"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379942,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u178f\u17b6\u17c6\u1784\u1782\u17c4\u1780",
+        "name:en": "Taing Kouk District",
+        "ref": "0609",
+        "type": "boundary",
+        "wikidata": "Q65427311",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379943,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17b6\u179a\u17b6\u1799\u178e\u17cd",
+        "name:en": "Baray District",
+        "ref": "0601",
+        "type": "boundary",
+        "wikidata": "Q4858526",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361168,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u178e\u17d2\u178a\u17b6\u1793\u17cb",
+        "name:en": "Sandan District",
+        "ref": "0606",
+        "type": "boundary",
+        "wikidata": "Q7415936",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361185,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u179f\u17d2\u1791\u17b9\u1784\u179f\u17c2\u1793",
+        "name:en": "Stueng Saen Municipality",
+        "ref": "0603",
+        "type": "boundary",
+        "wikidata": "Q4930194",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361186,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u1793\u17d2\u1791\u17bb\u1780",
+        "name:en": "Santuk District",
+        "ref": "0607",
+        "type": "boundary",
+        "wikidata": "Q4930664",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361199,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17d2\u179a\u17b6\u179f\u17b6\u1791\u1794\u179b\u17d2\u179b\u17d0\u1784\u17d2\u1782",
+        "name:en": "Prasat Ballangk District",
+        "ref": "0604",
+        "type": "boundary",
+        "wikidata": "Q4930202",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19361200,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17d2\u179a\u17b6\u179f\u17b6\u1791\u179f\u17c6\u1794\u17bc\u179a",
+        "name:en": "Prasat Sambour District",
+        "ref": "0605",
+        "type": "boundary",
+        "wikidata": "Q4930593",
+        "parent_id": "2198944"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171685,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17d2\u17a2\u17b6\u1784",
+        "name:en": "S'ang District",
+        "type": "boundary",
+        "wikidata": "Q7387018",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171686,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u178e\u17d2\u178a\u17b6\u179b\u179f\u17d2\u1791\u17b9\u1784",
+        "name:en": "Kandal Stueng District",
+        "name:ru": "\u041a\u0430\u043d\u0434\u0430\u043b\u044c\u0441\u0442\u044b\u043d\u0433",
+        "name:zh": "\u5e72\u4e39\u65af\u767b\u53bf",
+        "type": "boundary",
+        "wikidata": "Q6361246",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171687,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u178f\u17b6\u1781\u17d2\u1798\u17c5",
+        "name:en": "Krong Ta Khmau",
+        "type": "boundary",
+        "wikidata": "Q1948407",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171688,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c4\u17c7\u1792\u17c6",
+        "name:en": "Kaoh Thum District",
+        "type": "boundary",
+        "wikidata": "Q6425870",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171689,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179b\u17be\u1780\u178a\u17c2\u1780",
+        "name:en": "Leuk Daek District",
+        "type": "boundary",
+        "wikidata": "Q4930358",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171690,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c0\u1793\u179f\u17d2\u179c\u17b6\u1799",
+        "name:en": "Kien Svay District",
+        "type": "boundary",
+        "wikidata": "Q4886889",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171691,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179b\u17d2\u179c\u17b6\u17af\u1798",
+        "name:en": "Lvea Aem District",
+        "name:zh": "\u52d2\u7ef4\u6069\u53bf",
+        "type": "boundary",
+        "wikidata": "Q4930020",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171692,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1781\u17d2\u179f\u17b6\u1785\u17cb\u1780\u178e\u17d2\u178a\u17b6\u179b",
+        "name:en": "Khsach Kandal District",
+        "type": "boundary",
+        "wikidata": "Q4930148",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171693,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1798\u17bb\u1781\u1780\u17c6\u1796\u17bc\u179b",
+        "name:en": "Mukh Kampul District",
+        "type": "boundary",
+        "wikidata": "Q4930627",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171694,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u1789\u17b6\u17ae",
+        "name:en": "Ponhea Lueu District",
+        "type": "boundary",
+        "wikidata": "Q4930646",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11171695,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u17a2\u1784\u17d2\u1782\u179f\u17d2\u1793\u17bd\u179b",
+        "name:en": "Angk Snuol District",
+        "name:zh": "\u6602\u65af\u8bfa\u53bf",
+        "type": "boundary",
+        "wikidata": "Q4763307",
+        "parent_id": "2200251"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358166,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17b6\u1798\u1782\u17d2\u1782\u17b8\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Sameakki Mean Chey",
+        "ref": "0407",
+        "type": "boundary",
+        "wikidata": "Q7409232",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358219,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1787\u179b\u1782\u17b8\u179a\u17b8",
+        "name:en": "Chol Kiri",
+        "ref": "0402",
+        "type": "boundary",
+        "wikidata": "Q4930069",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358220,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u1796\u1784\u17cb\u178f\u17d2\u179a\u17a1\u17b6\u1785",
+        "name:en": "Kampong Tralach",
+        "ref": "0405",
+        "type": "boundary",
+        "wikidata": "Q1385857",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358221,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u1796\u1784\u17cb\u1786\u17d2\u1793\u17b6\u17c6\u1784",
+        "name:en": "Kampong Chhnang",
+        "ref": "0403",
+        "type": "boundary",
+        "wikidata": "Q6359291",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358222,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u179b\u17b6\u1794\u17d2\u17a2\u17c0\u179a",
+        "name:en": "Rolea B'ier",
+        "ref": "0406",
+        "type": "boundary",
+        "wikidata": "Q4929609",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19358240,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1791\u17b9\u1780\u1795\u17bb\u179f",
+        "name:en": "Tuek Phos",
+        "ref": "0408",
+        "type": "boundary",
+        "wikidata": "Q4930078",
+        "parent_id": "2200303"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351383,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17b8\u179f\u1793\u17d2\u1792\u179a",
+        "name:en": "Srei Santhor",
+        "ref": "0314",
+        "type": "boundary",
+        "wikidata": "Q1883937",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351384,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c4\u17c7\u179f\u17bc\u1791\u17b7\u1793",
+        "name:en": "Kaoh Soutin",
+        "ref": "0308",
+        "type": "boundary",
+        "wikidata": "Q4930676",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351385,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u1796\u1784\u17cb\u179f\u17c0\u1798",
+        "name:en": "Kampong Siem",
+        "ref": "0306",
+        "type": "boundary",
+        "wikidata": "Q4930039",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351386,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u1796\u1784\u17cb\u1785\u17b6\u1798",
+        "name:en": "Kampong Cham",
+        "ref": "0305",
+        "type": "boundary",
+        "wikidata": "Q2508561",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351400,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u17b6\u1792\u17b6\u1799",
+        "name:en": "Batheay",
+        "ref": "0301",
+        "type": "boundary",
+        "wikidata": "Q4869002",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351401,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u1784\u1798\u17b6\u179f",
+        "name:en": "Kang Meas",
+        "ref": "0307",
+        "type": "boundary",
+        "wikidata": "Q6362249",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351425,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u1791\u17b9\u1784\u178f\u17d2\u179a\u1784\u17cb",
+        "name:en": "Stueng Trang",
+        "ref": "0315",
+        "type": "boundary",
+        "wikidata": "Q4929112",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351426,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1785\u17c6\u1780\u17b6\u179a\u179b\u17be",
+        "name:en": "Chamkar Leu",
+        "ref": "0302",
+        "type": "boundary",
+        "wikidata": "Q4930163",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351427,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1796\u17d2\u179a\u17c3\u1788\u179a",
+        "name:en": "Prey Chhor",
+        "ref": "0313",
+        "type": "boundary",
+        "wikidata": "Q4929127",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19351428,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1787\u17be\u1784\u1796\u17d2\u179a\u17c3",
+        "name:en": "Cheung Prey",
+        "ref": "0303",
+        "type": "boundary",
+        "wikidata": "Q4930086",
+        "parent_id": "2200442"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17609918,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17c2\u1793\u1798\u1793\u17c4\u179a\u1798\u17d2\u1799",
+        "name:en": "Saen Monourom",
+        "ref": "1105",
+        "type": "boundary",
+        "wikidata": "Q4929483",
+        "parent_id": "2200450"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17609965,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u179a\u17b6\u17c6\u1784",
+        "name:en": "Ou Reang",
+        "ref": "1103",
+        "type": "boundary",
+        "wikidata": "Q4929265",
+        "parent_id": "2200450"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17609978,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c2\u179c\u179f\u17b8\u1798\u17b6",
+        "name:en": "Kaev Seima",
+        "ref": "1101",
+        "type": "boundary",
+        "wikidata": "Q6346045",
+        "parent_id": "2200450"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17610883,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c4\u17c7\u1789\u17c2\u1780",
+        "name:en": "Kaoh Nheaek",
+        "name:zh": "\u6208\u6d85\u53bf",
+        "ref": "1102",
+        "type": "boundary",
+        "wikidata": "Q4929526",
+        "parent_id": "2200450"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17610884,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1796\u17c1\u1787\u17d2\u179a\u17b6\u178a\u17b6",
+        "name:en": "Pech Chreada",
+        "ref": "1104",
+        "type": "boundary",
+        "wikidata": "Q7158696",
+        "parent_id": "2200450"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375585,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u1785\u17c1\u17c7",
+        "name:en": "Kracheh",
+        "ref": "1002",
+        "type": "boundary",
+        "wikidata": "Q4929457",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19338712,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c6\u1794\u17bc\u179a",
+        "name:en": "Sambour",
+        "ref": "1004",
+        "type": "boundary",
+        "wikidata": "Q4929336",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19338905,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1796\u17d2\u179a\u17c2\u1780\u1794\u17d2\u179a\u179f\u1796\u17d2\u179c",
+        "name:en": "Prek Prasab",
+        "ref": "1003",
+        "type": "boundary",
+        "wikidata": "Q4929478",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19338917,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1785\u17b7\u178f\u17d2\u179a\u1794\u17bb\u179a\u17b8",
+        "name:en": "Chetr Borei",
+        "ref": "1006",
+        "type": "boundary",
+        "wikidata": "Q25054606",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19338928,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u1782\u17d2\u179a\u17c0\u1784\u179f\u17c2\u1793\u1787\u17d0\u1799",
+        "name:en": "Ou Krieng Saenchey",
+        "ref": "1007",
+        "start_date": "2022-12-23",
+        "type": "boundary",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19349130,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u1793\u17bd\u179b",
+        "name:en": "Snuol",
+        "ref": "1005",
+        "type": "boundary",
+        "wikidata": "Q4929275",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19349131,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1786\u17d2\u179b\u17bc\u1784",
+        "name:en": "Chhloung",
+        "ref": "1001",
+        "type": "boundary",
+        "wikidata": "Q4929582",
+        "parent_id": "2200456"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19247374,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1798\u17c1\u1798\u178f\u17cb",
+        "name:en": "Memot",
+        "ref": "2503",
+        "type": "boundary",
+        "wikidata": "Q2221903",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19247438,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17d2\u1794\u17bc\u1784\u1783\u17d2\u1798\u17bb\u17c6",
+        "name:en": "Tboung Khmum",
+        "ref": "2507",
+        "type": "boundary",
+        "wikidata": "Q4929056",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19247439,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17bd\u1784",
+        "name:en": "Suong",
+        "ref": "2506",
+        "type": "boundary",
+        "wikidata": "Q25230430",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346634,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bc\u1785\u1786\u17d2\u1798\u17b6\u179a",
+        "name:en": "Krouch Chhmar",
+        "ref": "2502",
+        "type": "boundary",
+        "wikidata": "Q4930636",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346635,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17c6\u1794\u17c2\u179a",
+        "name:en": "Dambae",
+        "ref": "2501",
+        "type": "boundary",
+        "wikidata": "Q5212074",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346636,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1796\u1789\u17b6\u1780\u17d2\u179a\u17c2\u1780",
+        "name:en": "Ponhea Kraek",
+        "ref": "2505",
+        "type": "boundary",
+        "wikidata": "Q4929166",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346637,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u179a\u17b6\u17c6\u1784\u17aa",
+        "name:en": "Ou Reang Ov",
+        "ref": "2504",
+        "type": "boundary",
+        "wikidata": "Q4930654",
+        "parent_id": "3714841"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17024571,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u17a2\u1784\u17d2\u1782\u179a\u1794\u17bb\u179a\u17b8",
+        "name:en": "Angkor Borei District",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u17a2\u1784\u17d2\u1782\u179a\u1794\u17bb\u179a\u17b8",
+        "name:ru": "\u0410\u043d\u0433\u043a\u043e\u0431\u043e\u0440\u0438",
+        "population": "40860",
+        "population:date": "2019",
+        "ref": "2101",
+        "source:population": "NIS 2019",
+        "type": "boundary",
+        "wikidata": "Q4763323",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17024666,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1780\u1794\u17d2\u1794\u17b6\u179f",
+        "name:en": "Prey Kabbas District",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1780\u1794\u17d2\u1794\u17b6\u179f",
+        "name:ru": "\u041f\u0440\u0435\u0439\u043a\u0430\u0431\u0431\u0430\u0445",
+        "population": "98121",
+        "population:date": "2019",
+        "ref": "2106",
+        "source:population": "NIS 2019",
+        "type": "boundary",
+        "wikidata": "Q4929404",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17036524,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17b6\u1791\u17b8",
+        "name:en": "Bati District",
+        "name:km": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17b6\u1791\u17b8",
+        "name:ru": "\u0411\u0430\u0442\u0438",
+        "population": "158400",
+        "population:date": "2019",
+        "ref": "2102",
+        "source:population": "NIS 2019",
+        "type": "boundary",
+        "wikidata": "Q4869028",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547386,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17c6\u179a\u17c4\u1784",
+        "name:en": "Samraong District",
+        "ref": "2107",
+        "type": "boundary",
+        "wikidata": "Q4930385",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547426,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1791\u17d2\u179a\u17b6\u17c6\u1784",
+        "name:en": "Treang District",
+        "ref": "2110",
+        "type": "boundary",
+        "wikidata": "Q4929468",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547427,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u178f\u17d2\u179a\u17b6\u17c6\u1780\u1780\u17cb",
+        "name:en": "Tram Kak District",
+        "ref": "2109",
+        "type": "boundary",
+        "wikidata": "Q4929370",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547428,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u178a\u17bc\u1793\u1780\u17c2\u179c",
+        "name:en": "Doun Kaev Municipality",
+        "ref": "2108",
+        "type": "boundary",
+        "wikidata": "Q4929284",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547440,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17bc\u179a\u17b8\u1787\u179b\u179f\u17b6\u179a",
+        "name:en": "Borei Cholsar District",
+        "ref": "2103",
+        "type": "boundary",
+        "wikidata": "Q4950138",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547452,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1782\u17b8\u179a\u17b8\u179c\u1784\u17cb",
+        "name:en": "Kiri Vong District",
+        "ref": "2104",
+        "type": "boundary",
+        "wikidata": "Q4930130",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18547453,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c4\u17c7\u17a2\u178e\u17d2\u178a\u17c2\u178f",
+        "name:en": "Kaoh Andaet District",
+        "ref": "2105",
+        "type": "boundary",
+        "wikidata": "Q4929064",
+        "parent_id": "2200220"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375914,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1780\u17d2\u179a\u17bb\u1784\u1796\u17d2\u179a\u17c3\u179c\u17c2\u1784",
+        "name:en": "Prey Veng Municipality",
+        "ref": "1410",
+        "type": "boundary",
+        "wikidata": "Q4930093",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375925,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17b6\u1798\u179a\u1780\u17cd",
+        "name:en": "Peam Ro District",
+        "ref": "1407",
+        "type": "boundary",
+        "wikidata": "Q7157916",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375939,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1794\u17b6\u1797\u17d2\u1793\u17c6",
+        "name:en": "Ba Phnum District",
+        "ref": "1401",
+        "type": "boundary",
+        "wikidata": "Q4837067",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375968,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1798\u17c1\u179f\u17b6\u1784",
+        "name:en": "Me Sang District",
+        "ref": "1405",
+        "type": "boundary",
+        "wikidata": "Q4929602",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18393455,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c6\u1796\u1784\u17cb\u178f\u17d2\u179a\u1794\u17c2\u1780",
+        "name:en": "Kampong Trabaek District",
+        "ref": "1403",
+        "type": "boundary",
+        "wikidata": "Q4929343",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18393456,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c7\u179f\u17d2\u178a\u17c1\u1785",
+        "name:en": "Preah Sdach District",
+        "ref": "1409",
+        "type": "boundary",
+        "wikidata": "Q4930046",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18393457,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17b6\u1798\u1787\u179a",
+        "name:en": "Peam Chor District",
+        "ref": "1406",
+        "type": "boundary",
+        "wikidata": "Q4929420",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346844,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17b6\u179a\u17b6\u17c6\u1784",
+        "name:en": "Pea Reang District",
+        "ref": "1408",
+        "type": "boundary",
+        "wikidata": "Q4930230",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346845,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1796\u17c4\u1792\u17b7\u17cd\u179a\u17c0\u1784",
+        "name:en": "Pur Rieng District",
+        "ref": "1411",
+        "type": "boundary",
+        "wikidata": "Q4930117",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346846,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17d2\u179c\u17b6\u1799\u17a2\u1793\u17d2\u1791\u179a",
+        "name:en": "Svay Antor District",
+        "ref": "1413",
+        "type": "boundary",
+        "wikidata": "Q14847064",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346847,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u17c6\u1785\u17b6\u1799\u1798\u17b6\u179a",
+        "name:en": "Kamchay Mear District",
+        "ref": "1402",
+        "type": "boundary",
+        "wikidata": "Q4929411",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346848,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u1780\u1789\u17d2\u1787\u17d2\u179a\u17c0\u1785",
+        "name:en": "Kanhchriech District",
+        "ref": "1404",
+        "type": "boundary",
+        "wikidata": "Q4929327",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19346849,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179a\u17bb\u1780\u179f\u17ca\u17b8\u1792\u179a\u1780\u178e\u17d2\u178a\u17b6\u179b",
+        "name:en": "Sithor Kandal District",
+        "ref": "1412",
+        "type": "boundary",
+        "wikidata": "Q4930028",
+        "parent_id": "2200477"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375893,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17c6\u1796\u1784\u17cb\u179a\u17c4\u1791\u17b7\u17cd",
+        "name:en": "Kampong Rou",
+        "ref": "2002",
+        "type": "boundary",
+        "wikidata": "Q8011114",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375894,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1785\u1793\u17d2\u1791\u17d2\u179a\u17b6",
+        "name:en": "Chantrea",
+        "ref": "2001",
+        "type": "boundary",
+        "wikidata": "Q4929220",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375895,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1794\u17b6\u179c\u17b7\u178f",
+        "name:en": "Bavet",
+        "ref": "2008",
+        "type": "boundary",
+        "wikidata": "Q1385809",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375896,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u1791\u17b6\u1794",
+        "name:en": "Svay Teab",
+        "ref": "2007",
+        "type": "boundary",
+        "wikidata": "Q4929310",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375897,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u17c6\u178a\u17bd\u179b",
+        "name:en": "Rumduol",
+        "ref": "2003",
+        "type": "boundary",
+        "wikidata": "Q4929230",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375898,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u1787\u17d2\u179a\u17c6",
+        "name:en": "Svay Chrum",
+        "ref": "2005",
+        "type": "boundary",
+        "wikidata": "Q4928995",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375899,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u1798\u17b6\u179f\u17a0\u17c2\u1780",
+        "name:en": "Romeas Haek",
+        "ref": "2004",
+        "type": "boundary",
+        "wikidata": "Q4929102",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375900,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784",
+        "name:en": "Svay Rieng",
+        "ref": "2006",
+        "type": "boundary",
+        "wikidata": "Q4929043",
+        "parent_id": "2301441"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259496,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "\u17e7\u1798\u1780\u179a\u17b6",
+        "alt_name:en": "Khan Prampi Makara;7 Makara;Khan 7 Makara",
+        "alt_name:zh-Hans": "\u9a6c\u5361\u62c9\u533a",
+        "boundary": "administrative",
+        "name": "\u1794\u17d2\u179a\u17b6\u17c6\u1796\u17b8\u179a\u1798\u1780\u179a\u17b6",
+        "name:en": "Khan Prampir Makara",
+        "official_name": "\u1781\u178e\u17d2\u178c\u1794\u17d2\u179a\u17b6\u17c6\u1796\u17b8\u179a\u1798\u1780\u179a\u17b6",
+        "type": "boundary",
+        "wikidata": "Q7238280",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259497,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1785\u17c6\u1780\u17b6\u179a\u1798\u1793",
+        "name:en": "Khan Chamkar Mon",
+        "type": "boundary",
+        "wikidata": "Q5069819",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259498,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u178a\u1784\u17d2\u1780\u17c4",
+        "name:en": "Khan Dangkao",
+        "type": "boundary",
+        "wikidata": "Q5216178",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259499,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u178a\u17bc\u1793\u1796\u17c1\u1789",
+        "name:en": "Khan Daun Penh",
+        "type": "boundary",
+        "wikidata": "Q5228039",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259500,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Khan Mean Chey",
+        "type": "boundary",
+        "wikidata": "Q6803675",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259502,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u17ab\u179f\u17d2\u179f\u17b8\u1780\u17c2\u179c",
+        "name:en": "Khan Russey Keo",
+        "type": "boundary",
+        "wikidata": "Q7381269",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259503,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u179f\u17c2\u1793\u179f\u17bb\u1781",
+        "name:en": "Khan Sen Sok",
+        "type": "boundary",
+        "wikidata": "Q7449896",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 2259504,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Tuol Kok",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1791\u17bd\u179b\u1782\u17c4\u1780",
+        "name:en": "Khan Toul Kork",
+        "type": "boundary",
+        "wikidata": "Q1884077",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 6076126,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1785\u17d2\u1794\u17b6\u179a\u17a2\u17c6\u1796\u17c5",
+        "name:en": "Khan Chbar Ampov",
+        "type": "boundary",
+        "wikidata": "Q19684572",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 6076129,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1787\u17d2\u179a\u17c4\u1799\u1785\u1784\u17d2\u179c\u17b6\u179a",
+        "name:en": "Khan Chroy Changvar",
+        "name:zh": "\u6c34\u51c0\u534e\u533a",
+        "type": "boundary",
+        "wikidata": "Q5114302",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9590423,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1796\u17c4\u1792\u17b7\u17cd\u179f\u17c2\u1793\u1787\u17d0\u1799",
+        "name:en": "Khan Pou Senchey",
+        "type": "boundary",
+        "wikidata": "Q14847076",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11165697,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1796\u17d2\u179a\u17c2\u1780\u1796\u17d2\u1793\u17c5",
+        "name:en": "Khan Prek Pnov",
+        "type": "boundary",
+        "wikidata": "Q19684570",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11165749,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u1781\u178e\u17d2\u178c\u1794\u17b9\u1784\u1780\u17c1\u1784\u1780\u1784",
+        "name:en": "Khan Boeng Keng Kang",
+        "type": "boundary",
+        "wikidata": "Q65426819",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 11166794,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "is_in": "Phnom Penh",
+        "name": "\u1781\u178e\u17d2\u178c\u1780\u17c6\u1794\u17bc\u179b",
+        "name:en": "Khan Kamboul",
+        "type": "boundary",
+        "wikidata": "Q65426818",
+        "parent_id": "2199033"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374625,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1798\u17c9\u17b6\u17a1\u17c3",
+        "name:en": "Malai",
+        "ref": "0109",
+        "type": "boundary",
+        "wikidata": "Q4929080",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374714,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1794\u17c9\u17c4\u1799\u1794\u17c9\u17c2\u178f",
+        "name:en": "Paoy Paet",
+        "ref": "0110",
+        "type": "boundary",
+        "wikidata": "Q27220329",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374781,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u1787\u17d2\u179a\u17c5",
+        "name:en": "Ou Chrov",
+        "ref": "0105",
+        "type": "boundary",
+        "wikidata": "Q4929257",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374815,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17b7\u179a\u17b8\u179f\u17c4\u1797\u17d0\u178e",
+        "name:en": "Serei Saophoan",
+        "ref": "0106",
+        "type": "boundary",
+        "wikidata": "Q4929174",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374860,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u1785\u17c1\u1780",
+        "name:en": "Svay Chek",
+        "ref": "0108",
+        "type": "boundary",
+        "wikidata": "Q4929021",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374867,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1790\u17d2\u1798\u1796\u17bd\u1780",
+        "name:en": "Thma Puok",
+        "ref": "0107",
+        "type": "boundary",
+        "wikidata": "Q1385830",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374874,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1797\u17d2\u1793\u17c6\u179f\u17d2\u179a\u17bb\u1780",
+        "name:en": "Phnum Srok",
+        "ref": "0103",
+        "type": "boundary",
+        "wikidata": "Q3306393",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374907,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1798\u1784\u17d2\u1782\u179b\u1794\u17bc\u179a\u17b8",
+        "name:en": "Mongkol Borei",
+        "ref": "0102",
+        "type": "boundary",
+        "wikidata": "Q1945748",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374908,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1796\u17d2\u179a\u17c7\u1793\u17c1\u178f\u17d2\u179a\u1796\u17d2\u179a\u17c7",
+        "name:en": "Preah Netr Preah",
+        "ref": "0104",
+        "type": "boundary",
+        "wikidata": "Q1385840",
+        "parent_id": "2200390"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375746,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17d2\u179a\u1796\u17b6\u17c6\u1784\u1794\u17d2\u179a\u17b6\u179f\u17b6\u1791",
+        "name:en": "Trapeang Prasat",
+        "ref": "2205",
+        "type": "boundary",
+        "wikidata": "Q4930139",
+        "parent_id": "2200402"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375747,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u1793\u17d2\u179b\u1784\u17cb\u179c\u17c2\u1784",
+        "name:en": "Anlong Veaeng",
+        "ref": "2201",
+        "type": "boundary",
+        "wikidata": "Q557911",
+        "parent_id": "2200402"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375748,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1785\u17bb\u1784\u1780\u17b6\u179b\u17cb",
+        "name:en": "Chong Kal",
+        "ref": "2203",
+        "type": "boundary",
+        "wikidata": "Q4930099",
+        "parent_id": "2200402"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375749,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17c6\u179a\u17c4\u1784",
+        "name:en": "Samraong",
+        "ref": "2204",
+        "type": "boundary",
+        "wikidata": "Q7410285",
+        "parent_id": "2200402"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375750,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u1793\u17d2\u1791\u17b6\u1799\u17a2\u17c6\u1796\u17b7\u179b",
+        "name:en": "Banteay Ampil",
+        "ref": "2202",
+        "type": "boundary",
+        "wikidata": "Q4857202",
+        "parent_id": "2200402"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379544,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u17bb\u179a\u17b8\u17a2\u17bc\u179a\u179f\u17d2\u179c\u17b6\u1799\u179f\u17c2\u1793\u1787\u17d0\u1799",
+        "name:en": "Borei Ou Svay Senchey",
+        "ref": "1906",
+        "type": "boundary",
+        "wikidata": "Q65427313",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379568,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c0\u1798\u1794\u17c9\u17b6\u1784",
+        "name:en": "Siem Pang",
+        "ref": "1903",
+        "type": "boundary",
+        "wikidata": "Q4929494",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379575,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u1791\u17b9\u1784\u178f\u17d2\u179a\u17c2\u1784",
+        "name:en": "Stueng Traeng",
+        "ref": "1904",
+        "type": "boundary",
+        "wikidata": "Q4929505",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379577,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c1\u179f\u17b6\u1793",
+        "name:en": "Sesan",
+        "ref": "1901",
+        "type": "boundary",
+        "wikidata": "Q4929005",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379647,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1790\u17b6\u17a1\u17b6\u1794\u179a\u17b7\u179c\u17c9\u17b6\u178f\u17cb",
+        "name:en": "Thala Barivat",
+        "ref": "1905",
+        "type": "boundary",
+        "wikidata": "Q4929558",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379648,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u17c0\u1798\u1794\u17bc\u1780",
+        "name:en": "Siem Bouk District",
+        "ref": "1902",
+        "type": "boundary",
+        "wikidata": "Q4928985",
+        "parent_id": "2198916"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379659,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1796\u17d2\u179a\u17c7\u179c\u17b7\u17a0\u17b6\u179a",
+        "name:en": "Preah Vihear",
+        "ref": "1308",
+        "type": "boundary",
+        "wikidata": "Q27220327",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379661,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17d2\u1794\u17c2\u1784\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Tbaeng Mean Chey",
+        "ref": "1307",
+        "type": "boundary",
+        "wikidata": "Q1883679",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379673,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1782\u1798\u1790\u17d2\u1798\u17b8",
+        "name:en": "Sangkum Thmei",
+        "ref": "1306",
+        "type": "boundary",
+        "wikidata": "Q4929184",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379689,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1782\u17bc\u179b\u17c2\u1793",
+        "name:en": "Kuleaen",
+        "ref": "1304",
+        "type": "boundary",
+        "wikidata": "Q4929210",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379699,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1787\u17b6\u17c6\u1780\u17d2\u179f\u17b6\u1793\u17d2\u178a",
+        "name:en": "Choam Ksant",
+        "ref": "1303",
+        "type": "boundary",
+        "wikidata": "Q4929072",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379708,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179a\u179c\u17c0\u1784",
+        "name:en": "Rovieng",
+        "ref": "1305",
+        "type": "boundary",
+        "wikidata": "Q4929033",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379709,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1787\u17d0\u1799\u179f\u17c2\u1793",
+        "name:en": "Chey Saen",
+        "ref": "1301",
+        "type": "boundary",
+        "wikidata": "Q4929136",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18379710,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1786\u17c2\u1794",
+        "name:en": "Chhaeb",
+        "ref": "1302",
+        "type": "boundary",
+        "wikidata": "Q4929159",
+        "parent_id": "2198922"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18374952,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "municipality",
+        "boundary": "administrative",
+        "name": "\u1794\u17b6\u1793\u179b\u17bb\u1784",
+        "name:en": "Ban Lung",
+        "ref": "1602",
+        "type": "boundary",
+        "wikidata": "Q4856829",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375087,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1794\u179a\u1780\u17c2\u179c",
+        "name:en": "Bar Kaev",
+        "ref": "1603",
+        "type": "boundary",
+        "wikidata": "Q4857942",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375089,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u1787\u17bb\u17c6",
+        "name:en": "Ou Chum",
+        "ref": "1606",
+        "type": "boundary",
+        "wikidata": "Q4930108",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375140,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u178e\u17d2\u178a\u17bc\u1784\u1798\u17b6\u179f",
+        "name:en": "Andoung Meas",
+        "ref": "1601",
+        "type": "boundary",
+        "wikidata": "Q4754589",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375160,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u178f\u17b6\u179c\u17c2\u1784",
+        "name:en": "Ta Veaeng",
+        "ref": "1608",
+        "type": "boundary",
+        "wikidata": "Q4930210",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375165,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179c\u17be\u1793\u179f\u17c3",
+        "name:en": "Veun Sai",
+        "ref": "1609",
+        "type": "boundary",
+        "wikidata": "Q4930123",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375195,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u1780\u17bc\u1793\u1798\u17bb\u17c6",
+        "name:en": "Koun Mom",
+        "ref": "1604",
+        "type": "boundary",
+        "wikidata": "Q4930053",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375205,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u17a2\u17bc\u179a\u1799\u17c9\u17b6\u178a\u17b6\u179c",
+        "name:en": "Ou Ya Dav",
+        "ref": "1607",
+        "type": "boundary",
+        "wikidata": "Q4930220",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18375206,
+      "tags": {
+        "admin_level": "6",
+        "border_type": "district",
+        "boundary": "administrative",
+        "name": "\u179b\u17c6\u1795\u17b6\u178f\u17cb",
+        "name:en": "Lumphat",
+        "ref": "1605",
+        "type": "boundary",
+        "wikidata": "Q2235920",
+        "parent_id": "2200301"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020853,
+      "tags": {
+        "admin_level": "8",
+        "alt_name": "\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "alt_name:en": "Bet Trang",
+        "alt_name:km": "\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "alt_name:zh": "\u672c\u5f53",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "name:en": "Bet Trang Quarter",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "name:zh": "\u672c\u5f53\u5206\u533a",
+        "old_name": "\u1783\u17bb\u17c6\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "old_name:en": "Bet Trang Commune",
+        "old_name:km": "\u1783\u17bb\u17c6\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "old_name:zh": "\u672c\u5f53\u4e61",
+        "type": "boundary",
+        "wikidata": "Q56321117",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u1794\u17b7\u178f\u178f\u17d2\u179a\u17b6\u17c6\u1784",
+        "parent_id": "18020858"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020854,
+      "tags": {
+        "admin_level": "8",
+        "alt_name": "\u179a\u17b6\u1798",
+        "alt_name:en": "Ream",
+        "alt_name:km": "\u179a\u17b6\u1798",
+        "alt_name:zh": "\u4e91\u58e4",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179a\u17b6\u1798",
+        "name:en": "Ream Quarter",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179a\u17b6\u1798",
+        "name:zh": "\u4e91\u58e4\u8857\u9053",
+        "old_name": "\u1783\u17bb\u17c6\u179a\u17b6\u1798",
+        "old_name:en": "Ream Commune",
+        "old_name:km": "\u1783\u17bb\u17c6\u179a\u17b6\u1798",
+        "old_name:zh": "\u4e91\u58e4\u4e61",
+        "type": "boundary",
+        "wikidata": "Q56321109",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u179a\u17b6\u1798",
+        "parent_id": "18020858"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020855,
+      "tags": {
+        "admin_level": "8",
+        "alt_name": "\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "alt_name:en": "Ou Oknha Heng",
+        "alt_name:km": "\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "alt_name:zh": "\u5965\u7fc1\u4e9a\u5174",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "name:en": "Ou Oknha Heng Quarter",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "name:zh": "\u5965\u7fc1\u4e9a\u5174\u5206\u533a",
+        "old_name": "\u1783\u17bb\u17c6\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "old_name:en": "Ou Oknha Heng Commune",
+        "old_name:km": "\u1783\u17bb\u17c6\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "old_name:zh": "\u5965\u7fc1\u4e9a\u5174\u4e61",
+        "type": "boundary",
+        "wikidata": "Q56321108",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u17a2\u17bc\u179a\u17a7\u1789\u17c9\u17b6\u17a0\u17c1\u1784",
+        "parent_id": "18020858"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020856,
+      "tags": {
+        "admin_level": "8",
+        "alt_name": "\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "alt_name:en": "Boeng Ta Prum",
+        "alt_name:km": "\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "alt_name:zh": "\u5d29\u8fbe\u5e03\u9686",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "name:en": "Boeng Ta Prum Quarter",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "name:zh": "\u5d29\u8fbe\u5e03\u9686\u5206\u533a",
+        "old_name": "\u1783\u17bb\u17c6\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "old_name:en": "Boeng Ta Prum Commune",
+        "type": "boundary",
+        "wikidata": "Q56321119",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u1794\u17b9\u1784\u178f\u17b6\u1796\u17d2\u179a\u17a0\u17d2\u1798",
+        "parent_id": "18020858"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020857,
+      "tags": {
+        "admin_level": "8",
+        "alt_name": "\u17a2\u17bc\u179a\u1787\u17d2\u179a\u17c5",
+        "alt_name:en": "Ou Chrov",
+        "alt_name:km": "\u17a2\u17bc\u179a\u1787\u17d2\u179a\u17c5",
+        "alt_name:zh": "\u4e4c\u7956",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u17a2\u17bc\u179a\u1787\u17d2\u179a\u17c5",
+        "name:en": "Ou Chrov Quarter",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u17a2\u17bc\u179a\u1787\u17d2\u179a\u17c5",
+        "name:zh": "\u4e4c\u7956\u5206\u533a",
+        "type": "boundary",
+        "parent_id": "18020858"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17035152,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1791\u17b9\u1780\u1790\u17d2\u179b\u17b6",
+        "name:en": "Teuk Thla Commune",
+        "name:km": "\u1783\u17bb\u17c6\u1791\u17b9\u1780\u1790\u17d2\u179b\u17b6",
+        "name:ru": "\u0422\u044b\u043a\u0442\u043b\u0430",
+        "type": "boundary",
+        "wikidata": "Q56321127",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u1791\u17b9\u1780\u1790\u17d2\u179b\u17b6(\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1793\u1794\u17cb)",
+        "parent_id": "5846610"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 17035211,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1791\u17b9\u1780\u179b\u17d2\u17a2\u1780\u17cb",
+        "name:en": "Tuek L'ak Commune",
+        "name:km": "\u1783\u17bb\u17c6\u1791\u17b9\u1780\u179b\u17d2\u17a2\u1780\u17cb",
+        "name:ru": "\u0422\u044b\u043a\u043b\u044a\u0430\u043a",
+        "type": "boundary",
+        "wikidata": "Q56321126",
+        "wikipedia": "km:\u1783\u17bb\u17c6\u1791\u17b9\u1780\u179b\u17d2\u17a2\u1780\u17cb(\u179f\u17d2\u179a\u17bb\u1780\u1796\u17d2\u179a\u17c3\u1793\u1794\u17cb)",
+        "parent_id": "5846610"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18020921,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1798\u17bd\u1799",
+        "name:en": "Quarter 1",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1798\u17bd\u1799",
+        "name:zh": "\u7b2c\u4e00\u5206\u533a",
+        "type": "boundary",
+        "parent_id": "5846609"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18021001,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17b8\u179a",
+        "name:en": "Quarter 2",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17b8\u179a",
+        "name:zh": "\u7b2c\u4e8c\u5206\u533a",
+        "type": "boundary",
+        "parent_id": "5846609"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18021002,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b8",
+        "name:en": "Quarter 3",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b8",
+        "name:zh": "\u7b2c\u4e09\u5206\u533a",
+        "type": "boundary",
+        "parent_id": "5846609"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18021003,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17bd\u1793",
+        "name:en": "Quarter 4",
+        "name:km": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17bd\u1793",
+        "name:zh": "\u7b2c\u56db\u5206\u533a",
+        "type": "boundary",
+        "parent_id": "5846609"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404650,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1780\u17c2\u1794",
+        "name:en": "Kep Quarter",
+        "ref": "200205",
+        "type": "boundary",
+        "parent_id": "18404655"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404651,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u17a2\u17bc\u179a\u1780\u17d2\u179a\u179f\u17b6\u179a",
+        "name:en": "Ou Krasar Quarter",
+        "ref": "200205",
+        "type": "boundary",
+        "parent_id": "18404655"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404652,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17d2\u179a\u17c3\u1792\u17c6",
+        "name:en": "Prey Thum Quarter",
+        "ref": "200205",
+        "type": "boundary",
+        "parent_id": "18404655"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404653,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u1784\u1791\u17b9\u1780",
+        "name:en": "Pong Toek Commune",
+        "ref": "200110",
+        "type": "boundary",
+        "parent_id": "18404656"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18404654,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u1784\u17d2\u1780\u17c4\u179b",
+        "name:en": "Angkoul Commune",
+        "ref": "200110",
+        "type": "boundary",
+        "parent_id": "18404656"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385579,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u17d2\u179a\u17b6\u1798",
+        "name:en": "Mream Commune",
+        "ref": "200412",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385580,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u17bb\u1781\u178a\u17b6",
+        "name:en": "Mukh Da Commune",
+        "ref": "200411",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385581,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1785\u1793\u17d2\u178a\u17d2\u179a\u17b8",
+        "name:en": "Chantrei Commune",
+        "ref": "200405",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385582,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178f\u17d2\u179a\u1796\u17b6\u17c6\u1784\u179f\u17d2\u178a\u17c5",
+        "name:en": "Trapeang Sdau Commune",
+        "ref": "200415",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385583,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u1784\u17d2\u1782\u1794\u17d2\u179a\u179f\u17d2\u179a\u17c2",
+        "name:en": "Angk Prasrae Commune",
+        "ref": "200404",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385584,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u178e\u17d2\u178a\u17bc\u1784\u1796\u17c4\u1792\u17b7\u17cd",
+        "name:en": "Andoung Pou Commune",
+        "ref": "200402",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385585,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178a\u17bc\u1784",
+        "name:en": "Doung Commune",
+        "ref": "200407",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385586,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17c6\u1796\u1784\u17cb\u178f\u17d2\u179a\u17b6\u1785",
+        "name:en": "Kampong Trach Commune",
+        "ref": "200408",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385587,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1782\u1782\u17b8\u179a",
+        "name:en": "Kokir Commune",
+        "ref": "200409",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385588,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u17c6\u1796\u17b7\u179b",
+        "name:en": "Ampil Commune",
+        "ref": "200401",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385589,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1787\u17d2\u179a\u17c3\u1792\u17c6",
+        "name:en": "Chrey Thum Commune",
+        "ref": "200406",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385590,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u1798\u17d2\u1794\u178f\u17d2\u178a\u17b7\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Sambatt Mean Chey Commune",
+        "ref": "200414",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385591,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17c6\u1794\u17bd\u179a",
+        "name:en": "Sambuor Commune",
+        "ref": "200413",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385592,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17d2\u179a\u179f\u17b6\u17c6\u1784",
+        "name:en": "Krasang Commune",
+        "ref": "200410",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385593,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u178e\u17d2\u178a\u17bc\u1784\u178f\u17d2\u179a\u1794\u17c2\u1780",
+        "name:en": "Andoung Trabaek Commune",
+        "ref": "200403",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18385594,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178f\u17d2\u179a\u179f\u17cb",
+        "name:en": "Tras Commune",
+        "ref": "200416",
+        "type": "boundary",
+        "parent_id": "18375899"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395882,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1794\u17b6\u179f\u17b6\u1780\u17cb",
+        "name:en": "Basak Commune",
+        "ref": "200502",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395883,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178a\u17bc\u1793\u179f",
+        "name:en": "Doun Sa Commune",
+        "ref": "200508",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395884,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1792\u17d2\u179b\u1780",
+        "name:en": "Thlok Commune",
+        "ref": "200517",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395885,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u17a2\u1784\u17d2\u1782\u178f\u17b6\u179f\u17bc",
+        "name:en": "Angk Ta Sou Commune",
+        "ref": "200501",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395886,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u1799\u17b6",
+        "name:en": "Svay Yea Commune",
+        "ref": "200516",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395887,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u17d2\u179c\u17b6\u1799\u17a2\u1784\u17d2\u1782",
+        "name:en": "Svay Angk Commune",
+        "ref": "200513",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395888,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1788\u17be\u1791\u17b6\u179b",
+        "name:en": "Chheu Teal Commune",
+        "ref": "200507",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395889,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17d2\u179c\u17b6\u1799\u1792\u17c6",
+        "name:en": "Svay Thum Commune",
+        "ref": "200515",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395890,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u17c4\u1792\u17b7\u179a\u17b6\u1787",
+        "name:en": "Pouthi Reach Commune",
+        "ref": "200512",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395891,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17d2\u179a\u17c4\u179b\u1782\u17c4",
+        "name:en": "Kraol Kou Commune",
+        "ref": "200510",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395892,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1782\u17c4\u1780\u1796\u17d2\u179a\u17b8\u1784",
+        "name:en": "Kouk Pring Commune",
+        "ref": "200509",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395893,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17d2\u179c\u17b6\u1799\u1787\u17d2\u179a\u17c6",
+        "name:en": "Svay Chrum Commune",
+        "ref": "200514",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395894,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178f\u17b6\u179f\u17bd\u179f",
+        "name:en": "Ta Suos Commune",
+        "ref": "200505",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395895,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17c6\u1796\u1784\u17cb\u1785\u17c6\u17a1\u1784",
+        "name:en": "Kampong Chamlang Commune",
+        "ref": "200504",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395896,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1785\u17c6\u1794\u1780\u17cb",
+        "name:en": "Chambak Commune",
+        "ref": "200503",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18395897,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1782\u17d2\u179a\u17bd\u179f",
+        "name:en": "Kruos Commune",
+        "ref": "200511",
+        "type": "boundary",
+        "parent_id": "18375898"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382053,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1794\u17d2\u179a\u179f\u17bc\u178f\u17d2\u179a",
+        "name:en": "Prasoutr Commune",
+        "ref": "200707",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382054,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u178e\u17d2\u178a\u17c0\u1784\u179a\u17b6\u1799",
+        "name:en": "Kandieng Reay Commune",
+        "ref": "200703",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382055,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17c6\u1794\u17bd\u179a",
+        "name:en": "Sambuor Commune",
+        "ref": "200709",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382056,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179a\u1798\u17b6\u17c6\u1784\u1790\u17d2\u1780\u17c4\u179b",
+        "name:en": "Romeang Thkaol Commune",
+        "ref": "200708",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382057,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c6\u1796\u17b6\u179a",
+        "name:en": "Svay Rumpear Commune",
+        "ref": "200711",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382058,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1782\u1782\u17b8\u179f\u17c4\u1798",
+        "name:en": "Koki Saom Commune",
+        "ref": "200702",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382059,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u1796\u17c2\u178f",
+        "name:en": "Popeaet Commune",
+        "ref": "200705",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382060,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u17d2\u179a\u17c3\u178f\u17b6\u17a2\u17b8",
+        "name:en": "Prey Ta Ei Commune",
+        "ref": "200706",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382061,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u1793\u17c4\u179a\u1798\u17d2\u1799",
+        "name:en": "Monourom Commune",
+        "ref": "200704",
+        "type": "boundary",
+        "parent_id": "18375896"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381490,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u178f\u17d2\u1793\u17c4\u178f",
+        "name:en": "Tnaot Commune",
+        "ref": "200212",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381491,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17c6\u17a1\u17b8",
+        "name:en": "Samlei Commune",
+        "ref": "200207",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381492,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17d2\u179c\u17b6\u1799\u178f\u17b6\u1799\u17b6\u1793",
+        "name:en": "Svay Ta Yean Commune",
+        "ref": "200209",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381493,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1781\u17d2\u179f\u17c2\u178f\u17d2\u179a",
+        "name:en": "Khsaetr Commune",
+        "ref": "200203",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381494,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u17d2\u179a\u17c7\u1796\u1793\u17d2\u179b\u17b6",
+        "name:en": "Preah Ponlea Commune",
+        "ref": "200204",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381495,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1790\u17d2\u1798\u17b8",
+        "name:en": "Thmei Commune",
+        "ref": "200211",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381496,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1789\u179a",
+        "name:en": "Nhor Commune",
+        "ref": "200202",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381497,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179a\u17b6\u1787\u1798\u1793\u17d2\u1791\u17b8\u179a",
+        "name:en": "Reach Montir Commune",
+        "ref": "200206",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381498,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1794\u1793\u17d2\u1791\u17b6\u1799\u1780\u17d2\u179a\u17b6\u17c6\u1784",
+        "name:en": "Banteay Krang Commune",
+        "ref": "200201",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381499,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17c6\u1799\u17c9\u17c4\u1784",
+        "name:en": "Samyaong Commune",
+        "ref": "200208",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381500,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u17d2\u179a\u17c3\u1792\u17c6",
+        "name:en": "Prey Thum Commune",
+        "ref": "200205",
+        "type": "boundary",
+        "parent_id": "18375893"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381206,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u17d2\u179a\u17c3\u1782\u1782\u17b8\u179a",
+        "name:en": "Prey Kokir Commune",
+        "ref": "200105",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381207,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u17c1\u179f\u179a\u1790\u17d2\u1784\u1780",
+        "name:en": "Me Sar Thngak Commune",
+        "ref": "200105",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381208,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17c6\u179a\u17c4\u1784",
+        "name:en": "Samraong Commune",
+        "ref": "200109",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381209,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1785\u17d2\u179a\u17c1\u179f",
+        "name:en": "Chres Commune",
+        "ref": "200104",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381210,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1791\u17bd\u179b\u179f\u17d2\u178a\u17b8",
+        "name:en": "Chantrea Commune",
+        "ref": "200103",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381211,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1791\u17bd\u179b\u179f\u17d2\u178a\u17b8",
+        "name:en": "Tuol Sdei Commune",
+        "ref": "200110",
+        "type": "boundary",
+        "parent_id": "18375894"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396023,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179f\u1784\u17d2\u1783\u17d0\u179a",
+        "name:en": "Sangkhoar Quarter",
+        "ref": "200803",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396024,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1785\u17c1\u1780",
+        "name:en": "Chek Quarter",
+        "ref": "200804",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396025,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17d2\u179a\u17c3\u1786\u17d2\u179b\u17b6\u1780\u17cb",
+        "name:en": "Prey Chhlak Quarter",
+        "ref": "200803",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396026,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179f\u17d2\u179c\u17b6\u1799\u179a\u17c0\u1784",
+        "name:en": "Svay Rieng Quarter",
+        "ref": "200802",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396027,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17c4\u1792\u17b7\u17cd\u178f\u17b6\u17a0\u17c4",
+        "name:en": "Pou Ta Hao Quarter",
+        "ref": "200802",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396028,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179f\u17d2\u179c\u17b6\u1799\u178f\u17bf",
+        "name:en": "Svay Toea Quarter",
+        "ref": "200803",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18396029,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1782\u1799\u178f\u17d2\u179a\u1794\u17c2\u1780",
+        "name:en": "Koy Trabaek Quarter",
+        "ref": "200803",
+        "type": "boundary",
+        "parent_id": "18375900"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381087,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17b6\u179c\u17b7\u178f",
+        "name:en": "Bavet Quarter",
+        "ref": "200802",
+        "type": "boundary",
+        "parent_id": "18375895"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381088,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1794\u17d2\u179a\u17b6\u179f\u17b6\u1791",
+        "name:en": "Prasat Quarter",
+        "ref": "200804",
+        "type": "boundary",
+        "parent_id": "18375895"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381089,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1785\u17d2\u179a\u1780\u1798\u17d2\u1791\u17c1\u179f",
+        "name:en": "Bati Quarter",
+        "ref": "200801",
+        "type": "boundary",
+        "parent_id": "18375895"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381090,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1785\u17d2\u179a\u1780\u1798\u17d2\u1791\u17c1\u179f",
+        "name:en": "Chrak Mtes Quarter",
+        "ref": "200803",
+        "type": "boundary",
+        "parent_id": "18375895"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18381091,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1796\u17d2\u179a\u17c3\u17a2\u1784\u17d2\u1782\u17bb\u1789",
+        "name:en": "Prey Angkunh Quarter",
+        "ref": "200805",
+        "type": "boundary",
+        "parent_id": "18375895"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382432,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u17c9\u17ba\u1793\u1787\u17d0\u1799",
+        "name:en": "Thmea Commune",
+        "ref": "200302",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382433,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1798\u17c9\u17ba\u1793\u1787\u17d0\u1799",
+        "name:en": "Meun Chey Commune",
+        "ref": "200306",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382434,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u17d2\u179c\u17b6\u1799\u1785\u17c1\u1780",
+        "name:en": "Svay Chek Commune",
+        "ref": "200309",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382435,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17c6\u1796\u1784\u17cb\u1785\u1780",
+        "name:en": "Kampong Chak Commune",
+        "ref": "200303",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382436,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u179f\u1784\u17d2\u1780\u17c2",
+        "name:en": "Sangkae Commune",
+        "ref": "200308",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382437,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1787\u17d2\u179a\u17bb\u1784\u1796\u1796\u17c1\u179b",
+        "name:en": "Chrung Popel Commune",
+        "ref": "200304",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382438,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1780\u17c6\u1796\u1784\u17cb\u17a2\u17c6\u1796\u17b7\u179b",
+        "name:en": "Kampong Ampil Commune",
+        "ref": "200305",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382439,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1790\u17d2\u1793\u17b6\u1792\u17d2\u1793\u1784\u17cb",
+        "name:en": "Thna Thnong Commune",
+        "ref": "200310",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382440,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1794\u17bb\u179f\u1798\u1793",
+        "name:en": "Bos Mon Commune",
+        "ref": "200301",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 18382441,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u1783\u17bb\u17c6\u1796\u1784\u1791\u17b9\u1780",
+        "name:en": "Pong Tuek Commune",
+        "ref": "200307",
+        "type": "boundary",
+        "parent_id": "18375897"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19354965,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179f\u17bb\u1781\u178a\u17bb\u1798",
+        "name:en": "Sokh Dom Sangkat",
+        "ref": "110502",
+        "type": "boundary",
+        "wikidata": "Q65428350",
+        "parent_id": "17609918"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19354966,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179f\u17d2\u1796\u17b6\u1793\u1798\u17b6\u1793\u1787\u17d0\u1799",
+        "name:en": "Spean Mean Chey Sangkat",
+        "ref": "110503",
+        "type": "boundary",
+        "wikidata": "Q65428354",
+        "parent_id": "17609918"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19354967,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u179a\u1798\u1793\u17b6",
+        "name:en": "Romonea Sangkat",
+        "ref": "110504",
+        "type": "boundary",
+        "wikidata": "Q65428346",
+        "parent_id": "17609918"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 19354968,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "\u179f\u1784\u17d2\u1780\u17b6\u178f\u17cb\u1798\u1793\u17c4\u179a\u1798\u17d2\u1799",
+        "name:en": "Monourom Sangkat",
+        "ref": "110501",
+        "type": "boundary",
+        "wikidata": "Q65428341",
+        "parent_id": "17609918"
+      }
+    }
+  ]
+}

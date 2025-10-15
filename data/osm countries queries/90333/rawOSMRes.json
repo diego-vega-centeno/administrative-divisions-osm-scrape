@@ -1,0 +1,35 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-03T17:29:45Z",
+    "timestamp_areas_base": "2025-10-03T13:36:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 90333,
+      "tags": {
+        "admin_level": "2",
+        "border_type": "nation",
+        "boundary": "administrative",
+        "name": "France - Deutschland",
+        "name:br": "Fra\u00f1s - Alamagn",
+        "name:ca": "Fran\u00e7a - Alemanya",
+        "name:de": "Frankreich - Deutschland",
+        "name:en": "France - Germany",
+        "name:fr": "France - Allemagne",
+        "name:gsw": "Frankrich - Ditschland",
+        "name:hsb": "Francoska - N\u011bmska",
+        "name:lb": "Frankr\u00e4ich - D\u00e4itschland",
+        "name:lt": "Pranc\u016bzija \u2014 Vokietija",
+        "name:nl": "Frankrijk - Duitsland",
+        "name:ru": "\u0424\u0440\u0430\u043d\u0446\u0438\u044f - \u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+        "note": "For explanations please read https://wiki.openstreetmap.org/wiki/France_boundary_pyramidal_construction",
+        "type": "multilinestring",
+        "wikidata": "Q1991225"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2002 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-04T19:06:52Z",
+    "timestamp_areas_base": "2025-10-04T15:40:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 184818,
+      "tags": {
+        "ISO3166-1": "JO",
+        "ISO3166-1:alpha2": "JO",
+        "ISO3166-1:alpha3": "JOR",
+        "ISO3166-1:numeric": "400",
+        "admin_level": "2",
+        "alt_name:vi": "Gio\u00f3c-\u0111a-ni;Gio\u00f3c\u0111ani;Giooc\u0111ani;\u01af\u1edbc \u0110\u00e1n",
+        "border_type": "administrative",
+        "boundary": "administrative",
+        "default_language": "ar",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg",
+        "name": "\u0627\u0644\u0623\u0631\u062f\u0646",
+        "name:ace": "Yordania",
+        "name:af": "Jordani\u00eb",
+        "name:als": "Jordanien",
+        "name:alt": "\u0627\u0644\u0623\u0631\u062f\u0646",
+        "name:am": "\u1306\u122d\u12f3\u1295",
+        "name:an": "Chordania",
+        "name:ar": "\u0627\u0644\u0623\u0631\u062f\u0646",
+        "name:arc": "\u071d\u0718\u072a\u0715\u0722\u0722",
+        "name:arz": "\u0627\u0644\u0627\u0631\u062f\u0646",
+        "name:ast": "Xordania",
+        "name:az": "\u0130ordaniya",
+        "name:ba": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:bar": "Jordanien",
+        "name:bat-smg": "Juordan\u0117j\u0117",
+        "name:bcl": "Yordanya",
+        "name:be": "\u0406\u0430\u0440\u0434\u0430\u043d\u0456\u044f",
+        "name:be-tarask": "\u042f\u0440\u0434\u0430\u043d\u0456\u044f",
+        "name:bg": "\u0419\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:bjn": "Yordania",
+        "name:bm": "Ordon",
+        "name:bn": "\u099c\u09b0\u09cd\u09a6\u09be\u09a8",
+        "name:bo": "\u0f62\u0f97\u0f7c\u0f62\u0f0b\u0f4c\u0f53\u0f0d",
+        "name:bpy": "\u099c\u09b0\u09cd\u09a1\u09be\u09a8",
+        "name:br": "Jordania",
+        "name:bs": "Jordan",
+        "name:bug": "Yordania",
+        "name:bxr": "\u0419\u043e\u0440\u0434\u0430\u043d",
+        "name:ca": "Jord\u00e0nia",
+        "name:cdo": "I\u00f3k-d\u00e1ng",
+        "name:ceb": "Hordanya",
+        "name:ckb": "\u0626\u0648\u0631\u062f\u0646",
+        "name:crh": "Urdun",
+        "name:cs": "Jord\u00e1nsko",
+        "name:csb": "Jordani\u00f4",
+        "name:cv": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438",
+        "name:cy": "Gwlad yr Iorddonen",
+        "name:da": "Jordan",
+        "name:de": "Jordanien",
+        "name:diq": "Urdun",
+        "name:dsb": "Jordaniska",
+        "name:dv": "\u0787\u07aa\u0783\u07aa\u078b\u07aa\u0782\u07b0",
+        "name:el": "\u0399\u03bf\u03c1\u03b4\u03b1\u03bd\u03af\u03b1",
+        "name:en": "Jordan",
+        "name:eo": "Jordanio",
+        "name:es": "Jordania",
+        "name:et": "Jordaania",
+        "name:eu": "Jordania",
+        "name:ext": "Jordania",
+        "name:fa": "\u0627\u0631\u062f\u0646",
+        "name:fi": "Jordania",
+        "name:fo": "Jordan",
+        "name:fr": "Jordanie",
+        "name:frp": "J\u00b7ordanie",
+        "name:fy": "Jordaanje",
+        "name:ga": "An Iord\u00e1in",
+        "name:gag": "\u0130ordaniya",
+        "name:gd": "I\u00f2rdan",
+        "name:gl": "Xordania",
+        "name:gn": "Horyt\u00e1\u00f1a",
+        "name:gu": "\u0a9c\u0ac9\u0ab0\u0acd\u0aa1\u0aa8",
+        "name:gv": "Yn Jordaan",
+        "name:hak": "Yok-tan",
+        "name:haw": "Iored\u0101ne",
+        "name:he": "\u05d9\u05e8\u05d3\u05df",
+        "name:hi": "\u091c\u0949\u0930\u094d\u0921\u0928",
+        "name:hif": "Jordan",
+        "name:hr": "Jordan",
+        "name:hsb": "Jordaniska",
+        "name:ht": "J\u00f2dani",
+        "name:hu": "Jord\u00e1nia",
+        "name:hy": "\u0540\u0578\u0580\u0564\u0561\u0576\u0561\u0576",
+        "name:ia": "Jordania",
+        "name:id": "Yordania",
+        "name:ie": "Jordania",
+        "name:ilo": "Hordania",
+        "name:io": "Jordania",
+        "name:is": "J\u00f3rdan\u00eda",
+        "name:it": "Giordania",
+        "name:ja": "\u30e8\u30eb\u30c0\u30f3",
+        "name:jbo": "gugdeju'o",
+        "name:jv": "Yordania",
+        "name:ka": "\u10d8\u10dd\u10e0\u10d3\u10d0\u10dc\u10d8\u10d0",
+        "name:kab": "Urdun",
+        "name:kbd": "\u0419\u043e\u0440\u0434\u0430\u043d",
+        "name:kk": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:kl": "Jordan",
+        "name:km": "\u17a0\u17d2\u179f\u1780\u178a\u1784\u17cb",
+        "name:ko": "\uc694\ub974\ub2e8",
+        "name:krc": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:ks": "\u0627\u0631\u062f\u0646",
+        "name:ku": "Urdun",
+        "name:ku-Arab": "\u0626\u0648\u0631\u062f\u0648\u0646",
+        "name:kv": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:kw": "Jordan",
+        "name:la": "Iordania",
+        "name:lb": "Jordanien",
+        "name:lez": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:li": "Jordani\u00eb",
+        "name:lij": "Giordannia",
+        "name:lmo": "Giurdania",
+        "name:ln": "Zordan\u00ed",
+        "name:lt": "Jordanija",
+        "name:lv": "Jord\u0101nija",
+        "name:mdf": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u0435",
+        "name:mi": "H\u014drano",
+        "name:mk": "\u0408\u043e\u0440\u0434\u0430\u043d",
+        "name:ml": "\u0d1c\u0d4b\u0d7c\u0d26\u0d3e\u0d7b",
+        "name:mn": "\u0419\u043e\u0440\u0434\u0430\u043d",
+        "name:mr": "\u091c\u0949\u0930\u094d\u0921\u0928",
+        "name:ms": "Jordan",
+        "name:mt": "\u0120ordan",
+        "name:my": "\u1002\u103b\u1031\u102c\u103a\u1012\u1014\u103a\u1014\u102d\u102f\u1004\u103a\u1004\u1036",
+        "name:mzn": "\u0627\u0648\u0631\u062f\u0648\u0646",
+        "name:na": "Djordan",
+        "name:nah": "Iordania",
+        "name:nan": "Iok-t\u00e0n",
+        "name:nap": "Giordania",
+        "name:nds": "Jordanien",
+        "name:nl": "Jordani\u00eb",
+        "name:nn": "Jordan",
+        "name:no": "Jordan",
+        "name:nov": "Jordan",
+        "name:nv": "J\u00f3o\u02bcdan",
+        "name:oc": "Jordania",
+        "name:or": "\u0b1c\u0b4b\u0b30\u0b4d\u0b21\u0b3e\u0b28",
+        "name:os": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438",
+        "name:pa": "\u0a1c\u0a3e\u0a30\u0a21\u0a28",
+        "name:pam": "Hordanya",
+        "name:pap": "Jordan",
+        "name:pih": "Jordan",
+        "name:pl": "Jordania",
+        "name:pms": "Giordania",
+        "name:pnb": "\u0627\u0631\u062f\u0646",
+        "name:ps": "\u0627\u0631\u062f\u0646",
+        "name:pt": "Jord\u00e2nia",
+        "name:qu": "Hurdanya",
+        "name:ro": "Iordania",
+        "name:ru": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:rw": "Yorudani",
+        "name:sa": "\u091c\u093e\u0930\u094d\u0921\u0928",
+        "name:sah": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:scn": "Giurdania",
+        "name:sco": "Jordan",
+        "name:se": "Jordania",
+        "name:sh": "Jordan",
+        "name:simple": "Jordan",
+        "name:sk": "Jord\u00e1nsko",
+        "name:sl": "Jordanija",
+        "name:smn": "Jordania",
+        "name:sms": "Jordania",
+        "name:so": "Urdun",
+        "name:sq": "Jordania",
+        "name:sr": "\u0408\u043e\u0440\u0434\u0430\u043d",
+        "name:ss": "IJoridane",
+        "name:stq": "Jordanien",
+        "name:su": "Yordania",
+        "name:sv": "Jordanien",
+        "name:sw": "Yordani",
+        "name:szl": "Jordanij\u014f",
+        "name:ta": "\u0b9c\u0bcb\u0bb0\u0bcd\u0ba4\u0bbe\u0ba9\u0bcd",
+        "name:te": "\u0c1c\u0c4b\u0c30\u0c4d\u0c21\u0c3e\u0c28\u0c4d",
+        "name:th": "\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e08\u0e2d\u0e23\u0e4c\u0e41\u0e14\u0e19",
+        "name:tk": "Iordani\u00fda",
+        "name:tl": "Hordan",
+        "name:tr": "\u00dcrd\u00fcn",
+        "name:tt": "\u04ae\u0440\u0434\u04af\u043d",
+        "name:tzl": "Xhordan",
+        "name:udm": "\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f",
+        "name:ug": "\u0626\u0649\u0626\u0648\u0631\u062f\u0627\u0646\u0649\u064a\u06d5",
+        "name:uk": "\u0419\u043e\u0440\u0434\u0430\u043d\u0456\u044f",
+        "name:ur": "\u0627\u0631\u062f\u0646",
+        "name:uz": "Iordaniya",
+        "name:vec": "Zordania",
+        "name:vi": "Jordan",
+        "name:vo": "Yord\u00e4n",
+        "name:vro": "Jordaania",
+        "name:war": "Hordanya",
+        "name:wo": "Jordaani",
+        "name:wuu": "\u7ea6\u65e6",
+        "name:yi": "\u05d9\u05d0\u05e8\u05d3\u05d0\u05e0\u05d9\u05e2",
+        "name:yo": "J\u1ecd\u0301rd\u00e1n\u00ec",
+        "name:yue": "\u7d04\u65e6",
+        "name:zea": "Jordaoni\u00eb",
+        "name:zh": "\u7ea6\u65e6",
+        "name:zh-Hans": "\u7ea6\u65e6",
+        "name:zh-Hant": "\u7d04\u65e6",
+        "official_name": "\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0623\u0631\u062f\u0646\u064a\u0629 \u0627\u0644\u0647\u0627\u0634\u0645\u064a\u0629",
+        "official_name:ang": "Hascemisce Cyner\u012bce \u00fe\u00e6s Iordanes",
+        "official_name:ar": "\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0623\u0631\u062f\u0646\u064a\u0629 \u0627\u0644\u0647\u0627\u0634\u0645\u064a\u0629",
+        "official_name:ca": "Regne Haiximita de Jord\u00e0nia",
+        "official_name:cs": "Jord\u00e1nsk\u00e9 h\u00e1\u0161imovsk\u00e9 kr\u00e1lovstv\u00ed",
+        "official_name:cy": "Teyrnas Hashimaidd Gwlad yr Iorddonen",
+        "official_name:de": "Haschemitisches K\u00f6nigreich Jordanien",
+        "official_name:en": "Hashemite Kingdom of Jordan",
+        "official_name:eo": "Ha\u015demida Re\u011dlando Jordanio",
+        "official_name:es": "Reino Hachemita de Jordania",
+        "official_name:fa": "\u067e\u0627\u062f\u0634\u0627\u0647\u06cc \u0627\u064f\u0631\u062f\u064f\u0646 \u0647\u0627\u0634\u0645\u06cc",
+        "official_name:fr": "Royaume hach\u00e9mite de Jordanie",
+        "official_name:gn": "Tavet\u00e3 Hachemita Horyt\u00e1\u00f1a",
+        "official_name:he": "\u05d4\u05de\u05de\u05dc\u05db\u05d4 \u05d4\u05d9\u05e8\u05d3\u05e0\u05d9\u05ea \u05d4\u05d4\u05d0\u05e9\u05de\u05d9\u05ea",
+        "official_name:pt": "Reino Haxemita da Jord\u00e2nia",
+        "official_name:ru": "\u0418\u043e\u0440\u0434\u0430\u043d\u0441\u043a\u043e\u0435 \u0425\u0430\u0448\u0438\u043c\u0438\u0442\u0441\u043a\u043e\u0435 \u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u0442\u0432\u043e",
+        "official_name:ur": "\u06c1\u0627\u0634\u0645\u06cc \u0645\u0645\u0644\u06a9\u062a \u0627\u0631\u062f\u0646",
+        "official_name:xal": "\u0425\u0430\u0448\u0438\u043c\u0438\u0442 \u0496\u043e\u0440\u0434\u0438\u043d \u041d\u0443\u0442\u0433",
+        "sqkm": "89342",
+        "timezone": "Asia/Amman",
+        "type": "boundary",
+        "wikidata": "Q810",
+        "wikipedia": "ar:\u0627\u0644\u0623\u0631\u062f\u0646"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925596,
+      "tags": {
+        "ISO3166-2": "JO-BA",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0628\u0644\u0642\u0627\u0621",
+        "name:ar": "\u0627\u0644\u0628\u0644\u0642\u0627\u0621",
+        "name:be-tarask": "\u042d\u043b\u044c-\u0411\u0430\u043a\u0430",
+        "name:ca": "Al-Balqa",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at al Balq\u0101'",
+        "name:cs": "governor\u00e1t Balk\u00e1",
+        "name:de": "al-Balqa",
+        "name:el": "\u039c\u03c0\u03ac\u03bb\u03b3\u03ba\u03b1",
+        "name:en": "Balqa",
+        "name:es": "Gobernaci\u00f3n de Balqa'",
+        "name:eu": "Balqa",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0628\u0644\u0642\u0627\u0621",
+        "name:fi": "Al Balqa'",
+        "name:fr": "Gouvernorat de Balqa",
+        "name:he": "\u05d1\u05dc\u05e7\u05d0",
+        "name:hi": "\u092c\u0932\u094d\u0915\u093c\u093e \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Balk\u00e1 korm\u00e1nyz\u00f3s\u00e1g",
+        "name:it": "Governatorato di Balqa",
+        "name:ja": "\u30d0\u30eb\u30ab\u770c",
+        "name:ko": "\ubc1c\uce74\uc8fc",
+        "name:lt": "Balkos muchafaza",
+        "name:nl": "Balka",
+        "name:nn": "Balqa guvernement",
+        "name:pl": "Al-Balka",
+        "name:pnb": "\u0636\u0644\u0639 \u0628\u0644\u0642\u0627",
+        "name:pt": "Balqa",
+        "name:ro": "Guvernoratul Balqa",
+        "name:ru": "\u042d\u043b\u044c-\u0411\u0430\u043b\u043a\u0430",
+        "name:sco": "Balqa Govrenorate",
+        "name:sq": "Governorati Belka",
+        "name:sv": "Balqa",
+        "name:ta": "\u0baa\u0bb2\u0bcd\u0b95\u0bbe \u0b86\u0bb3\u0bc1\u0ba8\u0bb0\u0b95\u0bae\u0bcd",
+        "name:tr": "Belka",
+        "name:uk": "\u0415\u043b\u044c-\u0411\u0430\u043b\u043a\u0430",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0628\u0644\u0642\u0627\u0621",
+        "name:zh": "\u62dc\u52d2\u52a0\u7701",
+        "sorting_name:cs": "Balk\u00e1",
+        "type": "boundary",
+        "wikidata": "Q721431",
+        "wikipedia": "ar:\u0627\u0644\u0628\u0644\u0642\u0627\u0621 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925597,
+      "tags": {
+        "ISO3166-2": "JO-AZ",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0632\u0631\u0642\u0627\u0621",
+        "name:ar": "\u0627\u0644\u0632\u0631\u0642\u0627\u0621",
+        "name:arz": "\u0645\u062d\u0627\u0641\u0638\u0647 \u0627\u0644\u0632\u0631\u0642\u0627",
+        "name:be-tarask": "\u042d\u0437-\u0417\u0430\u0440\u043a\u0430",
+        "name:ca": "Governaci\u00f3 de Zarqa",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at az Zarq\u0101'",
+        "name:cs": "Zark\u00e1",
+        "name:cy": "Ardal Lywodraethol Zarqa",
+        "name:de": "Zarqa",
+        "name:el": "\u039a\u03c5\u03b2\u03b5\u03c1\u03bd\u03b5\u03af\u03bf \u0396\u03ac\u03c1\u03ba\u03b1",
+        "name:en": "Zarqa",
+        "name:es": "Gobernaci\u00f3n de Zark\u00e1",
+        "name:eu": "Zarqa",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0632\u0631\u0642\u0627\u0621",
+        "name:fi": "Az Zarqa",
+        "name:fr": "Gouvernorat de Zarqa",
+        "name:he": "\u05d6\u05e8\u05e7\u05d0",
+        "name:hi": "\u091c\u093c\u0930\u0915\u093c\u093e \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Zark\u00e1 korm\u00e1nyz\u00f3s\u00e1g",
+        "name:id": "Kegubernuran Zarqa",
+        "name:it": "Governatorato di al-Zarqa",
+        "name:ja": "\u30b6\u30eb\u30ab\u770c",
+        "name:ko": "\uc790\ub974\uce74\uc8fc",
+        "name:lt": "Zarkos muchafaza",
+        "name:nl": "Zarka",
+        "name:nn": "Zarqa guvernement",
+        "name:pl": "Az-Zarka",
+        "name:pnb": "\u0636\u0644\u0639 \u0632\u0631\u0642\u0627",
+        "name:pt": "Zarqa",
+        "name:ro": "Guvernoratul Zarqa",
+        "name:ru": "\u042d\u0437-\u0417\u0430\u0440\u043a\u0430",
+        "name:sco": "Zarqa Govrenorate",
+        "name:sv": "Zarqa",
+        "name:tr": "Zerka",
+        "name:uk": "\u0415\u0437-\u0417\u0430\u0440\u043a\u0430",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0632\u0631\u0642\u0627\u0621",
+        "name:zh": "\u624e\u723e\u5361\u7701",
+        "type": "boundary",
+        "wikidata": "Q721445",
+        "wikipedia": "ar:\u0627\u0644\u0632\u0631\u0642\u0627\u0621 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925599,
+      "tags": {
+        "ISO3166-2": "JO-JA",
+        "admin_level": "4",
+        "alt_name:de": "Gouvernement Dscharasch",
+        "alt_name:en": "Jerash Governorate",
+        "boundary": "administrative",
+        "name": "\u062c\u0631\u0634",
+        "name:ar": "\u0645\u062d\u0627\u0641\u0638\u0629 \u062c\u0631\u0634",
+        "name:be-tarask": "\u0414\u0436\u0430\u0440\u0430\u0448",
+        "name:bg": "\u0414\u0436\u0435\u0440\u0430\u0448",
+        "name:ceb": "Jarash",
+        "name:de": "Dscharasch",
+        "name:en": "Jarash",
+        "name:es": "Gobernaci\u00f3n de Gerasa",
+        "name:eu": "Jerax",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u062c\u0631\u0634",
+        "name:fi": "Jarash",
+        "name:fr": "Gouvernorat de Jerash",
+        "name:he": "\u05d2'\u05e8\u05e9 (\u05de\u05d7\u05d5\u05d6)",
+        "name:hi": "\u091c\u0947\u0930\u0936 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Dzseras korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u054b\u0561\u0580\u0561\u0577\u056b \u0574\u0561\u0580\u0566",
+        "name:id": "Kegubernuran Jerash",
+        "name:it": "Governatorato di Jerash",
+        "name:ja": "\u30b8\u30e3\u30e9\u30b7\u30e5\u770c",
+        "name:ko": "\uc81c\ub77c\uc2dc\uc8fc",
+        "name:lt": "D\u017eara\u0161o muchafaza",
+        "name:nl": "Jerash",
+        "name:nn": "Jerash guvernement",
+        "name:pl": "D\u017carasz",
+        "name:pnb": "\u0636\u0644\u0639 \u062c\u0631\u0634",
+        "name:pt": "G\u00e9rasa",
+        "name:ro": "Guvernoratul Jerash",
+        "name:ru": "\u0414\u0436\u0430\u0440\u0430\u0448",
+        "name:sco": "Jerash Govrenorate",
+        "name:sq": "Governorati Xherash",
+        "name:sv": "Jerash",
+        "name:tr": "Cera\u015f",
+        "name:uk": "\u0414\u0436\u0435\u0440\u0430\u0448",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u062c\u0631\u0634",
+        "name:zh": "\u5091\u62c9\u4ec0\u7701",
+        "type": "boundary",
+        "wikidata": "Q750270",
+        "wikipedia": "ar:\u062c\u0631\u0634 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925608,
+      "tags": {
+        "ISO3166-2": "JO-MA",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0645\u0641\u0631\u0642",
+        "name:ar": "\u0627\u0644\u0645\u0641\u0631\u0642",
+        "name:be-tarask": "\u042d\u043b\u044c-\u041c\u0430\u0444\u0440\u0430\u043a",
+        "name:ceb": "Al Mafraq",
+        "name:cs": "Mafrak",
+        "name:de": "Mafraq",
+        "name:en": "Mafraq",
+        "name:es": "Gobernaci\u00f3n de Mafraq",
+        "name:eu": "Mafraq",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0645\u0641\u0631\u0642",
+        "name:fi": "Al Mafraq",
+        "name:fr": "Gouvernorat de Mafraq",
+        "name:he": "\u05de\u05e4\u05e8\u05e7",
+        "name:hi": "\u092e\u092b\u093c\u094d\u0930\u0915\u093c \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Mafrak korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0531\u056c-\u0544\u0561\u0586\u0580\u0561\u056f\u056b \u0574\u0561\u0580\u0566",
+        "name:it": "Governatorato di al-Mafraq",
+        "name:ja": "\u30de\u30d5\u30e9\u30af\u770c",
+        "name:ko": "\ub9c8\ud504\ub77c\ud06c\uc8fc",
+        "name:lt": "Mafrako muchafaza",
+        "name:nl": "Mafrak",
+        "name:nn": "Mafraq guvernement",
+        "name:pl": "Al-Mafrak (muhafaza)",
+        "name:pnb": "\u0636\u0644\u0639 \u0645\u0641\u0631\u0627\u0642",
+        "name:ro": "Guvernoratul Mafraq",
+        "name:ru": "\u042d\u043b\u044c-\u041c\u0430\u0444\u0440\u0430\u043a",
+        "name:sco": "Mafraq Govrenorate",
+        "name:sq": "Governorati Mafrak",
+        "name:sv": "Mafraq",
+        "name:tr": "Mefrak",
+        "name:uk": "\u0415\u043b\u044c-\u041c\u0430\u0444\u0440\u0430\u043a",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0645\u0641\u0631\u0642",
+        "name:zh": "\u9a6c\u5f17\u62c9\u514b\u7701",
+        "place": "state",
+        "type": "boundary",
+        "wikidata": "Q854871",
+        "wikipedia": "ar:\u0627\u0644\u0645\u0641\u0631\u0642 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925616,
+      "tags": {
+        "ISO3166-2": "JO-AJ",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0639\u062c\u0644\u0648\u0646",
+        "name:ar": "\u0639\u062c\u0644\u0648\u0646",
+        "name:be-tarask": "\u0410\u0434\u0436\u043b\u044e\u043d",
+        "name:bg": "\u0410\u0434\u0436\u043b\u0443\u043d",
+        "name:ca": "Governaci\u00f3 d'Ajlun",
+        "name:ce": "\u0410\u0434\u0436\u043b\u0443\u043d",
+        "name:ceb": "Ajloun",
+        "name:cy": "Ardal Lywodraethol Ajlwn",
+        "name:de": "Adschlun",
+        "name:el": "\u039a\u03c5\u03b2\u03b5\u03c1\u03bd\u03b5\u03af\u03bf \u0391\u03c4\u03b6\u03bb\u03bf\u03cd\u03bd",
+        "name:en": "Ajlun",
+        "name:es": "Gobernaci\u00f3n de Ajlun",
+        "name:eu": "Ajlun",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0639\u062c\u0644\u0648\u0646",
+        "name:fi": "Ajlun",
+        "name:fr": "Gouvernorat d'Ajlun",
+        "name:frr": "Adschluun",
+        "name:he": "\u05e2\u05d2'\u05dc\u05d5\u05df",
+        "name:hi": "\u0905\u091c\u0932\u0942\u0928 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Adzsl\u00fan korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0531\u057b\u056c\u0578\u0582\u0576\u056b \u0574\u0561\u0580\u0566",
+        "name:id": "Kegubernuran Ajloun",
+        "name:it": "Governatorato di Ajlun",
+        "name:nl": "Ajlun",
+        "name:nn": "Ajloun guvernement",
+        "name:pl": "Ad\u017clun",
+        "name:pnb": "\u0636\u0644\u0639 \u0627\u062c\u0644\u0648\u0646",
+        "name:pt": "Ajlun",
+        "name:ro": "Guvernoratul Ajloun",
+        "name:ru": "\u0410\u0434\u0436\u043b\u0443\u043d",
+        "name:sco": "Ajloun Govrenorate",
+        "name:sq": "Governorati Axhlun",
+        "name:sv": "Ajlun",
+        "name:ta": "\u0b85\u0b9a\u0bcd\u0b9a\u0bbf\u0bb2\u0bb5\u0bc1\u0ba9\u0bcd \u0b86\u0bb3\u0bc1\u0ba8\u0bb0\u0b95\u0bae\u0bcd",
+        "name:tr": "Aclun",
+        "name:uk": "\u0410\u0434\u0436\u043b\u0443\u043d",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0639\u062c\u0644\u0648\u0646",
+        "name:zh": "\u963f\u5091\u9686\u7701",
+        "type": "boundary",
+        "wikidata": "Q506658",
+        "wikipedia": "ar:\u0639\u062c\u0644\u0648\u0646 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2925617,
+      "tags": {
+        "ISO3166-2": "JO-IR",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0625\u0631\u0628\u062f",
+        "name:ar": "\u0625\u0631\u0628\u062f",
+        "name:de": "Irbid",
+        "name:en": "Irbid",
+        "name:es": "Gobernaci\u00f3n de Irbid",
+        "name:fr": "Gouvernorat d'Irbid",
+        "name:he": "\u05d0\u05d9\u05e8\u05d1\u05d9\u05d3",
+        "name:lt": "Irbidas",
+        "name:ru": "\u0418\u0440\u0431\u0438\u0434",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0627\u0631\u0628\u062f",
+        "type": "boundary",
+        "wikidata": "Q721441",
+        "wikipedia": "ar:\u0625\u0631\u0628\u062f (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926344,
+      "tags": {
+        "ISO3166-2": "JO-AM",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0639\u0645\u0627\u0646",
+        "name:am": "\u12a0\u121b\u1295",
+        "name:ar": "\u0639\u0645\u0627\u0646",
+        "name:be-tarask": "\u0410\u043c\u0430\u043d",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at `Amm\u0101n",
+        "name:cy": "Ardal Lywodraethol Amman",
+        "name:de": "Amman",
+        "name:en": "Amman",
+        "name:es": "Gobernaci\u00f3n de Amm\u00e1n",
+        "name:eu": "Amman",
+        "name:fa": "\u0627\u0645\u0627\u0646",
+        "name:fi": "Amman",
+        "name:fr": "Gouvernorat d'Amman",
+        "name:he": "\u05e2\u05de\u05d0\u05df",
+        "name:hi": "\u0905\u092e\u094d\u092e\u093e\u0928 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "F\u0151v\u00e1ros korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0531\u0574\u0574\u0561\u0576\u056b \u0574\u0561\u0580\u0566",
+        "name:it": "Governatorato di Amman",
+        "name:ja": "\u30a2\u30f3\u30de\u30f3",
+        "name:ko": "\uc554\ub9cc",
+        "name:ks": "\u0639\u0645\u0627\u0646",
+        "name:lt": "Amano muchafaza",
+        "name:nl": "Amman",
+        "name:nn": "Amman guvernement",
+        "name:pl": "Prowincja Sto\u0142eczna",
+        "name:pnb": "\u0636\u0644\u0639 \u0639\u0645\u0627\u0646",
+        "name:pt": "Am\u00e3",
+        "name:ro": "Guvernoratul Amman",
+        "name:ru": "\u0410\u043c\u043c\u0430\u043d",
+        "name:sco": "Amman Govrenorate",
+        "name:sd": "\u0627\u0645\u0627\u0646 \u06af\u0648\u0631\u0646\u0631\u064a",
+        "name:sk": "Amm\u00e1n",
+        "name:sv": "Amman",
+        "name:tr": "Amman",
+        "name:uk": "\u0415\u043b\u044c-\u0410\u0441\u0456\u043c\u0430",
+        "name:ur": "\u0639\u0645\u0627\u0646",
+        "name:zh": "\u5b89\u66fc\u7701",
+        "official_name": "\u0645\u062d\u0627\u0641\u0638\u0629 \u0627\u0644\u0639\u0627\u0635\u0645\u0629",
+        "official_name:ar": "\u0645\u062d\u0627\u0641\u0638\u0629 \u0627\u0644\u0639\u0627\u0635\u0645\u0629",
+        "type": "boundary",
+        "wikidata": "Q472788",
+        "wikipedia": "ar:\u0645\u062d\u0627\u0641\u0638\u0629 \u0627\u0644\u0639\u0627\u0635\u0645\u0629 (\u0627\u0644\u0623\u0631\u062f\u0646)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926345,
+      "tags": {
+        "ISO3166-2": "JO-AQ",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0639\u0642\u0628\u0629",
+        "name:ar": "\u0627\u0644\u0639\u0642\u0628\u0629",
+        "name:be-tarask": "\u0410\u043a\u0430\u0431\u0430",
+        "name:ceb": "Aqaba",
+        "name:cs": "Akaba",
+        "name:cy": "Ardal Lywodraethol Aqaba",
+        "name:de": "Aqaba",
+        "name:en": "Aqaba",
+        "name:es": "Gobernaci\u00f3n de Aqaba",
+        "name:eu": "Aqaba",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0639\u0642\u0628\u0647",
+        "name:fi": "Al 'Aqabah",
+        "name:fr": "Gouvernorat d'Aqaba",
+        "name:he": "\u05e2\u05e7\u05d1\u05d4",
+        "name:hi": "\u0905\u0915\u093c\u093e\u092c\u093e \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Akaba korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0531\u056f\u0561\u0562\u0561\u0575\u056b \u0574\u0561\u0580\u0566",
+        "name:it": "Governatorato di Aqaba",
+        "name:ja": "\u30a2\u30ab\u30d0\u770c",
+        "name:ko": "\uc544\uce74\ubc14\uc8fc",
+        "name:li": "Aqaba",
+        "name:lt": "Akabos muchafaza",
+        "name:nl": "Akaba",
+        "name:nn": "Akaba guvernement",
+        "name:pl": "Akaba",
+        "name:pnb": "\u0636\u0644\u0639 \u0639\u0642\u0628\u06c1",
+        "name:pt": "Acaba",
+        "name:ro": "Guvernoratul Aqaba",
+        "name:ru": "\u0410\u043a\u0430\u0431\u0430",
+        "name:sco": "Aqaba Govrenorate",
+        "name:sk": "Akaba",
+        "name:sv": "Akaba",
+        "name:tr": "Akabe",
+        "name:uk": "\u0410\u043a\u0430\u0431\u0430",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0639\u0642\u0628\u06c1",
+        "name:zh": "\u4e9e\u5580\u5df4\u7701",
+        "type": "boundary",
+        "wikidata": "Q260796",
+        "wikipedia": "ar:\u0627\u0644\u0639\u0642\u0628\u0629 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926346,
+      "tags": {
+        "ISO3166-2": "JO-KA",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0643\u0631\u0643",
+        "name:ar": "\u0627\u0644\u0643\u0631\u0643",
+        "name:be-tarask": "\u041a\u0430\u0440\u0430\u043a",
+        "name:ca": "Governaci\u00f3 de Karak",
+        "name:ceb": "Al Karak",
+        "name:cs": "governor\u00e1t Karak",
+        "name:cy": "Ardal Lywodraethol Karak",
+        "name:de": "Karak",
+        "name:en": "Karak",
+        "name:es": "Gobernaci\u00f3n de Karak",
+        "name:eu": "Karak",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u06a9\u0631\u06a9",
+        "name:fi": "Al Karak",
+        "name:fr": "Gouvernorat de Karak",
+        "name:he": "\u05db\u05e8\u05db",
+        "name:hi": "\u0915\u0930\u0915 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Karak korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0554\u0561\u0580\u0561\u0584\u056b \u0574\u0561\u0580\u0566",
+        "name:it": "Governatorato di al-Karak",
+        "name:ja": "\u30ab\u30e9\u30af\u770c",
+        "name:ko": "\uce74\ub77c\ud06c\uc8fc",
+        "name:lt": "Karako muchafaza",
+        "name:nl": "Kerak",
+        "name:nn": "Karak guvernement",
+        "name:pl": "Al-Karak",
+        "name:pnb": "\u0636\u0644\u0639 \u06a9\u0631\u06a9",
+        "name:pt": "Caraque",
+        "name:ro": "Guvernoratul Karak",
+        "name:ru": "\u042d\u043b\u044c-\u041a\u0430\u0440\u0430\u043a",
+        "name:sco": "Karak Govrenorate",
+        "name:sv": "Karak",
+        "name:tr": "Kerek",
+        "name:uk": "\u0415\u043b\u044c-\u041a\u0430\u0440\u0430\u043a",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u06a9\u0631\u06a9",
+        "name:zh": "\u5361\u62c9\u514b\u7701",
+        "type": "boundary",
+        "wikidata": "Q735245",
+        "wikipedia": "ar:\u0627\u0644\u0643\u0631\u0643 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926347,
+      "tags": {
+        "ISO3166-2": "JO-MN",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0645\u0639\u0627\u0646",
+        "name:ar": "\u0645\u0639\u0627\u0646",
+        "name:be-tarask": "\u041c\u0430\u0430\u043d",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at Ma\u2018\u0101n",
+        "name:ckb": "\u067e\u0627\u0631\u06ce\u0632\u06af\u0627\u06cc \u0645\u06d5\u0639\u0627\u0646",
+        "name:cy": "Ardal Lywodraethol Ma'an",
+        "name:de": "Ma'an",
+        "name:en": "Maan",
+        "name:es": "Gobernaci\u00f3n de Ma'an",
+        "name:eu": "Maan",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0645\u0639\u0627\u0646",
+        "name:fi": "Ma\u2019an",
+        "name:fr": "Gouvernorat de Ma'an",
+        "name:he": "\u05de\u05e2\u05d0\u05df",
+        "name:hi": "\u092e'\u0906\u0928 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Ma\u00e1n korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0544\u0561\u0561\u0576\u056b \u0574\u0561\u0580\u0566",
+        "name:id": "Ma'an",
+        "name:it": "Governatorato di Ma'an",
+        "name:ja": "\u30de\u30a2\u30fc\u30f3\u770c",
+        "name:ko": "\ub9c8\uc548\uc8fc",
+        "name:lt": "Maano muchafaza",
+        "name:nl": "Ma'an",
+        "name:nn": "Ma'an guvernement",
+        "name:pl": "Ma\u2019an",
+        "name:pnb": "\u0636\u0644\u0639 \u0645\u0639\u0627\u0646",
+        "name:ro": "Guvernoratul Ma'an",
+        "name:ru": "\u041c\u0430\u0430\u043d",
+        "name:sco": "Ma'an Govrenorate",
+        "name:sv": "Ma'an",
+        "name:th": "\u0e40\u0e02\u0e15\u0e1c\u0e39\u0e49\u0e27\u0e48\u0e32\u0e23\u0e32\u0e0a\u0e01\u0e32\u0e23\u0e21\u0e30\u0e2d\u0e32\u0e19",
+        "name:tr": "Ma'an",
+        "name:uk": "\u041c\u0430\u0430\u043d",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0645\u0639\u0627\u0646",
+        "name:zh": "\u99ac\u5b89\u7701",
+        "type": "boundary",
+        "wikidata": "Q606340",
+        "wikipedia": "ar:\u0645\u0639\u0627\u0646 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926348,
+      "tags": {
+        "ISO3166-2": "JO-MD",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0645\u0627\u062f\u0628\u0627",
+        "name:ar": "\u0645\u0627\u062f\u0628\u0627",
+        "name:arz": "\u0645\u062d\u0627\u0641\u0638\u0647 \u0645\u0627\u062f\u0628\u0627",
+        "name:be-tarask": "\u041c\u0430\u0434\u0430\u0431\u0430",
+        "name:ca": "Governaci\u00f3 de Madaba",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at M\u0101dab\u0101",
+        "name:cs": "governor\u00e1t Madaba",
+        "name:de": "Madaba",
+        "name:el": "\u039c\u03ac\u03bd\u03c4\u03b1\u03bc\u03c0\u03b1",
+        "name:en": "Madaba",
+        "name:es": "Gobernaci\u00f3n de Madaba",
+        "name:eu": "Madaba",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0645\u0627\u062f\u0628\u0627",
+        "name:fi": "Madaba",
+        "name:fr": "Gouvernorat de Madaba",
+        "name:he": "\u05de\u05d9\u05d3\u05d1\u05d0",
+        "name:hi": "\u092e\u093e\u0926\u092c\u093e \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "M\u00e1daba korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0544\u0561\u0564\u0561\u0562\u0561\u0575\u056b \u0574\u0561\u0580\u0566",
+        "name:it": "Governatorato di Madaba",
+        "name:ja": "\u30de\u30c0\u30d0\u770c",
+        "name:ko": "\ub9c8\ub2e4\ubc14\uc8fc",
+        "name:lt": "Madabos muchafaza",
+        "name:nl": "Madaba",
+        "name:nn": "Madaba guvernement",
+        "name:pl": "Madaba",
+        "name:pnb": "\u0636\u0644\u0639 \u0645\u0627\u062f\u0627\u0628\u0627",
+        "name:ro": "Guvernoratul Madaba",
+        "name:ru": "\u041c\u0430\u0434\u0430\u0431\u0430",
+        "name:sco": "Madaba Govrenorate",
+        "name:sv": "Madaba",
+        "name:tr": "Medeba",
+        "name:uk": "\u041c\u0430\u0434\u0430\u0431\u0430",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0645\u0627\u062f\u0628\u0627",
+        "name:zh": "\u99ac\u4ee3\u5df4\u7701",
+        "type": "boundary",
+        "wikidata": "Q750447",
+        "wikipedia": "ar:\u0645\u0627\u062f\u0628\u0627 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2926349,
+      "tags": {
+        "ISO3166-2": "JO-AT",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "\u0627\u0644\u0637\u0641\u064a\u0644\u0629",
+        "name:ar": "\u0627\u0644\u0637\u0641\u064a\u0644\u0629",
+        "name:be-tarask": "\u0422\u0430\u0444\u0456\u043b\u0430",
+        "name:ceb": "Mu\u1e29\u0101faz\u0327at a\u0163 \u0162af\u012blah",
+        "name:de": "Tafila",
+        "name:en": "Tafilah",
+        "name:es": "Gobernaci\u00f3n de Tafila",
+        "name:eu": "Tafila",
+        "name:fa": "\u0627\u0633\u062a\u0627\u0646 \u0637\u0641\u06cc\u0644\u0647",
+        "name:fi": "At Tafilah",
+        "name:fr": "Tafilah",
+        "name:he": "\u05d8\u05e4\u05d9\u05dc\u05d4",
+        "name:hi": "\u0924\u092b\u093c\u0940\u0932\u093e\u0939 \u092a\u094d\u0930\u093e\u0928\u094d\u0924",
+        "name:hu": "Taf\u00edla korm\u00e1nyz\u00f3s\u00e1g",
+        "name:hy": "\u0531\u056c-\u054f\u0561\u0586\u056b\u056c\u0561\u0575\u056b \u0574\u0561\u0580\u0566",
+        "name:id": "Kegubernuran Tafilah",
+        "name:it": "Governatorato di al-Tafila",
+        "name:ja": "\u30bf\u30d5\u30a3\u30e9\u770c",
+        "name:ko": "\ud0c0\ud544\ub77c\uc8fc",
+        "name:lt": "Tafilos muchafaza",
+        "name:nl": "Tafilah",
+        "name:nn": "Tafilah guvernement",
+        "name:pl": "At-Tafila",
+        "name:pnb": "\u0636\u0644\u0639 \u0637\u0641\u06cc\u0644\u06c1",
+        "name:ro": "Guvernoratul Tafilah",
+        "name:ru": "\u042d\u0442-\u0422\u0430\u0444\u0438\u043b\u0430",
+        "name:sco": "Tafilah Govrenorate",
+        "name:sv": "Tafilah",
+        "name:tr": "Tafile",
+        "name:uk": "\u0415\u0442-\u0422\u0430\u0444\u0456\u043b\u0430",
+        "name:ur": "\u0645\u062d\u0627\u0641\u0638\u06c1 \u0637\u0641\u06cc\u0644\u06c1",
+        "name:zh": "\u5854\u83f2\u62c9\u7701",
+        "type": "boundary",
+        "wikidata": "Q750259",
+        "wikipedia": "ar:\u0627\u0644\u0637\u0641\u064a\u0644\u0629 (\u0645\u062d\u0627\u0641\u0638\u0629)"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376082,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062f\u064a\u0633\u0629",
+        "name:en": "Diesah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126196",
+        "parent_id": "2926345"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376083,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0642\u0648\u064a\u0631\u0629",
+        "name:en": "Al Quairah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183214",
+        "parent_id": "2926345"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376084,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0648\u0627\u062f\u064a \u0639\u0631\u0628\u0629",
+        "name:en": "Wadi Araba Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126198",
+        "wikipedia": "ar:\u0642\u0636\u0627\u0621 \u0648\u0627\u062f\u064a \u0639\u0631\u0628\u0629",
+        "parent_id": "2926345"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376085,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0639\u0642\u0628\u0629",
+        "name:ar": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0639\u0642\u0628\u0629",
+        "name:de": "Unterbezirk Akaba",
+        "name:en": "Aqaba Sub-District",
+        "name:es": "Subdistrito de \u00c1qaba",
+        "type": "boundary",
+        "parent_id": "2926345"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376072,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Athroh Sub-District",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0623\u0630\u0631\u062d",
+        "name:en": "Udhruh Sub-District",
+        "name:fr": "Udhruh",
+        "type": "boundary",
+        "wikidata": "Q27126203",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376073,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Jafr Sub-District",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062c\u0641\u0631",
+        "name:en": "Al-Jafr Sub-District",
+        "name:fr": "Al-Jafr",
+        "type": "boundary",
+        "wikidata": "Q27126200",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376074,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062d\u0633\u064a\u0646\u064a\u0629",
+        "name:en": "Huseiniya Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183199",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376075,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0634\u0648\u0628\u0643",
+        "name:en": "Shobak Qasabah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183188",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376076,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Petra Sub-District",
+        "type": "boundary",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376077,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Iel Sub-District",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u064a\u0644",
+        "name:en": "Ayl Sub-District",
+        "name:fr": "Ayl",
+        "type": "boundary",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376078,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0631\u064a\u063a\u0629",
+        "name:en": "Mraighah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126199",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376079,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Ma'an Sub-District",
+        "type": "boundary",
+        "parent_id": "2926347"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376132,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0647\u0627\u0634\u0645\u064a\u0629",
+        "name:en": "Hashemiyah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182459",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376134,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0631\u0635\u064a\u0641\u0629",
+        "name:en": "Russeifa Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182444",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376135,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0623\u0632\u0631\u0642",
+        "name:en": "Azraq Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866537",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376137,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u064a\u0631\u064a\u0646",
+        "name:en": "Bierain Sub-District",
+        "type": "boundary",
+        "wikidata": "Q22686455",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376139,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0632\u0631\u0642\u0627\u0621",
+        "name:ar": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0632\u0631\u0642\u0627\u0621",
+        "name:en": "Zarqa Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182374",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376140,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0636\u0644\u064a\u0644",
+        "name:en": "Dhlail Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866536",
+        "parent_id": "2925597"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376112,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Rwaished Sub-District",
+        "name:en": "Rwaished Sub-District",
+        "type": "boundary",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376114,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u062d\u0648\u0634\u0627",
+        "name:en": "Hosha Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126215",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376115,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0633\u0645\u0627 \u0627\u0644\u0633\u0631\u062d\u0627\u0646",
+        "name:en": "Serhan Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126216",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376117,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0628\u0627\u062f\u064a\u0629 \u0627\u0644\u0634\u0645\u0627\u0644\u064a\u0629 \u0627\u0644\u063a\u0631\u0628\u064a\u0629",
+        "name:en": "Badiah Shamaliyah Gharbiyah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182771",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376118,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0641\u0631\u0642",
+        "name:en": "Mafraq Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182694",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376119,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u0644\u0639\u0645\u0627",
+        "name:en": "Bal'ama Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126214",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376120,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0625\u0631\u062d\u0627\u0628",
+        "name:en": "Irhab Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126213",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376121,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0646\u0634\u064a\u0629",
+        "name:en": "Manshiyah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126212",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376122,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0623\u0645 \u0627\u0644\u062c\u0645\u0627\u0644",
+        "name:en": "Um Al-Jemal Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126219",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376123,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0635\u0628\u062d\u0627",
+        "name:en": "Sabha Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126220",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376124,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0623\u0645 \u0627\u0644\u0642\u0637\u064a\u0646",
+        "name:en": "Um-Elqotain Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126221",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376125,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u062f\u064a\u0631 \u0627\u0644\u0643\u0647\u0641",
+        "name:en": "Dair Al Kahf Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126222",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376126,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0635\u0627\u0644\u062d\u064a\u0629",
+        "name:en": "Salhiya Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182735",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376127,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062e\u0627\u0644\u062f\u064a\u0629",
+        "name:en": "Khaldiyah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126217",
+        "parent_id": "2925608"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376003,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0645\u0627\u0631\u0643\u0627",
+        "name:en": "Marka Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182134",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376004,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0646\u0627\u062d\u064a\u0629 \u0639\u0645\u0627\u0646",
+        "name:ar": "\u0646\u0627\u062d\u064a\u0629 \u0639\u0645\u0627\u0646",
+        "name:en": "Amman Sub-District",
+        "type": "boundary",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376012,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0646\u0627\u062d\u064a\u0629 \u0627\u0644\u0642\u0648\u064a\u0633\u0645\u0629",
+        "name:ar": "\u0646\u0627\u062d\u064a\u0629 \u0627\u0644\u0642\u0648\u064a\u0633\u0645\u0629",
+        "name:en": "Quaismeh Sub-District",
+        "type": "boundary",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376013,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0646\u0627\u062d\u064a\u0629 \u0648\u0627\u062f\u064a \u0627\u0644\u0633\u064a\u0631",
+        "name:ar": "\u0646\u0627\u062d\u064a\u0629 \u0648\u0627\u062f\u064a \u0627\u0644\u0633\u064a\u0631",
+        "name:en": "Wadi Essier Sub-District",
+        "type": "boundary",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376014,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Na'oor Sub-District",
+        "name:en": "Na'oor Sub-District",
+        "type": "boundary",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376015,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u062d\u0633\u0628\u0627\u0646",
+        "name:en": "Hosba'n Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126224",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376016,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0623\u0645 \u0627\u0644\u0628\u0633\u0627\u062a\u064a\u0646",
+        "name:en": "Um Elbasatien Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126223",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376017,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062c\u0627\u0645\u0639\u0629",
+        "name:ar": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062c\u0627\u0645\u0639\u0629",
+        "name:en": "Al-Jami'ah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182155",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376018,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062c\u064a\u0632\u0629",
+        "name:en": "Jizah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182173",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376019,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0623\u0645 \u0627\u0644\u0631\u0635\u0627\u0635",
+        "name:en": "Um Al-Rasas Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126226",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376020,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0631\u062c\u0645 \u0627\u0644\u0634\u0627\u0645\u064a",
+        "name:en": "Rajm al-Shami Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126225",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376021,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0648\u0642\u0631",
+        "name:en": "Muaqqar Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182209",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376022,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Sahab Sub-District",
+        "name:en": "Sahab Sub-District",
+        "name:fr": "Sahab",
+        "type": "boundary",
+        "parent_id": "2926344"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376065,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "At Tafila Sub-District",
+        "type": "boundary",
+        "parent_id": "2926349"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376066,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Bsaira Sub-District",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u0635\u064a\u0631\u0627",
+        "name:en": "Busayra Sub-District",
+        "name:fr": "Busayra",
+        "type": "boundary",
+        "wikidata": "Q35183071",
+        "parent_id": "2926349"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376067,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Hasa Sub-District",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u062d\u0633\u0627",
+        "name:en": "Al Hasa Sub-District",
+        "name:fr": "Al Hasa",
+        "type": "boundary",
+        "wikidata": "Q35183094",
+        "parent_id": "2926349"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376050,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0641\u0642\u0648\u0639",
+        "name:en": "Faqo'e Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183023",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376055,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0642\u0637\u0631\u0627\u0646\u0629",
+        "name:en": "Qatraneh Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183047",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376056,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Karak Sub-District",
+        "type": "boundary",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376057,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0639\u064a",
+        "name:en": "Ayy Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35183004",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376058,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0645\u0624\u0627\u0628",
+        "name:en": "Mo'aab Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126204",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376059,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Mazar Sub-District",
+        "name:en": "Mazar Sub-District",
+        "type": "boundary",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376060,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u063a\u0648\u0631 \u0627\u0644\u0635\u0627\u0641\u064a",
+        "name:en": "Safi Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182950",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376061,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u063a\u0648\u0631 \u0627\u0644\u0645\u0632\u0631\u0639\u0629",
+        "name:en": "Ghawr Almazra'a Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126205",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376062,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0648\u062c\u0628",
+        "name:en": "Mowjeb Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126206",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376064,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0642\u0635\u0631",
+        "name:en": "Qasr Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182924",
+        "parent_id": "2926346"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376024,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u062c\u0631\u064a\u0646\u0629",
+        "name:en": "Jrainah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866545",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376039,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0641\u064a\u0635\u0644\u064a\u0629",
+        "name:en": "Faisaliah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866541",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376040,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "\u0642\u0636\u0627\u0621 \u0645\u0623\u062f\u0628\u0627",
+        "alt_name:ar": "\u0642\u0636\u0627\u0621 \u0645\u0623\u062f\u0628\u0627",
+        "boundary": "administrative",
+        "name": "Madaba Sub-District",
+        "name:ar": "\u0642\u0636\u0627\u0621 \u0645\u0627\u062f\u0628\u0627",
+        "name:de": "Unterbezirk Madaba",
+        "name:es": "Subdistrito de Madaba",
+        "name:fr": "Sous-district de Madaba",
+        "name:pt": "Subdistrito de Madaba",
+        "type": "boundary",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376041,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0645\u0627\u0639\u064a\u0646",
+        "name:ar": "\u0642\u0636\u0627\u0621 \u0645\u0627\u0639\u064a\u0646",
+        "name:ar-Latn": "Qa\u1e11\u0101' M\u0101\u2018\u012bn",
+        "name:de": "Unterbezirk Ma'in",
+        "name:en": "Ma'in Sub-District",
+        "name:fr": "Sous-district de Ma'in",
+        "type": "boundary",
+        "wikidata": "Q31866544",
+        "wikipedia": "ar:\u0642\u0636\u0627\u0621 \u0645\u0627\u0639\u064a\u0646",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376042,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0645\u0644\u064a\u062d",
+        "name:en": "Mlaih Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866546",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376043,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Dieban Sub-District",
+        "name:en": "Dieban Sub-District",
+        "type": "boundary",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376044,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0639\u0631\u064a\u0636",
+        "name:en": "Areedh Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866543",
+        "parent_id": "2926348"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376031,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Shoonah Janoobiyah Sub-District",
+        "name:en": "Shoonah Janoobiyah Sub-District",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376032,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0639\u064a\u0646 \u0627\u0644\u0628\u0627\u0634\u0627",
+        "name:en": "Ain Albasha Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182341",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376033,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Mahes and Fuhais Sub-District",
+        "name:en": "Mahes and Fuhais Sub-District",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376034,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0639\u064a\u0631\u0627 \u0648\u064a\u0631\u0642\u0627",
+        "name:en": "Ira and Yargha Sub-District",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376035,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Al-Salt Sub-District",
+        "name:en": "Al-Salt Sub-District",
+        "name:fr": "Sous-district de Salt",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376036,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Allan and Zayy Sub-District",
+        "name:en": "Allan and Zayy Sub-District",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376037,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0639\u0627\u0631\u0636\u0629",
+        "name:en": "Al-Ardha Sub-District",
+        "type": "boundary",
+        "wikidata": "Q31866551",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376038,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Dair Alla Sub-District",
+        "name:en": "Dair Alla Sub-District",
+        "type": "boundary",
+        "parent_id": "2925596"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376129,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0645\u0642\u0627\u0637\u0639\u0629 \u062c\u0631\u0634",
+        "name:ar": "\u0645\u0642\u0627\u0637\u0639\u0629 \u062c\u0631\u0634",
+        "name:en": "Jerash Sub-District",
+        "type": "boundary",
+        "wikidata": "Q61439301",
+        "parent_id": "2925599"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376130,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u0631\u0645\u0627",
+        "name:en": "Borma Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126211",
+        "parent_id": "2925599"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376131,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0645\u0635\u0637\u0628\u0629",
+        "name:en": "Mestabah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126210",
+        "parent_id": "2925599"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376098,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0635\u062e\u0631\u0629",
+        "name:en": "Sakhrah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126207",
+        "parent_id": "2925616"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376099,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0639\u0631\u062c\u0627\u0646",
+        "name:en": "Orjan Sub-District",
+        "type": "boundary",
+        "wikidata": "Q27126208",
+        "parent_id": "2925616"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376100,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Ajloun Sub-District",
+        "name:en": "Ajloun Sub-District",
+        "type": "boundary",
+        "parent_id": "2925616"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376101,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0643\u0641\u0631\u0646\u062c\u0629",
+        "name:en": "Kufranjah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182883",
+        "parent_id": "2925616"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376088,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0648\u0633\u0637\u064a\u0629",
+        "name:en": "El-Wastiyyeh Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182678",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376090,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0637\u0628\u064a\u0629",
+        "name:en": "Taybeh Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182657",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376091,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Mazar Shamali Sub-District",
+        "name:en": "Mazar Shamali Sub-District",
+        "type": "boundary",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376092,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u0646\u064a \u0639\u0628\u064a\u062f",
+        "name:en": "Bani Obeid Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182636",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376093,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Aghwar Janoobiyah Sub-District",
+        "name:en": "Aghwar Janoobiyah Sub-District",
+        "type": "boundary",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376095,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0643\u0648\u0631\u0629",
+        "name:en": "Koorah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182590",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376103,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0627\u0644\u0631\u0645\u062b\u0627",
+        "name:en": "Ramtha Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182565",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376105,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u0642\u0636\u0627\u0621 \u0628\u0646\u064a \u0643\u0646\u0627\u0646\u0629",
+        "name:en": "Bani Kenanah Sub-District",
+        "type": "boundary",
+        "wikidata": "Q35182606",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 13376106,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "\u062d\u0648\u0627\u0631\u0629",
+        "type": "boundary",
+        "parent_id": "2925617"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9094108,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "Sweileh",
+        "name:ar": "\u0635\u0648\u064a\u0644\u062d",
+        "name:en": "Sweileh",
+        "place": "district",
+        "type": "boundary",
+        "parent_id": "13376017"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9094108,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "Sweileh",
+        "name:ar": "\u0635\u0648\u064a\u0644\u062d",
+        "name:en": "Sweileh",
+        "place": "district",
+        "type": "boundary",
+        "parent_id": "13376035"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9094108,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "Sweileh",
+        "name:ar": "\u0635\u0648\u064a\u0644\u062d",
+        "name:en": "Sweileh",
+        "place": "district",
+        "type": "boundary",
+        "parent_id": "13376032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 9094108,
+      "tags": {
+        "admin_level": "8",
+        "boundary": "administrative",
+        "name": "Sweileh",
+        "name:ar": "\u0635\u0648\u064a\u0644\u062d",
+        "name:en": "Sweileh",
+        "place": "district",
+        "type": "boundary",
+        "parent_id": "13376033"
+      }
+    }
+  ]
+}

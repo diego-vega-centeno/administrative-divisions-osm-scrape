@@ -1,0 +1,1136 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.8 e802775f",
+  "osm3s": {
+    "timestamp_osm_base": "2025-10-03T17:28:44Z",
+    "timestamp_areas_base": "2025-10-03T13:36:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 88210,
+      "tags": {
+        "ISO3166-1": "SZ",
+        "ISO3166-1:alpha2": "SZ",
+        "ISO3166-1:alpha3": "SWZ",
+        "ISO3166-1:numeric": "748",
+        "admin_level": "2",
+        "alt_name:be": "\u0421\u0432\u0430\u0437\u0456\u043b\u0435\u043d\u0434",
+        "alt_name:be-tarask": "\u0421\u045e\u0430\u0437\u0456\u043b\u044d\u043d\u0434",
+        "alt_name:bg": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434;\u0421\u0443\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "alt_name:ca": "Swazil\u00e0ndia",
+        "alt_name:cs": "Svazijsko",
+        "alt_name:da": "Swaziland",
+        "alt_name:de": "Swasiland",
+        "alt_name:en": "eSwatini;Swaziland",
+        "alt_name:eo": "Svaziujo",
+        "alt_name:es": "Suazilandia",
+        "alt_name:fi": "Eswatini",
+        "alt_name:fr": "Swaziland",
+        "alt_name:gl": "Eswatini",
+        "alt_name:it": "Suazilandia",
+        "alt_name:nl": "Swaziland",
+        "alt_name:pl": "Suazi",
+        "alt_name:ro": "Swaziland",
+        "alt_name:ru": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "alt_name:tr": "Svaziland",
+        "alt_name:uk": "\u041d\u0433\u0432\u0430\u043d\u0435;\u0421\u0432\u0430\u0437\u0456\u043b\u0435\u043d\u0434",
+        "alt_name:vi": "E-xoa-ti-ni;Swaziland;Xoa-di-len",
+        "alt_official_name": "Reino de Essuat\u00edni",
+        "border_type": "country",
+        "boundary": "administrative",
+        "driving_side": "left",
+        "flag": "File:Flag_of_Eswatini.svg",
+        "land_area": "administrative",
+        "name": "Eswatini",
+        "name:ace": "Swaziland",
+        "name:af": "Swaziland",
+        "name:als": "Swasiland",
+        "name:am": "\u1235\u12cb\u12da\u120b\u1295\u12f5",
+        "name:an": "Swazilandia",
+        "name:ang": "S\u01bfasiland",
+        "name:ar": "\u0633\u0648\u0627\u0632\u064a\u0644\u0627\u0646\u062f",
+        "name:arz": "\u0633\u0648\u0627\u0632\u064a\u0644\u0627\u0646\u062f\u0627",
+        "name:ast": "Suazilandia",
+        "name:ay": "Suas\u00efsuiu",
+        "name:az": "Esvatini",
+        "name:ba": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:bat-smg": "Svaz\u0117lands",
+        "name:bcl": "Swasilandya",
+        "name:be": "\u042d\u0441\u0432\u0430\u0446\u0456\u043d\u0456",
+        "name:be-tarask": "\u042d\u0441\u045e\u0430\u0446\u0456\u043d\u0456",
+        "name:bg": "\u0415\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "name:bjn": "Swaziland",
+        "name:bn": "\u09b8\u09cb\u09af\u09bc\u09be\u099c\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09a1",
+        "name:bo": "\u0f66\u0f74\u0f0b\u0f5d\u0f0b\u0f5b\u0f72\u0f0b\u0f63\u0f53\u0f4c\u0f0d",
+        "name:bpy": "\u09b8\u09cb\u09af\u09bc\u09be\u099c\u09bf\u09b2\u09cd\u09af\u09be\u09a8\u09cd\u09a1",
+        "name:br": "Eswatini",
+        "name:bs": "Svazilend",
+        "name:bxr": "\u0421\u0432\u0430\u0437\u0438\u043b\u0430\u043d\u0434",
+        "name:ca": "Eswatini",
+        "name:ceb": "Suwasilandiya",
+        "name:ckb": "\u0633\u0648\u0627\u0632\u06cc\u0644\u0627\u0646\u062f",
+        "name:crh": "Svaziland",
+        "name:cs": "Eswatini",
+        "name:cy": "Eswatini",
+        "name:da": "Eswatini",
+        "name:de": "Eswatini",
+        "name:diq": "Swazilanda",
+        "name:dv": "\u0790\u07aa\u0788\u07a7\u0792\u07a8\u078d\u07ad\u0782\u07b0\u0791\u07aa",
+        "name:ee": "Swaziland",
+        "name:el": "\u03a3\u03bf\u03c5\u03b1\u03b6\u03b9\u03bb\u03ac\u03bd\u03b4\u03b7",
+        "name:en": "Eswatini",
+        "name:eo": "Svazilando",
+        "name:es": "Eswatini",
+        "name:et": "Svaasimaa",
+        "name:eu": "Swazilandia",
+        "name:ext": "Suazilandia",
+        "name:fa": "\u0633\u0648\u0627\u0632\u06cc\u0644\u0646\u062f",
+        "name:fi": "Swazimaa",
+        "name:fo": "Svasiland",
+        "name:fr": "Eswatini",
+        "name:frp": "Souazilande",
+        "name:fy": "Swazil\u00e2n",
+        "name:ga": "Esuait\u00edn\u00ed",
+        "name:gag": "Svazilend",
+        "name:gd": "D\u00f9thaich nan Suasaidh",
+        "name:gl": "Suacilandia",
+        "name:gn": "Esuat\u00edni",
+        "name:gu": "\u0ab8\u0acd\u0ab5\u0abe\u0a9d\u0ac0\u0ab2\u0ac7\u0aa8\u0acd\u0aa1",
+        "name:gv": "Yn \u00c7heer Swassee",
+        "name:hak": "S\u1e73\u0302-v\u00ee-s\u1e73-l\u00e0n",
+        "name:he": "\u05e1\u05d5\u05d5\u05d6\u05d9\u05dc\u05e0\u05d3",
+        "name:hi": "\u0938\u094d\u0935\u093e\u091c\u093c\u0940\u0932\u0948\u0923\u094d\u0921",
+        "name:hif": "Swaziland",
+        "name:hr": "Esvatini",
+        "name:ht": "Swazilann",
+        "name:hu": "Szv\u00e1zif\u00f6ld",
+        "name:hy": "\u054d\u057e\u0561\u0566\u056b\u056c\u0565\u0576\u0564",
+        "name:id": "Swaziland",
+        "name:ie": "Swaziland",
+        "name:ilo": "Swaziland",
+        "name:io": "Swazilando",
+        "name:is": "Svas\u00edland",
+        "name:it": "Eswatini",
+        "name:ja": "\u30b9\u30ef\u30b8\u30e9\u30f3\u30c9",
+        "name:jbo": "suazilynd",
+        "name:jv": "Swaziland",
+        "name:ka": "\u10d4\u10e1\u10d5\u10d0\u10e2\u10d8\u10dc\u10d8",
+        "name:kaa": "Svazilend",
+        "name:kg": "Swati",
+        "name:kk": "\u0421\u0443\u0430\u0437\u0438\u043b\u0430\u043d\u0434",
+        "name:kn": "\u0cb8\u0ccd\u0cb5\u0cbe\u0c9c\u0cbf\u0cb2\u0ccd\u0caf\u0cbe\u0c82\u0ca1\u0ccd",
+        "name:ko": "\uc2a4\uc640\uc9c8\ub780\ub4dc",
+        "name:ku": "Swaziland",
+        "name:kw": "Pow Swati",
+        "name:la": "Swazia",
+        "name:lb": "Swasiland",
+        "name:li": "Swaziland",
+        "name:lij": "Swaziland",
+        "name:lmo": "Swaziland",
+        "name:ln": "Swaziland",
+        "name:lt": "Svazilandas",
+        "name:lv": "Svazilenda",
+        "name:mhr": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:mi": "Warerangi",
+        "name:mk": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:ml": "\u0d38\u0d4d\u0d35\u0d3e\u0d38\u0d3f\u0d32\u0d3e\u0d28\u0d4d\u0d31\u0d4d",
+        "name:mn": "\u0421\u0432\u0430\u0437\u0438\u043b\u0430\u043d\u0434",
+        "name:mr": "\u0938\u094d\u0935\u093e\u091d\u0940\u0932\u0901\u0921",
+        "name:ms": "Swaziland",
+        "name:mt": "Swa\u017ciland",
+        "name:my": "\u1006\u103d\u102c\u1007\u102e\u101c\u1014\u103a\u1014\u102d\u102f\u1004\u103a\u1004\u1036",
+        "name:nah": "Suazitl\u0101lpan",
+        "name:nan": "Swazi-t\u0113",
+        "name:nds": "Swasiland",
+        "name:nl": "Eswatini",
+        "name:nn": "Eswatini",
+        "name:no": "Eswatini",
+        "name:nov": "Swazilande",
+        "name:nso": "Swaziland",
+        "name:nv": "Sw\u00e1azi Dine\u02bc\u00e9 Bik\u00e9yah",
+        "name:oc": "Swaziland",
+        "name:or": "\u0b38\u0b4d\u0b35\u0b3e\u0b1c\u0b3f\u0b32\u0b4d\u0b5f\u0b3e\u0b23\u0b4d\u0b21",
+        "name:os": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:pa": "\u0a38\u0a35\u0a3e\u0a1c\u0a3c\u0a40\u0a32\u0a48\u0a02\u0a21",
+        "name:pam": "Swaziland",
+        "name:pdc": "Swasiland",
+        "name:pih": "Swoseland",
+        "name:pl": "Eswatini",
+        "name:pms": "Swaziland",
+        "name:pnb": "\u0633\u0648\u0627\u0632\u06cc \u0644\u06cc\u0646\u0688",
+        "name:ps": "\u0633\u0648\u0627\u0632\u064a\u0644\u0627\u0646\u0689",
+        "name:pt": "Essuat\u00edni",
+        "name:qu": "Swasisuyu",
+        "name:ro": "eSwatini",
+        "name:ru": "\u042d\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "name:rw": "Swazilande",
+        "name:sa": "\u0938\u094d\u0935\u093e\u091c\u0940\u0932\u0948\u0902\u0921",
+        "name:sah": "\u0421\u0443\u0430\u0437\u0438\u043b\u044d\u043d\u0434",
+        "name:sc": "Swaziland",
+        "name:scn": "Swaziland",
+        "name:sco": "Swaziland",
+        "name:se": "Swazieana",
+        "name:sg": "Sw\u00e4z\u00efl\u00e2nde",
+        "name:sh": "Svazilend",
+        "name:sk": "Eswatini",
+        "name:sl": "Esvatini",
+        "name:smn": "Swazieenn\u00e2m",
+        "name:sms": "Swazij\u00e2nnam",
+        "name:sn": "Swaziland",
+        "name:so": "Swasiland",
+        "name:sq": "Suazilendi",
+        "name:sr": "\u0415\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "name:sr-Latn": "Esvatini",
+        "name:ss": "eSwatini",
+        "name:stq": "Swasilound",
+        "name:su": "Swaziland",
+        "name:sv": "Swaziland",
+        "name:sw": "Uswazi",
+        "name:ta": "\u0b9a\u0bc1\u0bb5\u0bbe\u0b9a\u0bbf\u0bb2\u0bbe\u0ba8\u0bcd\u0ba4\u0bc1",
+        "name:tg": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:th": "\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e2a\u0e27\u0e32\u0e0b\u0e34\u0e41\u0e25\u0e19\u0e14\u0e4c",
+        "name:ti": "\u1235\u12cb\u12da\u120b\u1295\u12f5",
+        "name:tk": "Swazilend",
+        "name:tl": "Suwasilandya",
+        "name:tok": "ma Sawasi",
+        "name:tr": "Esvatini",
+        "name:ts": "Swaziland",
+        "name:tt": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "name:tzl": "Swaziph\u00e4ts",
+        "name:ug": "\u0633\u06cb\u0627\u0632\u0649\u0644\u06d0\u0646\u062f",
+        "name:uk": "\u0415\u0441\u0432\u0430\u0442\u0456\u043d\u0456",
+        "name:ur": "\u0633\u0648\u0627\u0632\u06cc \u0644\u06cc\u0646\u0688",
+        "name:uz": "Svazilend",
+        "name:ve": "Swazini",
+        "name:vec": "Swaziland",
+        "name:vi": "Eswatini",
+        "name:vo": "Svasiy\u00e4n",
+        "name:vro": "Svaasimaa",
+        "name:war": "Swazilandya",
+        "name:wo": "Suwaasilaand",
+        "name:xal": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434\u0438\u043d \u041d\u0443\u0442\u0433",
+        "name:yi": "\u05e1\u05d5\u05d5\u05d0\u05d6\u05d9\u05dc\u05d0\u05e0\u05d3",
+        "name:yo": "Sw\u00e1s\u00edl\u00e1nd\u00ec",
+        "name:yue": "\u65af\u5a01\u58eb\u862d",
+        "name:zh": "\u65af\u5a01\u58eb\u5170 / \u53f2\u74e6\u8482\u5c3c / \u65af\u5a01\u58eb\u862d",
+        "name:zh-Hans": "\u65af\u5a01\u58eb\u5170",
+        "name:zh-Hans-CN": "\u65af\u5a01\u58eb\u5170",
+        "name:zh-Hant": "\u53f2\u74e6\u5e1d\u5c3c",
+        "name:zh-Hant-CN": "\u65af\u5a01\u58eb\u862d",
+        "name:zh-Hant-HK": "\u65af\u5a01\u58eb\u862d",
+        "name:zh-Hant-TW": "\u53f2\u74e6\u8482\u5c3c",
+        "name:zu": "ISwazilandi",
+        "official_name:az": "Esvatini Krall\u0131\u011f\u0131",
+        "official_name:be": "\u041a\u0430\u0440\u0430\u043b\u0435\u045e\u0441\u0442\u0432\u0430 \u042d\u0441\u0432\u0430\u0446\u0456\u043d\u0456",
+        "official_name:bg": "\u041a\u0440\u0430\u043b\u0441\u0442\u0432\u043e \u0415\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "official_name:ca": "Regne d'Eswatini",
+        "official_name:cs": "Svazijsk\u00e9 kr\u00e1lovstv\u00ed",
+        "official_name:cy": "Teyrnas Eswatini",
+        "official_name:de": "K\u00f6nigreich von Eswatini",
+        "official_name:en": "Kingdom of Eswatini",
+        "official_name:fr": "Royaume d\u2019Eswatini",
+        "official_name:ga": "R\u00edocht Esuait\u00edn\u00ed",
+        "official_name:gn": "Tavet\u00e3 Esuat\u00edni",
+        "official_name:he": "\u05de\u05de\u05dc\u05db\u05ea \u05d0\u05e1\u05d5\u05d5\u05d0\u05d8\u05d9\u05e0\u05d9",
+        "official_name:hr": "Kraljevina Esvatini",
+        "official_name:ka": "\u10d4\u10e1\u10d5\u10d0\u10e2\u10d8\u10dc\u10d8\u10e1 \u10e1\u10d0\u10db\u10d4\u10e4\u10dd",
+        "official_name:nn": "Kongeriket Eswatini",
+        "official_name:no": "Kongeriket Eswatini",
+        "official_name:pl": "Kr\u00f3lestwo Eswatini",
+        "official_name:pt": "Reino de Essuat\u00edni",
+        "official_name:ro": "Regatul eSwatini",
+        "official_name:ru": "\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u0442\u0432\u043e \u042d\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "official_name:sk": "Eswatinsk\u00e9 kr\u00e1\u013eovstvo",
+        "official_name:sl": "Kraljevina Esvatini",
+        "official_name:sr": "\u041a\u0440\u0430\u0459\u0435\u0432\u0438\u043d\u0430 \u0415\u0441\u0432\u0430\u0442\u0438\u043d\u0438",
+        "official_name:sr-Latn": "Kraljevina Esvatini",
+        "official_name:tr": "Esvatini Krall\u0131\u011f\u0131",
+        "official_name:uk": "\u041a\u043e\u0440\u043e\u043b\u0456\u0432\u0441\u0442\u0432\u043e \u0415-\u0421\u0432\u0430\u0442\u0456\u043d\u0456",
+        "official_name:vi": "V\u01b0\u01a1ng qu\u1ed1c Eswatini",
+        "old_name:az": "Svazilend",
+        "old_name:be": "\u0421\u0432\u0430\u0437\u0456\u043b\u0435\u043d\u0434",
+        "old_name:be-tarask": "\u0421\u045e\u0430\u0437\u0456\u043b\u044d\u043d\u0434",
+        "old_name:br": "Swaziland",
+        "old_name:cy": "Gwlad Swazi",
+        "old_name:de": "Swasiland",
+        "old_name:en": "Swaziland",
+        "old_name:fr": "Swaziland",
+        "old_name:ga": "An tSuasalainn",
+        "old_name:hr": "Svazi",
+        "old_name:ka": "\u10e1\u10d5\u10d0\u10d6\u10d8\u10da\u10d4\u10dc\u10d3\u10d8",
+        "old_name:nn": "Swaziland",
+        "old_name:no": "Swaziland",
+        "old_name:pt": "Suazil\u00e2ndia",
+        "old_name:ru": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "old_name:sk": "Svazijsko",
+        "old_name:sl": "Svazi",
+        "old_name:sr": "\u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "old_name:sr-Latn": "Svazilend",
+        "old_name:uk": "\u0421\u0432\u0430\u0437\u0456\u043b\u0435\u043d\u0434",
+        "old_name:zh": "\u65af\u5a01\u58eb\u5170 / \u65af\u5a01\u58eb\u862d / \u53f2\u74e6\u6fdf\u862d",
+        "old_name:zh-Hant-TW": "\u53f2\u74e6\u6fdf\u862d",
+        "old_official_name:ca": "Regne de Swazil\u00e0ndia",
+        "old_official_name:fr": "Royaume du Swaziland",
+        "old_official_name:pt": "Reino da Suazil\u00e2ndia",
+        "old_official_name:ro": "Regatul Swaziland",
+        "old_official_name:sl": "Kraljevina Svazi",
+        "old_official_name:sr": "\u041a\u0440\u0430\u0459\u0435\u0432\u0438\u043d\u0430 \u0421\u0432\u0430\u0437\u0438\u043b\u0435\u043d\u0434",
+        "old_official_name:sr-Latn": "Kraljevina Svazilend",
+        "old_official_name:uk": "\u041a\u043e\u0440\u043e\u043b\u0456\u0432\u0441\u0442\u0432\u043e \u0421\u0432\u0430\u0437\u0456\u043b\u0435\u043d\u0434",
+        "old_official_name:vi": "V\u01b0\u01a1ng qu\u1ed1c Swaziland",
+        "old_official_name:yi": "\u05e7\u05e2\u05e0\u05d9\u05d2\u05e8\u05d9\u05d9\u05da \u05e4\u05d5\u05df \u05e1\u05d5\u05d5\u05d0\u05b7\u05d6\u05d9\u05dc\u05d0\u05b7\u05e0\u05d3",
+        "source:name:de": "https://www.auswaertiges-amt.de/blob/215256/e505c18e9cd162813a29f4e5a4ec8e07/laenderverzeichnis-data.pdf (2019-12-24)",
+        "source:name:zh-Hant-TW": "https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=29B3D06675FAF607",
+        "source:official_name:de": "https://www.auswaertiges-amt.de/blob/215256/e505c18e9cd162813a29f4e5a4ec8e07/laenderverzeichnis-data.pdf (2019-12-24)",
+        "source:official_name:en": "https://www.un.org/en/member-states/index.html (2019-12-24)",
+        "type": "boundary",
+        "wikidata": "Q1050",
+        "wikipedia": "en:Eswatini"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1253032,
+      "tags": {
+        "ISO3166-2": "SZ-MA",
+        "admin_level": "4",
+        "alt_name:ar": "\u0645\u0642\u0627\u0637\u0639\u0629 \u0645\u0646\u0632\u064a\u0646\u064a",
+        "boundary": "administrative",
+        "name": "Manzini",
+        "name:ar": "\u0645\u0646\u0632\u064a\u0646\u064a",
+        "name:bg": "\u041c\u0430\u043d\u0437\u0438\u043d\u0438 (\u0440\u0430\u0439\u043e\u043d)",
+        "name:ceb": "Manzini District",
+        "name:de": "Manzini",
+        "name:el": "\u039c\u03b1\u03bd\u03b6\u03af\u03bd\u03b9",
+        "name:en": "Manzini Region",
+        "name:es": "Distrito de Manzini",
+        "name:fa": "\u0645\u0646\u0637\u0642\u0647 \u0645\u0627\u0646\u0632\u06cc\u0646\u06cc",
+        "name:fi": "Manzini",
+        "name:fr": "Manzini",
+        "name:frr": "Manzini",
+        "name:id": "Region Manzini",
+        "name:it": "Distretto di Manzini",
+        "name:ja": "\u30de\u30f3\u30b8\u30cb\u5730\u65b9",
+        "name:ka": "\u10db\u10d0\u10dc\u10d6\u10d8\u10dc\u10d8\u10e1 \u10e0\u10d4\u10d2\u10d8\u10dd\u10dc\u10d8",
+        "name:ko": "\ub9cc\uc9c0\ub2c8\uad6c",
+        "name:lt": "Manzinio rajonas",
+        "name:nl": "Manzini (district)",
+        "name:no": "Manzini",
+        "name:pl": "Dystrykt Manzini",
+        "name:pt": "Manzini",
+        "name:ro": "Districtul Manzini",
+        "name:ru": "\u041c\u0430\u043d\u0437\u0438\u043d\u0438",
+        "name:sr": "\u041c\u0430\u043d\u0437\u0438\u043d\u0438",
+        "name:ss": "Manzini",
+        "name:sv": "Manzini",
+        "name:uk": "\u041c\u0430\u043d\u0437\u0456\u043d\u0456",
+        "name:ur": "\u0645\u0627\u0646\u0632\u06cc\u0646\u06cc \u0639\u0644\u0627\u0642\u06c1",
+        "name:vi": "Manzini",
+        "name:xmf": "\u10db\u10d0\u10dc\u10d6\u10d8\u10dc\u10d8\u10e8 \u10e0\u10d4\u10d2\u10d8\u10dd\u10dc\u10d8",
+        "name:zh": "\u66fc\u9f4a\u5c3c\u5340",
+        "name:zu": "IManzini",
+        "type": "boundary",
+        "wikidata": "Q305395",
+        "wikipedia": "en:Manzini Region"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1253040,
+      "tags": {
+        "ISO3166-2": "SZ-LU",
+        "admin_level": "4",
+        "alt_name:en": "Lubombo Region",
+        "boundary": "administrative",
+        "name": "Lubombo",
+        "name:ar": "\u0645\u0642\u0627\u0637\u0639\u0629 \u0644\u0648\u0628\u0648\u0645\u0628\u0648",
+        "name:bg": "\u041b\u0443\u0431\u043e\u043c\u0431\u043e",
+        "name:ceb": "Lubombo District",
+        "name:de": "Lubombo",
+        "name:el": "\u039b\u03bf\u03c5\u03bc\u03c0\u03cc\u03bc\u03c0\u03bf",
+        "name:es": "Distrito de Lubombo",
+        "name:fa": "\u0646\u0627\u062d\u06cc\u0647 \u0644\u0648\u0628\u0648\u0645\u0628\u0648",
+        "name:fi": "Lubombo",
+        "name:fr": "Lubombo",
+        "name:frr": "Lubombo",
+        "name:id": "Region Lubombo",
+        "name:it": "Distretto di Lubombo",
+        "name:ja": "\u30eb\u30dc\u30f3\u30dc\u5730\u65b9",
+        "name:ka": "\u10da\u10e3\u10d1\u10dd\u10db\u10d1\u10dd",
+        "name:ko": "\ub8e8\ubd04\ubcf4\uad6c",
+        "name:lt": "Lubombo rajonas",
+        "name:nl": "Lubombo",
+        "name:no": "Lubombo",
+        "name:pl": "Dystrykt Lubombo",
+        "name:pt": "Lubombo",
+        "name:ro": "Districtul Lubombo",
+        "name:ru": "\u041b\u0443\u0431\u043e\u043c\u0431\u043e",
+        "name:sr": "\u041b\u0443\u0431\u043e\u043c\u0431\u043e",
+        "name:ss": "Lubombo",
+        "name:sv": "Lubombo",
+        "name:tr": "Lubombo B\u00f6lgesi",
+        "name:uk": "\u041b\u0443\u0431\u043e\u043c\u0431\u043e",
+        "name:ur": "\u0644\u0648\u0628\u0648\u0645\u0628\u0648 \u0639\u0644\u0627\u0642\u06c1",
+        "name:vi": "Lubombo",
+        "name:xmf": "\u10da\u10e3\u10d1\u10dd\u10db\u10d1\u10dd",
+        "name:zh": "\u5362\u90a6\u535a",
+        "name:zu": "ILubombo",
+        "type": "boundary",
+        "wikidata": "Q856657",
+        "wikipedia": "en:Lubombo Region"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1253042,
+      "tags": {
+        "ISO3166-2": "SZ-SH",
+        "admin_level": "4",
+        "alt_name:en": "Shiselweni Region",
+        "boundary": "administrative",
+        "name": "Shiselweni",
+        "name:ar": "\u0645\u0642\u0627\u0637\u0639\u0629 \u0634\u064a\u0632\u0644\u0648\u064a\u0646\u064a",
+        "name:bg": "\u0428\u0438\u0441\u0435\u043b\u0432\u0435\u043d\u0438",
+        "name:ca": "Shiselweni",
+        "name:ceb": "Shiselweni District",
+        "name:de": "Shiselweni",
+        "name:el": "\u03a3\u03b9\u03c3\u03b5\u03bb\u03bf\u03c5\u03ad\u03bd\u03b9",
+        "name:es": "Distrito de Shishelweni",
+        "name:fa": "\u0646\u0627\u062d\u06cc\u0647 \u0634\u06cc\u0632\u0644\u0648\u0646\u06cc",
+        "name:fi": "Shiselweni",
+        "name:fr": "Shiselweni",
+        "name:frr": "Shiselweni (Regiuun)",
+        "name:id": "Region Shiselweni",
+        "name:it": "Distretto di Shiselweni",
+        "name:ja": "\u30b7\u30bb\u30eb\u30a6\u30a7\u30cb\u5730\u65b9",
+        "name:ka": "\u10e8\u10d8\u10e1\u10d4\u10da\u10d5\u10d4\u10dc\u10d8",
+        "name:ko": "\uc2dc\uc140\uc6e8\ub2c8\uad6c",
+        "name:lt": "\u0160iselvenio rajonas",
+        "name:nl": "Shiselweni",
+        "name:no": "Shiselweni",
+        "name:pl": "Dystrykt Shiselweni",
+        "name:pt": "Shishelweni",
+        "name:ro": "Districtul Shiselweni",
+        "name:ru": "\u0428\u0438\u0441\u0435\u043b\u0432\u0435\u043d\u0438",
+        "name:sr": "\u0428\u0438\u0441\u0435\u043b\u0432\u0435\u043d\u0438",
+        "name:ss": "Shiselweni",
+        "name:sv": "Shiselweni",
+        "name:tr": "Shiselweni B\u00f6lgesi",
+        "name:uk": "\u0428\u0438\u0441\u0435\u043b\u0432\u0435\u043d\u0456",
+        "name:ur": "\u0634\u06cc\u0632\u0644\u0648\u06cc\u0646\u06cc \u0639\u0644\u0627\u0642\u06c1",
+        "name:vi": "Shiselweni (v\u00f9ng)",
+        "name:xmf": "\u10e8\u10d8\u10e1\u10d4\u10da\u10d5\u10d4\u10dc\u10d8",
+        "name:zh": "\u5e0c\u585e\u5362\u97e6\u5c3c",
+        "name:zu": "EShiselweni",
+        "type": "boundary",
+        "wikidata": "Q845934",
+        "wikipedia": "en:Shiselweni Region"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1253055,
+      "tags": {
+        "ISO3166-2": "SZ-HH",
+        "admin_level": "4",
+        "boundary": "administrative",
+        "name": "Hhohho",
+        "name:ar": "\u0625\u0642\u0644\u064a\u0645 \u0647\u0648\u0647\u0648",
+        "name:bg": "\u0425\u043e\u0445\u043e",
+        "name:ceb": "Hhohho District",
+        "name:cs": "Hhohho",
+        "name:de": "Hhohho",
+        "name:el": "\u03a7\u03bd\u03cc\u03c7\u03bf",
+        "name:en": "Hhohho Region",
+        "name:es": "Distrito de Hhohho",
+        "name:fa": "\u0646\u0627\u062d\u06cc\u0647 \u0647\u0648\u0648\u0647\u0648",
+        "name:fi": "Hhohho",
+        "name:fr": "Hhohho",
+        "name:frr": "Hhohho",
+        "name:id": "Region Hhohho",
+        "name:it": "Distretto di Hhohho",
+        "name:ja": "\u30db\u30db\u5730\u65b9",
+        "name:ka": "\u10f0\u10dd\u10f0\u10dd",
+        "name:ko": "\ud638\ud638\uad6c",
+        "name:lt": "Hoho rajonas",
+        "name:nl": "Hhohho",
+        "name:no": "Hhohho",
+        "name:oc": "Hhohho",
+        "name:pl": "Dystrykt Hhohho",
+        "name:pt": "Hhohho",
+        "name:ro": "Districtul Hhohho",
+        "name:ru": "\u0425\u043e\u0445\u043e",
+        "name:se": "Hhohho",
+        "name:sr": "\u0425\u043e\u0445\u043e",
+        "name:ss": "Hhohho",
+        "name:sv": "Hhohho",
+        "name:tr": "Hhohho B\u00f6lgesi",
+        "name:uk": "\u0425\u043e\u0445\u043e",
+        "name:ur": "\u06c1\u0648\u06c1\u0648 \u0639\u0644\u0627\u0642\u06c1",
+        "name:vi": "Hhohho",
+        "name:xmf": "\u10f0\u10dd\u10f0\u10dd",
+        "name:zh": "\u970d\u970d",
+        "name:zu": "IHhohho",
+        "type": "boundary",
+        "wikidata": "Q735570",
+        "wikipedia": "en:Hhohho Region"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253008,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mbangweni",
+        "type": "boundary",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253014,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Nkwene",
+        "type": "boundary",
+        "wikidata": "Q3432321",
+        "wikipedia:en": "Nkwene",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253016,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Zombodze",
+        "type": "boundary",
+        "wikidata": "Q2003377",
+        "wikipedia:en": "Zombodze",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253018,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Sandleni",
+        "type": "boundary",
+        "wikidata": "Q748452",
+        "wikipedia:en": "Sandleni",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253021,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Maseyisini",
+        "type": "boundary",
+        "wikidata": "Q3432388",
+        "wikipedia:en": "Maseyisini",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253022,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mtsambama",
+        "type": "boundary",
+        "wikidata": "Q3432363",
+        "wikipedia:en": "Mtsambama",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253025,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Sigwe",
+        "type": "boundary",
+        "wikidata": "Q3473340",
+        "wikipedia:en": "Sigwe",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253029,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Gege",
+        "type": "boundary",
+        "wikidata": "Q3473347",
+        "wikipedia": "en:Gege, Eswatini",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253031,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ngudzeni",
+        "type": "boundary",
+        "wikidata": "Q3432331",
+        "wikipedia:en": "Ngudzeni",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253035,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Hosea",
+        "type": "boundary",
+        "wikidata": "Q744857",
+        "wikipedia:en": "Hosea, Eswatini",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253039,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Somntongo",
+        "type": "boundary",
+        "wikidata": "Q2003368",
+        "wikipedia:en": "Somntongo",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253041,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Shiselweni",
+        "type": "boundary",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253050,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Matsanjeni South",
+        "type": "boundary",
+        "wikidata": "Q3798835",
+        "wikipedia:en": "Matsanjeni South",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253053,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Kubuta",
+        "type": "boundary",
+        "wikidata": "Q3432356",
+        "wikipedia:en": "Kubuta",
+        "parent_id": "1253042"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253002,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ngwempisi",
+        "type": "boundary",
+        "wikidata": "Q3798849",
+        "wikipedia:en": "Ngwempisi",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253012,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Manzini",
+        "type": "boundary",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253013,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lobamba Lomdzala",
+        "type": "boundary",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253020,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mafutseni",
+        "type": "boundary",
+        "wikidata": "Q738448",
+        "wikipedia:en": "Mafutseni",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253026,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Kwaluseni",
+        "type": "boundary",
+        "wikidata": "Q3798822",
+        "wikipedia:en": "Kwaluseni",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253028,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ekukhanyeni",
+        "type": "boundary",
+        "wikidata": "Q2003359",
+        "wikipedia": "en:Ekukhanyeni",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253030,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mahlangatja",
+        "type": "boundary",
+        "wikidata": "Q3798828",
+        "wikipedia:en": "Mahlangatja",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253033,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ludzeludze",
+        "type": "boundary",
+        "wikidata": "Q3798827",
+        "wikipedia": "en:Ludzeludze",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253038,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Nhlambeni",
+        "type": "boundary",
+        "wikidata": "Q3798851",
+        "wikipedia:en": "Nhlambeni",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253044,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mkhiweni",
+        "type": "boundary",
+        "wikidata": "Q3798844",
+        "wikipedia": "en:Mkhiweni",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253046,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mhlambanyatsi",
+        "type": "boundary",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253048,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ntondozi",
+        "type": "boundary",
+        "wikidata": "Q3798859",
+        "wikipedia:en": "Ntondozi",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253049,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lamgabhi",
+        "type": "boundary",
+        "wikidata": "Q3432371",
+        "wikipedia:en": "Lamgabhi",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253057,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mthongwaneni",
+        "type": "boundary",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253058,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mangcongco",
+        "type": "boundary",
+        "wikidata": "Q3798829",
+        "wikipedia:en": "Mangcongco",
+        "parent_id": "1253032"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253003,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Nkilongo",
+        "type": "boundary",
+        "wikidata": "Q3798855",
+        "wikipedia:en": "Nkilongo",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253005,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lugongolweni",
+        "type": "boundary",
+        "wikidata": "Q647334",
+        "wikipedia:en": "Lugongolweni",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253006,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mhlume",
+        "type": "boundary",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253010,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Sithobela",
+        "type": "boundary",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253015,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mpolonjeni",
+        "type": "boundary",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253023,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Siphofaneni",
+        "type": "boundary",
+        "wikidata": "Q637090",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253034,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Hlane",
+        "type": "boundary",
+        "wikidata": "Q3798820",
+        "wikipedia:en": "Hlane",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253037,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lomahasha",
+        "type": "boundary",
+        "wikidata": "Q576512",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253045,
+      "tags": {
+        "admin_level": "6",
+        "alt_name": "Inkhundla Matsanjeni North",
+        "boundary": "administrative",
+        "name": "Inkhundla Tikhuba",
+        "type": "boundary",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253054,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Dvokodvweni",
+        "type": "boundary",
+        "wikidata": "Q3798818",
+        "wikipedia:en": "Dvokodvweni",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253056,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lubuli",
+        "type": "boundary",
+        "wikidata": "Q3798826",
+        "wikipedia:en": "Lubuli",
+        "parent_id": "1253040"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253004,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Timpisini",
+        "type": "boundary",
+        "wikidata": "Q3798866",
+        "wikipedia": "en:Timpisini",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253007,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ndzingeni",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253009,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Hhukwini",
+        "type": "boundary",
+        "wikidata": "Q3798819",
+        "wikipedia": "en:Hhukwini",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253011,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Ntfonjeni",
+        "type": "boundary",
+        "wikidata": "Q3798856",
+        "wikipedia": "en:Ntfonjeni",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253017,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Lobamba",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253019,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mbabane",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253024,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Piggs Peak",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253027,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Nkhaba",
+        "type": "boundary",
+        "wikidata": "Q3798853",
+        "wikipedia": "en:Nkhaba",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253036,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Madlangempisi",
+        "type": "boundary",
+        "wikidata": "Q749707",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253043,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mhlangatane",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253047,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Maphalaleni",
+        "type": "boundary",
+        "wikidata": "Q3798834",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253051,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Motjane",
+        "type": "boundary",
+        "wikidata": "Q3798845",
+        "wikipedia": "en:Motjane",
+        "parent_id": "1253055"
+      }
+    },
+    {
+      "type": "rel",
+      "id": 1253052,
+      "tags": {
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Inkhundla Mayiwane",
+        "type": "boundary",
+        "parent_id": "1253055"
+      }
+    }
+  ]
+}
