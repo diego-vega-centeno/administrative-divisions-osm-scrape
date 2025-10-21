@@ -1,2 +1,3 @@
-/data/[0-9]*
+/data/raw/*
+/data/cleaned
 *.pyc
