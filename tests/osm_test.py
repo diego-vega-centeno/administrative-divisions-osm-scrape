@@ -67,23 +67,6 @@ def osm_basic_test(df):
         "leak": leakRowsDF,
     }
 
-def osm_duplicates_test(df):
-
-    #* duplicates elements happens with are method where polygon intersect other countries areas
-    dup = df[df.duplicated("id", keep=False)]
-    print(" * duplicate elements by id: ", len(dup))
-
-    return {
-        'duplicates.id': dup
-    }
-
-
-def testFunc(type):
-    match type:
-        case "missingName":
-            return lambda x: x["tags"].get("name", "") == ""
-
-
 def checkISO(code, cntrCode):
     if code == "":
         return True
@@ -91,56 +74,47 @@ def checkISO(code, cntrCode):
     iso1 = iso1.group(0) if iso1 else ""
     return iso1 == cntrCode
 
-def makeFixes(testRes, fixed = {}):
+def osm_duplicates_test_center(df, dup_test_logger, cache = {}):
 
-    keepElems = []
-    deleteElems = []
+    keep_elems = []
+    delete_elems = []
+    center_res = {}
+    test_res = {}
+    #* duplicates elements happens when a polygon intersect other areas due
+    #* to incorrect boundaries
+    dup = df[df.duplicated("id", keep=False)]
+    dup_test_logger.debug(f" - duplicate elements by id: {len(dup)}")
 
-    missingName = testRes["missing.name"]
-    print("\tmissing name: ", len(missingName))
-    for index, row in missingName.iterrows():
-        deleteElems.append(row['id'])
-
-    dup = testRes["duplicate.id"]
-    print("\tduplicate: ", len(dup))
-
-    dupTestRes = []
     if len(dup) > 0:
-        print("\t\ttesting osm center: ", len(dup))
-        for groupId, group in dup.groupby("id"):
-            for _, row in group.iterrows():
-                res = [
-                    row["id"],
-                    row["tags.parent_id"],
-                    getCenterNodeInsideParent(row["id"], row["tags.parent_id"]),
-                ]
-                dupTestRes.append(res)
-                print(f"\t\t* {[row['id'], row['tags.parent_id']]}: {res[2]['status'], res[2].get('error_type','')}")
+        dup_test_logger.debug(f"  - testing osm center: {len(dup)}")
+        for _, row in dup.iterrows():
+            dup_test_logger.debug(f"   - {[row['id'], row['tags.parent_id']]}:")
+            if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in cache.keys()]:
+                dup_test_logger.debug("   - already tested: continue")
+                continue
+            res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"])
+            center_res[(row["id"], row["tags.parent_id"])] = res
+            dup_test_logger.debug(f"  - result: {res['status'], res.get('error_type','')}")
 
-    dupCorrectElems = list(filter(
-        lambda x: x[2]["status"] == "ok"
-        and x[1] == str(x[2]["data"]["elements"][0]["id"]),
-        dupTestRes,
-    ))
-    
-    deleteElemsGrouped = []
-    for ele in dupCorrectElems:
-        keepElems.append({'id':ele[0], 'parent_id':ele[1]})
-        if dup[0] == ele[0] and dup[1] != ele[1]:
-            deleteElemsGrouped.append({'id':dup[0], 'parent_id':dup[1]})
-        # deleteElemsGrouped.append([
-        #     {'id':dup[0], 'parent_id':dup[1]} 
-        #     for dup in dupTestRes 
-        #     if dup[0] == ele[0] and dup[1] != ele[1]
-        # ])
-
-    leaks = testRes["leak"]
-    print("\tleaks: ", len(leaks))
-    for index, row in leaks.iterrows():
-        deleteElems.append(row['id'])
+    # normalize test result
+    for k,v in center_res.items():
+        if v['status'] == 'ok' and len(v['data']['elements']) == 0:
+            test_res[k] = {'status':'ok', 'result': False, 'data':v}
+            delete_elems.append(k)
+        elif v['status'] == 'ok':
+            parent = v['data']['elements'][0]
+            if str(parent['id']) == k[1]:
+                test_res[k] = {'status':'ok', 'result': True, 'data':v}
+                keep_elems.append(k)
+            else:
+                test_res[k] = {'status':'ok', 'result': False, 'data':v}
+                delete_elems.append(k)
+        else:
+            test_res[k] = v
+        
 
     return {
-        'deleteElems': deleteElems,
-        'duplicate.keepElems': keepElems,
-        'duplicate.deleteElems': deleteElemsGrouped
+        'test_res': test_res,
+        'duplicate.keep_elems': keep_elems,
+        'duplicate.delete_elems': delete_elems
     }
