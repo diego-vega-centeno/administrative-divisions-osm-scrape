@@ -2,6 +2,11 @@ import re
 from toolsOSM.overpass import getCenterNodeInsideParent
 import pandas as pd
 
+import logging
+# this will create a logger on module import
+# later we can add its configuration
+logger = logging.getLogger('dup_test_logger')
+
 def osm_basic_test(df):
 
     cntrRow = df["tags.ISO3166-1"].notna()
@@ -74,7 +79,7 @@ def checkISO(code, cntrCode):
     iso1 = iso1.group(0) if iso1 else ""
     return iso1 == cntrCode
 
-def osm_duplicates_test_center(df, dup_test_logger, cache = {}):
+def osm_duplicates_test_center(df, cache = {}):
 
     keep_elems = []
     delete_elems = []
@@ -83,18 +88,18 @@ def osm_duplicates_test_center(df, dup_test_logger, cache = {}):
     #* duplicates elements happens when a polygon intersect other areas due
     #* to incorrect boundaries
     dup = df[df.duplicated("id", keep=False)]
-    dup_test_logger.debug(f" - duplicate elements by id: {len(dup)}")
+    logger.debug(f" - duplicate elements by id: {len(dup)}")
 
     if len(dup) > 0:
-        dup_test_logger.debug(f"  - testing osm center: {len(dup)}")
+        logger.debug(f"  - testing osm center: {len(dup)}")
         for _, row in dup.iterrows():
-            dup_test_logger.debug(f"   - {[row['id'], row['tags.parent_id']]}:")
+            logger.debug(f"   - {[row['id'], row['tags.parent_id']]}:")
             if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in cache.keys()]:
-                dup_test_logger.debug("   - already tested: continue")
+                logger.debug("   - already tested: continue")
                 continue
             res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"])
             center_res[(row["id"], row["tags.parent_id"])] = res
-            dup_test_logger.debug(f"  - result: {res['status'], res.get('error_type','')}")
+            logger.debug(f"  - result: {res['status'], res.get('error_type','')}")
 
     # normalize test result
     for k,v in center_res.items():
