@@ -1,7 +1,9 @@
 import re
 from toolsOSM.overpass import getCenterNodeInsideParent
 import pandas as pd
-
+from IPython.display import clear_output
+import os
+import toolsGeneral.main as tgm
 import logging
 # this will create a logger on module import
 # later we can add its configuration
@@ -88,38 +90,63 @@ def osm_duplicates_test_center(df, cache = {}):
     #* duplicates elements happens when a polygon intersect other areas due
     #* to incorrect boundaries
     dup = df[df.duplicated("id", keep=False)]
-    logger.debug(f" - duplicate elements by id: {len(dup)}")
+    logger.info(f" - duplicate elements by id: {len(dup)}")
 
     if len(dup) > 0:
-        logger.debug(f"  - testing osm center: {len(dup)}")
+        logger.info(f" - testing osm center: {len(dup)}")
         for _, row in dup.iterrows():
-            logger.debug(f"   - {[row['id'], row['tags.parent_id']]}:")
+            logger.info(f"  * {[row['id'], row['tags.parent_id']]}:")
             if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in cache.keys()]:
-                logger.debug("   - already tested: continue")
+                logger.info("  * already tested: pass")
                 continue
             res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"])
             center_res[(row["id"], row["tags.parent_id"])] = res
-            logger.debug(f"  - result: {res['status'], res.get('error_type','')}")
 
-    # normalize test result
-    for k,v in center_res.items():
-        if v['status'] == 'ok' and len(v['data']['elements']) == 0:
-            test_res[k] = {'status':'ok', 'result': False, 'data':v}
-            delete_elems.append(k)
-        elif v['status'] == 'ok':
-            parent = v['data']['elements'][0]
-            if str(parent['id']) == k[1]:
-                test_res[k] = {'status':'ok', 'result': True, 'data':v}
-                keep_elems.append(k)
-            else:
+            k, v = (row["id"], row["tags.parent_id"]), res
+
+            # normalize test results
+            if v['status'] == 'ok' and len(v['data']['elements']) == 0:
                 test_res[k] = {'status':'ok', 'result': False, 'data':v}
                 delete_elems.append(k)
-        else:
-            test_res[k] = v
+            elif v['status'] == 'ok':
+                parent = v['data']['elements'][0]
+                if str(parent['id']) == k[1]:
+                    test_res[k] = {'status':'ok', 'result': True, 'data':v}
+                    keep_elems.append(k)
+                else:
+                    test_res[k] = {'status':'ok', 'result': False, 'data':v}
+                    delete_elems.append(k)
+            else:
+                test_res[k] = v
+            logger.info(f"  * finished: status: {test_res[k]['status'], test_res[k].get('error_type','')}; result: {test_res[k].get('result','')}")
         
-
     return {
         'test_res': test_res,
         'duplicate.keep_elems': keep_elems,
         'duplicate.delete_elems': delete_elems
     }
+
+def countries_run_test(
+    df,
+    test,
+    logger,
+    save=True,
+    save_dir=None,
+    processed_info=None
+):
+    test_res = {}
+    to_test = list(df.items())
+    total = len(to_test)
+    for i, (cntr, df) in enumerate(to_test, start=1):
+        clear_output(wait=True)
+        logger.info(f"[{i}/{total}] Processing {cntr}")
+        
+        test_res_curr = test(df, processed_info)
+
+        if save:
+            data_path = os.path.join(save_dir, f"{cntr}/{cntr}_test_res.pkl")
+            if not os.path.exists(data_path):
+                tgm.dump(data_path, test_res_curr)
+        test_res[cntr] = test_res_curr
+
+    return test_res
