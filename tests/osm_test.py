@@ -106,15 +106,15 @@ def osm_duplicates_test_center(df, cache = {}):
 
             # normalize test results
             if v['status'] == 'ok' and len(v['data']['elements']) == 0:
-                test_res[k] = {'status':'ok', 'result': False, 'data':v}
+                test_res[k] = {'status':'ok', 'result': False, 'data':v['data']}
                 delete_elems.append(k)
             elif v['status'] == 'ok':
                 parent = v['data']['elements'][0]
                 if str(parent['id']) == k[1]:
-                    test_res[k] = {'status':'ok', 'result': True, 'data':v}
+                    test_res[k] = {'status':'ok', 'result': True, 'data':v['data']}
                     keep_elems.append(k)
                 else:
-                    test_res[k] = {'status':'ok', 'result': False, 'data':v}
+                    test_res[k] = {'status':'ok', 'result': False, 'data':v['data']}
                     delete_elems.append(k)
             else:
                 test_res[k] = v
