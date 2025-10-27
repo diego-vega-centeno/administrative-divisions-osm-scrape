@@ -17,13 +17,16 @@ def osm_basic_test(df):
     columns = df.columns
 
     #* some elements have missing name
-    miss = df[df["tags.name"].isna()]
-    if miss.empty:
-        miss = pd.DataFrame(columns=columns)
+    miss = df[df["tags.name"].isna()]['id'].to_list()
+    # if miss.empty:
+    #     miss = pd.DataFrame(columns=columns)
     print(" * missing names: ", len(miss))
 
 
     #* relations from other countries
+    #* only discard the ones we are sure are not from the country
+    #* pass the test otherwise
+
     checkTags = [
         "tags.is_in:country",
         "tags.ISO3166-2",
@@ -35,7 +38,11 @@ def osm_basic_test(df):
     isInCountry = {}
 
     for idx, row in df.iterrows():
+
         osmID = str(row.get("id"))
+        if str(row.get("tags.admin_level")) == '2':
+            isInCountry[osmID] = True
+            continue
         parentID = row.get("tags.parent_id")
         foundTag = False
         for tag in checkTags:
@@ -66,12 +73,12 @@ def osm_basic_test(df):
         if not foundTag and pd.notna(parentID) and isInCountry.get(parentID):
             isInCountry[osmID] = True
 
-    leakRowsDF = pd.DataFrame(leakRows, columns=columns)
-    print(" * relations from other countries: ", len(leakRowsDF))
+    leakRows = [row['id'] for row in leakRows]
+    print(" * relations from other countries: ", len(leakRows))
 
     return {    
         "missing.name": miss,
-        "leak": leakRowsDF,
+        "leak": leakRows,
     }
 
 def checkISO(code, cntrCode):
