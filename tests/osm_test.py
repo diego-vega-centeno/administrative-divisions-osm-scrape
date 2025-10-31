@@ -33,6 +33,7 @@ def osm_basic_test(df):
         "tags.ref:nuts",
         "tags.ref:nuts:2",
         "tags.ref:nuts:3",
+        "tags.addr:country"
     ]
     leakRows = []
     isInCountry = {}
@@ -51,7 +52,6 @@ def osm_basic_test(df):
                 continue
 
             foundTag = True
-
             # Handle explicit country tag
             if tag == "tags.is_in:country":
                 if val.strip().lower() == cntrName.strip().lower():
@@ -88,7 +88,7 @@ def checkISO(code, cntrCode):
     iso1 = iso1.group(0) if iso1 else ""
     return iso1 == cntrCode
 
-def osm_duplicates_test_center(df, cache = {}):
+def osm_duplicates_test_center(df, processed_info, test_all_df):
 
     keep_elems = []
     delete_elems = []
@@ -96,17 +96,21 @@ def osm_duplicates_test_center(df, cache = {}):
     test_res = {}
     #* duplicates elements happens when a polygon intersect other areas due
     #* to incorrect boundaries
-    dup = df[df.duplicated("id", keep=False)]
+    if not test_all_df:
+        dup = df[df.duplicated("id", keep=False)]
+    else:
+        dup = df
     logger.info(f" - duplicate elements by id: {len(dup)}")
 
+    total = len(dup)
     if len(dup) > 0:
         logger.info(f" - testing osm center: {len(dup)}")
-        for _, row in dup.iterrows():
-            logger.info(f"  * {[row['id'], row['tags.parent_id']]}:")
-            if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in cache.keys()]:
+        for i, (idx, row) in enumerate(df.iterrows(), start=1):
+            logger.info(f"  * [{i}/{total}]: testing {[row['id'], row['tags.parent_id']]}:")
+            if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in processed_info.keys()]:
                 logger.info("  * already tested: pass")
                 continue
-            res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"])
+            res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"], logger)
             center_res[(row["id"], row["tags.parent_id"])] = res
 
             k, v = (row["id"], row["tags.parent_id"]), res
@@ -139,16 +143,44 @@ def countries_run_test(
     logger,
     save=True,
     save_dir=None,
-    processed_info=None
+    processed_info=None,
+    test_all_df=False
 ):
     test_res = {}
     to_test = list(df.items())
     total = len(to_test)
     for i, (cntr, df) in enumerate(to_test, start=1):
-        clear_output(wait=True)
-        logger.info(f"[{i}/{total}] Processing {cntr}")
+        chunk_size = 2
+        acumulated_res = {}
+        chunks_index = range(00, len(df), chunk_size)
+        for j,chunk_start in enumerate(chunks_index, start=1):
+            clear_output(wait=True)
+            logger.info(f"[{i}/{total}] Processing {cntr}")
+            logger.info(f"  * chunk size {chunk_size}: current [{j}/{len(chunks_index)}]")
+            chunk_df = df[chunk_start:chunk_start + chunk_size] 
+            chunk_res = test(
+                df=chunk_df,
+                processed_info=processed_info,
+                test_all_df=test_all_df
+            )
+            acumulated_res.get(cntr, []).append(chunk_res)
+            tgm.dump(os.path.join(save_dir, f"chunk_test_res.pkl"), acumulated_res)
+
+        # join chunks results
+        key_test_res = {}
+        Key_duplicate_keep_elems = []
+        Key_duplicate_delete_elems = []
+        for res in acumulated_res:
+            key_test_res.update(res['test_res'])
+            Key_duplicate_keep_elems.append(res['duplicate.keep_elems']) 
+            Key_duplicate_delete_elems.append(res['duplicate.delete_elems'])
         
-        test_res_curr = test(df, processed_info)
+        # make test res from chunks
+        test_res_curr = {
+            'test_res': key_test_res,
+            'duplicate.keep_elems': Key_duplicate_keep_elems,
+            'duplicate.delete_elems': Key_duplicate_delete_elems
+        }
 
         if save:
             data_path = os.path.join(save_dir, f"{cntr}/{cntr}_test_res.pkl")
