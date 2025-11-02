@@ -9,19 +9,20 @@ import logging
 # later we can add its configuration
 logger = logging.getLogger('dup_test_logger')
 
-def osm_basic_test(df):
+def osm_basic_test(df_input):
+
+    #* sort the dataframe
+    df = df_input.copy()
+    df = df.sort_values('tags.admin_level', key=lambda col: col.astype(int)) 
 
     cntrRow = df["tags.ISO3166-1"].notna()
     cntrISO = df[cntrRow].iloc[0]["tags.ISO3166-1"]
-    cntrName = df[cntrRow].iloc[0]["tags.name"]
-    columns = df.columns
+    cntrName = df[cntrRow].iloc[0]["tags.country_name"]
+    cntr_id = df[cntrRow].iloc[0]["id"]
 
     #* some elements have missing name
     miss = df[df["tags.name"].isna()]['id'].to_list()
-    # if miss.empty:
-    #     miss = pd.DataFrame(columns=columns)
     print(" * missing names: ", len(miss))
-
 
     #* relations from other countries
     #* only discard the ones we are sure are not from the country
@@ -35,18 +36,21 @@ def osm_basic_test(df):
         "tags.ref:nuts:3",
         "tags.addr:country"
     ]
-    leakRows = []
+    leak = []
+    in_country = []
     isInCountry = {}
-
+    NA_result = []
     for idx, row in df.iterrows():
 
         osmID = str(row.get("id"))
         if str(row.get("tags.admin_level")) == '2':
             isInCountry[osmID] = True
+            in_country.append((osmID, pd.NA, cntr_id))
             continue
         parentID = row.get("tags.parent_id")
         foundTag = False
         for tag in checkTags:
+            # we will check all tags to have some confidence meassure of the
             val = row.get(tag)
             if pd.isna(val):
                 continue
@@ -56,36 +60,66 @@ def osm_basic_test(df):
             if tag == "tags.is_in:country":
                 if val.strip().lower() == cntrName.strip().lower():
                     isInCountry[osmID] = True
+                    in_country.append((osmID, parentID, cntr_id))
                 else:
                     # not the same country -> verify with parent
-                    if pd.notna(parentID) and isInCountry.get(parentID):
+                    if pd.notna(parentID) and pd.isna(isInCountry.get(parentID)):
+                        isInCountry[osmID] = pd.NA
+                        NA_result.append((osmID, parentID, cntr_id))
+                    elif pd.notna(parentID) and isInCountry.get(parentID):
+                        in_country.append((osmID, parentID, cntr_id))
                         isInCountry[osmID] = True
                     else:
-                        leakRows.append(row)
-                break  # no need to check other tags
+                        isInCountry[osmID] = False
+                        leak.append((osmID, parentID, cntr_id))
+                break 
+
             # Handle ISO-style tags
-            elif not checkISO(val, cntrISO):
-                leakRows.append(row)
+            checkISO_res = checkISO(val, cntrISO)
+            if pd.isna(checkISO_res):
+                isInCountry[osmID] = pd.NA
+                NA_result.append((osmID, parentID, cntr_id))
                 break
+
+            isInCountry[osmID] = checkISO_res
+            if checkISO_res:
+                in_country.append((osmID, parentID, cntr_id))
+            else:
+                leak.append((osmID, parentID, cntr_id))
+
+            break  # no need to check other tags
+
+        # check parent if elem has NA tags
+        if not foundTag and pd.notna(parentID) and pd.notna(isInCountry.get(parentID)) and isInCountry.get(parentID):
+            if parentID == cntr_id:
+                isInCountry[osmID] = pd.NA
+                NA_result.append((osmID, parentID, cntr_id))
             else:
                 isInCountry[osmID] = True
-                break
-        if not foundTag and pd.notna(parentID) and isInCountry.get(parentID):
-            isInCountry[osmID] = True
+                in_country.append((osmID, parentID, cntr_id))
+        else:
+            isInCountry[osmID] = pd.NA
+            NA_result.append((osmID, parentID, cntr_id))
 
-    leakRows = [row['id'] for row in leakRows]
-    print(" * relations from other countries: ", len(leakRows))
+    # leakRows = [row['id'] for row in leakRows]
+    print(" * relations from other countries: ", len(leak))
 
     return {    
         "missing.name": miss,
-        "leak": leakRows,
+        "leak": leak,
+        "in_country": in_country,
+        'NA_result': NA_result
     }
 
 def checkISO(code, cntrCode):
-    if code == "":
-        return True
+    if code == "": return pd.NA
     iso1 = re.search(r"^([A-Z]{2})", code)
-    iso1 = iso1.group(0) if iso1 else ""
+
+    if not iso1:
+        return pd.NA
+    else:
+        iso1 = iso1.group(0)
+
     return iso1 == cntrCode
 
 def osm_duplicates_test_center(df, processed_info, test_all_df):
