@@ -40,75 +40,64 @@ def osm_basic_test(df_input):
     in_country = []
     isInCountry = {}
     NA_result = []
-    for idx, row in df.iterrows():
 
+    for idx, row in df.iterrows():
+        true_count = 0
+        false_count = 0
         osmID = str(row.get("id"))
         if str(row.get("tags.admin_level")) == '2':
             isInCountry[osmID] = True
             in_country.append((osmID, pd.NA, cntr_id))
             continue
         parentID = row.get("tags.parent_id")
-        foundTag = False
+
         for tag in checkTags:
-            # we will check all tags to have some confidence meassure of the
+            # we'll check all tags to have some confidence meassure of the test
             val = row.get(tag)
             if pd.isna(val):
                 continue
 
-            foundTag = True
-            # Handle explicit country tag
+            # Handle is_in:country tag
             if tag == "tags.is_in:country":
                 if val.strip().lower() == cntrName.strip().lower():
-                    isInCountry[osmID] = True
-                    in_country.append((osmID, parentID, cntr_id))
+                    true_count += 1
                 else:
-                    # not the same country -> verify with parent
-                    if pd.notna(parentID) and pd.isna(isInCountry.get(parentID)):
-                        isInCountry[osmID] = pd.NA
-                        NA_result.append((osmID, parentID, cntr_id))
-                    elif pd.notna(parentID) and isInCountry.get(parentID):
-                        in_country.append((osmID, parentID, cntr_id))
-                        isInCountry[osmID] = True
-                    else:
-                        isInCountry[osmID] = False
-                        leak.append((osmID, parentID, cntr_id))
-                break 
+                    false_count += 1
+                continue
 
             # Handle ISO-style tags
             checkISO_res = checkISO(val, cntrISO)
-            if pd.isna(checkISO_res):
-                isInCountry[osmID] = pd.NA
-                NA_result.append((osmID, parentID, cntr_id))
-                break
+            if checkISO_res is True:
+                true_count += 1
+            elif checkISO_res is False:
+                false_count += 1
+            # else NA, ignore
 
-            isInCountry[osmID] = checkISO_res
-            if checkISO_res:
+
+        # meassure confidence of results
+        if false_count > 0:
+            leak.append((osmID, parentID, cntr_id))
+            isInCountry[osmID] = False
+        elif true_count >= 2:
+            in_country.append((osmID, parentID, cntr_id))
+            isInCountry[osmID] = True
+        elif true_count <= 1:
+            # single weak signal, fallback to parent
+            # except for first level (4)
+            if parentID and isInCountry.get(parentID) is True and row.get('tags.admin_level') != '4':
                 in_country.append((osmID, parentID, cntr_id))
-            else:
-                leak.append((osmID, parentID, cntr_id))
-
-            break  # no need to check other tags
-
-        # check parent if elem has NA tags
-        if not foundTag and pd.notna(parentID) and pd.notna(isInCountry.get(parentID)) and isInCountry.get(parentID):
-            if parentID == cntr_id:
-                isInCountry[osmID] = pd.NA
-                NA_result.append((osmID, parentID, cntr_id))
-            else:
                 isInCountry[osmID] = True
-                in_country.append((osmID, parentID, cntr_id))
-        else:
-            isInCountry[osmID] = pd.NA
-            NA_result.append((osmID, parentID, cntr_id))
+            else:
+                NA_result.append((osmID, parentID, cntr_id))
+                isInCountry[osmID] = pd.NA
 
-    # leakRows = [row['id'] for row in leakRows]
     print(" * relations from other countries: ", len(leak))
 
     return {    
         "missing.name": miss,
         "leak": leak,
         "in_country": in_country,
-        'NA_result': NA_result
+        'NA_result': NA_result,
     }
 
 def checkISO(code, cntrCode):
