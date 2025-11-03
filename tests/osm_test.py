@@ -128,10 +128,11 @@ def osm_test_center(rows, save_temp=False, save_path=''):
         res = is_child_inside_parent(row["id"], row["tags.parent_id"])
         test_res[tuple_id] = res
 
-        logger.info(f" $ finished: status: {res['status']} -> result: {res.get('result','')}")
-
         if save_temp:
+            logger.info(f"  * saving ...")
             tgm.dump(save_path, test_res)
+
+        logger.info(f" $ finished: status: {res['status']} -> result: {res.get('result','')}")
         
     return test_res
 
