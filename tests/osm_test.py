@@ -1,5 +1,5 @@
 import re
-from toolsOSM.overpass import getCenterNodeInsideParent
+from toolsOSM.overpass import is_child_inside_parent
 import pandas as pd
 from IPython.display import clear_output
 import os
@@ -111,54 +111,29 @@ def checkISO(code, cntrCode):
 
     return iso1 == cntrCode
 
-def osm_duplicates_test_center(df, processed_info, test_all_df):
+def osm_test_center(rows, save_temp=False, save_path=''):
 
-    keep_elems = []
-    delete_elems = []
-    center_res = {}
-    test_res = {}
-    #* duplicates elements happens when a polygon intersect other areas due
-    #* to incorrect boundaries
-    if not test_all_df:
-        dup = df[df.duplicated("id", keep=False)]
-    else:
-        dup = df
-    logger.info(f" - duplicate elements by id: {len(dup)}")
+    total = len(rows)
+    if save_temp:
+        if os.path.exists(save_path):
+            test_res = tgm.load(save_path)
+        else:
+            test_res = {}
 
-    total = len(dup)
-    if len(dup) > 0:
-        logger.info(f" - testing osm center: {len(dup)}")
-        for i, (idx, row) in enumerate(df.iterrows(), start=1):
-            logger.info(f"  * [{i}/{total}]: testing {[row['id'], row['tags.parent_id']]}:")
-            if (row['id'], row['tags.parent_id']) in [ele[1:3] for ele in processed_info.keys()]:
-                logger.info("  * already tested: pass")
-                continue
-            res = getCenterNodeInsideParent(row["id"], row["tags.parent_id"], logger)
-            center_res[(row["id"], row["tags.parent_id"])] = res
+    for i, (idx, row) in enumerate(rows.iterrows(), start=1):
+        clear_output(wait=True)
+        tuple_id = (row["id"], row["tags.parent_id"], row["tags.country_id"])
+        logger.info(f" ^ [{i}/{total}]: testing {tuple_id}:")
 
-            k, v = (row["id"], row["tags.parent_id"]), res
+        res = is_child_inside_parent(row["id"], row["tags.parent_id"])
+        test_res[tuple_id] = res
 
-            # normalize test results
-            if v['status'] == 'ok' and len(v['data']['elements']) == 0:
-                test_res[k] = {'status':'ok', 'result': False, 'data':v['data']}
-                delete_elems.append(k)
-            elif v['status'] == 'ok':
-                parent = v['data']['elements'][0]
-                if str(parent['id']) == k[1]:
-                    test_res[k] = {'status':'ok', 'result': True, 'data':v['data']}
-                    keep_elems.append(k)
-                else:
-                    test_res[k] = {'status':'ok', 'result': False, 'data':v['data']}
-                    delete_elems.append(k)
-            else:
-                test_res[k] = v
-            logger.info(f"  * finished: status: {test_res[k]['status'], test_res[k].get('error_type','')}; result: {test_res[k].get('result','')}")
+        logger.info(f" $ finished: status: {res['status']} -> result: {res.get('result','')}")
+
+        if save_temp:
+            tgm.dump(save_path, test_res)
         
-    return {
-        'test_res': test_res,
-        'duplicate.keep_elems': keep_elems,
-        'duplicate.delete_elems': delete_elems
-    }
+    return test_res
 
 def countries_run_test(
     df,
