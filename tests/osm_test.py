@@ -1,5 +1,5 @@
 import re
-from toolsOSM.overpass import is_child_inside_parent
+from toolsOSM.overpass import is_center_inside_parent
 import pandas as pd
 from IPython.display import clear_output
 import os
@@ -125,7 +125,8 @@ def osm_test_center(rows, save_temp=False, save_path=''):
         tuple_id = (row["id"], row["tags.parent_id"], row["tags.country_id"])
         logger.info(f" ^ [{i}/{total}]: testing {tuple_id}:")
 
-        res = is_child_inside_parent(row["id"], row["tags.parent_id"])
+        # res = is_child_inside_parent(row["id"], row["tags.parent_id"])
+        res = is_center_inside_parent(row["id"], row["tags.parent_id"])
         test_res[tuple_id] = res
 
         if save_temp:
