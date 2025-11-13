@@ -1,10 +1,11 @@
 import re
-from toolsOSM.overpass import is_center_inside_parent
+from toolsOSM.overpass import is_child_inside_parent
 import pandas as pd
 from IPython.display import clear_output
 import os
 import toolsGeneral.main as tgm
 import logging
+import time
 # this will create a logger on module import
 # later we can add its configuration
 logger = logging.getLogger('dup_test_logger')
@@ -125,16 +126,17 @@ def osm_test_center(rows, save_temp=False, save_path=''):
         tuple_id = (row["id"], row["tags.parent_id"], row["tags.country_id"])
         logger.info(f" ^ [{i}/{total}]: testing {tuple_id}:")
 
-        # res = is_child_inside_parent(row["id"], row["tags.parent_id"])
-        res = is_center_inside_parent(row["id"], row["tags.parent_id"])
+        res = is_child_inside_parent(row["id"], row["tags.parent_id"])
         test_res[tuple_id] = res
 
         if save_temp:
             logger.info(f"  * saving ...")
             tgm.dump(save_path, test_res)
 
-        logger.info(f" $ finished: status: {res['status']} -> result: {res.get('result','')}")
+        resume  = {k:v['status'] for k,v in res.items()}
+        logger.info(f" $ finished: status: {resume}")
         
+        time.sleep(3)
     return test_res
 
 def countries_run_test(
