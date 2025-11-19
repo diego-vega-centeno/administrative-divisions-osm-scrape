@@ -76,12 +76,13 @@ def osm_basic_test(df_input):
 
 
         # meassure confidence of results
-        if false_count > 0:
-            leak.append((osmID, parentID, cntr_id))
-            isInCountry[osmID] = False
-        elif true_count >= 2:
+
+        if true_count >= 2:
             in_country.append((osmID, parentID, cntr_id))
             isInCountry[osmID] = True
+        elif false_count > 0:
+            leak.append((osmID, parentID, cntr_id))
+            isInCountry[osmID] = False
         elif true_count <= 1:
             # single weak signal, fallback to parent
             # except for first level (4)
