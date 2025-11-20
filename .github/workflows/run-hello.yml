@@ -1,0 +1,15 @@
+name: Run Hello
+
+on:
+  workflow_dispatch:   # lets you trigger it manually
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run hello.py
+        run: python hello.py
