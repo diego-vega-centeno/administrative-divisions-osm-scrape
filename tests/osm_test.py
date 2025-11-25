@@ -4,13 +4,18 @@ import pandas as pd
 from IPython.display import clear_output
 import os
 import toolsGeneral.main as tgm
+import toolsGeneral.logger as tgl
 import logging
 import time
 # this will create a logger on module import
 # later we can add its configuration
-logger = logging.getLogger('dup_test_logger')
+logger = tgl.initiate_logger('logger')
 
-def osm_basic_test(df_input):
+
+def osm_basic_test(df_input, save_logger_path = None):
+
+    if save_logger_path:
+        tgl.add_file_handler(logger, save_logger_path)
 
     #* sort the dataframe
     df = df_input.copy()
@@ -23,7 +28,7 @@ def osm_basic_test(df_input):
 
     #* some elements have missing name
     miss = df[df["tags.name"].isna()]['id'].to_list()
-    print(" * missing names: ", len(miss))
+    logger.info(f" * missing names: {len(miss)}")
 
     #* relations from other countries
     #* only discard the ones we are sure are not from the country
@@ -93,7 +98,7 @@ def osm_basic_test(df_input):
                 NA_result.append((osmID, parentID, cntr_id))
                 isInCountry[osmID] = pd.NA
 
-    print(" * relations from other countries: ", len(leak))
+    logger.info(f" * relations from other countries: {len(leak)}")
 
     return {    
         "missing.name": miss,
