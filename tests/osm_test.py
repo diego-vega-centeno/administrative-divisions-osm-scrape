@@ -134,65 +134,14 @@ def osm_test_center(rows, save_temp=False, save_path=''):
         res = is_child_inside_parent(row["id"], row["tags.parent_id"])
         test_res[tuple_id] = res
 
-        if save_temp:
+        resume  = {k:v['status'] for k,v in res.items()}
+        status_list = [v['status'] for k,v in res.items()]
+
+        if save_temp and 'error' not in status_list:
             logger.info(f"  * saving ...")
             tgm.dump(save_path, test_res)
 
-        resume  = {k:v['status'] for k,v in res.items()}
         logger.info(f" $ finished: status: {resume}")
         
         time.sleep(3)
-    return test_res
-
-def countries_run_test(
-    df,
-    test,
-    logger,
-    save=True,
-    save_dir=None,
-    processed_info=None,
-    test_all_df=False
-):
-    test_res = {}
-    to_test = list(df.items())
-    total = len(to_test)
-    for i, (cntr, df) in enumerate(to_test, start=1):
-        chunk_size = 2
-        acumulated_res = {}
-        chunks_index = range(00, len(df), chunk_size)
-        for j,chunk_start in enumerate(chunks_index, start=1):
-            clear_output(wait=True)
-            logger.info(f"[{i}/{total}] Processing {cntr}")
-            logger.info(f"  * chunk size {chunk_size}: current [{j}/{len(chunks_index)}]")
-            chunk_df = df[chunk_start:chunk_start + chunk_size] 
-            chunk_res = test(
-                df=chunk_df,
-                processed_info=processed_info,
-                test_all_df=test_all_df
-            )
-            acumulated_res.get(cntr, []).append(chunk_res)
-            tgm.dump(os.path.join(save_dir, f"chunk_test_res.pkl"), acumulated_res)
-
-        # join chunks results
-        key_test_res = {}
-        Key_duplicate_keep_elems = []
-        Key_duplicate_delete_elems = []
-        for res in acumulated_res:
-            key_test_res.update(res['test_res'])
-            Key_duplicate_keep_elems.append(res['duplicate.keep_elems']) 
-            Key_duplicate_delete_elems.append(res['duplicate.delete_elems'])
-        
-        # make test res from chunks
-        test_res_curr = {
-            'test_res': key_test_res,
-            'duplicate.keep_elems': Key_duplicate_keep_elems,
-            'duplicate.delete_elems': Key_duplicate_delete_elems
-        }
-
-        if save:
-            data_path = os.path.join(save_dir, f"{cntr}/{cntr}_test_res.pkl")
-            if not os.path.exists(data_path):
-                tgm.dump(data_path, test_res_curr)
-        test_res[cntr] = test_res_curr
-
     return test_res
