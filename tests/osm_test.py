@@ -6,6 +6,7 @@ import os
 import toolsGeneral.main as tgm
 import toolsGeneral.logger as tgl
 import logging
+from pathlib import Path
 import time
 # this will create a logger on module import
 # later we can add its configuration
@@ -122,13 +123,11 @@ def osm_test_center(rows, save_temp=False, save_path=''):
 
     total = len(rows)
     if save_temp:
-        if os.path.exists(save_path):
-            test_res = tgm.load(save_path)
-        else:
-            test_res = {}
+        test_res = tgm.load(save_path) if os.path.exists(save_path) else {}
 
     for i, (idx, row) in enumerate(rows.iterrows(), start=1):
         clear_output(wait=True)
+        logger.info(f'* country: {Path(save_path).parent.name}')
         tuple_id = (row["id"], row["tags.parent_id"], row["tags.country_id"])
         logger.info(f" ^ [{i}/{total}]: testing {tuple_id}:")
 
