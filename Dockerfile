@@ -1,6 +1,10 @@
 FROM python:3.11-slim
 
 WORKDIR /app
-COPY hello.py .
 
-CMD ["python", "hello.py"]
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/scrape.py ./src/
+
+CMD ["python", "src/scrape.py"]
