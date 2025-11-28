@@ -39,9 +39,8 @@ countries_processed = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
 
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in countries_processed]
-to_scrape = to_scrape[:2]
-to_scrape = [ ('Peru', '288247', ['4', '6', '8'])]
+to_scrape = to_scrape[:5]
 
 # fetch admin
 for country, id, lvls in to_scrape:
-    too.fetch_admin_osm_structure((country, id, lvls), SAVE_DIR, method='chunks')
+    too.fetch_admin_osm_structure((country, id, lvls), SAVE_DIR)
