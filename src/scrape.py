@@ -35,8 +35,7 @@ tuples = sorted(
 )
 
 # exclude processed countries
-raw_path = DATA_DIR / 'raw/osm countries queries'
-countries_processed = {f.parent.name for f in raw_path.glob('*/*.json')}
+countries_processed = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
 
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in countries_processed]
