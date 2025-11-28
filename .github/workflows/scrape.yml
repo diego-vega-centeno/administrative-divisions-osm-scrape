@@ -1,0 +1,34 @@
+name: Scrape OSM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Build Docker image
+        run: docker build -t osm-scraper .
+
+      - name: Run scraper
+        run: docker run -v ${{ github.workspace }}/data:/app/data osm-scraper
+
+      - name: Create timestamp variable
+        id: ts
+        run: echo "ts=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Upload scraped data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: country-data-${{ github.run_number }}_${{ steps.ts.outputs.ts }}
+          path: data/raw
+          retention-days: 30
