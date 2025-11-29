@@ -51,6 +51,9 @@ failed_countries = tgm.load(failed_file) if os.path.exists(failed_file) else set
 processed_file = SAVE_DIR / 'processed_countries.pkl'
 processed_countries = tgm.load(processed_file) if os.path.exists(processed_file) else set()
 
+raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
+raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
+
 # fetch admin
 for country, id, lvls in to_scrape:
     raw_scrape_logger.info(f"* processing: {country, id, lvls}")
