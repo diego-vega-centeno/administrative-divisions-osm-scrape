@@ -35,7 +35,8 @@ tuples = sorted(
 )
 
 # exclude processed countries
-countries_processed = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
+countries_processed = tgm.load(SAVE_DIR / "countries_processed.pkl")
+# countries_processed = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
 
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in countries_processed]

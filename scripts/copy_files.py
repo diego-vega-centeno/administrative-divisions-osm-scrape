@@ -5,7 +5,7 @@ SCRAPE_REPO = Path(r"C:/Users/gonta/D/study/full stack/projects/administrative d
 
 ROOT = Path(__file__).resolve().parents[1]
 notebooks = ["notebooks/scrape.ipynb"]
-files = ["data/osmMetaCountrDict.json"]
+files = ["data/osmMetaCountrDict.json", "data/raw/osm countries queries/countries_processed.pkl"]
 to_convert_notebook = ROOT / "to_convert_notebooks" / "scrape.ipynb"
 converted_file = ROOT / "src" / "scrape"
 
