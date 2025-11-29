@@ -35,13 +35,49 @@ tuples = sorted(
 )
 
 # exclude processed countries
-countries_processed = tgm.load(SAVE_DIR / "countries_processed.pkl")
-# countries_processed = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
+processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
+# processed_countries = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
 
 # skip already processed countries
-to_scrape = [t for t in tuples if t[0] not in countries_processed]
+to_scrape = [t for t in tuples if t[0] not in processed_countries]
 to_scrape = to_scrape[:5]
+
+to_scrape = [ ('Peru', '288247', ['4', '6', '8'])]
+
+# load files
+failed_file = SAVE_DIR / 'failed_countries.pkl'
+failed_countries = tgm.load(failed_file) if os.path.exists(failed_file) else set()
+
+processed_file = SAVE_DIR / 'processed_countries.pkl'
+processed_countries = tgm.load(processed_file) if os.path.exists(processed_file) else set()
 
 # fetch admin
 for country, id, lvls in to_scrape:
-    too.fetch_admin_osm_structure((country, id, lvls), SAVE_DIR)
+    raw_scrape_logger.info(f"* processing: {country, id, lvls}")
+    
+    country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
+    response = too.getOSMIDAddsStruct(id, lvls)
+    raw_scrape_logger.info(f"  - finished: {response['status']}")
+
+    if response["status"] == "ok":
+        tgm.dump(country_save_file, response["data"])
+        processed_countries.add(country)
+        tgm.dump(processed_file, processed_countries)
+    elif '429' in response["status_type"]:
+        raw_scrape_logger.info(f"  - Too many requests error, trying chunks")
+        too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+    else:
+        raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
+        failed_countries.add(country)
+        tgm.dump(failed_file, failed_countries)
+    
+    time.sleep(3)
+
+raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
+raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
+
+
+# for country, id, lvls in to_scrape:
+
+#     too.getOSMIDAddsStruct_chunks(tuple, SAVE_DIR)
+#     time.sleep(3)
