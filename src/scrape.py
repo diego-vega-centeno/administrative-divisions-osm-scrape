@@ -9,6 +9,7 @@ from importlib import reload
 from pathlib import Path
 import boto3
 import subprocess
+import tools.upload_and_commit as tools 
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -65,37 +66,6 @@ s3 = session.client(
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
 
-def upload_dir_files_to_backblaze(dir:Path):
-    for file in dir.rglob("*"):
-        if file.is_file():
-            try:
-                s3.upload_file(
-                    str(file), 
-                    os.environ["B2_BUCKET_NAME"], 
-                    str(file.relative_to(ROOT))
-                )
-                raw_scrape_logger.info(f"Uploaded {file} to Backblaze successfully")
-            except Exception as e:
-                raw_scrape_logger.error(f"Failed to upload {file}: {e}")
-
-
-def commit_file(file:Path, commit_msg):
-    try:
-        subprocess.run(["git", "add", str(file)], check=True)
-        result = subprocess.run(["git", "diff", "--cached", "--quiet"])
-        if result.returncode != 0:
-            subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-            subprocess.run(["git", "push"], check=True)
-
-        raw_scrape_logger.info(f"Commit successful: {file.name}")
-    except Exception as e:
-        raw_scrape_logger.error(f"Failed to commit {file.name}: {e}")
-
-def dump_upload_and_commit_result(file, data, commit_msg):
-    tgm.dump(file, data)
-    upload_dir_files_to_backblaze(file.parent)
-    commit_file(file, commit_msg)
-
 in_chunks_countries = ['China','Armenia']
 
 # fetch admin
@@ -108,20 +78,22 @@ for country, id, lvls in to_scrape:
         response = too.getOSMIDAddsStruct(id, lvls)
         raw_scrape_logger.info(f"  - finished: {response['status']}")
 
+        config = {'root':ROOT, 's3':s3, 'logger':raw_scrape_logger}
+
         if response["status"] == "ok":
             tgm.dump(country_save_file, response["data"])
-            upload_dir_files_to_backblaze(country_save_file.parent)
+            tools.upload_dir_files_to_backblaze(country_save_file.parent, config)
 
             processed_countries.add(country)
-            dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}")
+            tools.dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}", config)
 
         elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
-            raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks")
+            raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks", raw_scrape_logger)
             too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
         else:
             raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
             failed_countries.add(country)
-            dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}")
+            tools.dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}", config)
     else:
         response = too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
 
@@ -129,11 +101,11 @@ for country, id, lvls in to_scrape:
         raw_scrape_logger.info(f"  - finished: {response['status']} - {response['status_type']}")
         if response['status'] == 'ok':
             processed_countries.add(country)
-            dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}")
+            tools.dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}", config)
         else:
             raw_scrape_logger.info(f"  - A chunk failed, saving to failed_countries")
             failed_countries.add(country)
-            dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}")          
+            tools.dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}", config)        
 
     time.sleep(3)
 
