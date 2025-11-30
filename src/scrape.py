@@ -77,18 +77,29 @@ s3 = session.client(
 )
 
 def upload_file_to_backblaze(path):
-    s3.upload_file(
-        str(path), 
-        os.environ["B2_BUCKET"], 
-        str(path.relative_to(ROOT))
-    )
+    try:
+        s3.upload_file(
+            str(path), 
+            os.environ["B2_BUCKET"], 
+            str(path.relative_to(ROOT))
+        )
+        raw_scrape_logger.info(f"Uploaded {path} to Backblaze successfully")
+    except Exception as e:
+        raw_scrape_logger.error(f"Failed to upload {path}: {e}")
 
-def commit_file(file, commit_msg):
-    subprocess.run(["git", "add", file], check=True)
-    result = subprocess.run(["git", "diff", "--cached", "--quiet"])
-    if result.returncode != 0:
-        subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-        subprocess.run(["git", "push"], check=True)
+
+def commit_file(file:Path, commit_msg):
+    try:
+        subprocess.run(["git", "add", str(file)], check=True)
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"])
+        if result.returncode != 0:
+            subprocess.run(["git", "commit", "-m", commit_msg], check=True)
+            subprocess.run(["git", "push"], check=True)
+
+        raw_scrape_logger.info(f"Commit successful: {file.name}")
+    except Exception as e:
+        raw_scrape_logger.error(f"Failed to commit {file.name}: {e}")
+
 
 
 # fetch admin
@@ -106,7 +117,7 @@ for country, id, lvls in to_scrape:
         processed_countries.add(country)
         tgm.dump(processed_file, processed_countries)
         upload_file_to_backblaze(processed_file)
-        commit_file(str(processed_file), f"Update processed_countries: added {country}")
+        commit_file(processed_file, f"Update processed_countries: added {country}")
 
     elif '429' in response["status_type"]:
         raw_scrape_logger.info(f"  - Too many requests error, trying chunks")
@@ -116,7 +127,7 @@ for country, id, lvls in to_scrape:
         failed_countries.add(country)
         tgm.dump(failed_file, failed_countries)
         upload_file_to_backblaze(failed_file)
-        commit_file(str(failed_file), f"Update failed_countries: added {country}")
+        commit_file(failed_file, f"Update failed_countries: added {country}")
     
     time.sleep(3)
 
