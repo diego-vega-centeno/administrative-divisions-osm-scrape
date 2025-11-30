@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'raw/osm countries queries'
 
+subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
 subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
 
