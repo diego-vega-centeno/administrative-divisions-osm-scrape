@@ -64,6 +64,7 @@ processed_countries = tgm.load(processed_file) if os.path.exists(processed_file)
 
 raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
 raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
+raw_scrape_logger.info(f"* to process countries: {len(to_scrape)}")
 
 # Use AWS kit to upload files
 session = boto3.session.Session()
