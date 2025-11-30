@@ -54,7 +54,7 @@ processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in processed_countries]
 to_scrape = to_scrape[:2]
-to_scrape = [('China', '270056', ['4', '6', '8'])]
+to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
 
 # load files
 failed_file = SAVE_DIR / 'failed_countries.pkl'
@@ -77,16 +77,18 @@ s3 = session.client(
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
 
-def upload_file_to_backblaze(path):
-    try:
-        s3.upload_file(
-            str(path), 
-            os.environ["B2_BUCKET_NAME"], 
-            str(path.relative_to(ROOT))
-        )
-        raw_scrape_logger.info(f"Uploaded {path} to Backblaze successfully")
-    except Exception as e:
-        raw_scrape_logger.error(f"Failed to upload {path}: {e}")
+def upload_dir_files_to_backblaze(dir:Path):
+    for file in dir.rglob("*"):
+        if file.is_file():
+            try:
+                s3.upload_file(
+                    str(file), 
+                    os.environ["B2_BUCKET_NAME"], 
+                    str(file.relative_to(ROOT))
+                )
+                raw_scrape_logger.info(f"Uploaded {file} to Backblaze successfully")
+            except Exception as e:
+                raw_scrape_logger.error(f"Failed to upload {file}: {e}")
 
 
 def commit_file(file:Path, commit_msg):
@@ -102,7 +104,7 @@ def commit_file(file:Path, commit_msg):
         raw_scrape_logger.error(f"Failed to commit {file.name}: {e}")
 
 
-in_chunks_countries = ['China']
+in_chunks_countries = ['China','Armenia']
 
 # fetch admin
 for country, id, lvls in to_scrape:
@@ -116,11 +118,11 @@ for country, id, lvls in to_scrape:
 
         if response["status"] == "ok":
             tgm.dump(country_save_file, response["data"])
-            upload_file_to_backblaze(country_save_file)
+            upload_dir_files_to_backblaze(country_save_file.parent)
 
             processed_countries.add(country)
             tgm.dump(processed_file, processed_countries)
-            upload_file_to_backblaze(processed_file)
+            upload_dir_files_to_backblaze(processed_file.parent)
             commit_file(processed_file, f"Update processed_countries: added {country}")
 
         elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
@@ -130,7 +132,7 @@ for country, id, lvls in to_scrape:
             raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
             failed_countries.add(country)
             tgm.dump(failed_file, failed_countries)
-            upload_file_to_backblaze(failed_file)
+            upload_dir_files_to_backblaze(failed_file.parent)
             commit_file(failed_file, f"Update failed_countries: added {country}")
     else:
         too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
