@@ -74,8 +74,8 @@ for country, id, lvls in to_scrape:
     
     time.sleep(3)
 
-raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
-raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
+raw_scrape_logger.info(f"* new total of processed_countries: {len(processed_countries)}")
+raw_scrape_logger.info(f"* new total of failed_countries: {len(failed_countries)}")
 
 
 # for country, id, lvls in to_scrape:
