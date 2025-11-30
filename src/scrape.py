@@ -52,7 +52,7 @@ processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
 
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in processed_countries]
-to_scrape = to_scrape[:20]
+to_scrape = to_scrape[:2]
 
 # load files
 failed_file = SAVE_DIR / 'failed_countries.pkl'
