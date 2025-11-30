@@ -10,12 +10,6 @@ jobs:
     permissions:
       contents: write
 
-    env:
-      B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
-      B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
-      B2_BUCKET: ${{ secrets.B2_BUCKET_NAME }}
-      B2_ENDPOINT: ${{ secrets.B2_ENDPOINT }}
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -32,11 +26,14 @@ jobs:
         run: pip install boto3
 
       - name: Run scraper
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          docker run -v ${{ github.workspace }}/data:/app/data \
+          docker run \
+          -v ${{ github.workspace }}/data:/app/data \
           -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
+          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
+          -e B2_BUCKET="${{ secrets.B2_BUCKET_NAME }}" \
+          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
           osm-scraper
 
       # - name: Commit state files
