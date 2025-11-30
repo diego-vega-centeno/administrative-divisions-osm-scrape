@@ -28,7 +28,7 @@ jobs:
       - name: Run scraper
         run: |
           docker run \
-          -v ${{ github.workspace }}/data:/app/data \
+          -v ${{ github.workspace }}:/app \
           -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
           -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
