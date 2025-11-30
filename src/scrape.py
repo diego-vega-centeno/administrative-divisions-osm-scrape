@@ -50,7 +50,7 @@ processed_countries = tgm.load(processed_file) if os.path.exists(processed_file)
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in processed_countries]
 to_scrape = to_scrape[:2]
-to_scrape = [('China', '270056', ['4', '6', '8'])]
+to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
 
 raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
 raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
