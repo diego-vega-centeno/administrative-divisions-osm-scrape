@@ -103,6 +103,10 @@ def commit_file(file:Path, commit_msg):
     except Exception as e:
         raw_scrape_logger.error(f"Failed to commit {file.name}: {e}")
 
+def dump_upload_and_commit_result(file, data, commit_msg):
+    tgm.dump(file, data)
+    upload_dir_files_to_backblaze(file.parent)
+    commit_file(file, commit_msg)
 
 in_chunks_countries = ['China','Armenia']
 
@@ -121,9 +125,7 @@ for country, id, lvls in to_scrape:
             upload_dir_files_to_backblaze(country_save_file.parent)
 
             processed_countries.add(country)
-            tgm.dump(processed_file, processed_countries)
-            upload_dir_files_to_backblaze(processed_file.parent)
-            commit_file(processed_file, f"Update processed_countries: added {country}")
+            dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}")
 
         elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
             raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks")
@@ -131,11 +133,19 @@ for country, id, lvls in to_scrape:
         else:
             raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
             failed_countries.add(country)
-            tgm.dump(failed_file, failed_countries)
-            upload_dir_files_to_backblaze(failed_file.parent)
-            commit_file(failed_file, f"Update failed_countries: added {country}")
+            dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}")
     else:
-        too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+        response = too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+
+        # only commit data and upload data on successfull return of chunks
+        raw_scrape_logger.info(f"  - finished: {response['status']}")
+        if response['status'] == 'ok':
+            processed_countries.add(country)
+            dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}")
+        else:
+            raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
+            failed_countries.add(country)
+            dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}")          
 
     time.sleep(3)
 
