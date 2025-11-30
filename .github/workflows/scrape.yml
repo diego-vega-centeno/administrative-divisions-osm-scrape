@@ -10,6 +10,12 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
+      B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+      B2_BUCKET: ${{ secrets.B2_BUCKET_NAME }}
+      B2_ENDPOINT: ${{ secrets.B2_ENDPOINT }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,20 +28,27 @@ jobs:
       - name: Build Docker image
         run: docker build -t osm-scraper .
 
-      - name: Run scraper
-        run: docker run -v ${{ github.workspace }}/data:/app/data osm-scraper
+      - name: Install AWS kit
+        run: pip install boto3
 
-      - name: Commit state files
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add "data/raw/osm countries queries/processed_countries.pkl"
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update processed_countries.pkl"
-            git push
-          fi
+      - name: Run scraper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: docker run -v ${{ github.workspace }}/data:/app/data \
+          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+          osm-scraper
+
+      # - name: Commit state files
+      #   run: |
+      #     git config --global user.name "github-actions[bot]"
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git add "data/raw/osm countries queries/processed_countries.pkl"
+      #     if git diff --cached --quiet; then
+      #       echo "No changes to commit"
+      #     else
+      #       git commit -m "Update processed_countries.pkl"
+      #       git push
+      #     fi
 
       - name: Create timestamp variable
         id: ts

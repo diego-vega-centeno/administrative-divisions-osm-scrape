@@ -7,6 +7,8 @@ import os
 import time
 from importlib import reload
 from pathlib import Path
+import boto3
+import subprocess
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -20,11 +22,21 @@ def pckgs_reload():
 pckgs_reload()
 
 
-# Initialize variables
+# Initialize setup
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'raw/osm countries queries'
 
+subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+
+subprocess.run([
+    "git", "remote", "set-url", "origin",
+    f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/CopaCabana21/automated-add-osm-scrape.git"
+])
+
+
+# load variables
 raw_scrape_logger = tgl.initiate_logger('raw_scrape_logger', DATA_DIR / 'raw/raw_scrape.log')
 
 osmMetaCountrDict = tgm.load(DATA_DIR / "osmMetaCountrDict.json")
@@ -52,6 +64,31 @@ processed_countries = tgm.load(processed_file) if os.path.exists(processed_file)
 raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
 raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
 
+# Use AWS kit to upload files
+session = boto3.session.Session()
+
+s3 = session.client(
+    service_name="s3",
+    aws_access_key_id=os.environ["B2_KEY_ID"],
+    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
+    endpoint_url=os.environ["B2_ENDPOINT"]
+)
+
+def upload_file_to_backblaze(path):
+    s3.upload_file(
+        str(path), 
+        os.environ["B2_BUCKET"], 
+        str(path.relative_to(DATA_DIR))
+    )
+
+def commit_file(file, commit_msg):
+    subprocess.run(["git", "add", file], check=True)
+    result = subprocess.run(["git", "diff", "--cached", "--quiet"])
+    if result.returncode != 0:
+        subprocess.run(["git", "commit", "-m", commit_msg], check=True)
+        subprocess.run(["git", "push"], check=True)
+
+
 # fetch admin
 for country, id, lvls in to_scrape:
     raw_scrape_logger.info(f"* processing: {country, id, lvls}")
@@ -62,8 +99,13 @@ for country, id, lvls in to_scrape:
 
     if response["status"] == "ok":
         tgm.dump(country_save_file, response["data"])
+        upload_file_to_backblaze(country_save_file)
+
         processed_countries.add(country)
         tgm.dump(processed_file, processed_countries)
+        upload_file_to_backblaze(processed_file)
+        commit_file(str(processed_file), f"Update processed_countries: added {country}")
+
     elif '429' in response["status_type"]:
         raw_scrape_logger.info(f"  - Too many requests error, trying chunks")
         too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
@@ -71,6 +113,8 @@ for country, id, lvls in to_scrape:
         raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
         failed_countries.add(country)
         tgm.dump(failed_file, failed_countries)
+        upload_file_to_backblaze(failed_file)
+        commit_file(str(failed_file), f"Update failed_countries: added {country}")
     
     time.sleep(3)
 
