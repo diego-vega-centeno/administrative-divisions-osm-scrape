@@ -37,4 +37,4 @@ def commit_file(file:Path, commit_msg, logger):
 def dump_upload_and_commit_result(file, data, commit_msg, config):
     tgm.dump(file, data)
     upload_dir_files_to_backblaze(file.parent, config)
-    commit_file(file, commit_msg)
+    commit_file(file, commit_msg, config['logger'])
