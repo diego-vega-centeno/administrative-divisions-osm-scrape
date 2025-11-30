@@ -32,7 +32,7 @@ jobs:
           -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
           -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
-          -e B2_BUCKET="${{ secrets.B2_BUCKET_NAME }}" \
+          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
           osm-scraper
 
