@@ -102,41 +102,41 @@ def commit_file(file:Path, commit_msg):
         raw_scrape_logger.error(f"Failed to commit {file.name}: {e}")
 
 
+in_chunks_countries = ['China']
 
 # fetch admin
 for country, id, lvls in to_scrape:
-    raw_scrape_logger.info(f"* processing: {country, id, lvls}")
-    
-    country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
-    response = too.getOSMIDAddsStruct(id, lvls)
-    raw_scrape_logger.info(f"  - finished: {response['status']}")
 
-    if response["status"] == "ok":
-        tgm.dump(country_save_file, response["data"])
-        upload_file_to_backblaze(country_save_file)
+    if country not in in_chunks_countries:
+        raw_scrape_logger.info(f"* processing: {country, id, lvls}")
+        
+        country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
+        response = too.getOSMIDAddsStruct(id, lvls)
+        raw_scrape_logger.info(f"  - finished: {response['status']}")
 
-        processed_countries.add(country)
-        tgm.dump(processed_file, processed_countries)
-        upload_file_to_backblaze(processed_file)
-        commit_file(processed_file, f"Update processed_countries: added {country}")
+        if response["status"] == "ok":
+            tgm.dump(country_save_file, response["data"])
+            upload_file_to_backblaze(country_save_file)
 
-    elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
-        raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks")
-        too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+            processed_countries.add(country)
+            tgm.dump(processed_file, processed_countries)
+            upload_file_to_backblaze(processed_file)
+            commit_file(processed_file, f"Update processed_countries: added {country}")
+
+        elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
+            raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks")
+            too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+        else:
+            raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
+            failed_countries.add(country)
+            tgm.dump(failed_file, failed_countries)
+            upload_file_to_backblaze(failed_file)
+            commit_file(failed_file, f"Update failed_countries: added {country}")
     else:
-        raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
-        failed_countries.add(country)
-        tgm.dump(failed_file, failed_countries)
-        upload_file_to_backblaze(failed_file)
-        commit_file(failed_file, f"Update failed_countries: added {country}")
-    
+        too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
+
     time.sleep(3)
+
 
 raw_scrape_logger.info(f"* new total of processed_countries: {len(processed_countries)}")
 raw_scrape_logger.info(f"* new total of failed_countries: {len(failed_countries)}")
-
-
-# for country, id, lvls in to_scrape:
-
-#     too.getOSMIDAddsStruct_chunks(tuple, SAVE_DIR)
-#     time.sleep(3)
