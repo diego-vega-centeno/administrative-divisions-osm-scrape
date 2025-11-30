@@ -80,7 +80,7 @@ def upload_file_to_backblaze(path):
     try:
         s3.upload_file(
             str(path), 
-            os.environ["B2_BUCKET"], 
+            os.environ["B2_BUCKET_NAME"], 
             str(path.relative_to(ROOT))
         )
         raw_scrape_logger.info(f"Uploaded {path} to Backblaze successfully")
