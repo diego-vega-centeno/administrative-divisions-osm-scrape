@@ -14,14 +14,6 @@ import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
 import toolsOSM.overpass as too
 
-def pckgs_reload():
-    reload(tgm)
-    reload(tgl)
-    reload(too)
-
-pckgs_reload()
-
-
 # Initialize setup
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
