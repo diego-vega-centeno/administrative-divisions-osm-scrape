@@ -54,6 +54,7 @@ processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
 # skip already processed countries
 to_scrape = [t for t in tuples if t[0] not in processed_countries]
 to_scrape = to_scrape[:2]
+to_scrape = [('China', '270056', ['4', '6', '8'])]
 
 # load files
 failed_file = SAVE_DIR / 'failed_countries.pkl'
@@ -119,8 +120,8 @@ for country, id, lvls in to_scrape:
         upload_file_to_backblaze(processed_file)
         commit_file(processed_file, f"Update processed_countries: added {country}")
 
-    elif '429' in response["status_type"]:
-        raw_scrape_logger.info(f"  - Too many requests error, trying chunks")
+    elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
+        raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks")
         too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
     else:
         raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
