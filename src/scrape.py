@@ -71,14 +71,14 @@ in_chunks_countries = ['China','Armenia']
 # fetch admin
 for country, id, lvls in to_scrape:
 
+    config = {'root':ROOT, 's3':s3, 'logger':raw_scrape_logger}
+
     if country not in in_chunks_countries:
         raw_scrape_logger.info(f"* processing: {country, id, lvls}")
         
         country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
         response = too.getOSMIDAddsStruct(id, lvls)
         raw_scrape_logger.info(f"  - finished: {response['status']}")
-
-        config = {'root':ROOT, 's3':s3, 'logger':raw_scrape_logger}
 
         if response["status"] == "ok":
             tgm.dump(country_save_file, response["data"])
