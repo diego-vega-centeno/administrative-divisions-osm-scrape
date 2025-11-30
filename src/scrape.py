@@ -80,7 +80,7 @@ def upload_file_to_backblaze(path):
     s3.upload_file(
         str(path), 
         os.environ["B2_BUCKET"], 
-        str(path.relative_to(DATA_DIR))
+        str(path.relative_to(ROOT))
     )
 
 def commit_file(file, commit_msg):
