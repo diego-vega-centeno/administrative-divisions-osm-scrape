@@ -47,21 +47,17 @@ tuples = sorted(
     key=lambda arg: arg[0]
 )
 
-# exclude processed countries
-processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
-# processed_countries = {f.parent.name for f in SAVE_DIR.glob('*/*.json')}
-
-# skip already processed countries
-to_scrape = [t for t in tuples if t[0] not in processed_countries]
-to_scrape = to_scrape[:2]
-to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
-
 # load files
 failed_file = SAVE_DIR / 'failed_countries.pkl'
 failed_countries = tgm.load(failed_file) if os.path.exists(failed_file) else set()
 
 processed_file = SAVE_DIR / 'processed_countries.pkl'
 processed_countries = tgm.load(processed_file) if os.path.exists(processed_file) else set()
+
+# skip already processed countries
+to_scrape = [t for t in tuples if t[0] not in processed_countries]
+to_scrape = to_scrape[:2]
+to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
 
 raw_scrape_logger.info(f"* processed_countries: {len(processed_countries)}")
 raw_scrape_logger.info(f"* failed_countries: {len(failed_countries)}")
@@ -138,12 +134,12 @@ for country, id, lvls in to_scrape:
         response = too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
 
         # only commit data and upload data on successfull return of chunks
-        raw_scrape_logger.info(f"  - finished: {response['status']}")
+        raw_scrape_logger.info(f"  - finished: {response['status']} - {response['status_type']}")
         if response['status'] == 'ok':
             processed_countries.add(country)
             dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}")
         else:
-            raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
+            raw_scrape_logger.info(f"  - A chunk failed, saving to failed_countries")
             failed_countries.add(country)
             dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}")          
 
