@@ -48,9 +48,9 @@ jobs:
       #       git push
       #     fi
 
-      - name: Create timestamp variable
-        id: ts
-        run: echo "ts=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      # - name: Create timestamp variable
+      #   id: ts
+      #   run: echo "ts=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       # - name: Upload scraped data as artifact
       #   uses: actions/upload-artifact@v4
@@ -66,14 +66,14 @@ jobs:
       #     unzip awscliv2.zip
       #     sudo ./aws/install
 
-      - name: Upload files to Backblaze B2 (S3 compatible)
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.B2_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_APPLICATION_KEY }}
-          AWS_DEFAULT_REGION: us-east-005
-        run: |
-          ts="${{ steps.ts.outputs.ts }}"
-          aws s3 cp "data/raw" \
-            s3://${{ secrets.B2_BUCKET_NAME }}/data/raw/ \
-            --recursive \
-            --endpoint-url "${{ secrets.B2_ENDPOINT }}"
+      # - name: Upload files to Backblaze B2 (S3 compatible)
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.B2_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+      #     AWS_DEFAULT_REGION: us-east-005
+      #   run: |
+      #     ts="${{ steps.ts.outputs.ts }}"
+      #     aws s3 cp "data/raw" \
+      #       s3://${{ secrets.B2_BUCKET_NAME }}/data/raw/ \
+      #       --recursive \
+      #       --endpoint-url "${{ secrets.B2_ENDPOINT }}"
