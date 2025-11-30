@@ -42,8 +42,6 @@ processed_countries = tgm.load(SAVE_DIR / "processed_countries.pkl")
 to_scrape = [t for t in tuples if t[0] not in processed_countries]
 to_scrape = to_scrape[:5]
 
-to_scrape = [ ('Peru', '288247', ['4', '6', '8'])]
-
 # load files
 failed_file = SAVE_DIR / 'failed_countries.pkl'
 failed_countries = tgm.load(failed_file) if os.path.exists(failed_file) else set()
