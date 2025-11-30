@@ -33,7 +33,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update processed_countries.pkl from automated scraper job"
+            git commit -m "Update processed_countries.pkl"
             git push
           fi
 
