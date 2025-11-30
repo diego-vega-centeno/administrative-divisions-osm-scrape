@@ -47,7 +47,7 @@ jobs:
             AWS_DEFAULT_REGION: us-east-005
         run: |
           ts="${{ steps.ts.outputs.ts }}"
-          aws s3 cp data/raw \
-            s3://${{ secrets.B2_BUCKET_NAME }}/runs/${{ github.run_number }}_${ts}/ \
+          aws s3 cp "data/raw" \
+            s3://${{ secrets.B2_BUCKET_NAME }}/data/raw/ \
             --recursive \
             --endpoint-url "${{ secrets.B2_ENDPOINT }}"
