@@ -35,7 +35,7 @@ subprocess.run([
     "git", "remote", "set-url", "origin",
     f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/CopaCabana21/automated-add-osm-scrape.git"
 ])
-
+subprocess.run(["git", "pull", "--rebase"], check=True)
 
 # load variables
 raw_scrape_logger = tgl.initiate_logger('raw_scrape_logger', DATA_DIR / 'raw/raw_scrape.log')
