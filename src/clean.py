@@ -14,7 +14,7 @@ import toolsOSM.overpass as too
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'normalized'
-logger = tgl.logger('logger', SAVE_DIR / 'raw_scrape.log')
+logger = tgl.initiate_logger('logger', SAVE_DIR / 'raw_scrape.log')
 
 # Use AWS kit to upload files
 session = boto3.session.Session()
