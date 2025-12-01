@@ -2,6 +2,15 @@ name: Scrape OSM
 
 on:
   workflow_dispatch:
+    inputs:
+      run_scraper:
+        description: "Run scraper"
+        type: boolean
+        default: true
+      run_cleaner:
+        description: "Run cleaner"
+        type: boolean
+        default: false
 
 jobs:
   scrape-osm:
@@ -26,6 +35,7 @@ jobs:
         run: pip install boto3
 
       - name: Run scraper
+        if: ${{ inputs.run_scraper }}
         run: |
           docker run \
           -v ${{ github.workspace }}:/app \
@@ -34,7 +44,19 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-scraper
+          osm-scraper python src/scrape.py
+
+      - name: Run cleaner
+        if: ${{ inputs.run_scraper }}
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/app \
+          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
+          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
+          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
+          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
+          osm-cleaner python src/cleaner.py
 
       # - name: Commit state files
       #   run: |
