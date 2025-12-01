@@ -1,4 +1,4 @@
-name: Scrape OSM
+name: OSM data pipeline
 
 on:
   workflow_dispatch:
