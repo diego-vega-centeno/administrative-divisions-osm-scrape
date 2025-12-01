@@ -2,6 +2,7 @@ import subprocess
 import toolsGeneral.main as tgm
 from pathlib import Path
 import os
+import datetime
 
 def upload_dir_files_to_backblaze(dir:Path, config):
 
@@ -34,7 +35,10 @@ def commit_file(file:Path, commit_msg, logger):
     except Exception as e:
         logger.error(f"Failed to commit {file.name}: {e}")
 
-def dump_and_commit_state(file, data, commit_msg, config):
-    tgm.dump(file, data)
-    upload_dir_files_to_backblaze(file.parent, config)
-    commit_file(file, commit_msg, config['logger'])
+def update_process_state(process_state, country, process_type, process_result):
+    process_state.setdefault(country, {
+        key: {"status": "pending", "last_run": None, "error": None} for key in 
+        ["scrape", "clean", "test_basic", "test_first_level", "test_duplicates", "fix"]
+    })
+    process_state[country][process_type] = process_result
+    process_state[country][process_type] = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
