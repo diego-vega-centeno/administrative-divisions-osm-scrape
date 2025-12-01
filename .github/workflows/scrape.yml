@@ -47,7 +47,7 @@ jobs:
           osm-scraper python src/scrape.py
 
       - name: Run cleaner
-        if: ${{ inputs.run_scraper }}
+        if: ${{ inputs.run_cleaner }}
         run: |
           docker run \
           -v ${{ github.workspace }}:/app \
