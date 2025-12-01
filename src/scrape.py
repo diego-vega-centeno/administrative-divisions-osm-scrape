@@ -85,7 +85,7 @@ for country, id, lvls in to_scrape:
             tools.upload_dir_files_to_backblaze(country_save_file.parent, config)
 
             processed_countries.add(country)
-            tools.dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}", config)
+            tools.commit_file(processed_file, f"Update processed_countries: added {country}", config['logger'])
 
         elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
             raw_scrape_logger.info(f"  - Too many requests/timeout error, using chunks", raw_scrape_logger)
@@ -93,19 +93,20 @@ for country, id, lvls in to_scrape:
         else:
             raw_scrape_logger.info(f"  - Failed, saving to failed_countries")
             failed_countries.add(country)
-            tools.dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}", config)
+            tools.commit_file(failed_file, f"Update failed_countries: added {country}", config['logger'])
     else:
         response = too.getOSMIDAddsStruct_chunks((country, id, lvls), SAVE_DIR)
-
+        tools.upload_dir_files_to_backblaze(country_save_file.parent, config)
+        
         # only commit data and upload data on successfull return of chunks
         raw_scrape_logger.info(f"  - finished: {response['status']} - {response['status_type']}")
         if response['status'] == 'ok':
             processed_countries.add(country)
-            tools.dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}", config)
+            tools.commit_file(processed_file, f"Update processed_countries: added {country}", config['logger'])
         else:
             raw_scrape_logger.info(f"  - A chunk failed, saving to failed_countries")
             failed_countries.add(country)
-            tools.dump_upload_and_commit_result(failed_file, failed_countries, f"Update failed_countries: added {country}", config)        
+            tools.commit_file(failed_file, f"Update failed_countries: added {country}", config['logger'])
 
     time.sleep(3)
 

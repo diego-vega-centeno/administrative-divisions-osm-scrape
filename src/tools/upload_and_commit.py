@@ -34,7 +34,7 @@ def commit_file(file:Path, commit_msg, logger):
     except Exception as e:
         logger.error(f"Failed to commit {file.name}: {e}")
 
-def dump_upload_and_commit_result(file, data, commit_msg, config):
+def dump_and_commit_state(file, data, commit_msg, config):
     tgm.dump(file, data)
     upload_dir_files_to_backblaze(file.parent, config)
     commit_file(file, commit_msg, config['logger'])
