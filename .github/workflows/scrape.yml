@@ -29,7 +29,7 @@ jobs:
           python-version: "3.11"
 
       - name: Build Docker image
-        run: docker build -t osm-scraper .
+        run: docker build -t osm-runner .
 
       - name: Install AWS kit
         run: pip install boto3
@@ -44,7 +44,7 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-scraper python src/scrape.py
+          osm-runner python src/scrape.py
 
       - name: Run cleaner
         if: ${{ inputs.run_cleaner }}
@@ -56,7 +56,7 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-cleaner python src/clean.py
+          osm-runner python src/clean.py
 
       # - name: Commit state files
       #   run: |
