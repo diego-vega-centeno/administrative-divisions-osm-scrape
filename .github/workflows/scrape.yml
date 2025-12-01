@@ -56,7 +56,7 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-cleaner python src/cleaner.py
+          osm-cleaner python src/clean.py
 
       # - name: Commit state files
       #   run: |
