@@ -31,9 +31,6 @@ jobs:
       - name: Build Docker image
         run: docker build -t osm-runner .
 
-      - name: Install AWS kit
-        run: pip install boto3
-
       - name: Run scraper
         if: ${{ inputs.run_scraper }}
         run: |
