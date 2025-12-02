@@ -1,0 +1,1930 @@
+{
+  "Andorra": {
+    "id": "9407",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Slovakia": {
+    "id": "14296",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Austria": {
+    "id": "16239",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Germany-Austria": {
+    "id": "17511",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Hungary": {
+    "id": "21335",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Georgia": {
+    "id": "28699",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "VaticanCity": {
+    "id": "36989",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Poland": {
+    "id": "49715",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Cambodia": {
+    "id": "49898",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Laos": {
+    "id": "49903",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Vietnam": {
+    "id": "49915",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Denmark": {
+    "id": "50046",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Myanmar": {
+    "id": "50371",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Germany--Switzerland": {
+    "id": "51239",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Germany": {
+    "id": "51477",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Czechia": {
+    "id": "51684",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Switzerland": {
+    "id": "51701",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Belgium": {
+    "id": "52411",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Sweden": {
+    "id": "52822",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "FaroeIslands": {
+    "id": "52939",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Albania": {
+    "id": "53292",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "NorthMacedonia": {
+    "id": "53293",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Montenegro": {
+    "id": "53296",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Finland": {
+    "id": "54224",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SanMarino": {
+    "id": "54624",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Moldova": {
+    "id": "58974",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Belarus": {
+    "id": "59065",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Brazil": {
+    "id": "59470",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Russia": {
+    "id": "60189",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Ukraine": {
+    "id": "60199",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "UnitedKingdom": {
+    "id": "62149",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "IsleOfMan": {
+    "id": "62269",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Ireland": {
+    "id": "62273",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Latvia": {
+    "id": "72594",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Lithuania": {
+    "id": "72596",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Estonia": {
+    "id": "79510",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Australia": {
+    "id": "80500",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Spain": {
+    "id": "82675",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SouthAfrica": {
+    "id": "87565",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Eswatini": {
+    "id": "88210",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Italy": {
+    "id": "5389302",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Switzerland": {
+    "id": "90124",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Germany": {
+    "id": "90333",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Luxembourg": {
+    "id": "90340",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Belgium": {
+    "id": "90341",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Monaco": {
+    "id": "90352",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Romania": {
+    "id": "90689",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Austria-Switzerland": {
+    "id": "102666",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Austria--Liechtenstein": {
+    "id": "102877",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Ecuador": {
+    "id": "108089",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mexico": {
+    "id": "114686",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Colombia": {
+    "id": "120027",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France-Andorra": {
+    "id": "126410",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "UnitedStates": {
+    "id": "148838",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mongolia": {
+    "id": "161033",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Chile": {
+    "id": "167454",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Rwanda": {
+    "id": "171496",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Turkey": {
+    "id": "174737",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kyrgyzstan": {
+    "id": "178009",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bhutan": {
+    "id": "184629",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Nepal": {
+    "id": "184633",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bangladesh": {
+    "id": "184640",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Jordan": {
+    "id": "184818",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Syria": {
+    "id": "184840",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Lebanon": {
+    "id": "184843",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bulgaria": {
+    "id": "186382",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Greece": {
+    "id": "192307",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "NorthKorea": {
+    "id": "192734",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Algeria": {
+    "id": "192756",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tunisia": {
+    "id": "192757",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Libya": {
+    "id": "192758",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mauritania": {
+    "id": "192763",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "TheGambia": {
+    "id": "192774",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Senegal": {
+    "id": "192775",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Guinea-bissau": {
+    "id": "192776",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SierraLeone": {
+    "id": "192777",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Guinea": {
+    "id": "192778",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CoteD'ivoire": {
+    "id": "192779",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Liberia": {
+    "id": "192780",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Ghana": {
+    "id": "192781",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Togo": {
+    "id": "192782",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "BurkinaFaso": {
+    "id": "192783",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Benin": {
+    "id": "192784",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mali": {
+    "id": "192785",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Niger": {
+    "id": "192786",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Nigeria": {
+    "id": "192787",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Sudan": {
+    "id": "192789",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CentralAfricanRepublic": {
+    "id": "192790",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "EquatorialGuinea": {
+    "id": "192791",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Gabon": {
+    "id": "192793",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Congo-brazzaville": {
+    "id": "192794",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "DemocraticRepublicOfTheCongo": {
+    "id": "192795",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Uganda": {
+    "id": "192796",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kenya": {
+    "id": "192798",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Somalia": {
+    "id": "192799",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Ethiopia": {
+    "id": "192800",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Djibouti": {
+    "id": "192801",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Cameroon": {
+    "id": "192830",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Namibia": {
+    "id": "195266",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Angola": {
+    "id": "195267",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Burundi": {
+    "id": "195269",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tanzania": {
+    "id": "195270",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Zambia": {
+    "id": "195271",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Zimbabwe": {
+    "id": "195272",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mozambique": {
+    "id": "195273",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Malawi": {
+    "id": "195290",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Uzbekistan": {
+    "id": "196240",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tajikistan": {
+    "id": "214626",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kazakhstan": {
+    "id": "214665",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Croatia": {
+    "id": "214885",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Slovenia": {
+    "id": "218657",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Turkmenistan": {
+    "id": "223026",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bolivia": {
+    "id": "252645",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Guernsey": {
+    "id": "270009",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "China": {
+    "id": "270056",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Venezuela": {
+    "id": "272644",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "BritishVirginIslands": {
+    "id": "285454",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Argentina": {
+    "id": "286393",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Uruguay": {
+    "id": "287072",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Paraguay": {
+    "id": "287077",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Suriname": {
+    "id": "287082",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Guyana": {
+    "id": "287083",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Nicaragua": {
+    "id": "287666",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CostaRica": {
+    "id": "287667",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Panama": {
+    "id": "287668",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Honduras": {
+    "id": "287670",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Belize": {
+    "id": "287827",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Peru": {
+    "id": "288247",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Portugal": {
+    "id": "295480",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Eritrea": {
+    "id": "296961",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Iceland": {
+    "id": "299133",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Afghanistan": {
+    "id": "303427",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "India": {
+    "id": "304716",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Indonesia": {
+    "id": "304751",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Iraq": {
+    "id": "304934",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Iran": {
+    "id": "304938",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Yemen": {
+    "id": "305092",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Qatar": {
+    "id": "305095",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kuwait": {
+    "id": "305099",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Oman": {
+    "id": "305138",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "EastTimor": {
+    "id": "305142",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Pakistan": {
+    "id": "307573",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaudiArabia": {
+    "id": "307584",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SouthKorea": {
+    "id": "307756",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "UnitedArabEmirates": {
+    "id": "307763",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Cyprus": {
+    "id": "307787",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Dominica": {
+    "id": "307823",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "DominicanRepublic": {
+    "id": "307828",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Haiti": {
+    "id": "307829",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Cuba": {
+    "id": "307833",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "PapuaNewGuinea": {
+    "id": "307866",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Armenia": {
+    "id": "364066",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Azerbaijan": {
+    "id": "364110",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Malta": {
+    "id": "365307",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Italy": {
+    "id": "365331",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Jersey": {
+    "id": "367988",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bahrain": {
+    "id": "378734",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Japan": {
+    "id": "382313",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Philippines": {
+    "id": "443174",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Madagascar": {
+    "id": "447325",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Taiwan": {
+    "id": "449220",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CapeVerde": {
+    "id": "535774",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Comoros": {
+    "id": "535790",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Mauritius": {
+    "id": "535828",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaoTomeAndPrincipe": {
+    "id": "535880",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Seychelles": {
+    "id": "536765",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Maldives": {
+    "id": "536773",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Singapore": {
+    "id": "536780",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SriLanka": {
+    "id": "536807",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaintKittsAndNevis": {
+    "id": "536899",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "AntiguaAndBarbuda": {
+    "id": "536900",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Montserrat": {
+    "id": "537257",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bahamas": {
+    "id": "547469",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "TurksAndCaicosIslands": {
+    "id": "547479",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Barbados": {
+    "id": "547511",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaintVincentAndTheGrenadines": {
+    "id": "550725",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Grenada": {
+    "id": "550727",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaintLucia": {
+    "id": "550728",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Jamaica": {
+    "id": "555017",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "TrinidadAndTobago": {
+    "id": "555717",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "NewZealand": {
+    "id": "556706",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kiribati": {
+    "id": "571178",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Fiji": {
+    "id": "571747",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "MarshallIslands": {
+    "id": "571771",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "FederatedStatesOfMicronesia": {
+    "id": "571802",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Nauru": {
+    "id": "571804",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Palau": {
+    "id": "571805",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Monaco": {
+    "id": "1124039",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Liechtenstein": {
+    "id": "1155955",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Gibraltar": {
+    "id": "1278736",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Spain": {
+    "id": "1311341",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Canada": {
+    "id": "1428125",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Israel": {
+    "id": "1473946",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Egypt": {
+    "id": "1473947",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "ElSalvador": {
+    "id": "1520612",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Guatemala": {
+    "id": "1521463",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Austria--Switzerland": {
+    "id": "1550322",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Niue": {
+    "id": "1558556",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Germany-Luxembourg": {
+    "id": "1628284",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SouthSudan": {
+    "id": "1656678",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Italy-Slovenia": {
+    "id": "1674592",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Hungary-Slovenia": {
+    "id": "1675252",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Croatia-Slovenia": {
+    "id": "1675337",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Serbia": {
+    "id": "1741311",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SolomonIslands": {
+    "id": "1857436",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Samoa": {
+    "id": "1872673",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Botswana": {
+    "id": "1889339",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SaintHelena,AscensionAndTristanDaCunha": {
+    "id": "1964272",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SouthGeorgiaAndTheSouthSandwichIslands": {
+    "id": "1983628",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Bermuda": {
+    "id": "1993208",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "BritishIndianOceanTerritory": {
+    "id": "1993867",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Thailand": {
+    "id": "2067731",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Kosovo": {
+    "id": "2088990",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Lesotho": {
+    "id": "2093234",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Brunei": {
+    "id": "2103120",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Malaysia": {
+    "id": "2108121",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Luxembourg": {
+    "id": "2171347",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Anguilla": {
+    "id": "2177161",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Vanuatu": {
+    "id": "2177246",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tuvalu": {
+    "id": "2177266",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Greenland": {
+    "id": "2184073",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CookIslands": {
+    "id": "2184233",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "CaymanIslands": {
+    "id": "2185366",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "FalklandIslands": {
+    "id": "2185374",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "PitcairnIslands": {
+    "id": "2185375",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tokelau": {
+    "id": "2186600",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Tonga": {
+    "id": "2186665",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France": {
+    "id": "2202162",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Netherlands": {
+    "id": "2323309",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Chad": {
+    "id": "2361304",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "BosniaAndHerzegovina": {
+    "id": "2528142",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Netherlands--Belgium": {
+    "id": "2620918",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Norway": {
+    "id": "2978650",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "AkrotiriAndDhekelia": {
+    "id": "3263728",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "Morocco": {
+    "id": "3630439",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "SahrawiArabDemocraticRepublic": {
+    "id": "5441968",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "France/SurinameBorder": {
+    "id": "16100722",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "IslaTresCruces": {
+    "id": "17893357",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "IslaBassi": {
+    "id": "17893358",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "IslaFilomenaGrande": {
+    "id": "17893359",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  "IslaVerde": {
+    "id": "17894046",
+    "addLvlsNum": [
+      "4",
+      "6",
+      "8"
+    ]
+  }
+}
