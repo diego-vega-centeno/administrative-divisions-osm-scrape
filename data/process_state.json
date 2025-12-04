@@ -36868,8 +36868,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -37858,8 +37858,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -37990,8 +37990,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -40213,8 +40213,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -43593,8 +43593,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -43725,8 +43725,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -44253,8 +44253,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -44319,8 +44319,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -45375,8 +45375,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -45474,8 +45474,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
@@ -46167,8 +46167,8 @@
       "error": null
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-04T16:40:28",
       "error": null
     },
     "test_basic": {
