@@ -15,7 +15,7 @@ import toolsSync.main as tsm
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'cleaned'
-DEV_MODE = True
+DEV_MODE = False
 
 logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
