@@ -78,6 +78,7 @@ logger.info(f"* finshed b2")
 in_chunks_countries = ['China','Armenia']
 
 def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process_state, process_state_file):
+    logger.info(f"  - Scrape in chunks started")
     country, id, lvls = tuple
     process_state[country]['scrape']['type'] = 'chunk'
     process_state[country]['scrape']['chunk_state'] = {}
@@ -94,7 +95,9 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     tgm.dump(process_state_file, process_state)
 
     if not DEV_MODE:
+        logger.info("Upload data to backblaze b2")
         tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
+        logger.info("Commit updated process state")
         tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {response['status']})", config['logger'])
 
 # fetch admin
