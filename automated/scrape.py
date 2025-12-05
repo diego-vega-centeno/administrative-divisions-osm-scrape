@@ -20,6 +20,12 @@ DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'raw/osm countries queries'
 DEV_MODE = False
 
+# load environment variables for local run
+if DEV_MODE:
+    from dotenv import load_dotenv
+    load_dotenv()
+
+
 # initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
@@ -57,11 +63,6 @@ to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
 logger.info(f"* processed_countries: {len(processed_countries)}")
 logger.info(f"* failed_countries: {len(failed_countries)}")
 logger.info(f"* to process countries: {len(to_scrape)}")
-
-# load environment variables
-if DEV_MODE:
-    from dotenv import load_dotenv
-    load_dotenv()
 
 # Use AWS kit to upload files
 logger.info(f"* initializing b2 ...")
