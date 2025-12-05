@@ -43435,7 +43435,7 @@
       "status": "pending",
       "type": "normal",
       "last_run": null,
-      "error": null,
+      "error": null
     },
     "clean": {
       "status": "pending",
