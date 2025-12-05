@@ -41,7 +41,7 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-runner python src/scrape.py
+          osm-runner python automated/scrape.py
 
       - name: Run cleaner
         if: ${{ inputs.run_cleaner }}
@@ -53,7 +53,7 @@ jobs:
           -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-runner python src/clean.py
+          osm-runner python automated/clean.py
 
       # - name: Commit state files
       #   run: |
