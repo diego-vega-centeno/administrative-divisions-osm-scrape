@@ -1,22 +1,40 @@
 # init
 import os
-from importlib import reload
 from pathlib import Path
 import boto3
 import pandas as pd
-import tools.upload_and_commit as tuc
+import re
+import sys
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
 import toolsOSM.overpass as too
+import toolsSync.main as tsm
 
-# Initialize setup
+#* Initialize setup
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-SAVE_DIR = DATA_DIR / 'normalized'
-logger = tgl.initiate_logger('logger', SAVE_DIR / 'raw_scrape.log')
+SAVE_DIR = DATA_DIR / 'cleaned'
+DEV_MODE = True
 
-# Use AWS kit to upload files
+logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
+
+process_state = tgm.load(DATA_DIR / 'process_state.json')
+logger.info(f"Number of countries in process state: {len(process_state)}")
+
+#* select entities to process
+countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
+logger.info(f'countries cleaned: {len(countries_cleaned)}')
+countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and val['clean']['status'] == 'pending']
+logger.info(f'countries to clean: {len(countries_to_clean)}')
+
+#* load environment variables
+if DEV_MODE:
+    from dotenv import load_dotenv
+    load_dotenv()
+
+#* Use AWS kit to upload files
+logger.info(f"* initializing b2 ...")
 session = boto3.session.Session()
 
 s3 = session.client(
@@ -25,34 +43,78 @@ s3 = session.client(
     aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
+logger.info(f"* finshed b2")
 
-# list raw files
-files_dirs = [f for f in (DATA_DIR / 'raw/osm countries queries').glob('*') if f.is_dir()]
-logger.info(f"* raw files: {len(files_dirs)}")
+#* load state and meta data files
+process_state_file = DATA_DIR / "process_state.json"
+process_state = tgm.load(process_state_file)
 
-# load raw data for chunks and non chunk files
-raw_by_cntr = {}
-for dir in files_dirs:
-    files_elements = [tgm.load(str(f))['elements'] for f in dir.glob('*.json')]
+countries_to_clean = ['Armenia']
+
+downloaded_count = 0
+to_download_total = 0
+raw_data_dir = Path('data/raw/osm countries queries')
+list_obj_response = s3.list_objects_v2(Bucket=os.environ["B2_BUCKET_NAME"], Prefix=raw_data_dir.as_posix())
+files_list = [(obj['Key']) for obj in list_obj_response['Contents']]
+logger.info(f"Total files found for bucket in {raw_data_dir}: {len(files_list)}")
+
+logger.info(f"* Downloading data from backbkaze: {len(countries_to_clean)}")
+# load data from b2 bucket for countries to process
+for count, country in enumerate(countries_to_clean, start=1):
+    country_files = [str(file) for file in files_list if re.match(rf"{raw_data_dir.as_posix()}/{country}/.+\.json", file)]
+    to_download_total += len(country_files)
+    logger.info(f"  * Country {country} ({count}/{len(countries_to_clean)}) files found: {len(country_files)}")
+    for file in country_files:
+        save_file = ROOT / raw_data_dir / country / os.path.basename(file)
+        if save_file.exists():
+            logger.info(f"  * Skip existing file {save_file}")
+            continue
+        
+        os.makedirs(save_file.parent, exist_ok=True)
+        try:
+            s3.download_file(os.environ["B2_BUCKET_NAME"], file, str(save_file))
+            logger.info(f"  * File '{file}' downloaded successfully to '{Path(save_file).relative_to(ROOT)}'")
+            downloaded_count += 1
+        except Exception as e:
+            logger.error(f"  * Error downloading file '{file}': {e}")
+
+logger.info(f"Number of downloaded files: {downloaded_count}/{to_download_total}")
+
+#* load data for countries to clean
+country_raw_dirs = [f for f in (DATA_DIR / 'raw/osm countries queries').glob('*') if f.is_dir()]
+logger.info(f"Number of all raw directories found: {len(country_raw_dirs)}")
+
+to_clean_by_cntr = {}
+logger.info(f"Loading raw data only for countries to clean: {len(countries_to_clean)}")
+# for chunks and non chunk files
+for country in countries_to_clean:
+    country_dir = DATA_DIR / 'raw/osm countries queries' / country
+    if not country_dir.exists():
+        continue
+    files_elements = [tgm.load(f)['elements'] for f in country_dir.glob('*.json')]
     elements = [ele for list in files_elements for ele in list]
-    raw_by_cntr[str(dir.name)] = elements
+    to_clean_by_cntr[country] = elements
 
-logger.info(f"* countries raw data found: {len(raw_by_cntr)}")
+logger.info(f"Number of countries with raw data loaded: {len(to_clean_by_cntr)}")
+logger.info(f"Number of countries to clean without raw data: {tgm.complement(countries_to_clean, to_clean_by_cntr.keys())}")
 
-# filter countries to process
-processed_file = SAVE_DIR / 'processsed_countries.pkl'
-processed_countries = tgm.load(processed_file) if os.path.exists(processed_file) else set()
-logger.info(f"* processsed_countries: {len(processed_countries)}")
+if len(countries_to_clean) < 1:
+    logger.info("No countries to clean, exiting script")
+    sys.exit(0)
 
-to_process_by_cntr = {k:v for k,v in raw_by_cntr.items() if k not in processed_countries}
-logger.info(f"* to_process_by_cntr: {len(to_process_by_cntr)}")
+#* START CLEANING STEPS
+logger.info(f"Start cleaning steps")
 
-
-#* use sovereign countries only
+#* Use sovereign countries only
+logger.info(f"* Use sovereign countries only")
 sovereign_countries = tgm.load(DATA_DIR / 'sovereign countries.json')
-processsed_by_cntr = {k:df for k,df in to_process_by_cntr.items() if k in sovereign_countries}
+logger.info(f"  * Sovereign countries: {len(sovereign_countries)}")
+
+cleaned_by_cntr = {k:data for k,data in to_clean_by_cntr.items() if k in sovereign_countries}
+logger.info(f"  * Filtered sovereign countries: {len(cleaned_by_cntr)}")
 
 #* clean countries
+logger.info(f"* Clean countries")
 import copy
 def clean_country_data(raw_by_cntr):
 
@@ -77,19 +139,42 @@ def clean_country_data(raw_by_cntr):
 
     return cleaned_by_cntr
 
-processsed_by_cntr = clean_country_data(processsed_by_cntr)
+cleaned_by_cntr = clean_country_data(cleaned_by_cntr)
+logger.info(f"  * Cleaned countries: {len(cleaned_by_cntr)}")
 
-temp = [ele['tags'].get('parent_id',None) for k,v in processsed_by_cntr.items() for ele in v]
-
-logger.info(f"* types of data:")
-logger.info(f"{pd.Series(temp).map(type).value_counts()}")
+temp = [ele['tags'].get('parent_id', None) for k,v in cleaned_by_cntr.items() for ele in v]
+logger.info(f"  * Tally 'parent_id' for all elements: {tgm.tally([type(ele) for ele in temp])}")
 
 #* convert to dataframe
-df_by_cntr = {k:too.normalizeOSM(elems) for k,elems in processsed_by_cntr.items()}
-logger.info(f"* df_by_cntr: {len(df_by_cntr)}")
+logger.info(f"* Convert to dataframe")
+cleaned_by_cntr = {k:too.normalizeOSM(elems) for k,elems in cleaned_by_cntr.items()}
+logger.info(f"  * Cleaned converted to data frame: {len(cleaned_by_cntr)}")
 
+combined = pd.concat(cleaned_by_cntr.values(), ignore_index=True)
+logger.info(f"  * Tally all types of values in dataframe: {tgm.tally(list(combined.map(type).stack().values))}")
+
+#* save files
+logger.info(f"Finished cleaning. Total of cleaned countries: {len(cleaned_by_cntr)}")
+
+for country,df in cleaned_by_cntr.items():
+    tgm.dump(str(SAVE_DIR), df)
+logger.info(f"Saved files to cleaned directory: {len(cleaned_by_cntr)}")
+
+#* Upload data to backblaze b2 and update process state
+logger.info("* Uploading data to backblaze b2")
 config = {'root':ROOT, 's3':s3, 'logger':logger}
-# * save files
-for country,df in df_by_cntr.items():
-    processed_countries.add(country)
-    tuc.dump_upload_and_commit_result(processed_file, processed_countries, f"Update processed_countries: added {country}", config)
+for country in cleaned_by_cntr.keys():
+    logger.info(f"  * Uploading directory for country: {country}")
+    country_save_dir = SAVE_DIR / country
+    # all data in country directory will  be uploaded
+    if not DEV_MODE:
+        res = tsm.upload_dir_files_to_backblaze(country_save_dir, config)
+        if res['status'] != 'ok':
+            continue
+    # add country to process state
+    logger.info(f"  * Updating {country} in process state: (clean, ok)")
+    tsm.update_process_state(process_state, country, 'clean', 'ok')
+    tgm.dump(DATA_DIR / 'process_state.json', process_state)
+    # commit process state
+    if not DEV_MODE:
+        tsm.commit_file(DATA_DIR / 'process_state.json', f"Update process state for {country}: (scrape, ok)", config['logger'])
