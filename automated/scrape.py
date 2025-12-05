@@ -28,7 +28,7 @@ subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@
 if not DEV_MODE:
     subprocess.run([
         "git", "remote", "set-url", "origin",
-        f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/CopaCabana21/automated-add-osm-scrape.git"
+        f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
 
