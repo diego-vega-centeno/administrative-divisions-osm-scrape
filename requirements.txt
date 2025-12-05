@@ -1,0 +1,5 @@
+my-packages @ git+https://github.com/CopaCabana21/my-packages.git
+requests
+pandas
+boto3
+dotenv
