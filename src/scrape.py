@@ -7,17 +7,18 @@ import time
 from pathlib import Path
 import boto3
 import subprocess
-import tools.upload_and_commit as tools
+import sys
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
 import toolsOSM.overpass as too
+import toolsSync.main as tsm
 
 # Initialize variables
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'raw/osm countries queries'
-DEV_MODE = False
+DEV_MODE = True
 
 # initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
@@ -44,6 +45,10 @@ processed_countries = [country for country, country_state in process_state.items
 failed_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'failed']
 to_scrape_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'pending']
 to_scrape = [(country, osmMetaCountrDict[country]['id'], osmMetaCountrDict[country]['addLvlsNum']) for country in to_scrape_countries]
+
+if not len(to_scrape_countries) < 1:
+    logger.info("* No countries to scrape, exiting script")
+    sys.exit(0)
 
 # test to scrape
 # to_scrape = to_scrape[:2]
@@ -83,14 +88,14 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     state_resume = {k:{k2:(len(v2) if type(v2) == set else v2) for k2,v2 in val.items()} for k,val in response['data'].items()}
     logger.info(f"  - Chunk status: {state_resume}")
 
-    tools.update_process_state(process_state, country, 'scrape', response['status'])
+    tsm.update_process_state(process_state, country, 'scrape', response['status'])
     process_state[country]['scrape']['chunk_state'] = response['data']
     process_state[country]['scrape']['error'] = response['status_type']
     tgm.dump(process_state_file, process_state)
 
     if not DEV_MODE:
-        tools.upload_dir_files_to_backblaze(country_save_file.parent, config)
-        tools.commit_file(process_state_file, f"Update process state: {country}: (scrape, {response['status']})", config['logger'])
+        tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
+        tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {response['status']})", config['logger'])
 
 # fetch admin
 for country, id, lvls in to_scrape:
@@ -107,17 +112,17 @@ for country, id, lvls in to_scrape:
         if response["status"] == "ok":
             tgm.dump(country_save_file, response["data"])
             if not DEV_MODE:
-                tools.upload_dir_files_to_backblaze(country_save_file.parent, config)
+                tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
         elif '429' in response["status_type"] or 'timeout' in response["status_type"]:
             logger.info(f"  - Too many requests/timeout error, using chunks", logger)
             scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
         else:
             logger.info(f"  - Failed, saving to process state")
 
-        tools.update_process_state(process_state, country, 'scrape', response['status'])
+        tsm.update_process_state(process_state, country, 'scrape', response['status'])
         tgm.dump(process_state_file, process_state)
         if not DEV_MODE:
-            tools.commit_file(process_state_file, process_state, f"Update process state: {country}: (scrape, {response['status']})", config['logger'])
+            tsm.commit_file(process_state_file, process_state, f"Update process state: {country}: (scrape, {response['status']})", config['logger'])
     else:
         scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
 
