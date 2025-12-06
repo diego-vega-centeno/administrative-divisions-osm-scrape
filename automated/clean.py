@@ -5,6 +5,7 @@ import boto3
 import pandas as pd
 import re
 import sys
+import subprocess
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -21,6 +22,19 @@ logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
 process_state = tgm.load(DATA_DIR / 'process_state.json')
 logger.info(f"Number of countries in process state: {len(process_state)}")
+
+#* initialize git
+subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
+subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+
+token = os.environ.get("GITHUB_TOKEN")
+if token:
+    subprocess.run([
+        "git", "remote", "set-url", "origin",
+        f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
+    ])
+    subprocess.run(["git", "pull", "--rebase"], check=True)
 
 #* select entities to process
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
