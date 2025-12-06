@@ -56,7 +56,7 @@ s3 = session.client(
     aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
-logger.info(f"* finshed b2")
+logger.info(f"* finished b2")
 
 #* load state and meta data files
 process_state_file = DATA_DIR / "process_state.json"
@@ -69,18 +69,19 @@ to_download_total = 0
 raw_data_dir = Path('data/raw/osm countries queries')
 list_obj_response = s3.list_objects_v2(Bucket=os.environ["B2_BUCKET_NAME"], Prefix=raw_data_dir.as_posix())
 files_list = [(obj['Key']) for obj in list_obj_response['Contents']]
-logger.info(f"Total files found for bucket in {raw_data_dir}: {len(files_list)}")
+logger.info(f"* Total files found in {raw_data_dir}: {len(files_list)}")
 
-logger.info(f"* Downloading data from backbkaze: {len(countries_to_clean)}")
-# load data from b2 bucket for countries to process
+#* donwload file from b2 bucket for countries to process
+logger.info(f"* Downloading data from backbkaze: number of countries {len(countries_to_clean)}")
 for count, country in enumerate(countries_to_clean, start=1):
     country_files = [str(file) for file in files_list if re.match(rf"{raw_data_dir.as_posix()}/{country}/.+\.json", file)]
     to_download_total += len(country_files)
-    logger.info(f"  * Country {country} ({count}/{len(countries_to_clean)}) files found: {len(country_files)}")
+    logger.info(f"* Country {country} ({count}/{len(countries_to_clean)}) files found: {len(country_files)}")
     for file in country_files:
         save_file = ROOT / raw_data_dir / country / os.path.basename(file)
         if save_file.exists():
             logger.info(f"  * Skip existing file {save_file}")
+            downloaded_count += 1
             continue
         
         os.makedirs(save_file.parent, exist_ok=True)
@@ -95,7 +96,7 @@ logger.info(f"Number of downloaded files: {downloaded_count}/{to_download_total}
 
 #* load data for countries to clean
 country_raw_dirs = [f for f in (DATA_DIR / 'raw/osm countries queries').glob('*') if f.is_dir()]
-logger.info(f"Number of all raw directories found: {len(country_raw_dirs)}")
+logger.info(f"Number of raw data directories: {len(country_raw_dirs)}")
 
 to_clean_by_cntr = {}
 logger.info(f"Loading raw data only for countries to clean: {len(countries_to_clean)}")
@@ -116,7 +117,7 @@ if len(countries_to_clean) < 1:
     sys.exit(0)
 
 #* START CLEANING STEPS
-logger.info(f"Start cleaning steps")
+logger.info(f"* Start cleaning steps")
 
 #* Use sovereign countries only
 logger.info(f"* Use sovereign countries only")
@@ -170,7 +171,7 @@ logger.info(f"  * Tally all types of values in dataframe: {tgm.tally(list(combin
 logger.info(f"Finished cleaning. Total of cleaned countries: {len(cleaned_by_cntr)}")
 
 for country,df in cleaned_by_cntr.items():
-    tgm.dump(str(SAVE_DIR), df)
+    tgm.dump(SAVE_DIR / country, df)
 logger.info(f"Saved files to cleaned directory: {len(cleaned_by_cntr)}")
 
 #* Upload data to backblaze b2 and update process state
