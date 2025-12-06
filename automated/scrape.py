@@ -8,6 +8,7 @@ from pathlib import Path
 import boto3
 import subprocess
 import sys
+from dotenv import load_dotenv
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -21,10 +22,7 @@ SAVE_DIR = DATA_DIR / 'raw/osm countries queries'
 DEV_MODE = False
 
 # load environment variables for local run
-if DEV_MODE:
-    from dotenv import load_dotenv
-    load_dotenv()
-
+load_dotenv()
 
 # initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
@@ -81,13 +79,13 @@ logger.info(f"* finshed b2")
 in_chunks_countries = ['China','Armenia']
 
 def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process_state, process_state_file):
-    logger.info(f"  - Scrape in chunks started")
+    logger.info(f"* Scrape in chunks started")
     country, id, lvls = tuple
     process_state[country]['scrape']['type'] = 'chunk'
     process_state[country]['scrape']['chunk_state'] = {}
 
     response = too.getOSMIDAddsStruct_chunks((country, id, lvls), save_dir)
-    logger.info(f"  - Scrape in chunks finished: {response['status']} - {response['status_type']}")
+    logger.info(f"* Scrape in chunks finished: {response['status']} - {response['status_type']}")
 
     state_resume = {k:{k2:(len(v2) if type(v2) == set else v2) for k2,v2 in val.items()} for k,val in response['data'].items()}
     logger.info(f"  - Chunk status: {state_resume}")
@@ -97,27 +95,27 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
 
     if response["status"] == "ok":
         # Try to upload data and override process status with upload result from B2
-        logger.info("  - Upload data to backblaze b2")
+        logger.info("* Upload data to backblaze b2")
         if not DEV_MODE:
             upload_response = tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
             process_status = upload_response['status']
             process_error = upload_response['status_type']
 
-    logger.info(f"  - Update and commit to process state: {country} - ({process_status, process_error})")
+    logger.info(f"* Update and commit to process state: {country} - {(process_status, process_error)}")
     process_state[country]['scrape']['chunk_state'] = response['data']
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.commit_file(process_state_file, process_state, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
+        tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
 
 # fetch admin
 for country, id, lvls in to_scrape:
 
     config = {'root':ROOT, 's3':s3, 'logger':logger}
     country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
+    logger.info(f"* processing: {country, id, lvls}")
 
     if country not in in_chunks_countries:
-        logger.info(f"* processing: {country, id, lvls}")
         
         response = too.getOSMIDAddsStruct(id, lvls)
         logger.info(f"  - Scrape for country {country} result: {response['status']}")
@@ -143,7 +141,7 @@ for country, id, lvls in to_scrape:
         tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
         tgm.dump(process_state_file, process_state)
         if not DEV_MODE:
-            tsm.commit_file(process_state_file, process_state, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
+            tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
     else:
         scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
 
