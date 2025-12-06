@@ -83,8 +83,9 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     country, id, lvls = tuple
     process_state[country]['scrape']['type'] = 'chunk'
     process_state[country]['scrape']['chunk_state'] = {}
+    chunk_state = process_state.get('chunk_state')
 
-    response = too.getOSMIDAddsStruct_chunks((country, id, lvls), save_dir)
+    response = too.getOSMIDAddsStruct_chunks((country, id, lvls), save_dir, chunk_state)
     logger.info(f"* Scrape in chunks finished: {response['status']} - {response['status_type']}")
 
     state_resume = {k:{k2:(len(v2) if type(v2) == set else v2) for k2,v2 in val.items()} for k,val in response['data'].items()}
@@ -105,8 +106,8 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     process_state[country]['scrape']['chunk_state'] = response['data']
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
-    if not DEV_MODE:
-        tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
+    # if not DEV_MODE:
+    #     tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
 
 # fetch admin
 for country, id, lvls in to_scrape:
