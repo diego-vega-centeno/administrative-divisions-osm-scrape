@@ -16,7 +16,7 @@ import toolsSync.main as tsm
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'cleaned'
-DEV_MODE = True
+DEV_MODE = False
 
 logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
@@ -182,13 +182,12 @@ for country in cleaned_by_cntr.keys():
     country_save_dir = SAVE_DIR / country
     # all data in country directory will  be uploaded
     if not DEV_MODE:
-        res = tsm.upload_dir_files_to_backblaze(country_save_dir, config)
-        if res['status'] != 'ok':
-            continue
-    # add country to process state
+        upload_response = tsm.upload_dir_files_to_backblaze(country_save_dir, config)
+        process_status = upload_response['status']
+        process_error = upload_response['status_type']
+    # override process task state with upload response
     logger.info(f"  * Updating {country} in process state: (clean, ok)")
-    tsm.update_process_state(process_state, country, 'clean', 'ok')
+    tsm.update_process_state(process_state, country, 'clean', process_status=process_status, process_error=process_error)
     tgm.dump(DATA_DIR / 'process_state.json', process_state)
-    # commit process state
     if not DEV_MODE:
         tsm.commit_file(DATA_DIR / 'process_state.json', f"Update process state for {country}: (scrape, ok)", config['logger'])
