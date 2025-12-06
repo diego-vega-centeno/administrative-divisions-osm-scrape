@@ -49,7 +49,7 @@ process_state = tgm.load(process_state_file)
 # filter countries to scrape
 processed_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'ok']
 failed_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'failed']
-to_scrape_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'pending']
+to_scrape_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] in ['pending', 'error']]
 to_scrape = [(country, osmMetaCountrDict[country]['id'], osmMetaCountrDict[country]['addLvlsNum']) for country in to_scrape_countries]
 
 if len(to_scrape_countries) < 1:
