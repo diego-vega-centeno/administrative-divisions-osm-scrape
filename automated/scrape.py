@@ -106,8 +106,8 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     process_state[country]['scrape']['chunk_state'] = response['data']
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
-    # if not DEV_MODE:
-    #     tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
+    if not DEV_MODE:
+        tsm.commit_file(process_state_file, f"Update process state: {country}: (scrape, {process_status})", config['logger'])
 
 # fetch admin
 for country, id, lvls in to_scrape:
