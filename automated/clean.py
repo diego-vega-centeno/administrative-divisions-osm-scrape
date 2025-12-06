@@ -20,9 +20,6 @@ DEV_MODE = False
 
 logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
-process_state = tgm.load(DATA_DIR / 'process_state.json')
-logger.info(f"Number of countries in process state: {len(process_state)}")
-
 #* initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
@@ -188,6 +185,6 @@ for country in cleaned_by_cntr.keys():
     # override process task state with upload response
     logger.info(f"  * Updating {country} in process state: (clean, ok)")
     tsm.update_process_state(process_state, country, 'clean', process_status=process_status, process_error=process_error)
-    tgm.dump(DATA_DIR / 'process_state.json', process_state)
+    tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.commit_file(DATA_DIR / 'process_state.json', f"Update process state for {country}: (scrape, ok)", config['logger'])
+        tsm.commit_file(process_state_file, f"Update process state for {country}: (scrape, ok)", config['logger'])
