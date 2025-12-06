@@ -15,7 +15,7 @@ import toolsSync.main as tsm
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'cleaned'
-DEV_MODE = False
+DEV_MODE = True
 
 logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
@@ -29,9 +29,8 @@ countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['s
 logger.info(f'countries to clean: {len(countries_to_clean)}')
 
 #* load environment variables
-if DEV_MODE:
-    from dotenv import load_dotenv
-    load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 #* Use AWS kit to upload files
 logger.info(f"* initializing b2 ...")
