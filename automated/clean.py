@@ -171,7 +171,7 @@ logger.info(f"  * Tally all types of values in dataframe: {tgm.tally(list(combin
 logger.info(f"Finished cleaning. Total of cleaned countries: {len(cleaned_by_cntr)}")
 
 for country,df in cleaned_by_cntr.items():
-    tgm.dump(SAVE_DIR / country, df)
+    tgm.dump(SAVE_DIR / country / f'{country}_cleaned.pkl', df)
 logger.info(f"Saved files to cleaned directory: {len(cleaned_by_cntr)}")
 
 #* Upload data to backblaze b2 and update process state
