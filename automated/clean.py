@@ -33,11 +33,16 @@ if token:
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
 
+#* load state and meta data files
+process_state_file = DATA_DIR / "process_state.json"
+process_state = tgm.load(process_state_file)
+
 #* select entities to process
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
 countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and val['clean']['status'] == 'pending']
 logger.info(f'countries to clean: {len(countries_to_clean)}')
+countries_to_clean = ['Armenia']
 
 #* load environment variables
 from dotenv import load_dotenv
@@ -55,12 +60,7 @@ s3 = session.client(
 )
 logger.info(f"* finished b2")
 
-#* load state and meta data files
-process_state_file = DATA_DIR / "process_state.json"
-process_state = tgm.load(process_state_file)
-
-countries_to_clean = ['Armenia']
-
+#* list objects from B2
 downloaded_count = 0
 to_download_total = 0
 raw_data_dir = Path('data/raw/osm countries queries')
