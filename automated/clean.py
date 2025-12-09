@@ -6,6 +6,7 @@ import pandas as pd
 import re
 import sys
 import subprocess
+import copy
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -42,7 +43,11 @@ countries_cleaned = [c for c, val in process_state.items() if (val['clean']['sta
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
 countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and val['clean']['status'] == 'pending']
 logger.info(f'countries to clean: {len(countries_to_clean)}')
-countries_to_clean = ['Armenia']
+# countries_to_clean = ['Armenia']
+
+if len(countries_to_clean) < 1:
+    logger.info("No countries to clean, exiting script")
+    sys.exit(0)
 
 #* load environment variables
 from dotenv import load_dotenv
@@ -60,45 +65,64 @@ s3 = session.client(
 )
 logger.info(f"* finished b2")
 
+logger.info(f"* Downloading required raw data to clean")
 #* list objects from B2
 downloaded_count = 0
 to_download_total = 0
 raw_data_dir = Path('data/raw/osm countries queries')
 list_obj_response = s3.list_objects_v2(Bucket=os.environ["B2_BUCKET_NAME"], Prefix=raw_data_dir.as_posix())
 files_list = [(obj['Key']) for obj in list_obj_response['Contents']]
-logger.info(f"* Total files found in {raw_data_dir}: {len(files_list)}")
+b2_countries = tgm.deleteDuplicates([Path(obj['Key']).parent.name  for obj in list_obj_response['Contents']])
+
+logger.info(f"  * Total objects found in B2 '{raw_data_dir}': {len(files_list)}")
+logger.info(f"  * Total countries found in B2 '{raw_data_dir}': {len(b2_countries)}")
 
 #* donwload file from b2 bucket for countries to process
-logger.info(f"* Downloading data from backbkaze: number of countries {len(countries_to_clean)}")
-for count, country in enumerate(countries_to_clean, start=1):
+logger.info(f'  * Countries to clean: {len(countries_to_clean)}: {countries_to_clean}')
+countries_to_clean_in_b2 = tgm.intersection(countries_to_clean, b2_countries)
+logger.info(f"  * Countries to clean found in B2: {len(countries_to_clean_in_b2)}")
+logger.info(f"  * Countries to clean missing in B2: {len(tgm.complement(countries_to_clean, b2_countries))}")
+
+if len(countries_to_clean_in_b2) < 1:
+    logger.info("No countries to clean found in B2, exiting script")
+    sys.exit(0)
+
+logger.info(f"  * Downloading country data from B2 in directory: '{raw_data_dir}'")
+for count, country in enumerate(countries_to_clean_in_b2, start=1):
     country_files = [str(file) for file in files_list if re.match(rf"{raw_data_dir.as_posix()}/{country}/.+\.json", file)]
     to_download_total += len(country_files)
-    logger.info(f"* Country {country} ({count}/{len(countries_to_clean)}) files found: {len(country_files)}")
+    logger.info(f"    * Country {country} ({count}/{len(countries_to_clean_in_b2)}) files found: {len(country_files)}")
     for file in country_files:
         save_file = ROOT / raw_data_dir / country / os.path.basename(file)
         if save_file.exists():
-            logger.info(f"  * Skip existing file {save_file}")
+            logger.info(f"      * Skip existing file '{save_file.name}'")
             downloaded_count += 1
             continue
         
         os.makedirs(save_file.parent, exist_ok=True)
         try:
             s3.download_file(os.environ["B2_BUCKET_NAME"], file, str(save_file))
-            logger.info(f"  * File '{file}' downloaded successfully to '{Path(save_file).relative_to(ROOT)}'")
+            logger.info(f"      * File '{file}' downloaded successfully to '{Path(save_file).relative_to(ROOT)}'")
             downloaded_count += 1
         except Exception as e:
-            logger.error(f"  * Error downloading file '{file}': {e}")
+            logger.error(f"    * Error downloading file '{os.path.basename(file)}': {e}")
 
-logger.info(f"Number of downloaded files: {downloaded_count}/{to_download_total}")
+logger.info(f"* Number of downloaded files: {downloaded_count}/{to_download_total}")
 
 #* load data for countries to clean
+logger.info(f"* Load raw data for countries to clean:")
 country_raw_dirs = [f for f in (DATA_DIR / 'raw/osm countries queries').glob('*') if f.is_dir()]
-logger.info(f"Number of raw data directories: {len(country_raw_dirs)}")
+logger.info(f"  * Total of raw data directories found: {len(country_raw_dirs)}")
+
+if len(country_raw_dirs) < 1:
+    logger.info("No raw data found for countries to clean, exiting script")
+    sys.exit(0)
+
 
 to_clean_by_cntr = {}
-logger.info(f"Loading raw data only for countries to clean: {len(countries_to_clean)}")
+logger.info(f"  * Loading raw data only for countries to clean: {len(countries_to_clean_in_b2)}")
 # for chunks and non chunk files
-for country in countries_to_clean:
+for country in countries_to_clean_in_b2:
     country_dir = DATA_DIR / 'raw/osm countries queries' / country
     if not country_dir.exists():
         continue
@@ -106,27 +130,26 @@ for country in countries_to_clean:
     elements = [ele for list in files_elements for ele in list]
     to_clean_by_cntr[country] = elements
 
-logger.info(f"Number of countries with raw data loaded: {len(to_clean_by_cntr)}")
-logger.info(f"Number of countries to clean without raw data: {tgm.complement(countries_to_clean, to_clean_by_cntr.keys())}")
+logger.info(f"  * Number of countries with raw data loaded: {len(to_clean_by_cntr)}")
+logger.info(f"  * Countries to clean without raw data: {tgm.complement(countries_to_clean_in_b2, to_clean_by_cntr.keys())}")
 
-if len(countries_to_clean) < 1:
-    logger.info("No countries to clean, exiting script")
-    sys.exit(0)
+
 
 #* START CLEANING STEPS
 logger.info(f"* Start cleaning steps")
+cleaned_by_cntr = copy.deepcopy(to_clean_by_cntr)
 
 #* Use sovereign countries only
-logger.info(f"* Use sovereign countries only")
-sovereign_countries = tgm.load(DATA_DIR / 'sovereign countries.json')
-logger.info(f"  * Sovereign countries: {len(sovereign_countries)}")
+# logger.info(f"* Use sovereign countries only")
+# sovereign_countries = tgm.load(DATA_DIR / 'sovereign countries.json')
+# logger.info(f"  * Sovereign countries: {len(sovereign_countries)}")
 
-cleaned_by_cntr = {k:data for k,data in to_clean_by_cntr.items() if k in sovereign_countries}
-logger.info(f"  * Filtered sovereign countries: {len(cleaned_by_cntr)}")
+# cleaned_by_cntr = {k:data for k,data in to_clean_by_cntr.items() if k in sovereign_countries}
+# logger.info(f"  * Filtered sovereign countries: {len(cleaned_by_cntr)}")
 
 #* clean countries
 logger.info(f"* Clean countries")
-import copy
+
 def clean_country_data(raw_by_cntr):
 
     cleaned_by_cntr = copy.deepcopy(raw_by_cntr)  
@@ -177,6 +200,8 @@ config = {'root':ROOT, 's3':s3, 'logger':logger}
 for country in cleaned_by_cntr.keys():
     logger.info(f"  * Uploading directory for country: {country}")
     country_save_dir = SAVE_DIR / country
+    process_status = 'ok'
+    process_error = None
     # all data in country directory will  be uploaded
     if not DEV_MODE:
         upload_response = tsm.upload_dir_files_to_backblaze(country_save_dir, config)
