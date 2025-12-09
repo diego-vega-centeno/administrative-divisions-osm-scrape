@@ -192,13 +192,12 @@ logger.info(f"Finished cleaning. Total of cleaned countries: {len(cleaned_by_cnt
 
 for country,df in cleaned_by_cntr.items():
     tgm.dump(SAVE_DIR / country / f'{country}_cleaned.pkl', df)
-logger.info(f"Saved files to cleaned directory: {len(cleaned_by_cntr)}")
+logger.info(f"Saved files to directory '{SAVE_DIR}' : {len(cleaned_by_cntr)}")
 
 #* Upload data to backblaze b2 and update process state
 logger.info("* Uploading data to backblaze b2")
 config = {'root':ROOT, 's3':s3, 'logger':logger}
 for country in cleaned_by_cntr.keys():
-    logger.info(f"  * Uploading directory for country: {country}")
     country_save_dir = SAVE_DIR / country
     process_status = 'ok'
     process_error = None
