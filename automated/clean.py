@@ -42,7 +42,7 @@ process_state = tgm.load(process_state_file)
 #* select entities to process
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
-countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and val['clean']['status'] == 'pending']
+countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and (val['clean']['status'] in ['pending', 'error'])]
 logger.info(f'countries to clean: {len(countries_to_clean)}')
 # countries_to_clean = ['Armenia']
 
@@ -178,4 +178,4 @@ for country in cleaned_by_cntr.keys():
     tsm.update_process_state(process_state, country, 'clean', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.commit_file(process_state_file, f"Update process state for {country}: (scrape, ok)", config['logger'])
+        tsm.commit_file(process_state_file, f"Update process state for {country}: (clean, ok)", config['logger'])
