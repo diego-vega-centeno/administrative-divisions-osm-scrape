@@ -43164,8 +43164,8 @@
       }
     },
     "clean": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-10T00:59:21",
       "error": null
     },
     "test_basic": {
