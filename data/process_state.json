@@ -507,8 +507,8 @@
       "error": null
     },
     "test_basic": {
-      "status": "pending",
-      "last_run": "2025-12-15T01:00:07",
+      "status": "ok",
+      "last_run": "2025-12-15T01:14:45",
       "error": null
     },
     "test_first_level": {
