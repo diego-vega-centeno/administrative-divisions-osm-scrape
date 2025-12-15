@@ -32,7 +32,7 @@ DEV_MODE = False
 TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
 process_state_file = DATA_DIR / "process_state.json"
 process_state = tgm.load(process_state_file)
-basic_test_to_delete_file = DATA_DIR / "basic_test_to_delete.json"
+basic_test_to_delete_file = TEST_BASIC_DIR / "basic_test_to_delete.json"
 logger = tgl.initiate_logger('logger', TEST_BASIC_DIR / 'basic_test.log')
 
 #* initialize git
@@ -140,11 +140,11 @@ logger.info(f"Childs to delete: {len(relations_childs_to_delete)}")
 basic_test_to_delete = relations_from_test_to_delete | relations_childs_to_delete
 logger.info(f"Basic test to delete relations: {len(basic_test_to_delete)}")
 
-basic_test_to_delete_old = tgm.load(DATA_DIR / "basic_test_to_delete.json")
+basic_test_to_delete_old = tgm.load(basic_test_to_delete_file)
 basic_test_to_delete_new = basic_test_to_delete_old | basic_test_to_delete
 logger.info(f"Current total of relations to delete from basic test: {len(basic_test_to_delete_new)}")
 
-tgm.dump(DATA_DIR / "basic_test_to_delete.json", basic_test_to_delete_new)
+tgm.dump(basic_test_to_delete_file, basic_test_to_delete_new)
 
 if not DEV_MODE:
     tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
