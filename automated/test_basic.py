@@ -55,6 +55,10 @@ countries_to_test = [c for c, val in process_state.items() if
     (val['clean']['status'] == 'ok') and (val['test_basic']['status'] in ['pending', 'error'])
 ]
 
+if len(countries_to_test) < 1:
+    logger.info("No countries to test, exiting script")
+    sys.exit(0)
+
 logger.info(f"countries to test: {len(countries_to_test)}")
 
 #* initalize B2
@@ -76,10 +80,18 @@ countries_downloaded = tsm.donwload_country_data_from_bucket(countries_to_test, 
 logger.info(f'* Countries to test: {len(countries_to_test)}')
 logger.info(f"* Countries to test with downloaded data from B2: {len(countries_downloaded)}")
 
+if len(countries_downloaded) < 1:
+    logger.info("No countries to test found in B2, exiting script")
+    sys.exit(0)
+
 #* load data for countries to test
 logger.info(f"* Load data from: {CLEANED_DIR.relative_to(ROOT)}")
 cleaned_files = [f for f in CLEANED_DIR.glob('*/*')]
-logger.info(f"  * Directories found: {len(cleaned_files)}")
+logger.info(f"  * Files found: {len(cleaned_files)}")
+
+if len(cleaned_files) < 1:
+    logger.info("No cleaned data found for countries to test, exiting script")
+    sys.exit(0)
 
 # to_test_df = {file.parent.name:tgm.load(str(file)) for file in cleaned_files if file.parent.name}
 to_test_df = {file.parent.name:tgm.load(str(file)) for file in cleaned_files if file.parent.name in countries_to_test}
