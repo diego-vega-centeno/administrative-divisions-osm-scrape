@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
-DEV_MODE = True
+DEV_MODE = False
 
 process_state_file = DATA_DIR / "process_state.json"
 process_state = tgm.load(process_state_file)
