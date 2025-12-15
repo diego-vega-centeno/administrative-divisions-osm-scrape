@@ -6,9 +6,13 @@ on:
       run_scraper:
         description: "Run scraper"
         type: boolean
-        default: true
+        default: false
       run_cleaner:
         description: "Run cleaner"
+        type: boolean
+        default: false
+      run_test_basic:
+        description: "Run test basic"
         type: boolean
         default: false
 
@@ -54,6 +58,18 @@ jobs:
           -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
           -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
           osm-runner python automated/clean.py
+
+      - name: Run test basic
+        if: ${{ inputs.run_test_basic }}
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/app \
+          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
+          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
+          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
+          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
+          osm-runner python automated/test_basic.py
 
       # - name: Commit state files
       #   run: |
