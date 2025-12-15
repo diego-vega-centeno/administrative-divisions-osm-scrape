@@ -144,13 +144,7 @@ basic_test_to_delete_old = tgm.load(basic_test_to_delete_file)
 basic_test_to_delete_new = basic_test_to_delete_old | basic_test_to_delete
 logger.info(f"Current total of relations to delete from basic test: {len(basic_test_to_delete_new)}")
 
-tgm.dump(basic_test_to_delete_file, basic_test_to_delete_new)
-
-if not DEV_MODE:
-    tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
-
 #* upload results to B2
-logger.info("* Uploading data to backblaze b2")
 config = {'root':ROOT, 's3':s3, 'logger':logger}
 task = 'test_basic'
 tested_dirs = [dir.name for dir in TEST_BASIC_DIR.glob('*/') if dir.name in countries_to_test]
@@ -174,6 +168,10 @@ for country in tested_dirs:
     # override process task state with upload response
     logger.info(f"  * Updating {country} in process state: ({task}, ok)")
     tsm.update_process_state(process_state, country, task, process_status=process_status, process_error=process_error)
-    tgm.dump(process_state_file, process_state)
-    if not DEV_MODE:
-        tsm.commit_file(process_state_file, f"Update process state for {country}: ({task}, ok)", config['logger'])
+
+#* commit updates
+tgm.dump(basic_test_to_delete_file, basic_test_to_delete_new)
+tgm.dump(process_state_file, process_state)
+if not DEV_MODE:
+    tsm.commit_file(process_state_file, f"Update process state for {country}: ({task}, ok)", config['logger'])
+    tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
