@@ -43169,8 +43169,8 @@
       "error": null
     },
     "test_basic": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-15T00:39:38",
       "error": null
     },
     "test_first_level": {
