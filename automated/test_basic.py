@@ -6,6 +6,7 @@ import pandas as pd
 from IPython.display import clear_output
 import boto3
 import sys
+import subprocess
 
 import toolsGeneral.main as tgm
 import toolsGeneral.logger as tgl
@@ -28,10 +29,24 @@ TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
 DEV_MODE = False
 
+TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
 process_state_file = DATA_DIR / "process_state.json"
 process_state = tgm.load(process_state_file)
-TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
+basic_test_to_delete_file = DATA_DIR / "basic_test_to_delete.json"
 logger = tgl.initiate_logger('logger', TEST_BASIC_DIR / 'basic_test.log')
+
+#* initialize git
+subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
+subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+
+token = os.environ.get("GITHUB_TOKEN")
+if token:
+    subprocess.run([
+        "git", "remote", "set-url", "origin",
+        f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
+    ])
+    subprocess.run(["git", "pull", "--rebase"], check=True)
 
 #* select entities to test
 countries_tested = [c for c, val in process_state.items() if (val['test_basic']['status'] == 'ok')]
@@ -118,6 +133,9 @@ basic_test_to_delete_new = basic_test_to_delete_old | basic_test_to_delete
 logger.info(f"Current total of relations to delete from basic test: {len(basic_test_to_delete_new)}")
 
 tgm.dump(DATA_DIR / "basic_test_to_delete.json", basic_test_to_delete_new)
+
+if not DEV_MODE:
+    tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
 
 #* upload results to B2
 logger.info("* Uploading data to backblaze b2")
