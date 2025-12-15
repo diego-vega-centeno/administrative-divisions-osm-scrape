@@ -5,6 +5,7 @@ import pandas as pd
 import boto3
 import sys
 import subprocess
+from dotenv import load_dotenv
 
 import toolsGeneral.main as tgm
 import toolsGeneral.logger as tgl
@@ -37,6 +38,9 @@ if token:
         f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
+
+#* load environment variables
+load_dotenv()
 
 #* select entities to test
 countries_tested = [c for c, val in process_state.items() if (val['test_basic']['status'] == 'ok')]
