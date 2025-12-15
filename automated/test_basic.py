@@ -1,9 +1,7 @@
 # init
-from importlib import reload
 import os
 from pathlib import Path
 import pandas as pd
-from IPython.display import clear_output
 import boto3
 import sys
 import subprocess
@@ -11,15 +9,7 @@ import subprocess
 import toolsGeneral.main as tgm
 import toolsGeneral.logger as tgl
 import toolsOSM.overpass as too
-import toolsPandas.helpers as tph
 import toolsSync.main as tsm
-
-def pckgs_reload():
-    reload(tgm)
-    reload(too)
-    reload(tph)
-    reload(tgl)
-    reload(tsm)
 
 
 #* initialize variables
