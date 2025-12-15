@@ -22,7 +22,7 @@ def pckgs_reload():
 
 
 #* initialize variables
-ROOT = Path.cwd().parents[0]
+ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
@@ -39,6 +39,7 @@ logger.info(f"countries tested: {len(countries_tested)}")
 countries_to_test = [c for c, val in process_state.items() if 
     (val['clean']['status'] == 'ok') and (val['test_basic']['status'] in ['pending', 'error'])
 ]
+
 logger.info(f"countries to test: {len(countries_to_test)}")
 
 #* initalize B2
