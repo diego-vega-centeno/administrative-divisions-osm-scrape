@@ -7,6 +7,7 @@ import re
 import sys
 import subprocess
 import copy
+from dotenv import load_dotenv
 
 import toolsGeneral.logger as tgl
 import toolsGeneral.main as tgm
@@ -51,7 +52,6 @@ if len(countries_to_clean) < 1:
     sys.exit(0)
 
 #* load environment variables
-from dotenv import load_dotenv
 load_dotenv()
 
 #* Use AWS kit to upload files
