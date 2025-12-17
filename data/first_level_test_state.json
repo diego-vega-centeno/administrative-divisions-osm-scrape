@@ -10566,7 +10566,16 @@
     },
     "processed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "364079",
+            "364066",
+            "364066"
+          ]
+        }
+      ]
     },
     "failed": {
       "type": "set",
