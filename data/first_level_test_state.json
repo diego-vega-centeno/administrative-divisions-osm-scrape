@@ -10570,8 +10570,17 @@
     },
     "failed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "364077",
+            "364066",
+            "364066"
+          ]
+        }
+      ]
     },
-    "next_index": 2
+    "next_index": 1
   }
 }
