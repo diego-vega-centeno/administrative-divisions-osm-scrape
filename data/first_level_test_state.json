@@ -10603,7 +10603,16 @@
     },
     "failed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "364081",
+            "364066",
+            "364066"
+          ]
+        }
+      ]
     },
     "next_index": 2
   }
