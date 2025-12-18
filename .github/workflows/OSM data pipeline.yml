@@ -15,6 +15,10 @@ on:
         description: "Run test basic"
         type: boolean
         default: false
+      run_test_first_level:
+        description: "Run first level"
+        type: boolean
+        default: false
 
 jobs:
   scrape-osm:
@@ -22,6 +26,17 @@ jobs:
 
     permissions:
       contents: write
+
+    env:
+      DOCKER_IMAGE: osm-runner
+      DOCKER_RUN_BASE: >
+        docker run
+        -v ${{ github.workspace }}:/app
+        -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+        -e B2_KEY_ID=${{ secrets.B2_KEY_ID }}
+        -e B2_APPLICATION_KEY=${{ secrets.B2_APPLICATION_KEY }}
+        -e B2_BUCKET_NAME=${{ secrets.B2_BUCKET_NAME }}
+        -e B2_ENDPOINT=${{ secrets.B2_ENDPOINT }}
 
     steps:
       - name: Checkout repo
@@ -38,38 +53,22 @@ jobs:
       - name: Run scraper
         if: ${{ inputs.run_scraper }}
         run: |
-          docker run \
-          -v ${{ github.workspace }}:/app \
-          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
-          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
-          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
-          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
-          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-runner python automated/scrape.py
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/scrape.py
 
       - name: Run cleaner
         if: ${{ inputs.run_cleaner }}
         run: |
-          docker run \
-          -v ${{ github.workspace }}:/app \
-          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
-          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
-          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
-          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
-          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-runner python automated/clean.py
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/clean.py
 
       - name: Run test basic
         if: ${{ inputs.run_test_basic }}
         run: |
-          docker run \
-          -v ${{ github.workspace }}:/app \
-          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
-          -e B2_KEY_ID="${{ secrets.B2_KEY_ID }}" \
-          -e B2_APPLICATION_KEY="${{ secrets.B2_APPLICATION_KEY }}" \
-          -e B2_BUCKET_NAME="${{ secrets.B2_BUCKET_NAME }}" \
-          -e B2_ENDPOINT="${{ secrets.B2_ENDPOINT }}" \
-          osm-runner python automated/test_basic.py
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_basic.py
+
+      - name: Run first level
+        if: ${{ inputs.run_test_first_level }}
+        run: |
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_first_level.py
 
       # - name: Commit state files
       #   run: |
