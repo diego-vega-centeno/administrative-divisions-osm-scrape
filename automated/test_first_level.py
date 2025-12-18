@@ -65,6 +65,8 @@ s3 = session.client(
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
 
+config = {'root':ROOT, 's3':s3, 'logger':logger}
+
 #* download required data
 logger.info(f"* Downloading required data to test: {len(countries_to_test)} countries")
 logger.info(f"  * Downloading country data from B2 in directory: '{CLEANED_DIR.relative_to(ROOT)}'")
@@ -177,23 +179,9 @@ for country, df in first_lvl_filtered_df.items():
         tsm.update_process_state(process_state, country, task, process_status='ok')
         tgm.dump(DATA_DIR / "process_state.json", process_state)
 
-#* upload results to B2
-logger.info("* Uploading data to backblaze b2")
-config = {'root':ROOT, 's3':s3, 'logger':logger}
-task = 'test_first_level'
-tested_dirs = [dir.name for dir in TEST_FIRST_LEVEL_DIR.glob('*/') if dir.name in countries_to_test]
-
-if len(tested_dirs) < 1:
-    logger.info("No data to upload, exiting script")
-    sys.exit(0)
-else:
-    logger.info(f"* Test result directories found: {len(tested_dirs)}")
-
-for country in tested_dirs:
+    # upload and commit after a country finishes
+    logger.info("* Uploading data to backblaze b2")
     if not DEV_MODE:
         tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
-
-#* commit files
-if not DEV_MODE:
-    tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
-    tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
+        tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
+        tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
