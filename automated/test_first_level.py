@@ -146,6 +146,11 @@ for country, df in first_lvl_filtered_df.items():
 
     total = len(df)
     test_res = {}
+    
+    CHUNK_SIZE = 20
+    MAX_SECONDS_WITHOUT_UPLOAD = 300 # 5 minutes
+    chunk_count = 0
+    last_upload_time = time.time()
     save_path = TEST_FIRST_LEVEL_DIR / country / f"{country}_first_level_test_res_{country_test_state['next_index']}.pkl"
 
     for i, (idx, row) in enumerate(df.iterrows(), start=1):
@@ -167,10 +172,33 @@ for country, df in first_lvl_filtered_df.items():
         resume  = {k:v['status'] for k,v in res.items()}
         logger.info(f" $ finished: status: {resume}")
 
+        chunk_count += 1
+        #* persist partial results
+        if (chunk_count >= CHUNK_SIZE or (time.time() - last_upload_time) >= MAX_SECONDS_WITHOUT_UPLOAD):
+            logger.info(f"* Checkpoint upload for {country}")
+            # persist current chunk
+            tgm.dump(save_path, test_res)
+            # advance chunk
+            test_res = {}
+            country_test_state['next_index'] += 1
+            # next chunk file
+            save_path = TEST_FIRST_LEVEL_DIR / country / f"{country}_first_level_test_res_{country_test_state['next_index']}.pkl"
+
+            tgm.dump(DATA_DIR / "first_level_test_state.json", first_level_test_state)
+            # upload to B2
+            if not DEV_MODE:
+                tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
+                tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
+
+            chunk_count = 0
+            last_upload_time = time.time()
+
+
     logger.info(f"* Finished {country}: saving data ...")
     # save test res
-    tgm.dump(save_path, test_res)
-    country_test_state['next_index'] += 1
+    if test_res:
+        tgm.dump(save_path, test_res)
+        country_test_state['next_index'] += 1
 
     # save country state
     tgm.dump(DATA_DIR / "first_level_test_state.json", first_level_test_state)
