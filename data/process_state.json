@@ -43174,8 +43174,8 @@
       "error": null
     },
     "test_first_level": {
-      "status": "pending",
-      "last_run": "2025-12-17T11:31:23",
+      "status": "ok",
+      "last_run": "2025-12-17T19:38:21",
       "error": null
     },
     "test_duplicates": {
