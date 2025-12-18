@@ -106,7 +106,7 @@ for country, df in countries_to_test_df.items():
 if not DEV_MODE and len(countries_wihout_first_level) > 0:
     tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
 
-logger.info(f"countries with first level: {len(first_lvl_df)}")
+logger.info(f"countries with first level: {len(first_lvl_df)} \n {list(first_lvl_df.keys())}")
 logger.info(f"countries without first level: {countries_wihout_first_level}")
 
 if len(first_lvl_df) < 1:
@@ -128,7 +128,7 @@ for country,df in first_lvl_df.items():
     if not filtered_df.empty:
         first_lvl_filtered_df[country] = filtered_df
 
-logger.info(f"Countries with first level -> filtered pending to process: {len(first_lvl_filtered_df)}")
+logger.info(f"Countries with first level -> filtered pending to process: {len(first_lvl_filtered_df)} \n {list(first_lvl_filtered_df.keys())}")
 logger.info(f"Total of relations to process: {sum([len(lis) for lis in first_lvl_filtered_df.values()])}")
 
 if len(first_lvl_filtered_df) < 1:
@@ -147,7 +147,7 @@ for country, df in first_lvl_filtered_df.items():
     total = len(df)
     test_res = {}
     
-    CHUNK_SIZE = 20
+    CHUNK_SIZE = 15
     MAX_SECONDS_WITHOUT_UPLOAD = 300 # 5 minutes
     chunk_count = 0
     last_upload_time = time.time()
@@ -187,6 +187,7 @@ for country, df in first_lvl_filtered_df.items():
             tgm.dump(DATA_DIR / "first_level_test_state.json", first_level_test_state)
             # upload to B2
             if not DEV_MODE:
+                logger.info("* Uploading data to backblaze b2")
                 tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
                 tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
 
@@ -208,8 +209,8 @@ for country, df in first_lvl_filtered_df.items():
         tgm.dump(DATA_DIR / "process_state.json", process_state)
 
     # upload and commit after a country finishes
-    logger.info("* Uploading data to backblaze b2")
     if not DEV_MODE:
+        logger.info("* Uploading data to backblaze b2")
         tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
         tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
         tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
