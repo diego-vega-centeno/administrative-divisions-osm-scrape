@@ -16,7 +16,7 @@ on:
         type: boolean
         default: false
       run_test_first_level:
-        description: "Run first level"
+        description: "Run first level test"
         type: boolean
         default: false
 
@@ -65,7 +65,7 @@ jobs:
         run: |
           $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_basic.py
 
-      - name: Run first level
+      - name: Run first level test
         if: ${{ inputs.run_test_first_level }}
         run: |
           $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_first_level.py
