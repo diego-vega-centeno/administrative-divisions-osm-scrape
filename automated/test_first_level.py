@@ -189,7 +189,7 @@ for country, df in first_lvl_filtered_df.items():
             if not DEV_MODE:
                 logger.info("* Uploading data to backblaze b2")
                 tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
-                tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
+                tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state: chunk {country_test_state['next_index'] - 1}", logger)
 
             chunk_count = 0
             last_upload_time = time.time()
