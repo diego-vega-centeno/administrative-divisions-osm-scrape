@@ -100,6 +100,10 @@ for country, df in countries_to_test_df.items():
     else:
         countries_wihout_first_level.append(country)
         tsm.update_process_state(process_state, country, task, process_status='ok')
+
+if not DEV_MODE and len(countries_wihout_first_level) > 0:
+    tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
+
 logger.info(f"countries with first level: {len(first_lvl_df)}")
 logger.info(f"countries without first level: {countries_wihout_first_level}")
 
