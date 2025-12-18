@@ -10782,5 +10782,53 @@
       "items": []
     },
     "next_index": 1
+  },
+  "Bahrain": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "2522303",
+            "378734",
+            "378734"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2522430",
+            "378734",
+            "378734"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "3028094",
+            "378734",
+            "378734"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "3028095",
+            "378734",
+            "378734"
+          ]
+        }
+      ]
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 1
   }
 }
