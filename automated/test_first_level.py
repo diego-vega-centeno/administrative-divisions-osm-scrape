@@ -99,6 +99,7 @@ for country, df in countries_to_test_df.items():
         first_lvl_df[country] = df[df['tags.admin_level'] == '4']
     else:
         countries_wihout_first_level.append(country)
+        tsm.update_process_state(process_state, country, task, process_status='ok')
 logger.info(f"countries with first level: {len(first_lvl_df)}")
 logger.info(f"countries without first level: {countries_wihout_first_level}")
 
@@ -107,8 +108,8 @@ if len(first_lvl_df) < 1:
     sys.exit(0)
 
 #* filter already processed relations
-logger.info(f"First_level_test_state: {len(first_level_test_state)}")
-logger.info(f"Tuples processed: {sum([len(t['processed']) for t in first_level_test_state.values()])}")
+logger.info(f"First_level_test_state countries: {len(first_level_test_state)}")
+logger.info(f"First_level_test_state triplets processed: {sum([len(t['processed']) for t in first_level_test_state.values()])}")
 
 first_lvl_filtered_df = {}
 for country,df in first_lvl_df.items():
@@ -122,7 +123,7 @@ for country,df in first_lvl_df.items():
         first_lvl_filtered_df[country] = filtered_df
 
 logger.info(f"Countries with first level -> filtered pending to process: {len(first_lvl_filtered_df)}")
-logger.info(f"Total of pending to process: {sum([len(lis) for lis in first_lvl_filtered_df.values()])}")
+logger.info(f"Total of relations to process: {sum([len(lis) for lis in first_lvl_filtered_df.values()])}")
 
 if len(first_lvl_filtered_df) < 1:
     logger.info("No first level data to test, exiting script")
@@ -131,6 +132,8 @@ if len(first_lvl_filtered_df) < 1:
 #* makes tests
 logger.info(f"* Making tests")
 for country, df in first_lvl_filtered_df.items():
+    logger.info(f"* Testing country {country}: {len(df)} relations")
+
     if not first_level_test_state.get(country):
         first_level_test_state[country] = {"to_process": set(), "processed": set(), "failed": set(), "next_index": 0}
     country_test_state = first_level_test_state[country]
@@ -158,7 +161,7 @@ for country, df in first_lvl_filtered_df.items():
         resume  = {k:v['status'] for k,v in res.items()}
         logger.info(f" $ finished: status: {resume}")
 
-    logger.info(f"  * Saving data ...")
+    logger.info(f"* Finished {country}: saving data ...")
     # save test res
     tgm.dump(save_path, test_res)
     country_test_state['next_index'] += 1
