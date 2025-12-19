@@ -101,7 +101,7 @@ for country, df in countries_to_test_df.items():
         first_lvl_df[country] = df[df['tags.admin_level'] == '4']
     else:
         countries_wihout_first_level.append(country)
-        tsm.update_process_state(process_state, country, task, process_status='ok')
+        tsm.update_process_state(process_state, country, task, process_status='missing')
 
 if not DEV_MODE and len(countries_wihout_first_level) > 0:
     tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
