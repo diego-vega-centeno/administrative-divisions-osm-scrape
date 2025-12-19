@@ -1,0 +1,3212 @@
+{
+  "Andorra": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Slovakia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Austria": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Hungary": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Georgia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "VaticanCity": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Poland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Cambodia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Laos": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Vietnam": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Denmark": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Myanmar": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Germany": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Czechia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Switzerland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Belgium": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Sweden": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "FaroeIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Albania": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "NorthMacedonia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Montenegro": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Finland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SanMarino": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Moldova": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Belarus": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Brazil": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Russia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Ukraine": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "UnitedKingdom": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "IsleOfMan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Ireland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Latvia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Lithuania": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Estonia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Australia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SouthAfrica": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Eswatini": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Romania": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Ecuador": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mexico": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Colombia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "UnitedStates": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mongolia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Chile": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Rwanda": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Turkey": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kyrgyzstan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bhutan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Nepal": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bangladesh": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Jordan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Syria": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Lebanon": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bulgaria": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Greece": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "NorthKorea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Algeria": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tunisia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Libya": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mauritania": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "TheGambia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Senegal": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Guinea-bissau": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SierraLeone": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Guinea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CoteD'ivoire": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Liberia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Ghana": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Togo": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "BurkinaFaso": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Benin": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mali": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Niger": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Nigeria": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Sudan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CentralAfricanRepublic": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "EquatorialGuinea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Gabon": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Congo-brazzaville": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "DemocraticRepublicOfTheCongo": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Uganda": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kenya": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Somalia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Ethiopia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Djibouti": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Cameroon": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Namibia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Angola": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Burundi": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tanzania": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Zambia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Zimbabwe": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mozambique": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Malawi": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Uzbekistan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tajikistan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kazakhstan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Croatia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Slovenia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Turkmenistan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bolivia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Guernsey": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "China": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Venezuela": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "BritishVirginIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Argentina": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Uruguay": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Paraguay": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Suriname": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Guyana": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Nicaragua": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CostaRica": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Panama": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Honduras": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Belize": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Peru": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Portugal": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Eritrea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Iceland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Afghanistan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "India": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Indonesia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Iraq": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Iran": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Yemen": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Qatar": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kuwait": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Oman": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "EastTimor": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Pakistan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaudiArabia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SouthKorea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "UnitedArabEmirates": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Cyprus": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Dominica": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "DominicanRepublic": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Haiti": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Cuba": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "PapuaNewGuinea": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Armenia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Azerbaijan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Malta": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Italy": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Jersey": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bahrain": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Japan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Philippines": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Madagascar": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Taiwan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CapeVerde": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Comoros": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Mauritius": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaoTomeAndPrincipe": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Seychelles": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Maldives": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Singapore": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SriLanka": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaintKittsAndNevis": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "AntiguaAndBarbuda": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Montserrat": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bahamas": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "TurksAndCaicosIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Barbados": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaintVincentAndTheGrenadines": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Grenada": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaintLucia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Jamaica": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "TrinidadAndTobago": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "NewZealand": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kiribati": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Fiji": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "MarshallIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "FederatedStatesOfMicronesia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Nauru": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Palau": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Monaco": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Liechtenstein": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Gibraltar": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Spain": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Canada": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Israel": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Egypt": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "ElSalvador": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Guatemala": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SouthSudan": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Serbia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SolomonIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Samoa": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Botswana": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SaintHelena,AscensionAndTristanDaCunha": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Bermuda": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Thailand": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Kosovo": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Lesotho": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Brunei": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Malaysia": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Luxembourg": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Anguilla": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Vanuatu": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tuvalu": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Greenland": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CookIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "CaymanIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "FalklandIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "PitcairnIslands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tokelau": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Tonga": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "France": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Netherlands": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Chad": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "BosniaAndHerzegovina": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Norway": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "Morocco": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  },
+  "SahrawiArabDemocraticRepublic": {
+    "to_process": {
+      "type": "set",
+      "items": []
+    },
+    "processed": {
+      "type": "set",
+      "items": []
+    },
+    "failed": {
+      "type": "set",
+      "items": []
+    },
+    "next_index": 0
+  }
+}
