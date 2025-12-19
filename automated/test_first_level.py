@@ -102,6 +102,7 @@ for country, df in countries_to_test_df.items():
     else:
         countries_wihout_first_level.append(country)
         tsm.update_process_state(process_state, country, task, process_status='missing')
+        tgm.dump(DATA_DIR / "process_state.json", process_state)
 
 if not DEV_MODE and len(countries_wihout_first_level) > 0:
     tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
