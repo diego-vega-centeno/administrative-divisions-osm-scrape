@@ -19,6 +19,10 @@ on:
         description: "Run first level test"
         type: boolean
         default: false
+      run_duplicates_level:
+        description: "Run duplicates test"
+        type: boolean
+        default: false
 
 jobs:
   scrape-osm:
@@ -69,6 +73,11 @@ jobs:
         if: ${{ inputs.run_test_first_level }}
         run: |
           $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_first_level.py
+
+      - name: Run duplicates test
+        if: ${{ inputs.run_duplicates_level }}
+        run: |
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_duplicates_level.py
 
       # - name: Commit state files
       #   run: |
