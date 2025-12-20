@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import boto3
 from dotenv import load_dotenv
+import sys
 import time
 
 import toolsGeneral.main as tgm
@@ -48,6 +49,10 @@ countries_to_test = [c for c, val in process_state.items() if
 ]
 logger.info(f"countries to test: {len(countries_to_test)}")
 
+if len(countries_to_test) < 1:
+    logger.info("No countries to test, exiting script")
+    sys.exit(0)
+
 #* initialize B2
 session = boto3.session.Session()
 
@@ -69,14 +74,22 @@ countries_downloaded = tsm.donwload_country_data_from_bucket(countries_to_test, 
 logger.info(f'* Countries to test: {len(countries_to_test)}')
 logger.info(f"* Countries to test with downloaded cleaned data from B2: {len(countries_downloaded)}")
 
+if len(countries_downloaded) < 1:
+    logger.info("No countries to test found in B2, exiting script")
+    sys.exit(0)
+
 #* load data for countries to test
 logger.info(f"* Load data from: {CLEANED_DIR.relative_to(ROOT)}")
 countries_to_test_df = tgm.load_single_file_dirs(CLEANED_DIR, countries_to_test)
 logger.info(f"  * Countries to test {len(countries_to_test)} ; countries with data loaded {len(countries_to_test_df)}")
 
+if len(countries_to_test_df) < 1:
+    logger.info("No cleaned data found for countries to test, exiting script")
+    sys.exit(0)
+
 #* select relations with duplicates ids
 # dups_id is computed using all countries in cleaned data, so we need just to filter here
-dups_id = tgm.load(TEST_DUPLICATES_DIR  / 'dups_id.pkl')
+dups_id = tgm.load(DATA_DIR  / 'dups_id.pkl')
 logger.info(f"Duplicates ids: {len(dups_id)}")
 
 logger.info(f"Countries to test: {len(countries_to_test_df)}")
@@ -96,6 +109,10 @@ for country, df in countries_to_test_df.items():
 logger.info(f"countries with first level: {len(dups_df)} \n {list(dups_df.keys())}")
 logger.info(f"relations duplicates to test: {len([row['id'] for df in dups_df.values() for i, row in df.iterrows()])}")
 logger.info(f"countries without first level: {len(countries_wihout_first_level)} \n{countries_wihout_first_level}")
+
+if len(countries_wihout_first_level) < 1:
+    logger.info("No duplicates data found for countries to test, exiting script")
+    sys.exit(0)
 
 #* exclude processed relations
 dups_test_state = tgm.load(DATA_DIR / 'dups_test_state.json')
@@ -120,6 +137,10 @@ for country, df in dups_df.items():
 
 print(f"Countries to process: {len(dups_pending_process_df)}")
 print(f"Relations to process filtered: {len([row['id'] for df in dups_pending_process_df.values() for i, row in df.iterrows()])}")
+
+if len(dups_pending_process_df) < 1:
+    logger.info("No duplicates data to test, exiting script")
+    sys.exit(0)
 
 #* make tests
 
@@ -181,7 +202,7 @@ for country, df in dups_pending_process_df.items():
 
             chunk_count = 0
             last_upload_time = time.time()
-            
+
         #* break after 20 min per country
         if (time.time() - country_time_start) >= 1200:
             break
