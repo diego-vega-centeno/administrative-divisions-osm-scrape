@@ -77,7 +77,7 @@ jobs:
       - name: Run duplicates test
         if: ${{ inputs.run_duplicates_level }}
         run: |
-          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_duplicates_level.py
+          $DOCKER_RUN_BASE $DOCKER_IMAGE python automated/test_duplicates.py
 
       # - name: Commit state files
       #   run: |
