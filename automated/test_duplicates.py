@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
-DEV_MODE = True
+DEV_MODE = False
 
 task = 'test_duplicates'
 TEST_DUPLICATES_DIR = TESTS_DIR / 'osm duplicates test'
