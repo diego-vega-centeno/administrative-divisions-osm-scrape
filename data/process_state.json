@@ -35530,8 +35530,8 @@
       "error": null
     },
     "test_duplicates": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-24T05:15:24",
       "error": null
     },
     "fix": {
