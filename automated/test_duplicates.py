@@ -205,6 +205,7 @@ for country, df in dups_pending_process_df.items():
 
         #* break after 20 min per country
         if (time.time() - country_time_start) >= 1200:
+            logger.info("* Country time out 20 min, skipping.")
             break
 
 
