@@ -183,7 +183,7 @@ for country, df in dups_pending_process_df.items():
 
         chunk_count += 1
         #* persist partial results
-        if (chunk_count >= CHUNK_SIZE or (time.time() - last_upload_time) >= MAX_SECONDS_WITHOUT_UPLOAD):
+        if (chunk_count > CHUNK_SIZE or (time.time() - last_upload_time) >= MAX_SECONDS_WITHOUT_UPLOAD):
             logger.info(f"* Checkpoint upload for {country}")
             # persist current chunk
             tgm.dump(save_path, test_res)
