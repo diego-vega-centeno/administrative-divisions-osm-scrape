@@ -37472,8 +37472,8 @@
       "error": null
     },
     "test_first_level": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2025-12-25T22:33:49",
       "error": null
     },
     "test_duplicates": {
