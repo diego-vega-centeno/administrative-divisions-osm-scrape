@@ -11030,12 +11030,37 @@
     },
     "processed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "2528143",
+            "2528142",
+            "2528142"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2528144",
+            "2528142",
+            "2528142"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2528145",
+            "2528142",
+            "2528142"
+          ]
+        }
+      ]
     },
     "failed": {
       "type": "set",
       "items": []
     },
-    "next_index": 1
+    "next_index": 2
   }
 }
