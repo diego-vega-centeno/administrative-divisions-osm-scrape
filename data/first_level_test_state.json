@@ -10727,13 +10727,62 @@
     },
     "processed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "962353",
+            "287827",
+            "287827"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "962354",
+            "287827",
+            "287827"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "962355",
+            "287827",
+            "287827"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "962356",
+            "287827",
+            "287827"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "962357",
+            "287827",
+            "287827"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "962358",
+            "287827",
+            "287827"
+          ]
+        }
+      ]
     },
     "failed": {
       "type": "set",
       "items": []
     },
-    "next_index": 0
+    "next_index": 1
   },
   "Bahrain": {
     "to_process": {
