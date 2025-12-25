@@ -10917,13 +10917,63 @@
     },
     "processed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "2803879",
+            "192784",
+            "192784"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2803880",
+            "192784",
+            "192784"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2845865",
+            "192784",
+            "192784"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2846872",
+            "192784",
+            "192784"
+          ]
+        }
+      ]
     },
     "failed": {
       "type": "set",
-      "items": []
+      "items": [
+        {
+          "type": "tuple",
+          "items": [
+            "2845850",
+            "192784",
+            "192784"
+          ]
+        },
+        {
+          "type": "tuple",
+          "items": [
+            "2845888",
+            "192784",
+            "192784"
+          ]
+        }
+      ]
     },
-    "next_index": 1
+    "next_index": 2
   },
   "BosniaAndHerzegovina": {
     "to_process": {
