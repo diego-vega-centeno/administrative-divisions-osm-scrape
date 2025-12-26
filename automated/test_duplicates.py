@@ -80,7 +80,7 @@ if len(countries_downloaded) < 1:
 
 #* load data for countries to test
 logger.info(f"* Load data from: {CLEANED_DIR.relative_to(ROOT)}")
-countries_to_test_df = tgm.load_single_file_dirs(CLEANED_DIR, countries_to_test)
+countries_to_test_df = tgm.load_dirs(CLEANED_DIR, countries_to_test)
 logger.info(f"  * Countries to test {len(countries_to_test)} ; countries with data loaded {len(countries_to_test_df)}")
 
 if len(countries_to_test_df) < 1:
