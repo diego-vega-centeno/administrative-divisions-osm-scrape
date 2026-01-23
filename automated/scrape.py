@@ -58,7 +58,7 @@ if len(to_scrape_countries) < 1:
 
 # test to scrape
 # to_scrape = to_scrape[:2]
-to_scrape = [('Armenia', '364066', ['4', '6', '8'])]
+to_scrape = [('France', '2202162', ['4', '6', '8']), ('Canada', '1428125', ['4', '6', '8'])]
 
 logger.info(f"* processed_countries: {len(processed_countries)}")
 logger.info(f"* failed_countries: {len(failed_countries)}")
@@ -116,7 +116,7 @@ for country, id, lvls in to_scrape:
     country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
     logger.info(f"* processing: {country, id, lvls}")
 
-    if country not in in_chunks_countries:
+    if False:
         
         response = too.getOSMIDAddsStruct(id, lvls)
         logger.info(f"  - Scrape for country {country} result: {response['status']}")
