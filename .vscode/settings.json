@@ -1,6 +1,6 @@
 {
   "python.analysis.extraPaths": [
-    "C:/Users/gonta/D/software developer/my-packages/src"
+    "C:/Users/gonta/D/study/full stack/projects/my-packages/src"
   ],
   "postman.settings.dotenv-detection-notification-visibility": false
 }
