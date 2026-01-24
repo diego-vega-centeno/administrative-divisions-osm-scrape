@@ -54,10 +54,10 @@ jobs:
       - name: Build Docker image
         run: docker build -t osm-runner .
 
-      - name: Switch to automation branch
-        run: |
-          git fetch origin automation
-          git checkout automation
+      # - name: Switch to automation branch
+      #   run: |
+      #     git fetch origin automation
+      #     git checkout automation
 
       - name: Run scraper
         if: ${{ inputs.run_scraper }}
