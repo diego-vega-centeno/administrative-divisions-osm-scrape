@@ -1,4 +1,4 @@
-/data/**/
+/data/
 data/process_state.json
 *.pyc
 .env
