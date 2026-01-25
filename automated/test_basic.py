@@ -19,12 +19,30 @@ DATA_DIR = ROOT / "data"
 TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
 DEV_MODE = False
-
 TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
+basic_test_to_delete_file = TEST_BASIC_DIR / "basic_test_to_delete.pkl"
 process_state_file = DATA_DIR / "process_state.json"
-process_state = tgm.load(process_state_file)
-basic_test_to_delete_file = TEST_BASIC_DIR / "basic_test_to_delete.json"
+task = 'test_basic'
+
+#* initialize logger
 logger = tgl.initiate_logger('logger', TEST_BASIC_DIR / 'basic_test.log')
+
+#* initalize B2
+session = boto3.session.Session()
+
+s3 = session.client(
+    service_name="s3",
+    aws_access_key_id=os.environ["B2_KEY_ID"],
+    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
+    endpoint_url=os.environ["B2_ENDPOINT"]
+)
+config = {'root':ROOT, 's3':s3, 'logger':logger}
+
+#* download from b2
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+
+#* load state
+process_state = tgm.load(process_state_file)
 
 #* initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
@@ -49,21 +67,14 @@ countries_to_test = [c for c, val in process_state.items() if
     (val['clean']['status'] == 'ok') and (val['test_basic']['status'] in ['pending', 'error'])
 ]
 
+#* schedule countries
+countries_to_test = ['Armenia']
+
 if len(countries_to_test) < 1:
     logger.info("No countries to test, exiting script")
     sys.exit(0)
 
 logger.info(f"countries to test: {len(countries_to_test)}")
-
-#* initalize B2
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name="s3",
-    aws_access_key_id=os.environ["B2_KEY_ID"],
-    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
-    endpoint_url=os.environ["B2_ENDPOINT"]
-)
 
 #* download required data
 logger.info(f"* Downloading required data to test: {len(countries_to_test)} countries")
@@ -130,7 +141,7 @@ while len(parents_to_delete) > 0:
     parents_to_delete = childs_to_delete
 logger.info(f"Childs to delete: {len(relations_childs_to_delete)}")
 
-#* Add to saved basic_test_to_delete.json and save
+#* Add to saved basic_test_to_delete.pkl and save
 basic_test_to_delete = relations_from_test_to_delete | relations_childs_to_delete
 logger.info(f"Basic test to delete relations: {len(basic_test_to_delete)}")
 
@@ -139,8 +150,6 @@ basic_test_to_delete_new = basic_test_to_delete_old | basic_test_to_delete
 logger.info(f"Current total of relations to delete from basic test: {len(basic_test_to_delete_new)}")
 
 #* upload results to B2
-config = {'root':ROOT, 's3':s3, 'logger':logger}
-task = 'test_basic'
 tested_dirs = [dir.name for dir in TEST_BASIC_DIR.glob('*/') if dir.name in countries_to_test]
 
 if len(tested_dirs) < 1:
@@ -163,9 +172,11 @@ for country in tested_dirs:
     logger.info(f"  * Updating {country} in process state: ({task}, ok)")
     tsm.update_process_state(process_state, country, task, process_status=process_status, process_error=process_error)
 
-#* commit updates
+#* upload states to B2
 tgm.dump(basic_test_to_delete_file, basic_test_to_delete_new)
 tgm.dump(process_state_file, process_state)
 if not DEV_MODE:
-    tsm.commit_file(process_state_file, f"Update process state for {country}: ({task}, ok)", config['logger'])
-    tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
+    tsm.upload_file_to_backblaze(process_state_file, config)
+    # tsm.commit_file(process_state_file, f"Update process state for {country}: ({task}, ok)", config['logger'])
+    tsm.upload_file_to_backblaze(basic_test_to_delete_file, config)
+    # tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
