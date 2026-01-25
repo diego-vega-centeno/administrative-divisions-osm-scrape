@@ -52559,8 +52559,8 @@
       "error": null
     },
     "test_duplicates": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2026-01-25T20:07:24",
       "error": null
     },
     "fix": {
@@ -88910,8 +88910,8 @@
       "error": null
     },
     "test_duplicates": {
-      "status": "pending",
-      "last_run": null,
+      "status": "ok",
+      "last_run": "2026-01-25T19:47:18",
       "error": null
     },
     "fix": {
