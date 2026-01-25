@@ -6,11 +6,16 @@ import os
 import boto3
 from dotenv import load_dotenv
 
+
+#* variables
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 logger = tgl.initiate_logger('logger')
 load_dotenv()
+process_state_file = DATA_DIR / "process_state.json"
+dups_test_state_file = DATA_DIR / "dups_test_state.json"
 
+#* setup b2
 session = boto3.session.Session()
 s3 = session.client(
     service_name="s3",
@@ -19,5 +24,6 @@ s3 = session.client(
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
 
-process_state_file = DATA_DIR / "process_state.json"
+#* download files
 tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], dups_test_state_file.relative_to(ROOT), s3, dups_test_state_file, logger)
