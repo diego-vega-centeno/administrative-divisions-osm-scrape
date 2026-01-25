@@ -22,9 +22,22 @@ DEV_MODE = False
 
 task = 'test_first_level'
 TEST_FIRST_LEVEL_DIR = TESTS_DIR / 'osm first level test'
-process_state = tgm.load(DATA_DIR / "process_state.json")
-first_level_test_state = tgm.load(DATA_DIR / "first_level_test_state.json")
+process_state_file = DATA_DIR / "process_state.json"
+first_level_test_state_file = DATA_DIR / "first_level_test_state.json"
+
+#* initialize logger
 logger = tgl.initiate_logger('logger', TEST_FIRST_LEVEL_DIR / 'first_level_test.log')
+
+#* initialize B2
+session = boto3.session.Session()
+
+s3 = session.client(
+    service_name="s3",
+    aws_access_key_id=os.environ["B2_KEY_ID"],
+    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
+    endpoint_url=os.environ["B2_ENDPOINT"]
+)
+config = {'root':ROOT, 's3':s3, 'logger':logger}
 
 #* initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
@@ -38,6 +51,14 @@ if token:
         f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
+
+#* download from b2
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], first_level_test_state_file.relative_to(ROOT), s3, first_level_test_state_file, logger)
+
+#* load state
+process_state = tgm.load(process_state_file)
+first_level_test_state = tgm.load(first_level_test_state_file)
 
 #* load environment variables
 load_dotenv()
@@ -53,19 +74,11 @@ if len(countries_to_test) < 1:
     logger.info("No countries to test, exiting script")
     sys.exit(0)
 
+#* schedule
+countries_to_test = ['Armenia']
+
 logger.info(f"Countries to test: {len(countries_to_test)} \n {countries_to_test}")
 
-#* initialize B2
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name="s3",
-    aws_access_key_id=os.environ["B2_KEY_ID"],
-    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
-    endpoint_url=os.environ["B2_ENDPOINT"]
-)
-
-config = {'root':ROOT, 's3':s3, 'logger':logger}
 
 #* download required data
 logger.info(f"* Downloading required data to test: {len(countries_to_test)} countries")
@@ -105,7 +118,8 @@ for country, df in countries_to_test_df.items():
         tgm.dump(DATA_DIR / "process_state.json", process_state)
 
 if not DEV_MODE and len(countries_wihout_first_level) > 0:
-    tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
+    tsm.upload_file_to_backblaze(process_state_file, config)
+    # tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
 
 logger.info(f"countries with first level: {len(first_lvl_df)} \n {list(first_lvl_df.keys())}")
 logger.info(f"countries without first level: {countries_wihout_first_level}")
@@ -190,7 +204,8 @@ for country, df in first_lvl_filtered_df.items():
             if not DEV_MODE:
                 logger.info("* Uploading data to backblaze b2")
                 tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
-                tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state: chunk {country_test_state['next_index'] - 1}", logger)
+                tsm.upload_file_to_backblaze(first_level_test_state_file, config)
+                # tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state: chunk {country_test_state['next_index'] - 1}", logger)
 
             chunk_count = 0
             last_upload_time = time.time()
@@ -213,5 +228,7 @@ for country, df in first_lvl_filtered_df.items():
     if not DEV_MODE:
         logger.info("* Uploading data to backblaze b2")
         tsm.upload_dir_files_to_backblaze(TEST_FIRST_LEVEL_DIR / country, config)
-        tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
-        tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
+        tsm.upload_file_to_backblaze(first_level_test_state_file, config)
+        # tsm.commit_file(DATA_DIR  / "first_level_test_state.json", f"Update {country} first level test state", logger)
+        tsm.upload_file_to_backblaze(process_state_file, config)
+        # tsm.commit_file(DATA_DIR / "process_state.json", f"Update process state for {country}: ({task}, ok)", logger)
