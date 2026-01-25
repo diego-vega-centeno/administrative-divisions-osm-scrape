@@ -41,9 +41,21 @@ if token:
 # initialize logger
 logger = tgl.initiate_logger('logger', DATA_DIR / 'raw/raw_scrape.log')
 
+# setup b2
+bucket_name = os.environ["B2_BUCKET_NAME"]
+session = boto3.session.Session()
+s3 = session.client(
+    service_name="s3",
+    aws_access_key_id=os.environ["B2_KEY_ID"],
+    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
+    endpoint_url=os.environ["B2_ENDPOINT"]
+)
+
+# download from b2
+process_state_file = DATA_DIR / "process_state.json"
+tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger)
 # load state and meta data files
 osmMetaCountrDict = tgm.load(DATA_DIR / "osmMetaCountrDict.json")
-process_state_file = DATA_DIR / "process_state.json"
 process_state = tgm.load(process_state_file)
 
 # filter countries to scrape
@@ -107,7 +119,8 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.commit_file(process_state_file, f"[automated] Update process state: {country}: (scrape, {process_status})", config['logger'])
+        tsm.upload_file_to_backblaze(process_state_file, config['logger'])
+        # tsm.commit_file(process_state_file, f"[automated] Update process state: {country}: (scrape, {process_status})", config['logger'])
 
 # fetch admin
 for country, id, lvls in to_scrape:
