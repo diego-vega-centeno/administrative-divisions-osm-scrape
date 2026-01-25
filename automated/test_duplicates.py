@@ -68,10 +68,11 @@ logger.info(f"countries tested: {len(countries_tested)}")
 countries_to_test = [c for c, val in process_state.items() if 
     (val['clean']['status'] == 'ok') and (val[task]['status'] in ['pending', 'error'])
 ]
-logger.info(f"countries to test: {len(countries_to_test)}")
 
 #* schedule countries
-countries_to_test = ['Canada','Germany','France','Peru']
+countries_to_test = ['Germany','Peru']
+
+logger.info(f"countries to test: {len(countries_to_test)}")
 
 if len(countries_to_test) < 1:
     logger.info("No countries to test, exiting script")
