@@ -20,7 +20,6 @@ TESTS_DIR = DATA_DIR / 'tests results'
 CLEANED_DIR = DATA_DIR / 'cleaned'
 DEV_MODE = False
 TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
-basic_test_to_delete_file = TEST_BASIC_DIR / "basic_test_to_delete.pkl"
 process_state_file = DATA_DIR / "process_state.json"
 task = 'test_basic'
 
@@ -110,45 +109,6 @@ for country, df in to_test_df.items():
     test_res = too.osm_basic_test(df)
     tgm.dump(TEST_BASIC_DIR / country / f'{country}_basic_test_res.pkl', test_res)
 
-#* select missing names and leaks from other countries
-test_res_by_cntr = {f.parent.name:tgm.load(f) for f in TEST_BASIC_DIR.glob('*/*') if f.parent.name in countries_to_test}
-# test_res_by_cntr = {f.parent.name:tgm.load(f) for f in TEST_BASIC_DIR.glob('*/*') if f.parent.name}
-logger.info(f'Test results found: {len(test_res_by_cntr)}')
-
-missing_names = set()
-leaks = set()
-for k,v in test_res_by_cntr.items():
-    missing_names.update(v['missing_name'])
-for k,v in test_res_by_cntr.items():
-    leaks.update(v['test_tags_leak'])
-
-logger.info(f"Missing names relations: {len(missing_names)}")
-logger.info(f"Leaks relations: {len(leaks)}")
-relations_from_test_to_delete = leaks | missing_names
-logger.info(f"To delete parents relations: {len(relations_from_test_to_delete)}")
-
-#* From the relations to delete, select the childs in the country that has them as parent
-# get all id triplets: (id, parent_id, country_id)
-id_triplets = pd.concat(to_test_df.values(), ignore_index=True)[['id', 'tags.parent_id', 'tags.country_id']].fillna('missing').apply(tuple,axis=1).to_list()
-logger.info(f"All dataframes id triplets: {len(id_triplets)}")
-
-parents_to_delete = relations_from_test_to_delete
-relations_childs_to_delete = set()
-while len(parents_to_delete) > 0:
-    parents_id_and_countryid = {(ele[0],ele[2]) for ele in parents_to_delete}
-    childs_to_delete = {ele for ele in id_triplets if (ele[1], ele[2]) in parents_id_and_countryid}
-    relations_childs_to_delete.update(childs_to_delete)
-    parents_to_delete = childs_to_delete
-logger.info(f"Childs to delete: {len(relations_childs_to_delete)}")
-
-#* Add to saved basic_test_to_delete.pkl and save
-basic_test_to_delete = relations_from_test_to_delete | relations_childs_to_delete
-logger.info(f"Basic test to delete relations: {len(basic_test_to_delete)}")
-
-basic_test_to_delete_old = tgm.load(basic_test_to_delete_file)
-basic_test_to_delete_new = basic_test_to_delete_old | basic_test_to_delete
-logger.info(f"Current total of relations to delete from basic test: {len(basic_test_to_delete_new)}")
-
 #* upload results to B2
 tested_dirs = [dir.name for dir in TEST_BASIC_DIR.glob('*/') if dir.name in countries_to_test]
 
@@ -172,11 +132,7 @@ for country in tested_dirs:
     logger.info(f"  * Updating {country} in process state: ({task}, ok)")
     tsm.update_process_state(process_state, country, task, process_status=process_status, process_error=process_error)
 
-#* upload states to B2
-tgm.dump(basic_test_to_delete_file, basic_test_to_delete_new)
+#* upload state to B2
 tgm.dump(process_state_file, process_state)
 if not DEV_MODE:
     tsm.upload_file_to_backblaze(process_state_file, config)
-    # tsm.commit_file(process_state_file, f"Update process state for {country}: ({task}, ok)", config['logger'])
-    tsm.upload_file_to_backblaze(basic_test_to_delete_file, config)
-    # tsm.commit_file(basic_test_to_delete_file, f"Update basic_test_to_delete relations, current length {len(basic_test_to_delete_new)}", logger)
