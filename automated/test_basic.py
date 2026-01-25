@@ -67,7 +67,7 @@ countries_to_test = [c for c, val in process_state.items() if
 ]
 
 #* schedule countries
-countries_to_test = ['Armenia']
+countries_to_test = ['Canada','Germany','France','Peru']
 
 if len(countries_to_test) < 1:
     logger.info("No countries to test, exiting script")
