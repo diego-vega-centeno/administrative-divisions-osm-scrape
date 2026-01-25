@@ -1,12 +1,15 @@
 import toolsSync.main as tsm
 from pathlib import Path
 import toolsGeneral.logger as tgl
+import toolsGeneral.main as tgm
 import os
 import boto3
+from dotenv import load_dotenv
 
-ROOT = Path.cwd().parents[0]
+ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 logger = tgl.initiate_logger('logger')
+load_dotenv()
 
 session = boto3.session.Session()
 s3 = session.client(
