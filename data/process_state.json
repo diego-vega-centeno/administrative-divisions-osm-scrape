@@ -408,17 +408,17 @@
       "error": null
     },
     "test_basic": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-09T22:42:32",
       "error": null
     },
     "test_first_level": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-09T22:55:10",
       "error": null
     },
     "test_duplicates": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-19T15:13:01",
       "error": null
     },
@@ -42255,17 +42255,17 @@
       "error": null
     },
     "test_basic": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-09T22:42:32",
       "error": null
     },
     "test_first_level": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-09T22:55:10",
       "error": null
     },
     "test_duplicates": {
-      "status": "ok",
+      "status": "pending",
       "last_run": "2025-12-19T15:13:01",
       "error": null
     },
