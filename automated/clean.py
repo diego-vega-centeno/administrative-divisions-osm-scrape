@@ -60,12 +60,7 @@ countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['s
 logger.info(f'countries to clean: {len(countries_to_clean)}')
 
 # schedule countries
-to_scrape = [
-    ('France', '2202162', ['4', '6', '8']),
-    ('Canada', '1428125', ['4', '6', '8']), 
-    ('Peru', '288247', ['4', '6', '8']),
-    ('Germany', '51477', ['4', '6', '8'])
-]
+countries_to_clean = ['France', 'Canada', 'Peru', 'Germany']
 
 if len(countries_to_clean) < 1:
     logger.info("No countries to clean, exiting script")
