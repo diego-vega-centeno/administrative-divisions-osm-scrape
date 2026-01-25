@@ -36,8 +36,21 @@ if token:
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
 
-#* load state and meta data files
+#* setup b2
+bucket_name = os.environ["B2_BUCKET_NAME"]
+session = boto3.session.Session()
+s3 = session.client(
+    service_name="s3",
+    aws_access_key_id=os.environ["B2_KEY_ID"],
+    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
+    endpoint_url=os.environ["B2_ENDPOINT"]
+)
+
+#* download from b2
 process_state_file = DATA_DIR / "process_state.json"
+tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+
+#* load state and meta data files
 process_state = tgm.load(process_state_file)
 
 #* select entities to process
@@ -45,7 +58,14 @@ countries_cleaned = [c for c, val in process_state.items() if (val['clean']['sta
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
 countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and (val['clean']['status'] in ['pending', 'error'])]
 logger.info(f'countries to clean: {len(countries_to_clean)}')
-# countries_to_clean = ['Armenia']
+
+# schedule countries
+to_scrape = [
+    ('France', '2202162', ['4', '6', '8']),
+    ('Canada', '1428125', ['4', '6', '8']), 
+    ('Peru', '288247', ['4', '6', '8']),
+    ('Germany', '51477', ['4', '6', '8'])
+]
 
 if len(countries_to_clean) < 1:
     logger.info("No countries to clean, exiting script")
@@ -178,4 +198,5 @@ for country in cleaned_by_cntr.keys():
     tsm.update_process_state(process_state, country, 'clean', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.commit_file(process_state_file, f"Update process state for {country}: (clean, ok)", config['logger'])
+        tsm.upload_file_to_backblaze(process_state_file, config)
+        # tsm.commit_file(process_state_file, f"Update process state for {country}: (clean, ok)", config['logger'])
