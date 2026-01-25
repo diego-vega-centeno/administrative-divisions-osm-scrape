@@ -38,12 +38,6 @@ s3 = session.client(
 )
 config = {'root':ROOT, 's3':s3, 'logger':logger}
 
-#* download from b2
-tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.relative_to(ROOT), s3, process_state_file, logger)
-
-#* load state
-process_state = tgm.load(process_state_file)
-
 #* initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
@@ -56,6 +50,12 @@ if token:
         f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
     ])
     subprocess.run(["git", "pull", "--rebase"], check=True)
+
+#* download from b2
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+
+#* load state
+process_state = tgm.load(process_state_file)
 
 #* load environment variables
 load_dotenv()
