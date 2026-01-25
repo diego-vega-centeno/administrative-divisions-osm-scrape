@@ -120,7 +120,7 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
     if not DEV_MODE:
-        tsm.upload_file_to_backblaze(process_state_file, config['logger'])
+        tsm.upload_file_to_backblaze(process_state_file, config)
         # tsm.commit_file(process_state_file, f"[automated] Update process state: {country}: (scrape, {process_status})", config['logger'])
 
 # fetch admin
