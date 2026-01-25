@@ -114,7 +114,7 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
             process_status = upload_response['status']
             process_error = upload_response['status_type']
 
-    logger.info(f"* Update and commit to process state: {country} - {(process_status, process_error)}")
+    logger.info(f"* Update and upload process state: {country} - {(process_status, process_error)}")
     process_state[country]['scrape']['chunk_state'] = response['data']
     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
     tgm.dump(process_state_file, process_state)
@@ -129,35 +129,35 @@ for country, id, lvls in to_scrape:
     country_save_file = SAVE_DIR / country / f'rawOSMRes.json'
     logger.info(f"* processing: {country, id, lvls}")
 
-    if False:
+    # if country not in in_chunks_countries:
         
-        response = too.getOSMIDAddsStruct(id, lvls)
-        logger.info(f"  - Scrape for country {country} result: {response['status']}")
+    #     response = too.getOSMIDAddsStruct(id, lvls)
+    #     logger.info(f"  - Scrape for country {country} result: {response['status']}")
 
-        # Use chunks if there are too many requests
-        if '429' in response["status_type"] or 'timeout' in response["status_type"]:
-            logger.info(f"  - Too many requests/timeout error, using chunks", logger)
-            scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
-            continue
+    #     # Use chunks if there are too many requests
+    #     if '429' in response["status_type"] or 'timeout' in response["status_type"]:
+    #         logger.info(f"  - Too many requests/timeout error, using chunks", logger)
+    #         scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
+    #         continue
         
-        process_status = response['status']
-        process_error = response['status_type']
-        # Try to upload data and override process status with upload result from B2
-        if response["status"] == "ok":
-            tgm.dump(country_save_file, response["data"])
-            logger.info("  - Upload data to backblaze b2")
-            if not DEV_MODE:
-                upload_response = tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
-                process_status = upload_response['status']
-                process_error = upload_response['status_type']
+    #     process_status = response['status']
+    #     process_error = response['status_type']
+    #     # Try to upload data and override process status with upload result from B2
+    #     if response["status"] == "ok":
+    #         tgm.dump(country_save_file, response["data"])
+    #         logger.info("  - Upload data to backblaze b2")
+    #         if not DEV_MODE:
+    #             upload_response = tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
+    #             process_status = upload_response['status']
+    #             process_error = upload_response['status_type']
         
-        logger.info(f"  - Update and commit to process state: {country} - ({process_status, process_error})")
-        tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
-        tgm.dump(process_state_file, process_state)
-        if not DEV_MODE:
-            tsm.commit_file(process_state_file, f"[automated] Update process state: {country}: (scrape, {process_status})", config['logger'])
-    else:
-        scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
+    #     logger.info(f"  - Update and commit to process state: {country} - ({process_status, process_error})")
+    #     tsm.update_process_state(process_state, country, 'scrape', process_status=process_status, process_error=process_error)
+    #     tgm.dump(process_state_file, process_state)
+    #     if not DEV_MODE:
+    #         tsm.commit_file(process_state_file, f"[automated] Update process state: {country}: (scrape, {process_status})", config['logger'])
+    # else:
+    scrape_country_in_chunks((country, id, lvls), SAVE_DIR, country_save_file, config, process_state, process_state_file)
 
     time.sleep(3)
 
