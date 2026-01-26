@@ -23,6 +23,9 @@ DEV_MODE = False
 
 logger = tgl.initiate_logger('logger', SAVE_DIR / 'cleaned.log')
 
+# load environment variables for local run
+load_dotenv()
+
 #* initialize git
 subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
 subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
@@ -37,6 +40,7 @@ if token:
     subprocess.run(["git", "pull", "--rebase"], check=True)
 
 #* setup b2
+logger.info(f"* initializing b2 ...")
 bucket_name = os.environ["B2_BUCKET_NAME"]
 session = boto3.session.Session()
 s3 = session.client(
@@ -45,6 +49,8 @@ s3 = session.client(
     aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
+config = {'root':ROOT, 's3':s3, 'logger':logger}
+logger.info(f"* finished b2")
 
 #* download from b2
 process_state_file = DATA_DIR / "process_state.json"
@@ -57,7 +63,7 @@ process_state = tgm.load(process_state_file)
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
 countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and (val['clean']['status'] in ['pending', 'error'])]
-logger.info(f'countries to clean: {len(countries_to_clean)}')
+logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 # schedule countries
 countries_to_clean = ['France', 'Canada', 'Peru', 'Germany']
@@ -68,18 +74,6 @@ if len(countries_to_clean) < 1:
 
 #* load environment variables
 load_dotenv()
-
-#* Use AWS kit to upload files
-logger.info(f"* initializing b2 ...")
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name="s3",
-    aws_access_key_id=os.environ["B2_KEY_ID"],
-    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
-    endpoint_url=os.environ["B2_ENDPOINT"]
-)
-logger.info(f"* finished b2")
 
 #* Download required data
 logger.info(f"* Downloading required raw data to clean")
@@ -120,14 +114,6 @@ logger.info(f"  * Countries to clean without raw data: {tgm.complement(countries
 #* START CLEANING STEPS
 logger.info(f"* Start cleaning steps")
 cleaned_by_cntr = copy.deepcopy(to_clean_by_cntr)
-
-#* Use sovereign countries only
-# logger.info(f"* Use sovereign countries only")
-# sovereign_countries = tgm.load(DATA_DIR / 'sovereign countries.json')
-# logger.info(f"  * Sovereign countries: {len(sovereign_countries)}")
-
-# cleaned_by_cntr = {k:data for k,data in to_clean_by_cntr.items() if k in sovereign_countries}
-# logger.info(f"  * Filtered sovereign countries: {len(cleaned_by_cntr)}")
 
 #* clean countries
 logger.info(f"* Clean countries")
@@ -170,7 +156,7 @@ combined = pd.concat(cleaned_by_cntr.values(), ignore_index=True)
 logger.info(f"  * Tally all types of values in dataframe: {tgm.tally(list(combined.map(type).stack().values))}")
 
 #* save files
-logger.info(f"Finished cleaning. Total of cleaned countries: {len(cleaned_by_cntr)}")
+logger.info(f"Finished cleaning. Cleaned countries {len(cleaned_by_cntr)} : {cleaned_by_cntr.keys()}")
 
 for country,df in cleaned_by_cntr.items():
     tgm.dump(SAVE_DIR / country / f'{country}_cleaned.pkl', df)
@@ -178,7 +164,7 @@ logger.info(f"Saved files to directory '{SAVE_DIR}' : {len(cleaned_by_cntr)}")
 
 #* Upload data to backblaze b2 and update process state
 logger.info("* Uploading data to backblaze b2")
-config = {'root':ROOT, 's3':s3, 'logger':logger}
+
 for country in cleaned_by_cntr.keys():
     country_save_dir = SAVE_DIR / country
     process_status = 'ok'
