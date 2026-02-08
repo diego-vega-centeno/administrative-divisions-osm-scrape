@@ -54,8 +54,10 @@ s3 = session.client(
 # download from b2
 process_state_file = DATA_DIR / "process_state.json"
 tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger)
+country_meta_file = DATA_DIR / "osmMetaCountrDict.json"
+tsm.download_file_from_bucket(bucket_name, country_meta_file.relative_to(ROOT), s3, country_meta_file, logger)
 # load state and meta data files
-osmMetaCountrDict = tgm.load(DATA_DIR / "osmMetaCountrDict.json")
+osmMetaCountrDict = tgm.load(country_meta_file)
 process_state = tgm.load(process_state_file)
 
 # filter countries to scrape
