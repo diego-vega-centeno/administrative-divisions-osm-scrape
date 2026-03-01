@@ -75,7 +75,7 @@ if len(countries_to_test) < 1:
     sys.exit(0)
 
 #* schedule
-# countries_to_test = ['Canada','Germany','France','Peru']
+countries_to_test = ['UnitedStates']
 
 logger.info(f"Countries to test: {len(countries_to_test)} \n {countries_to_test}")
 
