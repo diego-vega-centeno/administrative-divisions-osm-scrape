@@ -102,8 +102,14 @@ if len(countries_to_test_df) < 1:
     sys.exit(0)
 
 #* select relations with duplicates ids
+# download dups_id.pkl
+dups_id_file = CLEANED_DIR / 'dups_id.pkl'
+# create dir
+os.makedirs(dups_id_file.parent, exist_ok=True)
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], dups_id_file.relative_to(ROOT), s3, dups_id_file, logger)
+
 # id_set is computed using all countries in cleaned data, so we need just to filter here
-dups_id = tgm.load(CLEANED_DIR  / 'dups_id.pkl')
+dups_id = tgm.load(CLEANED_DIR / 'dups_id.pkl')
 logger.info(f"Duplicates ids: {len(dups_id)}")
 
 logger.info(f"Countries to test: {len(countries_to_test_df)}")
