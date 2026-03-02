@@ -183,12 +183,22 @@ for country in cleaned_by_cntr.keys():
         # tsm.commit_file(process_state_file, f"Update process state for {country}: (clean, ok)", config['logger'])
 
 #* compute updated dups_id.pkl and ids.pkl
-# old dups and ids
+# download and load old dups and ids
+os.makedirs(SAVE_DIR, exist_ok=True)
+
+dups_id_file = SAVE_DIR / 'dups_id.pkl'
+ids_file = SAVE_DIR / 'ids.pkl'
+
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], dups_id_file.relative_to(ROOT), s3, dups_id_file, logger)
+tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], ids_file.relative_to(ROOT), s3, ids_file, logger)
+
 dups_id = tgm.load(SAVE_DIR  / 'dups_id.pkl')
 logger.info(f"Duplicates ids: {len(dups_id)}")
 
 ids = tgm.load(SAVE_DIR / 'ids.pkl')
 logger.info(f"Ids: {len(ids)}")
+
+
 
 # new cleaned ids
 cleaned_df_all = pd.concat(cleaned_by_cntr.values(), ignore_index=True)
