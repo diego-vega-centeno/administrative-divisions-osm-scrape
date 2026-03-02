@@ -113,7 +113,7 @@ dups_id = tgm.load(CLEANED_DIR / 'dups_id.pkl')
 logger.info(f"Duplicates ids: {len(dups_id)}")
 
 logger.info(f"Countries to test: {len(countries_to_test_df)}")
-logger.info(f"Relations to test: {len([row['id'] for df in countries_to_test_df.values() for i, row in df.iterrows()])}")
+logger.info(f"Toal relations in countries: {len([row['id'] for df in countries_to_test_df.values() for i, row in df.iterrows()])}")
 
 dups_df = {}
 countries_wihout_dups = []
