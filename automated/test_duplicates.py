@@ -102,9 +102,9 @@ if len(countries_to_test_df) < 1:
     sys.exit(0)
 
 #* select relations with duplicates ids
-# dups_id is computed using all countries in cleaned data, so we need just to filter here
-dups_id = tgm.load(DATA_DIR  / 'dups_id.pkl')
-logger.info(f"Duplicates ids: {len(dups_id)}")
+# id_set is computed using all countries in cleaned data, so we need just to filter here
+id_set = tgm.load(CLEANED_DIR  / 'id_set.pkl')
+logger.info(f"All cleaned ids: {len(id_set)}")
 
 logger.info(f"Countries to test: {len(countries_to_test_df)}")
 logger.info(f"Relations to test: {len([row['id'] for df in countries_to_test_df.values() for i, row in df.iterrows()])}")
@@ -112,7 +112,7 @@ logger.info(f"Relations to test: {len([row['id'] for df in countries_to_test_df.
 dups_df = {}
 countries_wihout_first_level = []
 for country, df in countries_to_test_df.items():
-    dups = df[df['id'].isin(dups_id)]
+    dups = df[df['id'].isin(id_set)]
     if not dups.empty:
         dups_df[country] = dups
     else:
@@ -123,6 +123,7 @@ for country, df in countries_to_test_df.items():
 logger.info(f"countries with first level: {len(dups_df)} \n {list(dups_df.keys())}")
 logger.info(f"relations duplicates to test: {len([row['id'] for df in dups_df.values() for i, row in df.iterrows()])}")
 logger.info(f"countries without first level: {len(countries_wihout_first_level)} \n{countries_wihout_first_level}")
+sys.exit(0)
 
 if len(countries_to_test_df) < 1:
     logger.info("No duplicates data found for countries to test, exiting script")
