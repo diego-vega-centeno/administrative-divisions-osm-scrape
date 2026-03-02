@@ -181,3 +181,24 @@ for country in cleaned_by_cntr.keys():
     if not DEV_MODE:
         tsm.upload_file_to_backblaze(process_state_file, config)
         # tsm.commit_file(process_state_file, f"Update process state for {country}: (clean, ok)", config['logger'])
+
+#* compute updated dups_id.pkl and ids.pkl
+# old dups and ids
+dups_id = tgm.load(SAVE_DIR  / 'dups_id.pkl')
+logger.info(f"Duplicates ids: {len(dups_id)}")
+
+ids = tgm.load(SAVE_DIR / 'ids.pkl')
+logger.info(f"Ids: {len(ids)}")
+
+# new cleaned ids
+cleaned_df_all = pd.concat(cleaned_by_cntr.values(), ignore_index=True)
+cleaned_ids = list(cleaned_df_all['id'])
+logger.info(f"New cleaned ids: {len(cleaned_ids)}")
+
+# join and compute new dups and ids
+new_ids = ids
+new_ids.extend(cleaned_ids)
+logger.info(f"Joined new total ids: {len(new_ids)}")
+
+new_dups_id = set(tgm.find_duplicates(new_ids))
+logger.info(f"Joined new dups ids: {len(new_dups_id)}")
