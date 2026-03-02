@@ -129,7 +129,6 @@ for country, df in countries_to_test_df.items():
 logger.info(f"countries with first level: {len(dups_df)} \n {list(dups_df.keys())}")
 logger.info(f"relations duplicates to test: {len([row['id'] for df in dups_df.values() for i, row in df.iterrows()])}")
 logger.info(f"countries without first level: {len(countries_wihout_dups)} \n{countries_wihout_dups}")
-sys.exit(0)
 
 if len(countries_to_test_df) < 1:
     logger.info("No duplicates data found for countries to test, exiting script")
