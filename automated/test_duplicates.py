@@ -70,7 +70,7 @@ countries_to_test = [c for c, val in process_state.items() if
 ]
 
 #* schedule countries
-# countries_to_test = ['Germany','Peru']
+countries_to_test = ['UnitedStates']
 
 logger.info(f"countries to test: {len(countries_to_test)}")
 
