@@ -24,14 +24,13 @@ DEV_MODE = False
 # load environment variables for local run
 load_dotenv()
 
-# initialize git
-subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
-subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
-subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
-
 token = os.environ.get("GITHUB_TOKEN")
-
 if token:
+    # initialize git
+    subprocess.run(["git", "config", "--global", "--add", "safe.directory", "/app"], check=True)
+    subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+    subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+
     subprocess.run([
         "git", "remote", "set-url", "origin",
         f"https://x-access-token:{token}@github.com/CopaCabana21/administrative-divisions-osm-scrape.git"
