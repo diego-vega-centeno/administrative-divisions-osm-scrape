@@ -41,6 +41,7 @@ if token:
 logger = tgl.initiate_logger('logger', DATA_DIR / 'raw/raw_scrape.log')
 
 # setup b2
+logger.info(f"* initializing b2 ...")
 bucket_name = os.environ["B2_BUCKET_NAME"]
 session = boto3.session.Session()
 s3 = session.client(
@@ -49,6 +50,7 @@ s3 = session.client(
     aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
     endpoint_url=os.environ["B2_ENDPOINT"]
 )
+logger.info(f"* finshed b2")
 
 # download from b2
 process_state_file = DATA_DIR / "process_state.json"
@@ -76,18 +78,6 @@ to_scrape = to_scrape[:10]
 logger.info(f"* processed_countries: {len(processed_countries)}")
 logger.info(f"* failed_countries: {len(failed_countries)}")
 logger.info(f"* to process countries: {len(to_scrape)}")
-
-# Use AWS kit to upload files
-logger.info(f"* initializing b2 ...")
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name="s3",
-    aws_access_key_id=os.environ["B2_KEY_ID"],
-    aws_secret_access_key=os.environ["B2_APPLICATION_KEY"],
-    endpoint_url=os.environ["B2_ENDPOINT"]
-)
-logger.info(f"* finshed b2")
 
 in_chunks_countries = ['China','Armenia']
 
