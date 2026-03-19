@@ -213,3 +213,10 @@ logger.info(f"Joined new total ids: {len(new_ids)}")
 
 new_dups_id = set(tgm.find_duplicates(new_ids))
 logger.info(f"Joined new dups ids: {len(new_dups_id)}")
+
+# save and upload to B2
+tgm.dump(dups_id_file, new_dups_id)
+tgm.dump(ids_file, new_ids)
+
+tsm.upload_file_to_backblaze(dups_id_file, config)
+tsm.upload_file_to_backblaze(ids_file, config)
