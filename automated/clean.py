@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SAVE_DIR = DATA_DIR / 'cleaned'
 RAW_DIR = DATA_DIR / 'raw/osm countries queries'
-DEV_MODE = False
+DEV_MODE = True
 
 logger = tgl.initiate_logger('logger')
 
@@ -207,7 +207,7 @@ cleaned_ids = list(cleaned_df_all['id'])
 logger.info(f"New cleaned ids: {len(cleaned_ids)}")
 
 # join and compute new dups and ids
-new_ids = ids
+new_ids = []
 new_ids.extend(cleaned_ids)
 logger.info(f"Joined new total ids: {len(new_ids)}")
 
