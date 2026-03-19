@@ -55,7 +55,6 @@ logger.info(f"* finished b2")
 
 #* download from b2
 process_state_file = DATA_DIR / "process_state.json"
-print([bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger])
 tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger)
 #* load state and meta data files
 process_state = tgm.load(process_state_file)
@@ -67,7 +66,8 @@ countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['s
 logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 # schedule countries
-# countries_to_clean = ['UnitedStates']
+# countries_to_clean = ['SahrawiArabDemocraticRepublic']
+countries_to_clean = countries_cleaned
 
 if len(countries_to_clean) < 1:
     logger.info("No countries to clean, exiting script")
@@ -218,5 +218,6 @@ logger.info(f"Joined new dups ids: {len(new_dups_id)}")
 tgm.dump(dups_id_file, new_dups_id)
 tgm.dump(ids_file, new_ids)
 
-tsm.upload_file_to_backblaze(dups_id_file, config)
-tsm.upload_file_to_backblaze(ids_file, config)
+if not DEV_MODE:
+    tsm.upload_file_to_backblaze(dups_id_file, config)
+    tsm.upload_file_to_backblaze(ids_file, config)
