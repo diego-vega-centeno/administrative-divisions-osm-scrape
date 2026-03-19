@@ -61,8 +61,6 @@ tsm.download_file_from_bucket(bucket_name, country_meta_file.relative_to(ROOT), 
 osmMetaCountrDict = tgm.load(country_meta_file)
 process_state = tgm.load(process_state_file)
 
-sys.exit(0)
-
 # filter countries to scrape
 processed_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'ok']
 failed_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] == 'failed']
