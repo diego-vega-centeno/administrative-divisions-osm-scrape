@@ -60,8 +60,6 @@ tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT),
 #* load state and meta data files
 process_state = tgm.load(process_state_file)
 
-sys.exit(0)
-
 #* select entities to process
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
