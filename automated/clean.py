@@ -54,9 +54,8 @@ config = {'root':ROOT, 's3':s3, 'logger':logger}
 logger.info(f"* finished b2")
 
 #* download from b2
-country_meta_file = DATA_DIR / "osmMetaCountrDict.json"
-tsm.download_file_from_bucket(bucket_name, country_meta_file.relative_to(ROOT), s3, country_meta_file, logger)
 process_state_file = DATA_DIR / "process_state.json"
+print([bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger])
 tsm.download_file_from_bucket(bucket_name, process_state_file.relative_to(ROOT), s3, process_state_file, logger)
 #* load state and meta data files
 process_state = tgm.load(process_state_file)
