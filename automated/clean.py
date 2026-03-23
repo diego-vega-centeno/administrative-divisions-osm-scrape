@@ -67,7 +67,7 @@ logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean
 
 # schedule countries
 # countries_to_clean = ['SahrawiArabDemocraticRepublic']
-countries_to_clean = countries_cleaned[:30]
+countries_to_clean = countries_cleaned[30:60]
 logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 if len(countries_to_clean) < 1:
@@ -208,9 +208,7 @@ cleaned_ids = list(cleaned_df_all['id'])
 logger.info(f"New cleaned ids: {len(cleaned_ids)}")
 
 # join and compute new dups and ids
-# new_ids = [...ids]
-# fresh start
-new_ids = []
+new_ids = [...ids]
 new_ids.extend(cleaned_ids)
 logger.info(f"Joined new total ids: {len(new_ids)}")
 
