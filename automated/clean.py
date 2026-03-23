@@ -208,7 +208,7 @@ cleaned_ids = list(cleaned_df_all['id'])
 logger.info(f"New cleaned ids: {len(cleaned_ids)}")
 
 # join and compute new dups and ids
-new_ids = [...ids]
+new_ids = ids[:]
 new_ids.extend(cleaned_ids)
 logger.info(f"Joined new total ids: {len(new_ids)}")
 
