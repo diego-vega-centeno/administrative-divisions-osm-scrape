@@ -67,7 +67,7 @@ logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean
 
 # schedule countries
 # countries_to_clean = ['SahrawiArabDemocraticRepublic']
-countries_to_clean = countries_cleaned[60:90]
+countries_to_clean = countries_cleaned[90:120]
 logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 if len(countries_to_clean) < 1:
