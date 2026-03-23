@@ -67,7 +67,8 @@ logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean
 
 # schedule countries
 # countries_to_clean = ['SahrawiArabDemocraticRepublic']
-countries_to_clean = countries_cleaned
+countries_to_clean = countries_cleaned[:30]
+logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 if len(countries_to_clean) < 1:
     logger.info("No countries to clean, exiting script")
@@ -193,10 +194,10 @@ ids_file = SAVE_DIR / 'ids.pkl'
 tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], dups_id_file.relative_to(ROOT), s3, dups_id_file, logger)
 tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], ids_file.relative_to(ROOT), s3, ids_file, logger)
 
-dups_id = tgm.load(SAVE_DIR  / 'dups_id.pkl')
+dups_id = tgm.load(dups_id_file)
 logger.info(f"Duplicates ids: {len(dups_id)}")
 
-ids = tgm.load(SAVE_DIR / 'ids.pkl')
+ids = tgm.load(ids_file)
 logger.info(f"Ids: {len(ids)}")
 
 
@@ -207,6 +208,8 @@ cleaned_ids = list(cleaned_df_all['id'])
 logger.info(f"New cleaned ids: {len(cleaned_ids)}")
 
 # join and compute new dups and ids
+# new_ids = [...ids]
+# fresh start
 new_ids = []
 new_ids.extend(cleaned_ids)
 logger.info(f"Joined new total ids: {len(new_ids)}")
