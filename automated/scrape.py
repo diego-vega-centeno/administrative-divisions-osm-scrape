@@ -72,7 +72,7 @@ if len(to_scrape_countries) < 1:
     sys.exit(0)
 
 # test to scrape
-to_scrape = to_scrape[:10]
+# to_scrape = to_scrape[:10]
 # to_scrape = [('UnitedStates', '148838', ['4', '6', '8'])]
 
 logger.info(f"* processed_countries: {len(processed_countries)}")
