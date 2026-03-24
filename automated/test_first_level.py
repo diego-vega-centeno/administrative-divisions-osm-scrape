@@ -109,7 +109,10 @@ if len(cleaned_files) < 1:
 first_lvl_df = {}
 countries_wihout_first_level = []
 for country, df in countries_to_test_df.items():
-    if not df[df['tags.admin_level'] == '4'].empty:
+    cntrDict = df[df["tags.admin_level"] == '2'].iloc[0].to_dict()
+    admin_level_nums = sorted(df['tags.admin_level'].to_list())
+
+    if len(admin_level_nums) > 1:
         first_lvl_df[country] = df[df['tags.admin_level'] == '4']
     else:
         countries_wihout_first_level.append(country)
