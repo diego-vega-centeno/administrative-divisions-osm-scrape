@@ -98,8 +98,8 @@ def scrape_country_in_chunks(tuple, save_dir, country_save_file, config, process
 
     if response["status"] == "ok":
         # Try to upload data and override process status with upload result from B2
-        logger.info("* Upload data to backblaze b2")
         if not DEV_MODE:
+            logger.info("* Upload data to backblaze b2")
             upload_response = tsm.upload_dir_files_to_backblaze(country_save_file.parent, config)
             process_status = upload_response['status']
             process_error = upload_response['status_type']
