@@ -67,13 +67,13 @@ failed_countries = [country for country, country_state in process_state.items() 
 to_scrape_countries = [country for country, country_state in process_state.items() if country_state['scrape']['status'] in ['pending', 'error']]
 to_scrape = [(country, osmMetaCountrDict[country]['id'], osmMetaCountrDict[country]['addLvlsNum']) for country in to_scrape_countries]
 
-if len(to_scrape_countries) < 1:
-    logger.info("* No countries to scrape, exiting script")
-    sys.exit(0)
-
 # test to scrape
 # to_scrape = to_scrape[:10]
 to_scrape = [('VaticanCity', '36989', ['4', '6', '8'])]
+
+if len(to_scrape) < 1:
+    logger.info("* No countries to scrape, exiting script")
+    sys.exit(0)
 
 logger.info(f"* processed_countries: {len(processed_countries)}")
 logger.info(f"* failed_countries: {len(failed_countries)}")
