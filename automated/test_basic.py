@@ -23,6 +23,9 @@ TEST_BASIC_DIR = TESTS_DIR / 'osm basic test'
 process_state_file = DATA_DIR / "process_state.json"
 task = 'test_basic'
 
+#* load environment variables
+load_dotenv()
+
 #* initialize logger
 logger = tgl.initiate_logger('logger', TEST_BASIC_DIR / 'basic_test.log')
 
@@ -55,9 +58,6 @@ tsm.download_file_from_bucket(os.environ["B2_BUCKET_NAME"], process_state_file.r
 #* load state
 process_state = tgm.load(process_state_file)
 
-#* load environment variables
-load_dotenv()
-
 #* select entities to test
 countries_tested = [c for c, val in process_state.items() if (val['test_basic']['status'] == 'ok')]
 logger.info(f"countries tested: {len(countries_tested)}")
@@ -66,7 +66,8 @@ countries_to_test = [c for c, val in process_state.items() if
 ]
 
 #* schedule countries
-# countries_to_test = ['UnitedStates']
+# countries_to_test = ['SahrawiArabDemocraticRepublic']
+countries_to_test = countries_to_test[:2]
 
 if len(countries_to_test) < 1:
     logger.info("No countries to test, exiting script")
