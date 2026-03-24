@@ -68,7 +68,7 @@ to_scrape_countries = [country for country, country_state in process_state.items
 to_scrape = [(country, osmMetaCountrDict[country]['id'], osmMetaCountrDict[country]['addLvlsNum']) for country in to_scrape_countries]
 
 # test to scrape
-to_scrape = [('Fiji', '571747', ['4', '6', '8'])]
+# to_scrape = [('Fiji', '571747', ['4', '6', '8'])]
 
 if len(to_scrape) < 1:
     logger.info("* No countries to scrape, exiting script")
