@@ -63,7 +63,6 @@ process_state = tgm.load(process_state_file)
 countries_cleaned = [c for c, val in process_state.items() if (val['clean']['status'] == 'ok')]
 logger.info(f'countries cleaned: {len(countries_cleaned)}')
 countries_to_clean = [c for c, val in process_state.items() if (val['scrape']['status'] == 'ok') and (val['clean']['status'] in ['pending', 'error'])]
-logger.info(f'countries to clean {len(countries_to_clean)} : {countries_to_clean}')
 
 # schedule countries
 # countries_to_clean = ['SahrawiArabDemocraticRepublic']
@@ -101,10 +100,14 @@ if len(country_raw_dirs) < 1:
 to_clean_by_cntr = {}
 # for chunks and non chunk files
 for country in countries_to_clean_in_b2:
+    logger.info(f"  * Loading country: {country}")
     country_dir = DATA_DIR / 'raw/osm countries queries' / country
     if not country_dir.exists():
         continue
-    files_elements = [tgm.load(f)['elements'] for f in country_dir.glob('*.json')]
+    try:
+        files_elements = [tgm.load(f)['elements'] for f in country_dir.glob('*.json')]
+    except:
+        logger.info(f"  * Failed country dir: {country_dir}")
     elements = [ele for list in files_elements for ele in list]
     to_clean_by_cntr[country] = elements
 
