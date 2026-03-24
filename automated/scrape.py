@@ -73,7 +73,7 @@ if len(to_scrape_countries) < 1:
 
 # test to scrape
 # to_scrape = to_scrape[:10]
-# to_scrape = [('UnitedStates', '148838', ['4', '6', '8'])]
+to_scrape = [('VaticanCity', '36989', ['4', '6', '8'])]
 
 logger.info(f"* processed_countries: {len(processed_countries)}")
 logger.info(f"* failed_countries: {len(failed_countries)}")
